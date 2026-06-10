@@ -2,9 +2,9 @@
 // components/anyfed/MLWorkbench.tsx — DataRobot-style AI/ML workbench.
 // Select data sources (default: the sourcedata/ folder bundles) → pick a model
 // blueprint → Run. Every result is computed in-browser by lib/ml/engine.ts.
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { useTheme, Card, Row, SectionTitle, Badge, Spinner, Tip, fmtMoney } from "./ui"
-import { useAgencyData, DodAwards, DodBudget, LiveBudget, Txn } from "./useAgencyData"
+import { useAgencyData, DodAwards, DodBudget, LiveDetail, Txn } from "./useAgencyData"
 import { MODEL_BLUEPRINTS, ModelBlueprint } from "@/lib/ml/registry"
 import {
   holtForecast, linearForecast, detectAnomalies, benfordTest, kmeans1d, riskScore,
@@ -32,11 +32,13 @@ export default function MLWorkbench({ agency }: { agency: Agency }) {
   const C = useTheme()
   const awards = useAgencyData<DodAwards>("DOD", "awards")
   const budget = useAgencyData<DodBudget>("DOD", "budget")
-  // Selected-agency live budget — adds that agency's data to the catalog when a
-  // live (non-folder) department is chosen, so models run on the picked agency.
+  // Selected-agency live detail — object classes, federal accounts, sub-agency
+  // obligations and monthly burn from GTAS/USAspending, so the workbench runs
+  // genuinely on the PICKED agency (not just the bundled DoD/SEC folders).
   const isFolderAgency = agency.id === "DOD" || agency.id === "SEC"
-  const live = useAgencyData<LiveBudget>(agency.id, "budget")
-  const [selected, setSelected] = useState<string[]>(["dod_awards_contracts"])
+  const live = useAgencyData<LiveDetail>(agency.id, "detail")
+  const [crossAgency, setCrossAgency] = useState(false)
+  const [selected, setSelected] = useState<string[]>([])
   const [runs, setRuns] = useState<RunRecord[]>([])
   const [activeRun, setActiveRun] = useState<number | null>(null)
   const [running, setRunning] = useState<string | null>(null)
@@ -89,30 +91,62 @@ export default function MLWorkbench({ agency }: { agency: Agency }) {
       amounts: OBJECT_CLASS.flatMap(o => [o.fy25, o.fy26, o.fy27]),
       labels: OBJECT_CLASS.flatMap(o => [`${o.code} ${o.name} FY25`, `${o.code} ${o.name} FY26`, `${o.code} ${o.name} FY27`]),
     })
-    // Selected live agency (FDIC, Treasury, …): expose its USAspending budgetary
-    // resources & obligations as a forecastable series + amount pool.
-    if (!isFolderAgency && live.data && Array.isArray(live.data.fiscalYears) && live.data.fiscalYears.length >= 3) {
-      const fy = live.data.fiscalYears
-      out.push({
-        id:`live_${agency.id}_resources`, label:`${agency.abbrev} Budgetary Resources (live)`, agency:agency.id,
-        source:"live:USAspending.gov · GTAS-derived",
-        series: fy.map(y => ({ label: y.fy, value: y.budgetaryResources })),
-        amounts: fy.flatMap(y => [y.budgetaryResources, y.obligated]).filter(v => v > 0),
-        labels: fy.flatMap(y => [`${y.fy} resources`, `${y.fy} obligated`]),
+    // Selected agency's LIVE detail (works for every agency incl. DoD/SEC):
+    // federal-account + object-class amount pools, sub-agency obligations,
+    // multi-year resources series, and latest-year monthly burn.
+    if (live.data) {
+      const d = live.data
+      const faVals: number[] = []; const faLabs: string[] = []
+      d.dims.federalAccount.nodes.forEach(n => {
+        if (n.value) { faVals.push(Math.abs(n.value)); faLabs.push(`${agency.abbrev} acct — ${n.name}`) }
+        n.children.forEach(c => { if (c.value) { faVals.push(Math.abs(c.value)); faLabs.push(`${agency.abbrev} TAS ${c.code ?? ""} — ${c.name}`) } })
       })
+      const ocVals = d.dims.objectClass.nodes.filter(n => n.value).map(n => Math.abs(n.value))
+      const ocLabs = d.dims.objectClass.nodes.filter(n => n.value).map(n => `${agency.abbrev} OC — ${n.name}`)
+      const saVals = d.dims.subAgency.nodes.flatMap(n => [n, ...n.children]).filter(n => n.value).map(n => Math.abs(n.value))
+      const saLabs = d.dims.subAgency.nodes.flatMap(n => [n, ...n.children]).filter(n => n.value).map(n => `${agency.abbrev} org — ${n.name}`)
+      if (faVals.length)
+        out.push({ id:`live_${agency.id}_accounts`, label:`${agency.abbrev} Federal & Treasury Accounts (${d.fiscalYear})`, agency:agency.id,
+          source:"live:USAspending · GTAS account obligations", amounts: faVals, labels: faLabs })
+      if (ocVals.length)
+        out.push({ id:`live_${agency.id}_objectclass`, label:`${agency.abbrev} Object-Class Obligations (${d.fiscalYear})`, agency:agency.id,
+          source:"live:USAspending · OMB A-11 §83 breakout", amounts: ocVals, labels: ocLabs })
+      if (saVals.length >= 5)
+        out.push({ id:`live_${agency.id}_orgs`, label:`${agency.abbrev} Sub-agency / Office Awards (${d.fiscalYear})`, agency:agency.id,
+          source:"live:USAspending · award transactions", amounts: saVals, labels: saLabs })
+      if (d.years.length >= 3)
+        out.push({ id:`live_${agency.id}_resources`, label:`${agency.abbrev} Budgetary Resources by FY`, agency:agency.id,
+          source:"live:USAspending · GTAS-derived",
+          series: d.years.map(y => ({ label: y.fy, value: y.resources })),
+          amounts: d.years.flatMap(y => [y.resources, y.obligated]).filter(v => v > 0),
+          labels: d.years.flatMap(y => [`${y.fy} resources`, `${y.fy} obligated`]) })
+      const latest = d.years[d.years.length - 1]
+      if (latest && latest.byPeriod.length >= 6)
+        out.push({ id:`live_${agency.id}_burn`, label:`${agency.abbrev} Monthly Obligation Burn (${latest.fy})`, agency:agency.id,
+          source:"live:USAspending · obligations by period",
+          series: latest.byPeriod.map(p => ({ label: `P${p.period}`, value: p.obligated })) })
     }
     return out
-  }, [awards.data, budget.data, live.data, isFolderAgency, agency.id, agency.abbrev])
+  }, [awards.data, budget.data, live.data, agency.id, agency.abbrev])
 
-  // When a live agency is selected, surface its dataset automatically (once).
-  const liveDatasetId = !isFolderAgency ? `live_${agency.id}_resources` : null
+  // Catalog shown = active agency's datasets (cross-agency pooling is opt-in).
+  const visible = useMemo(
+    () => crossAgency ? datasets : datasets.filter(d => d.agency === agency.id),
+    [datasets, crossAgency, agency.id])
+
+  // Reset the selection whenever the agency changes — never pre-select another
+  // agency's data. Default: the agency's first two datasets.
+  const appliedFor = useRef<string>("")
   useEffect(() => {
-    if (liveDatasetId && datasets.some(d => d.id === liveDatasetId)) {
-      setSelected(prev => (prev.includes(liveDatasetId) ? prev : [...prev, liveDatasetId]))
-    }
-  }, [liveDatasetId, datasets])
+    const own = datasets.filter(d => d.agency === agency.id)
+    if (!own.length) return
+    if (appliedFor.current === agency.id) return
+    appliedFor.current = agency.id
+    setSelected(own.slice(0, 2).map(d => d.id))
+    setRuns([]); setActiveRun(null)
+  }, [agency.id, datasets])
 
-  const sel = datasets.filter(d => selected.includes(d.id))
+  const sel = datasets.filter(d => selected.includes(d.id) && (crossAgency || d.agency === agency.id))
   const pooledAmounts = sel.flatMap(d => d.amounts ?? [])
   const pooledLabels  = sel.flatMap(d => d.labels ?? [])
   const pooledTxns    = sel.flatMap(d => d.txns ?? [])
@@ -165,26 +199,27 @@ export default function MLWorkbench({ agency }: { agency: Agency }) {
 
   const active = runs.find(r => r.runId === activeRun) ?? runs[0]
 
-  if (awards.loading || budget.loading) return <Spinner label="Staging folder datasets for the workbench…" />
+  if (live.loading && !visible.length) return <Spinner label={`Staging ${agency.abbrev} datasets for the workbench…`} />
+  if (isFolderAgency && (awards.loading || budget.loading)) return <Spinner label="Staging folder datasets for the workbench…" />
 
   return (
     <div>
       <SectionTitle title="AI / ML Workbench"
-        sub={`Blueprint-driven models computed live on your selected data sources — DataRobot-style leaderboard, real numbers · active agency: ${agency.abbrev}`} />
-      {!isFolderAgency && (
-        <div style={{ fontSize:11.5, color:C.muted, marginBottom:12 }}>
-          {live.loading
-            ? `Fetching ${agency.abbrev} budgetary resources from USAspending.gov for modeling…`
-            : datasets.some(d => d.id === liveDatasetId)
-              ? `📡 ${agency.abbrev} live budgetary-resources series added below — forecast its burn alongside the bundled folder datasets.`
-              : `No live series available for ${agency.abbrev}; bundled DoD/SEC folder datasets remain available below.`}
-        </div>
-      )}
+        sub={`Blueprint-driven models computed live on ${agency.abbrev} data — DataRobot-style leaderboard, real numbers, no canned outputs`} />
+      <div style={{ fontSize:11.5, color:C.muted, marginBottom:12 }}>
+        {live.loading
+          ? `📡 Fetching ${agency.abbrev} live GTAS detail (accounts, object classes, monthly burn) from USAspending.gov…`
+          : visible.some(d => d.agency === agency.id)
+            ? `Catalog scoped to ${agency.abbrev} — ${visible.filter(d => d.agency === agency.id).length} dataset(s)${isFolderAgency ? " (folder + live)" : " (live GTAS/USAspending)"}.`
+            : `No ${agency.abbrev} datasets available yet — enable cross-agency pooling below to use bundled folder data.`}
+      </div>
 
       {/* 1 ── data sources */}
-      <Card title="1 · Data Sources" sub="Default: datasets parsed from the sourcedata/ folder. Multi-select to pool populations.">
+      <Card title={`1 · Data Sources — ${agency.abbrev}`}
+            sub={isFolderAgency ? "Default: this agency's folder + live datasets. Multi-select to pool populations."
+                                : "Live GTAS/USAspending datasets for the selected agency. Multi-select to pool populations."}>
         <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(280px, 1fr))", gap:10 }}>
-          {datasets.map(d => {
+          {visible.map(d => {
             const on = selected.includes(d.id)
             return (
               <label key={d.id} style={{ display:"flex", gap:10, alignItems:"flex-start", cursor:"pointer",
@@ -193,7 +228,10 @@ export default function MLWorkbench({ agency }: { agency: Agency }) {
                 <input type="checkbox" checked={on} style={{ marginTop:3 }}
                   onChange={() => setSelected(p => on ? p.filter(x => x !== d.id) : [...p, d.id])} />
                 <div>
-                  <div style={{ fontSize:12.5, fontWeight:600, color:C.text }}>{d.label}</div>
+                  <div style={{ display:"flex", gap:8, alignItems:"center", flexWrap:"wrap" }}>
+                    <span style={{ fontSize:12.5, fontWeight:600, color:C.text }}>{d.label}</span>
+                    {d.agency !== agency.id && <Badge color={C.gold}>{d.agency}</Badge>}
+                  </div>
                   <div style={{ fontSize:11, color:C.muted, marginTop:2 }}>{d.source}</div>
                   <div style={{ fontSize:11, color:C.cyan, marginTop:3 }}>
                     {d.txns ? `${d.txns.length} txns` : d.amounts ? `${d.amounts.length} values` : ""}
@@ -204,9 +242,15 @@ export default function MLWorkbench({ agency }: { agency: Agency }) {
             )
           })}
         </div>
-        <div style={{ fontSize:11.5, color:C.muted, marginTop:10 }}>
-          Pooled: <b style={{ color:C.text }}>{pooledAmounts.length}</b> values · <b style={{ color:C.text }}>{pooledTxns.length}</b> transactions
-          {firstSeries ? <> · series ready (<b style={{ color:C.text }}>{firstSeries.length}</b> pts)</> : " · no time series selected"}
+        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", gap:10, flexWrap:"wrap", marginTop:10 }}>
+          <div style={{ fontSize:11.5, color:C.muted }}>
+            Pooled: <b style={{ color:C.text }}>{pooledAmounts.length}</b> values · <b style={{ color:C.text }}>{pooledTxns.length}</b> transactions
+            {firstSeries ? <> · series ready (<b style={{ color:C.text }}>{firstSeries.length}</b> pts)</> : " · no time series selected"}
+          </div>
+          <label style={{ display:"flex", gap:7, alignItems:"center", fontSize:11.5, color:C.textSub, cursor:"pointer" }}>
+            <input type="checkbox" checked={crossAgency} onChange={e => setCrossAgency(e.target.checked)} />
+            Include other agencies&apos; datasets (cross-agency pooling — benchmark {agency.abbrev} against DoD/SEC folder data)
+          </label>
         </div>
       </Card>
 

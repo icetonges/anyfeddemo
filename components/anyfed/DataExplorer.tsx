@@ -7,8 +7,11 @@
 // • Pivot + compare, deterministic AI analysis (optional LLM), and a cleaning agent
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react"
 import { useTheme, Card, Row, SectionTitle, Badge, KPI, Spinner, Tip, fmtMoney } from "./ui"
-import { useAgencyData, DodBudget, BudgetExhibit, BudgetRecord } from "./useAgencyData"
+import { useAgencyData, DodBudget, BudgetExhibit, BudgetRecord, LiveDetail } from "./useAgencyData"
 import type { Agency } from "@/lib/agencies"
+import { AgentProvider, useAgentSet, agentProps as liveAgentProps } from "./agent"
+import { DrillPanel, CadencePanel } from "./DataIntelligence"
+import { fmt as fmtLive, resourceTrend, dimProfile, DIM_KEYS } from "@/lib/live-insights"
 import {
   FYS, FY, PHASE_META, profileExhibit, pivot, movers, qualityReport, usageAdvice, compactForLLM,
   lifecycleFindings, drillChildren, hoverInsight, HoverCtx,
@@ -58,7 +61,7 @@ export default function DataExplorer({ agency }: { agency: Agency }) {
     return () => { window.removeEventListener("mousemove", onMove); if (raf) cancelAnimationFrame(raf) }
   }, [])
 
-  if (agency.id !== "DOD") return <AvailabilityView agency={agency} />
+  if (agency.id !== "DOD") return <LiveExplorerView agency={agency} />
   if (loading) return <Spinner label="Loading enriched DoD exhibit data (both PB vintages) from sourcedata/…" />
   if (error || !data) return <Card title="Data error"><span style={{ color:C.red, fontSize:13 }}>{error}</span></Card>
 
@@ -80,11 +83,11 @@ export default function DataExplorer({ agency }: { agency: Agency }) {
 
       {active.length > 0 && (
         <>
-          {tab === "Lifecycle & Vintage" && <LifecycleTab data={data} ex={ex} exKey={primary} />}
-          {tab === "Deep Drill-down"     && <DrillTab ex={ex} exKey={primary} />}
-          {tab === "Pivot & Compare"     && <PivotTab ex={ex} exKey={primary} />}
-          {tab === "AI Analysis"         && <AnalysisTab data={data} ex={ex} exKey={primary} agency={agency} />}
-          {tab === "Data Prep"           && <PrepTab ex={ex} exKey={primary} />}
+          {tab === "Lifecycle & Vintage" && <LifecycleTab key={primary} data={data} ex={ex} exKey={primary} />}
+          {tab === "Deep Drill-down"     && <DrillTab key={primary} ex={ex} exKey={primary} />}
+          {tab === "Pivot & Compare"     && <PivotTab key={primary} ex={ex} exKey={primary} />}
+          {tab === "AI Analysis"         && <AnalysisTab key={primary} data={data} ex={ex} exKey={primary} agency={agency} />}
+          {tab === "Data Prep"           && <PrepTab key={primary} ex={ex} exKey={primary} />}
         </>
       )}
 
@@ -407,10 +410,11 @@ function PivotTab({ ex, exKey }: { ex: BudgetExhibit; exKey: string }) {
   const setAgent = useAgent()
   const records = ex.records ?? []
   const fields = (ex.hierarchy ?? []) as (keyof BudgetRecord)[]
-  const [dims, setDims] = useState<(keyof BudgetRecord)[]>(fields)
-  const [fy, setFy] = useState<FY>("FY2027")
-  const [dragIdx, setDragIdx] = useState<number | null>(null)
   const present = FYS.filter(f => ex.years[f] != null)
+  const [dims, setDims] = useState<(keyof BudgetRecord)[]>(fields)
+  const [fySel, setFy] = useState<FY>((present[present.length - 1] ?? "FY2027") as FY)
+  const fy = (present.includes(fySel) ? fySel : present[present.length - 1]) as FY   // guard: never pivot on a year this exhibit lacks
+  const [dragIdx, setDragIdx] = useState<number | null>(null)
   const activeDims = dims.filter(d => fields.includes(d))
   const dim1 = activeDims[0] ?? fields[0]
   const rows = useMemo(() => pivot(records, dim1, fy), [records, dim1, fy])
@@ -426,12 +430,13 @@ function PivotTab({ ex, exKey }: { ex: BudgetExhibit; exKey: string }) {
   }
   return (
     <div>
-      <Card title="Pivot configuration" sub="Drag dimension chips to choose the grouping · pick a fiscal year · export to CSV">
+      <Card title="Pivot configuration" sub="Click a dimension chip to group by it (or drag to reorder) · pick a fiscal year · export to CSV">
         <div style={{ display:"flex", gap:10, flexWrap:"wrap", alignItems:"center" }}>
           <span style={{ fontSize:11.5, color:C.muted }}>Group by →</span>
           {activeDims.map((d,i) => (
             <div key={String(d)} draggable onDragStart={()=>setDragIdx(i)} onDragOver={e=>e.preventDefault()} onDrop={()=>reorder(i)}
-              style={{ padding:"6px 12px", borderRadius:8, fontSize:12, fontWeight:600, cursor:"grab", userSelect:"none",
+              onClick={() => setDims([d, ...activeDims.filter(x => x !== d)])}
+              style={{ padding:"6px 12px", borderRadius:8, fontSize:12, fontWeight:600, cursor:"pointer", userSelect:"none",
                        border:`1px solid ${i===0?C.borderAccent:C.border}`, background:i===0?`${C.blue}22`:C.card, color:i===0?C.blue:C.textSub }}>
               ⠿ {DIM_LABEL[String(d)]??String(d)}{i===0&&<span style={{ opacity:0.6 }}> (active)</span>}
             </div>
@@ -492,6 +497,11 @@ function CompareBlock({ ex }: { ex: BudgetExhibit }) {
   const [a, setA] = useState<FY>(present[Math.max(0,present.length-2)] as FY)
   const [b, setB] = useState<FY>(present[present.length-1] as FY)
   const mv = useMemo(() => movers(records, a, b, 12), [records, a, b])
+  if (present.length < 2) return (
+    <Card title="Year-over-year movers" sub="Needs at least two fiscal years">
+      <div style={{ fontSize:12.5, color:C.muted }}>This exhibit exposes only {present[0] ?? "no"} totals — year-over-year comparison is unavailable. Pick another data source from the palette.</div>
+    </Card>
+  )
   const Sel = ({v,set}:{v:FY;set:(f:FY)=>void}) => (
     <select value={v} onChange={e=>set(e.target.value as FY)} style={{ background:C.card, color:C.text, border:`1px solid ${C.border}`, borderRadius:8, padding:"6px 10px", fontSize:12 }}>
       {present.map(o=><option key={o} value={o}>{o}</option>)}</select>)
@@ -618,22 +628,62 @@ function PrepTab({ ex, exKey }: { ex: BudgetExhibit; exKey: string }) {
   )
 }
 
-// ═══════════════════════════════════════════════ non-DoD availability fallback
-function AvailabilityView({ agency }: { agency: Agency }) {
+// ═══════════════════════════════ non-DoD: live explorer (GTAS/USAspending)
+function LiveExplorerView({ agency }: { agency: Agency }) {
+  return (
+    <AgentProvider>
+      <LiveExplorerInner agency={agency} />
+    </AgentProvider>
+  )
+}
+
+function LiveExplorerInner({ agency }: { agency: Agency }) {
   const C = useTheme()
+  const setAgent = useAgentSet()
+  const now = new Date()
+  const lastFY = (now.getMonth() >= 9 ? now.getFullYear() + 1 : now.getFullYear()) - 1
+  const { data, loading, error } = useAgencyData<LiveDetail>(agency.id, "detail", `fy=${lastFY}`)
+  const trend = data ? resourceTrend(data.years) : null
+
+  if (loading) return <Spinner label={`Loading live ${agency.abbrev} execution detail from USAspending.gov (GTAS submissions)…`} />
+  if (error || !data) return (
+    <Card title="Data Explorer" accent={C.red}>
+      <div style={{ fontSize:13, color:C.textSub }}>Live data unavailable for {agency.name}: <span style={{ color:C.red }}>{error}</span></div>
+    </Card>
+  )
+
   return (
     <div>
-      <SectionTitle title="Data Explorer" sub={`Data availability for ${agency.name}`} />
-      <Card title={`${agency.abbrev} — data layer`} accent={C.gold}>
-        <div style={{ fontSize:13, color:C.textSub, lineHeight:1.8 }}>
-          The deep explorer (vintage lifecycle, 5-level drill-down, pivot, agents) is powered by the bundled
-          <b style={{ color:C.text }}> DoD PB2026 + PB2027 exhibit books</b> in <code>sourcedata/</code>.
-          {agency.id==="SEC"
-            ? " SEC data comes from the FY2027 Congressional Budget Justification — see Executive Overview and the ML Workbench."
-            : ` Drop an ${agency.abbrev} exhibit/CBJ folder into sourcedata/ and re-run scripts/etl_sourcedata.py to light up the full explorer.`}
-          <div style={{ marginTop:12 }}>Switch the agency selector to <b style={{ color:C.blue }}>Department of Defense</b> for the full experience.</div>
-        </div>
-      </Card>
+      <SectionTitle title="Data Explorer"
+        sub={`${agency.name} — live GTAS/USAspending execution data, FY${lastFY}. Drill any dimension, hover anything for the FM agent. The Data Intelligence page adds profiling, comparison, and quality scoring on the same bundle.`} />
+      {trend && (
+        <Row>
+          <div style={{ flex:1, minWidth:160 }} {...liveAgentProps(setAgent, { title:"Budgetary resources", lines:[fmtLive(trend.latest.resources), trend.text] })}>
+            <KPI icon="💰" label={`${trend.latest.fy} resources`} value={fmtLive(trend.latest.resources)} accent={C.blue}
+                 sub={trend.yoyResources != null ? `${trend.yoyResources >= 0 ? "+" : ""}${trend.yoyResources}% YoY` : "total authority"} />
+          </div>
+          <div style={{ flex:1, minWidth:160 }}>
+            <KPI icon="✍️" label="Obligated" value={fmtLive(trend.latest.obligated)} accent={C.cyan} sub={`${trend.latest.rate ?? "—"}% of resources`} />
+          </div>
+          <div style={{ flex:1, minWidth:160 }}>
+            <KPI icon="🏦" label="Unobligated" value={fmtLive(trend.carryover)} accent={trend.carryoverShare > 35 ? C.orange : C.green} sub={`${trend.carryoverShare}% carryover`} />
+          </div>
+          {(() => { const p = dimProfile(data.dims.federalAccount); return p ? (
+            <div style={{ flex:1, minWidth:160 }} {...liveAgentProps(setAgent, { title:"Account structure", lines:[`${p.n} federal accounts`, p.reading] })}>
+              <KPI icon="🗂️" label="Federal accounts" value={String(p.n)} accent={C.purple} sub={`HHI ${p.hhi} · ${DIM_KEYS.length} drillable dims`} />
+            </div>) : null })()}
+        </Row>
+      )}
+      <div style={{ height:16 }} />
+      <DrillPanel data={data} fy={lastFY} />
+      <div style={{ height:16 }} />
+      <CadencePanel data={data} />
+      <div style={{ height:14 }} />
+      <div style={{ fontSize:11.5, color:C.muted, lineHeight:1.7 }}>
+        Want J-book-grade depth (vintages, 5-level drill, line-item movers)? That requires the agency&apos;s budget
+        exhibit files — drop a {agency.abbrev} CBJ/exhibit folder into <code>sourcedata/</code> and re-run the ETL.
+        DoD shows that full experience today; <b style={{ color:C.text }}>Data Intelligence</b> gives every agency the live execution layer.
+      </div>
     </div>
   )
 }

@@ -4,8 +4,8 @@ import { useEffect, useState } from "react"
 
 const cache = new Map<string, unknown>()
 
-export function useAgencyData<T = Record<string, unknown>>(agencyId: string, slice: string) {
-  const key = `${agencyId}:${slice}`
+export function useAgencyData<T = Record<string, unknown>>(agencyId: string, slice: string, extra = "") {
+  const key = `${agencyId}:${slice}:${extra}`
   const [data, setData] = useState<T | null>((cache.get(key) as T) ?? null)
   const [loading, setLoading] = useState(!cache.has(key))
   const [error, setError] = useState<string | null>(null)
@@ -14,7 +14,7 @@ export function useAgencyData<T = Record<string, unknown>>(agencyId: string, sli
     let alive = true
     if (cache.has(key)) { setData(cache.get(key) as T); setLoading(false); setError(null); return }
     setLoading(true); setError(null)
-    fetch(`/api/agency-data?agency=${agencyId}&slice=${slice}`)
+    fetch(`/api/agency-data?agency=${agencyId}&slice=${slice}${extra ? `&${extra}` : ""}`)
       .then(async r => {
         const j = await r.json()
         if (!r.ok) throw new Error(j.error ?? `HTTP ${r.status}`)
@@ -95,6 +95,22 @@ export interface DodAwards {
 export interface LiveBudget {
   source: string
   fiscalYears: { fy: string; budgetaryResources: number; obligated: number; obligationRate: number | null }[]
+}
+
+// ── slice=detail: live multi-dimension drill data for ANY agency ───────────
+export interface DetailNode {
+  name: string; code?: string; value: number; outlays?: number; count?: number
+  children: DetailNode[]
+}
+export interface DetailDim { label: string; childLabel: string; measure: string; nodes: DetailNode[] }
+export interface DetailYear {
+  fy: string; resources: number; obligated: number; rate: number | null
+  byPeriod: { period: number; obligated: number }[]
+}
+export interface LiveDetail {
+  source: string; agency: string; fiscalYear: string; fetchedAt: string
+  years: DetailYear[]
+  dims: { subAgency: DetailDim; budgetFunction: DetailDim; federalAccount: DetailDim; objectClass: DetailDim }
 }
 
 export interface LiveAwards {
