@@ -4,6 +4,7 @@ import { useState } from "react"
 import { ThemeContext, DARK, LIGHT, useIsMobile } from "./ui"
 import { AGENCIES, DEFAULT_AGENCY_ID, getAgency } from "@/lib/agencies"
 import Overview from "./Overview"
+import DataExplorer from "./DataExplorer"
 import BudgetLifecycle from "./BudgetLifecycle"
 import Accounting from "./Accounting"
 import AuditCenter from "./AuditCenter"
@@ -15,6 +16,7 @@ import AIAnalyst from "./AIAnalyst"
 
 const NAV = [
   { id:"overview",  label:"Executive Overview", icon:"🏛️" },
+  { id:"data",      label:"Data Explorer",      icon:"🗂️" },
   { id:"budget",    label:"Budget Lifecycle",   icon:"📊" },
   { id:"accounting",label:"Accounting",         icon:"📒" },
   { id:"audit",     label:"Audit",              icon:"🔍" },
@@ -38,6 +40,7 @@ export default function AnyFedPortal() {
   const content = (
     <>
       {page === "overview"    && <Overview agency={agency} />}
+      {page === "data"        && <DataExplorer agency={agency} />}
       {page === "budget"      && <BudgetLifecycle agency={agency} />}
       {page === "accounting"  && <Accounting agency={agency} />}
       {page === "audit"       && <AuditCenter agency={agency} />}

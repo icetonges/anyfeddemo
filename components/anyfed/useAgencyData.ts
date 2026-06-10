@@ -29,17 +29,43 @@ export function useAgencyData<T = Record<string, unknown>>(agencyId: string, sli
 }
 
 // ── shared shapes returned by /api/agency-data ────────────────────────────
+export interface YearPhase { phase: "actuals" | "enacted" | "request"; label: string }
+
+export interface BudgetExhibit {
+  title: string; appn: string; isMilcon?: boolean; note?: string
+  years: Record<string, number>
+  byOrg: Record<string, Record<string, number>>
+  byBudgetActivity: Record<string, Record<string, number>>
+  topAccounts: Record<string, Record<string, number>>
+  byStateCountry?: Record<string, Record<string, number>>
+  byFacilityCategory?: Record<string, Record<string, number>>
+  // enriched layer ----------------------------------------------------------
+  components?: Record<string, Record<string, number>>      // fy -> {actuals|discretionaryEnacted|mandatorySpendPlan|discretionaryRequest|mandatoryRequest|total|toa|appropriation|authorization}
+  orgComponentMix?: Record<string, Record<string, Record<string, number>>> // fy -> org -> component -> $
+  records?: BudgetRecord[]
+  dims?: Record<string, string[]>
+  quality?: { totalRows: number; nullAmounts: number; nonAddFiltered?: number; recordRows: number; recordsKept: number }
+}
+
+export interface BudgetRecord {
+  org: string; budgetActivity: string
+  account?: string; project?: string; stateCountry?: string
+  FY2024: number; FY2025: number; FY2026: number; FY2027: number
+  [k: string]: string | number | undefined
+}
+
+export interface CatalogEntry { file: string; exhibit: string; book: string; sheets: string[]; years: string[] }
+
 export interface DodBudget {
   source: string
   unit: string
-  exhibits: Record<string, {
-    title: string; appn: string
-    years: Record<string, number>
-    byOrg: Record<string, Record<string, number>>
-    byBudgetActivity: Record<string, Record<string, number>>
-    topAccounts: Record<string, Record<string, number>>
-  }>
+  agency?: string
+  generated?: string
+  yearPhase?: Record<string, YearPhase>
+  exhibits: Record<string, BudgetExhibit>
   totalsByFY: Record<string, number>
+  discMandatoryByFY?: Record<string, { discretionary: number; mandatory: number }>
+  catalog?: CatalogEntry[]
 }
 
 export interface Txn {

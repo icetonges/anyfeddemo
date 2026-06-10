@@ -235,7 +235,8 @@ def etl_ml_registry():
 
 
 if __name__ == "__main__":
-    etl_dod_budget()
+    import etl_dod_budget as _budget  # enriched budget ETL (MILCON + decomposition)
+    _budget.main()
     etl_dod_awards()
     etl_ml_registry()
     print("ETL complete ->", OUT)
