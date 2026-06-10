@@ -12,6 +12,7 @@ import type { Agency } from "@/lib/agencies"
 import { AgentProvider, useAgentSet, agentProps as liveAgentProps } from "./agent"
 import AcquirePanel from "./AcquirePanel"
 import UsaCatalog from "./UsaCatalog"
+import DataOpsRunbook from "./DataOpsRunbook"
 import { DrillPanel, CadencePanel } from "./DataIntelligence"
 import { fmt as fmtLive, resourceTrend, dimProfile, DIM_KEYS } from "@/lib/live-insights"
 import {
@@ -95,6 +96,8 @@ export default function DataExplorer({ agency }: { agency: Agency }) {
 
       <div style={{ height:16 }} />
       <AcquirePanel agency={agency} />
+      <div style={{ height:16 }} />
+      <DataOpsRunbook />
       <div style={{ height:16 }} />
       <UsaCatalog />
 
@@ -686,6 +689,8 @@ function LiveExplorerInner({ agency }: { agency: Agency }) {
       <CadencePanel data={data} />
       <div style={{ height:16 }} />
       <AcquirePanel agency={agency} />
+      <div style={{ height:16 }} />
+      <DataOpsRunbook />
       <div style={{ height:16 }} />
       <UsaCatalog />
       <div style={{ height:14 }} />

@@ -78,7 +78,9 @@ export default function UsaCatalog() {
     file-b-program-activity-object-class/
     file-c-account-breakdown-by-award/
   custom-award-data/             ← drop Custom Award Data extracts here
-  processed/<agency>/FY<yy>/     pipeline outputs: transactions_clean.csv + analysis_report.json
+  warehouse/silver/contracts/    DuckDB lakehouse: agency=<code>/fy=<year>/*.parquet (zstd)
+  processed/<agency>/FY<yy>/     gold outputs: analysis_report.json (app-readable)
+  catalog/coverage_manifest.json held-vs-missing matrix (usaspending_coverage.py scan)
   README.md                      the full data-model documentation`}</pre>
           </div>
 

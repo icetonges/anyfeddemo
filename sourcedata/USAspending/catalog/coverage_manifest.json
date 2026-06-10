@@ -1,0 +1,203 @@
+{
+  "generated": "2026-06-10T19:21:34.491781+00:00",
+  "scope": "FY2024\u2013FY2026 \u00d7 official products \u00d7 all-federal",
+  "summary": {
+    "held": 2,
+    "missing": 18,
+    "total": 20
+  },
+  "items": [
+    {
+      "product": "Award Archive \u2014 Contracts FULL (D1)",
+      "fy": 2024,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "MANUAL GUI: usaspending.gov \u2192 Download Center \u2192 Award Data Archive \u2192 Contracts \u2192 FY \u2192 save under award-data-archive/contracts/full/FY<fy>/",
+      "refresh": "Regenerated monthly by USAspending (filename carries the snapshot date)",
+      "note": ""
+    },
+    {
+      "product": "Award Archive \u2014 Assistance FULL (D2)",
+      "fy": 2024,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "MANUAL GUI: same page \u2192 Financial Assistance \u2192 FY \u2192 save under award-data-archive/assistance/full/FY<fy>/",
+      "refresh": "Regenerated monthly by USAspending (filename carries the snapshot date)",
+      "note": "Assistance is the missing half of the award universe \u2014 grants/loans/direct payments"
+    },
+    {
+      "product": "Account Data \u2014 File A",
+      "fy": 2024,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "MANUAL GUI: Download Center \u2192 Custom Account Data \u2192 select File A, all agencies, FY2024 \u2192 save under account-data/file-a-account-balances/FY2024/",
+      "refresh": "Agency DABS submissions: monthly reporting periods, published after period close (~P+3 weeks)",
+      "note": "File C carries appropriation-year attribution for awards"
+    },
+    {
+      "product": "Account Data \u2014 File B",
+      "fy": 2024,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "MANUAL GUI: Download Center \u2192 Custom Account Data \u2192 select File B, all agencies, FY2024 \u2192 save under account-data/file-b-program-activity-object-class/FY2024/",
+      "refresh": "Agency DABS submissions: monthly reporting periods, published after period close (~P+3 weeks)",
+      "note": "File C carries appropriation-year attribution for awards"
+    },
+    {
+      "product": "Account Data \u2014 File C",
+      "fy": 2024,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "MANUAL GUI: Download Center \u2192 Custom Account Data \u2192 select File C, all agencies, FY2024 \u2192 save under account-data/file-c-account-breakdown-by-award/FY2024/",
+      "refresh": "Agency DABS submissions: monthly reporting periods, published after period close (~P+3 weeks)",
+      "note": "File C carries appropriation-year attribution for awards"
+    },
+    {
+      "product": "API GTAS account view (all agencies)",
+      "fy": 2024,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "AUTOMATED: python scripts/usaspending_coverage.py fill  (or the in-app Acquire panel per agency)",
+      "refresh": "Underlying GTAS data refreshes monthly; award search data nightly",
+      "note": ""
+    },
+    {
+      "product": "Award Archive \u2014 Contracts FULL (D1)",
+      "fy": 2025,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "MANUAL GUI: usaspending.gov \u2192 Download Center \u2192 Award Data Archive \u2192 Contracts \u2192 FY \u2192 save under award-data-archive/contracts/full/FY<fy>/",
+      "refresh": "Regenerated monthly by USAspending (filename carries the snapshot date)",
+      "note": ""
+    },
+    {
+      "product": "Award Archive \u2014 Assistance FULL (D2)",
+      "fy": 2025,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "MANUAL GUI: same page \u2192 Financial Assistance \u2192 FY \u2192 save under award-data-archive/assistance/full/FY<fy>/",
+      "refresh": "Regenerated monthly by USAspending (filename carries the snapshot date)",
+      "note": "Assistance is the missing half of the award universe \u2014 grants/loans/direct payments"
+    },
+    {
+      "product": "Account Data \u2014 File A",
+      "fy": 2025,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "MANUAL GUI: Download Center \u2192 Custom Account Data \u2192 select File A, all agencies, FY2025 \u2192 save under account-data/file-a-account-balances/FY2025/",
+      "refresh": "Agency DABS submissions: monthly reporting periods, published after period close (~P+3 weeks)",
+      "note": "File C carries appropriation-year attribution for awards"
+    },
+    {
+      "product": "Account Data \u2014 File B",
+      "fy": 2025,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "MANUAL GUI: Download Center \u2192 Custom Account Data \u2192 select File B, all agencies, FY2025 \u2192 save under account-data/file-b-program-activity-object-class/FY2025/",
+      "refresh": "Agency DABS submissions: monthly reporting periods, published after period close (~P+3 weeks)",
+      "note": "File C carries appropriation-year attribution for awards"
+    },
+    {
+      "product": "Account Data \u2014 File C",
+      "fy": 2025,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "MANUAL GUI: Download Center \u2192 Custom Account Data \u2192 select File C, all agencies, FY2025 \u2192 save under account-data/file-c-account-breakdown-by-award/FY2025/",
+      "refresh": "Agency DABS submissions: monthly reporting periods, published after period close (~P+3 weeks)",
+      "note": "File C carries appropriation-year attribution for awards"
+    },
+    {
+      "product": "API GTAS account view (all agencies)",
+      "fy": 2025,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "AUTOMATED: python scripts/usaspending_coverage.py fill  (or the in-app Acquire panel per agency)",
+      "refresh": "Underlying GTAS data refreshes monthly; award search data nightly",
+      "note": ""
+    },
+    {
+      "product": "Award Archive \u2014 Contracts FULL (D1)",
+      "fy": 2026,
+      "status": "HELD",
+      "files": [
+        "award-data-archive/contracts/full/FY2026/FY2026_All_Contracts_Full_20260506_1.csv",
+        "award-data-archive/contracts/full/FY2026/FY2026_All_Contracts_Full_20260506_2.csv",
+        "award-data-archive/contracts/full/FY2026/FY2026_All_Contracts_Full_20260506_3.csv"
+      ],
+      "acquire": "MANUAL GUI: usaspending.gov \u2192 Download Center \u2192 Award Data Archive \u2192 Contracts \u2192 FY \u2192 save under award-data-archive/contracts/full/FY<fy>/",
+      "refresh": "Regenerated monthly by USAspending (filename carries the snapshot date)",
+      "note": ""
+    },
+    {
+      "product": "Award Archive \u2014 Assistance FULL (D2)",
+      "fy": 2026,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "MANUAL GUI: same page \u2192 Financial Assistance \u2192 FY \u2192 save under award-data-archive/assistance/full/FY<fy>/",
+      "refresh": "Regenerated monthly by USAspending (filename carries the snapshot date)",
+      "note": "Assistance is the missing half of the award universe \u2014 grants/loans/direct payments"
+    },
+    {
+      "product": "Account Data \u2014 File A",
+      "fy": 2026,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "MANUAL GUI: Download Center \u2192 Custom Account Data \u2192 select File A, all agencies, FY2026 \u2192 save under account-data/file-a-account-balances/FY2026/",
+      "refresh": "Agency DABS submissions: monthly reporting periods, published after period close (~P+3 weeks)",
+      "note": "File C carries appropriation-year attribution for awards"
+    },
+    {
+      "product": "Account Data \u2014 File B",
+      "fy": 2026,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "MANUAL GUI: Download Center \u2192 Custom Account Data \u2192 select File B, all agencies, FY2026 \u2192 save under account-data/file-b-program-activity-object-class/FY2026/",
+      "refresh": "Agency DABS submissions: monthly reporting periods, published after period close (~P+3 weeks)",
+      "note": "File C carries appropriation-year attribution for awards"
+    },
+    {
+      "product": "Account Data \u2014 File C",
+      "fy": 2026,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "MANUAL GUI: Download Center \u2192 Custom Account Data \u2192 select File C, all agencies, FY2026 \u2192 save under account-data/file-c-account-breakdown-by-award/FY2026/",
+      "refresh": "Agency DABS submissions: monthly reporting periods, published after period close (~P+3 weeks)",
+      "note": "File C carries appropriation-year attribution for awards"
+    },
+    {
+      "product": "API GTAS account view (all agencies)",
+      "fy": 2026,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "AUTOMATED: python scripts/usaspending_coverage.py fill  (or the in-app Acquire panel per agency)",
+      "refresh": "Underlying GTAS data refreshes monthly; award search data nightly",
+      "note": ""
+    },
+    {
+      "product": "Award Archive \u2014 Contracts DELTA",
+      "fy": null,
+      "status": "HELD",
+      "files": [
+        "award-data-archive/contracts/delta/2026-05-08/FY(All)_All_Contracts_Delta_20260508_1.csv",
+        "award-data-archive/contracts/delta/2026-05-08/FY(All)_All_Contracts_Delta_20260508_2.csv"
+      ],
+      "acquire": "MANUAL GUI: Download Center \u2192 Award Data Archive \u2192 Delta files (monthly)",
+      "refresh": "Published monthly \u2014 apply after the matching full snapshot",
+      "note": ""
+    },
+    {
+      "product": "Award Archive \u2014 Assistance DELTA",
+      "fy": null,
+      "status": "MISSING",
+      "files": [],
+      "acquire": "MANUAL GUI: same page \u2014 assistance delta",
+      "refresh": "Published monthly \u2014 apply after the matching full snapshot",
+      "note": ""
+    }
+  ],
+  "automation": {
+    "preferred": "Automated monthly pull: (1) coverage fill for API-fillable gaps, (2) duck build to refresh silver, (3) gold per priority agency.",
+    "windows_task_scheduler": "schtasks /Create /SC MONTHLY /D 15 /TN USAspendingRefresh /TR \"cmd /c cd C:\\Users\\Peter-HP\\git\\anyfeddemo && python scripts\\usaspending_coverage.py fill && python scripts\\usaspending_duck.py build && python scripts\\usaspending_duck.py gold --agency 097 --fy 2026\"",
+    "manual_remaining": "Bulk archive + File A/B/C GUI downloads (no public bulk URL stable enough to script reliably); ~10 min/month."
+  }
+}

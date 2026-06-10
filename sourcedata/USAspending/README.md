@@ -75,3 +75,12 @@ python scripts/usaspending_duck.py status
 After silver is built, the raw CSVs can be archived/deleted — Parquet is the
 working copy. `usaspending_pipeline.py` (stdlib) remains as the zero-dependency
 fallback.
+
+## Coverage & refresh runbook
+`scripts/usaspending_coverage.py scan` inventories holdings vs the all-federal
+product matrix → `catalog/coverage_manifest.json` (held/missing, acquisition
+method, cadence). `... fill` auto-pulls every API-fillable gap (GTAS account
+views for all 28 registry agencies). Monthly automation (Task Scheduler/cron):
+fill → duck build → duck gold. Only the bulk-archive GUI downloads stay manual.
+The in-app runbook (Data Explorer → Data Operations Runbook) carries the full
+procedure, cadence table, and DB internals.

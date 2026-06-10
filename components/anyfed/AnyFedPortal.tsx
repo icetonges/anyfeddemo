@@ -142,7 +142,7 @@ export default function AnyFedPortal() {
                   {dark ? "☀️ Light mode" : "🌙 Dark mode"}
                 </button>
                 <div style={{ marginTop:12, fontSize:11.5, color:C.muted, lineHeight:1.7, paddingLeft:4 }}>
-                  Data: sourcedata/ folder (default) · USAspending.gov (fallback)<br />
+                  Data: sourcedata/ (default) · USAspending API (live) · DuckDB lakehouse (bulk)<br />
                   Legacy SEC portal: <a href="/sec-cfo" style={{ color:C.blue }}>/sec-cfo</a>
                 </div>
               </div>
