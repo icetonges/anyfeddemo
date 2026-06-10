@@ -1,0 +1,7 @@
+# keep deploys lean — bulk data never ships to Vercel
+sourcedata/USAspending/award-data-archive
+sourcedata/USAspending/account-data
+sourcedata/USAspending/custom-award-data
+sourcedata/USAspending/warehouse
+sourcedata/Department of Defense/USASPENDING
+_handoff

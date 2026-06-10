@@ -36,3 +36,16 @@ Thumbs.db
 
 # Vercel
 .vercel
+
+# ── USAspending bulk data — NEVER commit (GitHub 100MB hard limit) ──────────
+# Raw archives, account extracts, and the local warehouse live on disk only;
+# small analysis reports and the catalog stay committed.
+sourcedata/USAspending/award-data-archive/
+sourcedata/USAspending/account-data/
+sourcedata/USAspending/custom-award-data/
+sourcedata/USAspending/warehouse/
+sourcedata/USAspending/processed/**/transactions_clean.csv
+sourcedata/**/USASPENDING/auto/
+*.duckdb
+*.duckdb.wal
+*.parquet

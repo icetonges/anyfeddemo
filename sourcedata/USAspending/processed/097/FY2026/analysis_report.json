@@ -1,0 +1,418 @@
+{
+  "generated": "2026-06-10T19:10:31.827864+00:00",
+  "engine": "DuckDB local lakehouse (silver parquet, hive-partitioned, zstd)",
+  "agency": "097",
+  "fy": 2026,
+  "records": 872126,
+  "net_obligations": 58661100332.56,
+  "monthly_obligations": {
+    "2025-10": 8025266060.88,
+    "2025-11": 19546558683.9,
+    "2025-12": 30981168302.82,
+    "2026-01": 9142760.02,
+    "2026-02": 39693203.19,
+    "2026-03": 59271321.75
+  },
+  "top_recipients_by_amount": [
+    [
+      "THE BOEING COMPANY",
+      7888825539.07
+    ],
+    [
+      "LOCKHEED MARTIN CORPORATION",
+      5710737994.45
+    ],
+    [
+      "RAYTHEON COMPANY",
+      2314518667.84
+    ],
+    [
+      "AMERISOURCEBERGEN DRUG CORP",
+      1785643275.57
+    ],
+    [
+      "NATIONAL STEEL AND SHIPBUILDING COMPANY",
+      1724430102.0
+    ],
+    [
+      "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+      1503626920.8
+    ],
+    [
+      "MARINETTE MARINE CORPORATION",
+      -1180671608.0
+    ],
+    [
+      "LOCKHEED MARTIN CORP",
+      1067436365.8
+    ],
+    [
+      "BELL TEXTRON INC",
+      1000124216.71
+    ],
+    [
+      "NORTHROP GRUMMAN SYSTEMS CORP",
+      964846235.86
+    ],
+    [
+      "BECHTEL PLANT MACHINERY, INC.",
+      927583430.0
+    ],
+    [
+      "RTX CORPORATION",
+      688067872.98
+    ],
+    [
+      "DELL MARKETING L.P.",
+      591447646.45
+    ],
+    [
+      "ATLANTIC DIVING SUPPLY, INC.",
+      528550067.42
+    ],
+    [
+      "RAM-SYSTEM GMBH",
+      483583398.41
+    ]
+  ],
+  "top_sub_agencies": [
+    [
+      "Department of the Navy",
+      16184806258.2
+    ],
+    [
+      "Department of the Air Force",
+      14383582008.5
+    ],
+    [
+      "Department of the Army",
+      12260383434.06
+    ],
+    [
+      "Defense Logistics Agency",
+      10357479594.2
+    ],
+    [
+      "Defense Health Agency",
+      1552487330.82
+    ],
+    [
+      "Defense Information Systems Agency",
+      813834115.44
+    ],
+    [
+      "USTRANSCOM",
+      809272293.32
+    ],
+    [
+      "U.S. Special Operations Command",
+      759357962.34
+    ],
+    [
+      "Missile Defense Agency",
+      637656490.6
+    ],
+    [
+      "Defense Finance and Accounting Service",
+      205798421.62
+    ],
+    [
+      "Defense Advanced Research Projects Agency",
+      172442915.0
+    ],
+    [
+      "Washington Headquarters Services",
+      149170332.85
+    ],
+    [
+      "Defense Microelectronics Activity",
+      86765689.46
+    ],
+    [
+      "Defense Counterintelligence and Security Agency",
+      82554888.64
+    ],
+    [
+      "Department of Defense Education Activity",
+      81619418.08
+    ]
+  ],
+  "top_naics": [
+    [
+      "336411 AIRCRAFT MANUFACTURING",
+      12843376483.66
+    ],
+    [
+      "541330 ENGINEERING SERVICES",
+      4151581536.32
+    ],
+    [
+      "336414 GUIDED MISSILE AND SPACE VEHICLE MANUFAC",
+      3503808346.05
+    ],
+    [
+      "336413 OTHER AIRCRAFT PARTS AND AUXILIARY EQUIP",
+      3456502702.87
+    ],
+    [
+      "324110 PETROLEUM REFINERIES",
+      1805847327.96
+    ],
+    [
+      "334511 SEARCH, DETECTION, NAVIGATION, GUIDANCE,",
+      1687688675.95
+    ],
+    [
+      "236220 COMMERCIAL AND INSTITUTIONAL BUILDING CO",
+      1674136706.9
+    ],
+    [
+      "336611 SHIP BUILDING AND REPAIRING",
+      1344307548.5
+    ],
+    [
+      "325411 MEDICINAL AND BOTANICAL MANUFACTURING",
+      1280589376.62
+    ],
+    [
+      "541715 RESEARCH AND DEVELOPMENT IN THE PHYSICAL",
+      1261282039.93
+    ]
+  ],
+  "top_treasury_accounts": [
+    [
+      "057-2020/2021-3600-000",
+      3653534543.68
+    ],
+    [
+      "057-2021/2022-3600-000",
+      3540181500.34
+    ],
+    [
+      "057-2022/2022-3400-000",
+      2964203290.99
+    ],
+    [
+      "057-2019/2020-3600-000",
+      2664092640.22
+    ],
+    [
+      "057-2018/2019-3600-000",
+      2554299100.61
+    ],
+    [
+      "057-2021/2023-3010-000",
+      2539916997.6
+    ],
+    [
+      "057-2019/2021-3010-000",
+      2537337425.61
+    ],
+    [
+      "057-2020/2022-3010-000",
+      2533560151.47
+    ],
+    [
+      "057-2017/2019-3010-000",
+      2501202355.0
+    ],
+    [
+      "057-2018/2020-3010-000",
+      2496240111.32
+    ],
+    [
+      "057-2017/2018-3600-000",
+      2492331459.6
+    ],
+    [
+      "057-2016/2017-3600-000",
+      2492091827.42
+    ]
+  ],
+  "cross_servicing_share_pct": 0.17,
+  "ml_screens": {
+    "benford_first_digit": {
+      "n": 822639,
+      "chi2": 2596.5,
+      "critical_0p05_8df": 15.51,
+      "mad_pct": 0.54,
+      "conforms": false
+    },
+    "robust_outliers_top": [
+      {
+        "score": 3660432.0,
+        "amount": 2469937347.75,
+        "recipient": "THE BOEING COMPANY",
+        "date": "2025-11-25",
+        "sub_agency": "Department of the Air Force"
+      },
+      {
+        "score": 3402407.7,
+        "amount": 2295831204.0,
+        "recipient": "THE BOEING COMPANY",
+        "date": "2025-11-25",
+        "sub_agency": "Department of the Army"
+      },
+      {
+        "score": 2538346.7,
+        "amount": 1712791796.0,
+        "recipient": "NATIONAL STEEL AND SHIPBUILDING COMPANY",
+        "date": "2025-11-06",
+        "sub_agency": "Department of the Navy"
+      },
+      {
+        "score": 1805784.0,
+        "amount": 1218483069.0,
+        "recipient": "LOCKHEED MARTIN CORPORATION",
+        "date": "2025-12-19",
+        "sub_agency": "Department of the Navy"
+      },
+      {
+        "score": 1749746.4,
+        "amount": -1180669725.0,
+        "recipient": "MARINETTE MARINE CORPORATION",
+        "date": "2025-12-05",
+        "sub_agency": "Department of the Navy"
+      },
+      {
+        "score": 1691271.6,
+        "amount": 1141213934.0,
+        "recipient": "LOCKHEED MARTIN CORPORATION",
+        "date": "2025-12-05",
+        "sub_agency": "Department of the Navy"
+      },
+      {
+        "score": 1374672.5,
+        "amount": 927583430.0,
+        "recipient": "BECHTEL PLANT MACHINERY, INC.",
+        "date": "2025-12-17",
+        "sub_agency": "Department of the Navy"
+      },
+      {
+        "score": 1333794.0,
+        "amount": 900000000.0,
+        "recipient": "NORTHROP GRUMMAN SYSTEMS CORP",
+        "date": "2025-12-09",
+        "sub_agency": "Department of the Air Force"
+      },
+      {
+        "score": 1247367.2,
+        "amount": 841682105.81,
+        "recipient": "RAYTHEON COMPANY",
+        "date": "2025-12-19",
+        "sub_agency": "Department of the Army"
+      },
+      {
+        "score": 1244874.3,
+        "amount": 840000000.0,
+        "recipient": "THE BOEING COMPANY",
+        "date": "2025-12-29",
+        "sub_agency": "Department of the Air Force"
+      },
+      {
+        "score": 854606.7,
+        "amount": 576660434.28,
+        "recipient": "LOCKHEED MARTIN CORP",
+        "date": "2025-11-12",
+        "sub_agency": "Department of the Air Force"
+      },
+      {
+        "score": 844735.9,
+        "amount": 570000000.0,
+        "recipient": "BELL TEXTRON INC",
+        "date": "2025-12-10",
+        "sub_agency": "Department of the Army"
+      },
+      {
+        "score": 690989.2,
+        "amount": 466256878.0,
+        "recipient": "THE BOEING COMPANY",
+        "date": "2025-12-10",
+        "sub_agency": "Department of the Navy"
+      },
+      {
+        "score": 659347.7,
+        "amount": 444906209.43,
+        "recipient": "RAM-SYSTEM GMBH",
+        "date": "2025-12-17",
+        "sub_agency": "Department of the Navy"
+      },
+      {
+        "score": 571309.8,
+        "amount": 385501244.0,
+        "recipient": "LOCKHEED MARTIN CORPORATION",
+        "date": "2025-11-21",
+        "sub_agency": "Missile Defense Agency"
+      },
+      {
+        "score": 500441.3,
+        "amount": 337681541.96,
+        "recipient": "RAYTHEON COMPANY",
+        "date": "2025-11-17",
+        "sub_agency": "Department of the Army"
+      },
+      {
+        "score": 496188.3,
+        "amount": 334811773.0,
+        "recipient": "THE CHARLES STARK DRAPER LABORATORY, INC.",
+        "date": "2025-12-10",
+        "sub_agency": "Department of the Navy"
+      },
+      {
+        "score": 495606.3,
+        "amount": 334419034.0,
+        "recipient": "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+        "date": "2025-12-12",
+        "sub_agency": "Department of the Navy"
+      },
+      {
+        "score": 489538.9,
+        "amount": 330324946.0,
+        "recipient": "BELL BOEING JOINT PROJECT OFFICE",
+        "date": "2025-12-17",
+        "sub_agency": "Department of the Navy"
+      },
+      {
+        "score": 487116.3,
+        "amount": 328690253.29,
+        "recipient": "LOCKHEED MARTIN CORPORATION",
+        "date": "2025-10-08",
+        "sub_agency": "Department of the Navy"
+      }
+    ],
+    "value_strata": [
+      {
+        "stratum": "Micro",
+        "min": 0.01,
+        "max": 232.6,
+        "population": 205867,
+        "share_pct": 25.0
+      },
+      {
+        "stratum": "Small",
+        "min": 232.61,
+        "max": 607.8,
+        "population": 205867,
+        "share_pct": 25.0
+      },
+      {
+        "stratum": "Medium",
+        "min": 607.8,
+        "max": 2750.28,
+        "population": 205867,
+        "share_pct": 25.0
+      },
+      {
+        "stratum": "Major",
+        "min": 2750.29,
+        "max": 2469937347.75,
+        "population": 205866,
+        "share_pct": 25.0
+      }
+    ]
+  },
+  "time_basis": {
+    "population": "action_date_fiscal_year == 2026 (execution view)",
+    "appropriation_identity": "top_treasury_accounts carries the TAS (year of the money)"
+  }
+}

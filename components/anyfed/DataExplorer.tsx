@@ -11,6 +11,7 @@ import { useAgencyData, DodBudget, BudgetExhibit, BudgetRecord, LiveDetail } fro
 import type { Agency } from "@/lib/agencies"
 import { AgentProvider, useAgentSet, agentProps as liveAgentProps } from "./agent"
 import AcquirePanel from "./AcquirePanel"
+import UsaCatalog from "./UsaCatalog"
 import { DrillPanel, CadencePanel } from "./DataIntelligence"
 import { fmt as fmtLive, resourceTrend, dimProfile, DIM_KEYS } from "@/lib/live-insights"
 import {
@@ -94,6 +95,8 @@ export default function DataExplorer({ agency }: { agency: Agency }) {
 
       <div style={{ height:16 }} />
       <AcquirePanel agency={agency} />
+      <div style={{ height:16 }} />
+      <UsaCatalog />
 
       <HoverAgent ctx={agentCtx} x={pos.current.x} y={pos.current.y} />
     </AgentCtx.Provider>
@@ -683,6 +686,8 @@ function LiveExplorerInner({ agency }: { agency: Agency }) {
       <CadencePanel data={data} />
       <div style={{ height:16 }} />
       <AcquirePanel agency={agency} />
+      <div style={{ height:16 }} />
+      <UsaCatalog />
       <div style={{ height:14 }} />
       <div style={{ fontSize:15.5, color:C.muted, lineHeight:1.7 }}>
         Want J-book-grade depth (vintages, 5-level drill, line-item movers)? That requires the agency&apos;s budget
