@@ -1,0 +1,45 @@
+﻿record_date,stmt_fiscal_year,restmt_flag,account_desc,line_item_desc,position_bil_amt,src_line_nbr,record_fiscal_year,record_fiscal_quarter,record_calendar_year,record_calendar_quarter,record_calendar_month,record_calendar_day
+2016-09-30,2016,N,Liabilities,Benefits due and payable,218.2,14,2016,4,2016,3,09,30
+2016-09-30,2016,N,Liabilities,Insurance and guarantee program liabilities,122.3,15,2016,4,2016,3,09,30
+2016-09-30,2016,N,Liabilities,Loan guarantee liabilities,18.2,16,2016,4,2016,3,09,30
+2016-09-30,2016,N,Liabilities,Total liabilities,22762.9,18,2016,4,2016,3,09,30
+2016-09-30,2016,N,Net position,Funds from Dedicated Collections,3374.3,19,2016,4,2016,3,09,30
+2016-09-30,2016,N,Net position,Funds other than those from Dedicated Collections,-22666.7,20,2016,4,2016,3,09,30
+2016-09-30,2016,N,Net position,Total net position,-19292.4,21,2016,4,2016,3,09,30
+2016-09-30,2016,N,Net position,Total liabilities and net position,3470.5,22,2016,4,2016,3,09,30
+2016-09-30,2016,N,Liabilities,Other liabilities,464.7,17,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,Cash and other monetary assets,464.6,1,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,"Accounts and taxes receivable, net",133.3,2,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,"Loans receivable, net",1277.6,3,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,"Inventories and related property, net",314.3,4,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,"Property, plant and equipment, net",979.5,5,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,Debt and equity securities,48.2,6,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,Investments in government-sponsored enterprises,108.6,7,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,Other assets,144.4,8,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,Total assets,3470.5,9,2016,4,2016,3,09,30
+2016-09-30,2016,N,Liabilities,Accounts payable,62.4,10,2016,4,2016,3,09,30
+2016-09-30,2016,N,Liabilities,Federal debt securities held by the public and accrued interest,14221.1,11,2016,4,2016,3,09,30
+2016-09-30,2016,N,Liabilities,Federal employee and veteran benefits payable,7209.4,12,2016,4,2016,3,09,30
+2016-09-30,2016,N,Liabilities,Environmental and disposal liabilities,446.6,13,2016,4,2016,3,09,30
+2017-09-30,2016,Y,Assets,Cash and other monetary assets,467.9,1,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Assets,"Accounts and taxes receivable, net",133.2,2,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Assets,"Loans receivable, net",1277.6,3,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Assets,"Inventories and related property, net",314.3,4,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Assets,"Property, plant and equipment, net",979.5,5,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Assets,Debt and equity securities,108.2,6,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Assets,Investments in government-sponsored enterprises,108.6,7,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Assets,Other assets,145.5,8,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Assets,Total assets,3534.8,9,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Accounts payable,62.4,10,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Federal debt securities held by the public and accrued interest,14221.1,11,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Federal employee and veteran benefits payable,7209.4,12,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Environmental and disposal liabilities,446.6,13,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Benefits due and payable,218.2,14,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Insurance and guarantee program liabilities,187.0,15,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Loan guarantee liabilities,18.2,16,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Other liabilities,468.7,17,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Total liabilities,22831.6,18,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Net position,Funds from Dedicated Collections,3374.3,19,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Net position,Funds other than those from Dedicated Collections,-22671.1,20,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Net position,Total net position,-19296.8,21,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Net position,Total liabilities and net position,3534.8,22,2017,4,2017,3,09,30

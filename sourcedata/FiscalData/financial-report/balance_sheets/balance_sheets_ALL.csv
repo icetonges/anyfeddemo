@@ -1,0 +1,1331 @@
+﻿record_date,stmt_fiscal_year,restmt_flag,account_desc,line_item_desc,position_bil_amt,src_line_nbr,record_fiscal_year,record_fiscal_quarter,record_calendar_year,record_calendar_quarter,record_calendar_month,record_calendar_day
+1995-09-30,1994,Y,Assets,"Property, plant, and equipment, net of accumulated depreciation",576.2,7,1995,4,1995,3,09,30
+1995-09-30,1994,Y,Assets,Other assets,151.1,8,1995,4,1995,3,09,30
+1995-09-30,1995,N,Assets,Total assets,1297.6,9,1995,4,1995,3,09,30
+1995-09-30,1994,Y,Assets,Total assets,1350.9,9,1995,4,1995,3,09,30
+1995-09-30,1995,N,Liabilities,Accounts payable,51.2,10,1995,4,1995,3,09,30
+1995-09-30,1994,Y,Liabilities,Accounts payable,48.4,10,1995,4,1995,3,09,30
+1995-09-30,1995,N,Liabilities,Interest payable,51.3,11,1995,4,1995,3,09,30
+1995-09-30,1994,Y,Liabilities,Interest payable,45.1,11,1995,4,1995,3,09,30
+1995-09-30,1995,N,Liabilities,Accrued payroll and benefits,17.3,12,1995,4,1995,3,09,30
+1995-09-30,1994,Y,Liabilities,Accrued payroll and benefits,17.2,12,1995,4,1995,3,09,30
+1995-09-30,1995,N,Liabilities,Unearned revenue,33.8,13,1995,4,1995,3,09,30
+1995-09-30,1995,N,Assets,Cash,66.8,1,1995,4,1995,3,09,30
+1995-09-30,1994,Y,Liabilities,Unearned revenue,36.0,13,1995,4,1995,3,09,30
+1995-09-30,1995,N,Liabilities,Federal Debt held by the public,3603.3,14,1995,4,1995,3,09,30
+1995-09-30,1994,Y,Liabilities,Federal Debt held by the public,3432.3,14,1995,4,1995,3,09,30
+1995-09-30,1995,N,Liabilities,Pensions and other actuarial liabilities,1628.2,15,1995,4,1995,3,09,30
+1995-09-30,1994,Y,Liabilities,Pensions and other actuarial liabilities,1526.2,15,1995,4,1995,3,09,30
+1995-09-30,1995,N,Liabilities,Other liabilities,425.5,16,1995,4,1995,3,09,30
+1995-09-30,1994,Y,Liabilities,Other liabilities,251.9,16,1995,4,1995,3,09,30
+1995-09-30,1995,N,Liabilities,Total liabilities,5810.6,17,1995,4,1995,3,09,30
+1995-09-30,1994,Y,Liabilities,Total liabilities,5357.1,17,1995,4,1995,3,09,30
+1995-09-30,1995,N,Net position,Accumulated position,-4513.0,18,1995,4,1995,3,09,30
+1995-09-30,1994,Y,Assets,Cash,56.3,1,1995,4,1995,3,09,30
+1995-09-30,1995,N,Assets,Other monetary assets,126.7,2,1995,4,1995,3,09,30
+1995-09-30,1994,Y,Assets,Other monetary assets,126.2,2,1995,4,1995,3,09,30
+1995-09-30,1995,N,Assets,"Accounts receivable, net of allowances",87.2,3,1995,4,1995,3,09,30
+1995-09-30,1994,Y,Assets,"Accounts receivable, net of allowances",76.6,3,1995,4,1995,3,09,30
+1995-09-30,1995,N,Assets,Inventories and related properties,259.1,4,1995,4,1995,3,09,30
+1995-09-30,1994,Y,Assets,Inventories and related properties,222.9,4,1995,4,1995,3,09,30
+1995-09-30,1995,N,Assets,"Loans receivable, net of allowances",120.8,5,1995,4,1995,3,09,30
+1995-09-30,1994,Y,Assets,"Loans receivable, net of allowances",118.8,5,1995,4,1995,3,09,30
+1995-09-30,1995,N,Assets,Advances and prepayments,24.2,6,1995,4,1995,3,09,30
+1995-09-30,1994,Y,Assets,Advances and prepayments,22.8,6,1995,4,1995,3,09,30
+1995-09-30,1994,Y,Net position,Accumulated position,-4006.2,18,1995,4,1995,3,09,30
+1995-09-30,1995,N,Assets,"Property, plant, and equipment, net of accumulated depreciation",503.4,7,1995,4,1995,3,09,30
+1995-09-30,1995,N,Assets,Other assets,109.4,8,1995,4,1995,3,09,30
+1996-09-30,1995,Y,Assets,Cash and other monetary assets,193.5,1,1996,4,1996,3,09,30
+1996-09-30,1995,Y,Assets,Accounts and loans receivable,161.8,2,1996,4,1996,3,09,30
+1996-09-30,1995,Y,Assets,Taxes receivable,46.2,3,1996,4,1996,3,09,30
+1996-09-30,1995,Y,Assets,Inventories and related properties,219.9,4,1996,4,1996,3,09,30
+1996-09-30,1995,Y,Assets,"Property, plant, and equipment",934.4,5,1996,4,1996,3,09,30
+1996-09-30,1995,Y,Assets,Other assets,133.6,6,1996,4,1996,3,09,30
+1996-09-30,1995,Y,Assets,Total assets,1689.4,7,1996,4,1996,3,09,30
+1996-09-30,1995,Y,Liabilities and net position,Accounts payable,153.6,8,1996,4,1996,3,09,30
+1996-09-30,1995,Y,Liabilities and net position,Federal debt securities held by the public,3603.3,9,1996,4,1996,3,09,30
+1996-09-30,1995,Y,Liabilities and net position,Pensions and other actuarial liabilities,1628.2,10,1996,4,1996,3,09,30
+1996-09-30,1995,Y,Liabilities and net position,Environmental liabilities,227.2,11,1996,4,1996,3,09,30
+1996-09-30,1995,Y,Liabilities and net position,Other liabilities,228.7,12,1996,4,1996,3,09,30
+1996-09-30,1995,Y,Liabilities and net position,Total liabilities,5841.0,13,1996,4,1996,3,09,30
+1996-09-30,1995,Y,Liabilities and net position,Net position,-4151.6,14,1996,4,1996,3,09,30
+1996-09-30,1996,N,Assets,Cash and other monetary assets,193.4,1,1996,4,1996,3,09,30
+1996-09-30,1996,N,Assets,Accounts and loans receivable,171.7,2,1996,4,1996,3,09,30
+1996-09-30,1996,N,Assets,Taxes receivable,33.8,3,1996,4,1996,3,09,30
+1996-09-30,1996,N,Assets,Inventories and related properties,232.1,4,1996,4,1996,3,09,30
+1996-09-30,1996,N,Assets,"Property, plant, and equipment",969.1,5,1996,4,1996,3,09,30
+1996-09-30,1996,N,Assets,Other assets,123.8,6,1996,4,1996,3,09,30
+1996-09-30,1996,N,Assets,Total assets,1723.9,7,1996,4,1996,3,09,30
+1996-09-30,1996,N,Liabilities and net position,Accounts payable,161.8,8,1996,4,1996,3,09,30
+1996-09-30,1996,N,Liabilities and net position,Federal debt securities held by the public,3730.0,9,1996,4,1996,3,09,30
+1996-09-30,1996,N,Liabilities and net position,Pensions and other actuarial liabilities,1651.5,10,1996,4,1996,3,09,30
+1996-09-30,1996,N,Liabilities and net position,Environmental liabilities,246.5,11,1996,4,1996,3,09,30
+1996-09-30,1996,N,Liabilities and net position,Other liabilities,283.6,12,1996,4,1996,3,09,30
+1996-09-30,1996,N,Liabilities and net position,Total liabilities,6073.4,13,1996,4,1996,3,09,30
+1996-09-30,1996,N,Liabilities and net position,Net position,-4349.5,14,1996,4,1996,3,09,30
+1997-09-30,1997,N,Assets,Cash and other monetary assets,92.7,1,1997,4,1997,3,09,30
+1997-09-30,1997,N,Assets,Accounts receivable,35.2,2,1997,4,1997,3,09,30
+1997-09-30,1997,N,Assets,Loans receivable,156.2,3,1997,4,1997,3,09,30
+1997-09-30,1997,N,Assets,Taxes receivable,28.1,4,1997,4,1997,3,09,30
+1997-09-30,1997,N,Assets,Inventories and related property,209.4,5,1997,4,1997,3,09,30
+1997-09-30,1997,N,Assets,"Property, plant and equipment",1017.0,6,1997,4,1997,3,09,30
+1997-09-30,1997,N,Assets,Other assets,62.9,7,1997,4,1997,3,09,30
+1997-09-30,1997,N,Assets,Total assets,1601.5,8,1997,4,1997,3,09,30
+1997-09-30,1997,N,Liabilities and net position,Accounts payable,97.7,9,1997,4,1997,3,09,30
+1997-09-30,1997,N,Liabilities and net position,Federal debt securities held by the public,3768.2,10,1997,4,1997,3,09,30
+1997-09-30,1997,N,Liabilities and net position,Federal employee and veteran benefits payable,2243.7,11,1997,4,1997,3,09,30
+1997-09-30,1997,N,Liabilities and net position,Environmental liabilities,211.7,12,1997,4,1997,3,09,30
+1997-09-30,1997,N,Liabilities and net position,Benefits due and payable,77.7,13,1997,4,1997,3,09,30
+1997-09-30,1997,N,Liabilities and net position,Loan guarantee liabilities,36.7,14,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Assets,Cash and other monetary assets,null,1,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Assets,Accounts receivable,null,2,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Assets,Loans receivable,null,3,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Assets,Taxes receivable,null,4,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Assets,Inventories and related property,null,5,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Assets,"Property, plant and equipment",null,6,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Assets,Other assets,null,7,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Assets,Total assets,null,8,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Liabilities and net position,Accounts payable,null,9,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Liabilities and net position,Other liabilities,null,15,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Liabilities and net position,Federal debt securities held by the public,null,10,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Liabilities and net position,Federal employee and veteran benefits payable,null,11,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Liabilities and net position,Environmental liabilities,null,12,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Liabilities and net position,Benefits due and payable,null,13,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Liabilities and net position,Loan guarantee liabilities,null,14,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Liabilities and net position,Total liabilities,null,16,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Liabilities and net position,Net position,null,17,1997,4,1997,3,09,30
+1997-09-30,1997,N,Liabilities and net position,Total liabilities and net position,1601.5,18,1997,4,1997,3,09,30
+1997-09-30,1996,Y,Liabilities and net position,Total liabilities and net position,null,18,1997,4,1997,3,09,30
+1997-09-30,1997,N,Liabilities and net position,Other liabilities,168.8,15,1997,4,1997,3,09,30
+1997-09-30,1997,N,Liabilities and net position,Total liabilities,6604.5,16,1997,4,1997,3,09,30
+1997-09-30,1997,N,Liabilities and net position,Net position,-5003.0,17,1997,4,1997,3,09,30
+1998-09-30,1998,N,Assets,Other assets,59.9,7,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Assets,Cash and other monetary assets,null,1,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Assets,Accounts receivable,null,2,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Assets,Loans receivable,null,3,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Assets,Taxes receivable,null,4,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Assets,Inventories and related property,null,5,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Assets,"Property, plant and equipment",null,6,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Assets,Other assets,null,7,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Assets,Total assets,null,8,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Liabilities and net position,Accounts payable,null,9,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Liabilities and net position,Federal debt securities held by the public,null,10,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Liabilities and net position,Federal employee and veteran benefits payable,null,11,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Liabilities and net position,Environmental liabilities,null,12,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Liabilities and net position,Benefits due and payable,null,13,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Liabilities and net position,Loan guarantee liabilities,null,14,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Liabilities and net position,Other liabilities,null,15,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Liabilities and net position,Total liabilities,null,16,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Liabilities and net position,Net position,null,17,1998,4,1998,3,09,30
+1998-09-30,1997,Y,Liabilities and net position,Total liabilities and net position,null,18,1998,4,1998,3,09,30
+1998-09-30,1998,N,Assets,Cash and other monetary assets,96.8,1,1998,4,1998,3,09,30
+1998-09-30,1998,N,Assets,Accounts receivable,36.1,2,1998,4,1998,3,09,30
+1998-09-30,1998,N,Assets,Loans receivable,166.8,3,1998,4,1998,3,09,30
+1998-09-30,1998,N,Assets,Taxes receivable,27.1,4,1998,4,1998,3,09,30
+1998-09-30,1998,N,Assets,Inventories and related property,166.8,5,1998,4,1998,3,09,30
+1998-09-30,1998,N,Assets,"Property, plant and equipment",299.3,6,1998,4,1998,3,09,30
+1998-09-30,1998,N,Assets,Total assets,852.8,8,1998,4,1998,3,09,30
+1998-09-30,1998,N,Liabilities and net position,Accounts payable,90.0,9,1998,4,1998,3,09,30
+1998-09-30,1998,N,Liabilities and net position,Federal debt securities held by the public,3717.7,10,1998,4,1998,3,09,30
+1998-09-30,1998,N,Liabilities and net position,Federal employee and veteran benefits payable,2685.1,11,1998,4,1998,3,09,30
+1998-09-30,1998,N,Liabilities and net position,Environmental liabilities,224.5,12,1998,4,1998,3,09,30
+1998-09-30,1998,N,Liabilities and net position,Benefits due and payable,77.6,13,1998,4,1998,3,09,30
+1998-09-30,1998,N,Liabilities and net position,Loan guarantee liabilities,37.7,14,1998,4,1998,3,09,30
+1998-09-30,1998,N,Liabilities and net position,Other liabilities,154.6,15,1998,4,1998,3,09,30
+1998-09-30,1998,N,Liabilities and net position,Total liabilities,6987.2,16,1998,4,1998,3,09,30
+1998-09-30,1998,N,Liabilities and net position,Net position,-6134.4,17,1998,4,1998,3,09,30
+1998-09-30,1998,N,Liabilities and net position,Total liabilities and net position,852.8,18,1998,4,1998,3,09,30
+1999-09-30,1998,Y,Assets,Cash and other monetary assets,null,1,1999,4,1999,3,09,30
+1999-09-30,1998,Y,Assets,Accounts receivable,null,2,1999,4,1999,3,09,30
+1999-09-30,1998,Y,Assets,Loans receivable,null,3,1999,4,1999,3,09,30
+1999-09-30,1998,Y,Assets,Taxes receivable,null,4,1999,4,1999,3,09,30
+1999-09-30,1998,Y,Assets,Inventories and related property,null,5,1999,4,1999,3,09,30
+1999-09-30,1998,Y,Assets,"Property, plant and equipment",null,6,1999,4,1999,3,09,30
+1999-09-30,1998,Y,Assets,Other assets,null,7,1999,4,1999,3,09,30
+1999-09-30,1998,Y,Assets,Total assets,null,8,1999,4,1999,3,09,30
+1999-09-30,1998,Y,Liabilities,Accounts payable,null,9,1999,4,1999,3,09,30
+1999-09-30,1998,Y,Liabilities,Federal debt securities held by the public,null,10,1999,4,1999,3,09,30
+1999-09-30,1998,Y,Liabilities,Federal employee and veteran benefits payable,null,11,1999,4,1999,3,09,30
+1999-09-30,1998,Y,Liabilities,Environmental and disposal liabilities,null,12,1999,4,1999,3,09,30
+1999-09-30,1998,Y,Liabilities,Benefits due and payable,null,13,1999,4,1999,3,09,30
+1999-09-30,1998,Y,Liabilities,Loan guarantee liabilities,null,14,1999,4,1999,3,09,30
+1999-09-30,1998,Y,Liabilities,Other liabilities,null,15,1999,4,1999,3,09,30
+1999-09-30,1998,Y,Liabilities,Total liabilities,null,16,1999,4,1999,3,09,30
+1999-09-30,1998,Y,Net position,Net Position,null,17,1999,4,1999,3,09,30
+1999-09-30,1998,Y,Net position,Total liabilities and net position,null,18,1999,4,1999,3,09,30
+1999-09-30,1999,N,Assets,Cash and other monetary assets,115.2,1,1999,4,1999,3,09,30
+1999-09-30,1999,N,Assets,Accounts receivable,35.0,2,1999,4,1999,3,09,30
+1999-09-30,1999,N,Assets,Loans receivable,183.7,3,1999,4,1999,3,09,30
+1999-09-30,1999,N,Assets,Taxes receivable,22.7,4,1999,4,1999,3,09,30
+1999-09-30,1999,N,Assets,Inventories and related property,173.3,5,1999,4,1999,3,09,30
+1999-09-30,1999,N,Assets,"Property, plant and equipment",298.8,6,1999,4,1999,3,09,30
+1999-09-30,1999,N,Assets,Other assets,54.3,7,1999,4,1999,3,09,30
+1999-09-30,1999,N,Assets,Total assets,883.0,8,1999,4,1999,3,09,30
+1999-09-30,1999,N,Liabilities,Accounts payable,85.8,9,1999,4,1999,3,09,30
+1999-09-30,1999,N,Liabilities,Federal debt securities held by the public,3631.6,10,1999,4,1999,3,09,30
+1999-09-30,1999,N,Liabilities,Federal employee and veteran benefits payable,2600.7,11,1999,4,1999,3,09,30
+1999-09-30,1999,N,Liabilities,Environmental and disposal liabilities,313.2,12,1999,4,1999,3,09,30
+1999-09-30,1999,N,Liabilities,Benefits due and payable,73.8,13,1999,4,1999,3,09,30
+1999-09-30,1999,N,Liabilities,Loan guarantee liabilities,35.1,14,1999,4,1999,3,09,30
+1999-09-30,1999,N,Liabilities,Other liabilities,169.0,15,1999,4,1999,3,09,30
+1999-09-30,1999,N,Liabilities,Total liabilities,6909.2,16,1999,4,1999,3,09,30
+1999-09-30,1999,N,Net position,Net Position,-6026.2,17,1999,4,1999,3,09,30
+1999-09-30,1999,N,Net position,Total liabilities and net position,883.0,18,1999,4,1999,3,09,30
+2000-09-30,1999,Y,Assets,Cash and other monetary assets,null,1,2000,4,2000,3,09,30
+2000-09-30,1999,Y,Assets,Accounts receivable,null,2,2000,4,2000,3,09,30
+2000-09-30,1999,Y,Assets,Loans receivable,null,3,2000,4,2000,3,09,30
+2000-09-30,1999,Y,Assets,Taxes receivable,null,4,2000,4,2000,3,09,30
+2000-09-30,1999,Y,Assets,Inventories and related property,null,5,2000,4,2000,3,09,30
+2000-09-30,1999,Y,Assets,"Property, plant, and equipment",null,6,2000,4,2000,3,09,30
+2000-09-30,1999,Y,Assets,Other assets,null,7,2000,4,2000,3,09,30
+2000-09-30,1999,Y,Assets,Total assets,null,8,2000,4,2000,3,09,30
+2000-09-30,1999,Y,Liabilities,Accounts payable,null,9,2000,4,2000,3,09,30
+2000-09-30,1999,Y,Liabilities,Federal debt securities held by the public,null,10,2000,4,2000,3,09,30
+2000-09-30,1999,Y,Liabilities,Federal employee and veteran benefits payable,null,11,2000,4,2000,3,09,30
+2000-09-30,1999,Y,Liabilities,Environmental and disposal liabilities,null,12,2000,4,2000,3,09,30
+2000-09-30,1999,Y,Liabilities,Benefits due and payable,null,13,2000,4,2000,3,09,30
+2000-09-30,1999,Y,Liabilities,Loan guarantee liabilities,null,14,2000,4,2000,3,09,30
+2000-09-30,1999,Y,Liabilities,Other liabilities,null,15,2000,4,2000,3,09,30
+2000-09-30,1999,Y,Liabilities,Total liabilities,null,16,2000,4,2000,3,09,30
+2000-09-30,2000,N,Net position,Net position,-5937.1,17,2000,4,2000,3,09,30
+2000-09-30,1999,Y,Net position,Net position,null,17,2000,4,2000,3,09,30
+2000-09-30,2000,N,Net position,Total liabilities and net position,911.5,18,2000,4,2000,3,09,30
+2000-09-30,1999,Y,Net position,Total liabilities and net position,null,18,2000,4,2000,3,09,30
+2000-09-30,2000,N,Assets,Cash and other monetary assets,104.9,1,2000,4,2000,3,09,30
+2000-09-30,2000,N,Assets,Accounts receivable,32.3,2,2000,4,2000,3,09,30
+2000-09-30,2000,N,Assets,Loans receivable,207.6,3,2000,4,2000,3,09,30
+2000-09-30,2000,N,Assets,Taxes receivable,23.3,4,2000,4,2000,3,09,30
+2000-09-30,2000,N,Assets,Inventories and related property,185.2,5,2000,4,2000,3,09,30
+2000-09-30,2000,N,Assets,"Property, plant, and equipment",298.5,6,2000,4,2000,3,09,30
+2000-09-30,2000,N,Assets,Other assets,59.7,7,2000,4,2000,3,09,30
+2000-09-30,2000,N,Assets,Total assets,911.5,8,2000,4,2000,3,09,30
+2000-09-30,2000,N,Liabilities,Accounts payable,91.0,9,2000,4,2000,3,09,30
+2000-09-30,2000,N,Liabilities,Federal debt securities held by the public,3408.5,10,2000,4,2000,3,09,30
+2000-09-30,2000,N,Liabilities,Federal employee and veteran benefits payable,2757.8,11,2000,4,2000,3,09,30
+2000-09-30,2000,N,Liabilities,Environmental and disposal liabilities,301.2,12,2000,4,2000,3,09,30
+2000-09-30,2000,N,Liabilities,Benefits due and payable,77.8,13,2000,4,2000,3,09,30
+2000-09-30,2000,N,Liabilities,Loan guarantee liabilities,37.3,14,2000,4,2000,3,09,30
+2000-09-30,2000,N,Liabilities,Other liabilities,175.0,15,2000,4,2000,3,09,30
+2000-09-30,2000,N,Liabilities,Total liabilities,6848.6,16,2000,4,2000,3,09,30
+2001-09-30,2000,Y,Assets,Cash and other monetary assets,104.9,1,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Assets,Accounts receivable,32.3,2,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Assets,Loans receivable,207.6,3,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Assets,Taxes receivable,23.3,4,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Assets,Inventories and related property,185.2,5,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Assets,"Property, plant and equipment",298.5,6,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Assets,Other assets,59.7,7,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Assets,Total assets,911.5,8,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Liabilities,Accounts payable,91.0,9,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Liabilities,Federal debt securities held by the public,3409.9,10,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Liabilities,Federal employee and veteran benefits payable,2764.7,11,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Liabilities,Environmental and disposal liabilities,301.2,12,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Liabilities,Benefits due and payable,77.8,13,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Liabilities,Loan guarantee liabilities,37.3,14,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Liabilities,Other liabilities,175.0,15,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Liabilities,Total liabilities,6856.9,16,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Net position,Net position,-5945.4,17,2001,4,2001,3,09,30
+2001-09-30,2001,N,Net position,Total liabilities and net position,926.1,18,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Net position,Total liabilities and net position,911.5,18,2001,4,2001,3,09,30
+2001-09-30,2001,N,Assets,"Property, plant and equipment",306.7,6,2001,4,2001,3,09,30
+2001-09-30,2001,N,Assets,Other assets,63.4,7,2001,4,2001,3,09,30
+2001-09-30,2001,N,Assets,Total assets,926.1,8,2001,4,2001,3,09,30
+2001-09-30,2001,N,Liabilities,Accounts payable,95.7,9,2001,4,2001,3,09,30
+2001-09-30,2001,N,Liabilities,Federal debt securities held by the public,3319.8,10,2001,4,2001,3,09,30
+2001-09-30,2001,N,Liabilities,Federal employee and veteran benefits payable,3360.8,11,2001,4,2001,3,09,30
+2001-09-30,2001,N,Liabilities,Environmental and disposal liabilities,306.8,12,2001,4,2001,3,09,30
+2001-09-30,2001,N,Liabilities,Benefits due and payable,86.0,13,2001,4,2001,3,09,30
+2001-09-30,2001,N,Liabilities,Loan guarantee liabilities,27.7,14,2001,4,2001,3,09,30
+2001-09-30,2001,N,Liabilities,Other liabilities,188.1,15,2001,4,2001,3,09,30
+2001-09-30,2001,N,Liabilities,Total liabilities,7384.9,16,2001,4,2001,3,09,30
+2001-09-30,2001,N,Net position,Net position,-6458.8,17,2001,4,2001,3,09,30
+2001-09-30,2001,N,Assets,Cash and other monetary assets,108.0,1,2001,4,2001,3,09,30
+2001-09-30,2001,N,Assets,Accounts receivable,34.2,2,2001,4,2001,3,09,30
+2001-09-30,2001,N,Assets,Loans receivable,208.9,3,2001,4,2001,3,09,30
+2001-09-30,2001,N,Assets,Taxes receivable,21.1,4,2001,4,2001,3,09,30
+2001-09-30,2001,N,Assets,Inventories and related property,183.8,5,2001,4,2001,3,09,30
+2002-09-30,2002,N,Liabilities,Loan guarantee liabilities,28.1,14,2002,4,2002,3,09,30
+2002-09-30,2002,N,Liabilities,Other liabilities,201.9,15,2002,4,2002,3,09,30
+2002-09-30,2002,N,Liabilities,Total liabilities,7816.7,16,2002,4,2002,3,09,30
+2002-09-30,2002,N,Net position,Net position,-6820.2,17,2002,4,2002,3,09,30
+2002-09-30,2002,N,Net position,Total liabilities and net position,996.5,18,2002,4,2002,3,09,30
+2002-09-30,2002,N,Assets,Cash and other monetary assets,141.6,1,2002,4,2002,3,09,30
+2002-09-30,2002,N,Assets,"Accounts receivable, net",32.0,2,2002,4,2002,3,09,30
+2002-09-30,2002,N,Assets,"Taxes receivable, net",21.4,4,2002,4,2002,3,09,30
+2002-09-30,2002,N,Assets,"Inventories and related property, net",192.2,5,2002,4,2002,3,09,30
+2002-09-30,2002,N,Assets,"Property, plant and equipment, net",324.7,6,2002,4,2002,3,09,30
+2002-09-30,2002,N,Assets,Other assets,65.4,7,2002,4,2002,3,09,30
+2002-09-30,2002,N,Assets,Total assets,996.5,8,2002,4,2002,3,09,30
+2002-09-30,2002,N,Liabilities,Accounts payable,55.8,9,2002,4,2002,3,09,30
+2002-09-30,2002,N,Liabilities,Federal debt securities held by the public and accrued interest,3573.2,10,2002,4,2002,3,09,30
+2002-09-30,2002,N,Liabilities,Federal employee and veteran benefits payable,3589.4,11,2002,4,2002,3,09,30
+2002-09-30,2002,N,Liabilities,Environmental and disposal liabilities,273.0,12,2002,4,2002,3,09,30
+2002-09-30,2002,N,Liabilities,Benefits due and payable,95.3,13,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Assets,"Taxes receivable, net",21.1,4,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Assets,"Inventories and related property, net",183.8,5,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Assets,"Property, plant and equipment, net",306.7,6,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Assets,Other assets,63.4,7,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Assets,Total assets,926.1,8,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Liabilities,Accounts payable,56.2,9,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Liabilities,Federal debt securities held by the public and accrued interest,3359.3,10,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Liabilities,Federal employee and veteran benefits payable,3360.8,11,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Liabilities,Environmental and disposal liabilities,306.8,12,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Liabilities,Benefits due and payable,86.0,13,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Liabilities,Loan guarantee liabilities,27.7,14,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Liabilities,Other liabilities,188.1,15,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Liabilities,Total liabilities,7384.9,16,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Net position,Net position,-6458.8,17,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Net position,Total liabilities and net position,926.1,18,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Assets,Cash and other monetary assets,108.0,1,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Assets,"Accounts receivable, net",34.2,2,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Assets,"Loans receivable, net",208.9,3,2002,4,2002,3,09,30
+2002-09-30,2002,N,Assets,"Loans receivable, net",219.2,3,2002,4,2002,3,09,30
+2003-09-30,2002,Y,Assets,Other assets,65.4,7,2003,4,2003,3,09,30
+2003-09-30,2003,N,Assets,Total assets,1393.9,8,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Assets,Total assets,996.5,8,2003,4,2003,3,09,30
+2003-09-30,2003,N,Liabilities,Accounts payable,62.2,9,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Liabilities,Accounts payable,55.8,9,2003,4,2003,3,09,30
+2003-09-30,2003,N,Liabilities,Federal debt securities held by the public and accrued interest,3944.9,10,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Liabilities,Federal debt securities held by the public and accrued interest,3573.2,10,2003,4,2003,3,09,30
+2003-09-30,2003,N,Liabilities,Federal employee and veteran benefits payable,3880.0,11,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Liabilities,Federal employee and veteran benefits payable,3589.4,11,2003,4,2003,3,09,30
+2003-09-30,2003,N,Liabilities,Environmental and disposal liabilities,249.9,12,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Liabilities,Environmental and disposal liabilities,273.0,12,2003,4,2003,3,09,30
+2003-09-30,2003,N,Liabilities,Benefits due and payable,100.0,13,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Liabilities,Benefits due and payable,95.3,13,2003,4,2003,3,09,30
+2003-09-30,2003,N,Liabilities,Loan guarantee liabilities,34.6,14,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Liabilities,Loan guarantee liabilities,28.1,14,2003,4,2003,3,09,30
+2003-09-30,2003,N,Liabilities,Other liabilities,227.0,15,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Liabilities,Other liabilities,201.9,15,2003,4,2003,3,09,30
+2003-09-30,2003,N,Liabilities,Total liabilities,8498.6,16,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Liabilities,Total liabilities,7816.7,16,2003,4,2003,3,09,30
+2003-09-30,2003,N,Net position,Net position,-7104.7,17,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Net position,Net position,-6820.2,17,2003,4,2003,3,09,30
+2003-09-30,2003,N,Net position,Total liabilities and net position,1393.9,18,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Net position,Total liabilities and net position,996.5,18,2003,4,2003,3,09,30
+2003-09-30,2003,N,Assets,Cash and other monetary assets,119.6,1,2003,4,2003,3,09,30
+2003-09-30,2003,N,Assets,"Accounts receivable, net",33.8,2,2003,4,2003,3,09,30
+2003-09-30,2003,N,Assets,"Loans receivable, net",221.1,3,2003,4,2003,3,09,30
+2003-09-30,2003,N,Assets,"Taxes receivable, net",22.9,4,2003,4,2003,3,09,30
+2003-09-30,2003,N,Assets,"Inventories and related property, net",241.2,5,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Assets,Cash and other monetary assets,141.6,1,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Assets,"Accounts receivable, net",32.0,2,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Assets,"Loans receivable, net",219.2,3,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Assets,"Taxes receivable, net",21.4,4,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Assets,"Inventories and related property, net",192.2,5,2003,4,2003,3,09,30
+2003-09-30,2003,N,Assets,"Property, plant, and equipment, net",658.2,6,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Assets,"Property, plant, and equipment, net",324.7,6,2003,4,2003,3,09,30
+2003-09-30,2003,N,Assets,Other assets,97.1,7,2003,4,2003,3,09,30
+2004-09-30,2003,Y,Assets,Cash and other monetary assets,119.6,1,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Assets,"Accounts receivable, net",33.8,2,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Assets,"Loans receivable, net",221.1,3,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Assets,"Taxes receivable, net",22.9,4,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Assets,"Inventories and related property, net",252.7,5,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Assets,"Property, plant, and equipment, net",658.2,6,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Assets,Other assets,97.1,7,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Assets,Total assets,1405.4,8,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Liabilities,Accounts payable,62.2,9,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Liabilities,Federal debt securities held by the public and accrued interest,3944.9,10,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Liabilities,Federal employee and veteran benefits payable,3880.0,11,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Liabilities,Environmental and disposal liabilities,249.9,12,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Liabilities,Benefits due and payable,100.0,13,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Liabilities,Loan guarantee liabilities,34.6,14,2004,4,2004,3,09,30
+2004-09-30,2004,N,Liabilities,Other liabilities,260.3,15,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Liabilities,Other liabilities,228.0,15,2004,4,2004,3,09,30
+2004-09-30,2004,N,Liabilities,Total liabilities,9107.1,16,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Liabilities,Total liabilities,8499.6,16,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Net position,Net position,-7094.2,17,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Net position,Total liabilities and net position,1405.4,18,2004,4,2004,3,09,30
+2004-09-30,2004,N,Assets,Cash and other monetary assets,97.0,1,2004,4,2004,3,09,30
+2004-09-30,2004,N,Assets,"Accounts receivable, net",35.1,2,2004,4,2004,3,09,30
+2004-09-30,2004,N,Assets,"Loans receivable, net",220.9,3,2004,4,2004,3,09,30
+2004-09-30,2004,N,Assets,"Taxes receivable, net",21.3,4,2004,4,2004,3,09,30
+2004-09-30,2004,N,Assets,"Inventories and related property, net",261.5,5,2004,4,2004,3,09,30
+2004-09-30,2004,N,Assets,"Property, plant, and equipment, net",652.7,6,2004,4,2004,3,09,30
+2004-09-30,2004,N,Assets,Other assets,108.8,7,2004,4,2004,3,09,30
+2004-09-30,2004,N,Assets,Total assets,1397.3,8,2004,4,2004,3,09,30
+2004-09-30,2004,N,Liabilities,Accounts payable,60.1,9,2004,4,2004,3,09,30
+2004-09-30,2004,N,Liabilities,Federal debt securities held by the public and accrued interest,4329.4,10,2004,4,2004,3,09,30
+2004-09-30,2004,N,Liabilities,Federal employee and veteran benefits payable,4062.1,11,2004,4,2004,3,09,30
+2004-09-30,2004,N,Liabilities,Environmental and disposal liabilities,249.2,12,2004,4,2004,3,09,30
+2004-09-30,2004,N,Liabilities,Benefits due and payable,102.9,13,2004,4,2004,3,09,30
+2004-09-30,2004,N,Liabilities,Loan guarantee liabilities,43.1,14,2004,4,2004,3,09,30
+2004-09-30,2004,N,Net position,Net position,-7709.8,17,2004,4,2004,3,09,30
+2004-09-30,2004,N,Net position,Total liabilities and net position,1397.3,18,2004,4,2004,3,09,30
+2005-09-30,2005,N,Net position,Total liabilities and net position,1456.1,19,2005,4,2005,3,09,30
+2005-09-30,2005,N,Assets,Cash and other monetary assets,85.8,1,2005,4,2005,3,09,30
+2005-09-30,2005,N,Assets,"Accounts and taxes receivable, net",66.1,2,2005,4,2005,3,09,30
+2005-09-30,2005,N,Assets,"Loans receivable, net",221.8,3,2005,4,2005,3,09,30
+2005-09-30,2005,N,Assets,"Inventories and related property, net",272.0,4,2005,4,2005,3,09,30
+2005-09-30,2005,N,Assets,"Property, plant, and equipment, net",678.4,5,2005,4,2005,3,09,30
+2005-09-30,2005,N,Assets,Securities and investments,75.3,6,2005,4,2005,3,09,30
+2005-09-30,2005,N,Assets,Other assets,56.7,7,2005,4,2005,3,09,30
+2005-09-30,2005,N,Assets,Total assets,1456.1,8,2005,4,2005,3,09,30
+2005-09-30,2005,N,Liabilities,Accounts payable,67.9,9,2005,4,2005,3,09,30
+2005-09-30,2005,N,Liabilities,Federal debt securities held by the public and accrued interest,4624.2,10,2005,4,2005,3,09,30
+2005-09-30,2005,N,Liabilities,Federal employee and veteran benefits payable,4491.8,11,2005,4,2005,3,09,30
+2005-09-30,2005,N,Liabilities,Environmental and disposal liabilities,259.8,12,2005,4,2005,3,09,30
+2005-09-30,2005,N,Liabilities,Benefits due and payable,117.0,13,2005,4,2005,3,09,30
+2005-09-30,2005,N,Liabilities,Insurance program liabilities,93.2,14,2005,4,2005,3,09,30
+2005-09-30,2005,N,Liabilities,Loan guarantee liabilities,47.7,15,2005,4,2005,3,09,30
+2005-09-30,2005,N,Liabilities,Other liabilities,213.2,16,2005,4,2005,3,09,30
+2005-09-30,2005,N,Liabilities,Total liabilities,9914.8,17,2005,4,2005,3,09,30
+2005-09-30,2005,N,Net position,Net position,-8458.7,18,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Assets,Cash and other monetary assets,97.0,1,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Assets,"Accounts and taxes receivable, net",56.4,2,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Assets,"Loans receivable, net",220.9,3,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Assets,"Inventories and related property, net",261.5,4,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Assets,"Property, plant, and equipment, net",652.7,5,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Assets,Securities and investments,57.1,6,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Assets,Other assets,51.7,7,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Assets,Total assets,1397.3,8,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Liabilities,Accounts payable,60.1,9,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Liabilities,Federal debt securities held by the public and accrued interest,4329.4,10,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Liabilities,Federal employee and veteran benefits payable,4062.1,11,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Liabilities,Environmental and disposal liabilities,249.2,12,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Liabilities,Benefits due and payable,102.9,13,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Liabilities,Insurance program liabilities,62.2,14,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Liabilities,Loan guarantee liabilities,43.1,15,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Liabilities,Other liabilities,198.1,16,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Liabilities,Total liabilities,9107.1,17,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Net position,Net position,-7709.8,18,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Net position,Total liabilities and net position,1397.3,19,2005,4,2005,3,09,30
+2006-09-30,2005,Y,Assets,Cash and other monetary assets,85.8,1,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Assets,"Accounts and taxes receivable, net",66.1,2,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Assets,"Loans receivable, net",221.8,3,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Assets,"Inventories and related property, net",272.0,4,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Assets,"Property, plant, and equipment, net",670.2,5,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Assets,Securities and investments,75.3,6,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Assets,Other assets,56.7,7,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Assets,Total assets,1447.9,8,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Liabilities,Accounts payable,67.9,9,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Liabilities,Federal debt securities held by the public and accrued interest,4624.2,10,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Liabilities,Federal employee and veteran benefits payable,4491.8,11,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Liabilities,Environmental and disposal liabilities,259.8,12,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Liabilities,Benefits due and payable,117.0,13,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Liabilities,Insurance program liabilities,93.2,14,2006,4,2006,3,09,30
+2006-09-30,2006,N,Liabilities,Loan guarantee liabilities,66.4,15,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Liabilities,Loan guarantee liabilities,47.7,15,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Liabilities,Other liabilities,213.2,16,2006,4,2006,3,09,30
+2006-09-30,2006,N,Liabilities,Total liabilities,10412.9,17,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Liabilities,Total liabilities,9914.8,17,2006,4,2006,3,09,30
+2006-09-30,2006,N,Net position,Earmarked funds,419.2,18,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Net position,Earmarked funds,null,18,2006,4,2006,3,09,30
+2006-09-30,2006,N,Net position,Non-earmarked funds,-9335.6,19,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Net position,Non-earmarked funds,null,19,2006,4,2006,3,09,30
+2006-09-30,2006,N,Net position,Total net position,-8916.4,20,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Net position,Total net position,-8466.9,20,2006,4,2006,3,09,30
+2006-09-30,2006,N,Net position,Total liabilities and net position,1496.5,21,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Net position,Total liabilities and net position,1447.9,21,2006,4,2006,3,09,30
+2006-09-30,2006,N,Assets,Cash and other monetary assets,97.9,1,2006,4,2006,3,09,30
+2006-09-30,2006,N,Assets,"Accounts and taxes receivable, net",68.8,2,2006,4,2006,3,09,30
+2006-09-30,2006,N,Assets,"Loans receivable, net",220.8,3,2006,4,2006,3,09,30
+2006-09-30,2006,N,Assets,"Inventories and related property, net",281.3,4,2006,4,2006,3,09,30
+2006-09-30,2006,N,Assets,"Property, plant, and equipment, net",688.5,5,2006,4,2006,3,09,30
+2006-09-30,2006,N,Assets,Securities and investments,83.8,6,2006,4,2006,3,09,30
+2006-09-30,2006,N,Assets,Total assets,1496.5,8,2006,4,2006,3,09,30
+2006-09-30,2006,N,Liabilities,Accounts payable,58.4,9,2006,4,2006,3,09,30
+2006-09-30,2006,N,Liabilities,Federal debt securities held by the public and accrued interest,4867.5,10,2006,4,2006,3,09,30
+2006-09-30,2006,N,Liabilities,Federal employee and veteran benefits payable,4679.0,11,2006,4,2006,3,09,30
+2006-09-30,2006,N,Liabilities,Environmental and disposal liabilities,305.2,12,2006,4,2006,3,09,30
+2006-09-30,2006,N,Liabilities,Benefits due and payable,129.3,13,2006,4,2006,3,09,30
+2006-09-30,2006,N,Liabilities,Insurance program liabilities,72.8,14,2006,4,2006,3,09,30
+2006-09-30,2006,N,Assets,Other assets,55.4,7,2006,4,2006,3,09,30
+2006-09-30,2006,N,Liabilities,Other liabilities,234.3,16,2006,4,2006,3,09,30
+2007-09-30,2006,Y,Assets,Cash and other monetary assets,97.9,1,2007,4,2007,3,09,30
+2007-09-30,2007,N,Assets,Other assets,65.4,7,2007,4,2007,3,09,30
+2007-09-30,2007,N,Assets,Total assets,1581.1,8,2007,4,2007,3,09,30
+2007-09-30,2007,N,Liabilities,Accounts payable,66.2,9,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Assets,"Accounts and taxes receivable, net",68.8,2,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Assets,"Loans receivable, net",220.8,3,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Assets,"Inventories and related property, net",281.3,4,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Assets,"Property, plant, and equipment, net",688.5,5,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Assets,Securities and investments,83.8,6,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Assets,Other assets,55.4,7,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Assets,Total assets,1496.5,8,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Liabilities,Accounts payable,58.4,9,2007,4,2007,3,09,30
+2007-09-30,2007,N,Liabilities,Federal debt securities held by the public and accrued interest,5077.7,10,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Liabilities,Federal debt securities held by the public and accrued interest,4867.5,10,2007,4,2007,3,09,30
+2007-09-30,2007,N,Liabilities,Federal employee and veteran benefits payable,4769.1,11,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Liabilities,Federal employee and veteran benefits payable,4679.0,11,2007,4,2007,3,09,30
+2007-09-30,2007,N,Liabilities,Environmental and disposal liabilities,342.0,12,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Liabilities,Environmental and disposal liabilities,305.2,12,2007,4,2007,3,09,30
+2007-09-30,2007,N,Liabilities,Benefits due and payable,133.7,13,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Liabilities,Benefits due and payable,129.3,13,2007,4,2007,3,09,30
+2007-09-30,2007,N,Liabilities,Insurance program liabilities,70.9,14,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Liabilities,Insurance program liabilities,72.8,14,2007,4,2007,3,09,30
+2007-09-30,2007,N,Liabilities,Loan guarantee liabilities,69.1,15,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Liabilities,Loan guarantee liabilities,66.4,15,2007,4,2007,3,09,30
+2007-09-30,2007,N,Assets,Cash and other monetary assets,128.0,1,2007,4,2007,3,09,30
+2007-09-30,2007,N,Assets,"Accounts and taxes receivable, net",87.8,2,2007,4,2007,3,09,30
+2007-09-30,2007,N,Assets,"Loans receivable, net",231.9,3,2007,4,2007,3,09,30
+2007-09-30,2007,N,Assets,"Inventories and related property, net",277.1,4,2007,4,2007,3,09,30
+2007-09-30,2007,N,Assets,"Property, plant, and equipment, net",691.1,5,2007,4,2007,3,09,30
+2007-09-30,2007,N,Assets,Securities and investments,99.8,6,2007,4,2007,3,09,30
+2007-09-30,2007,N,Liabilities,Other liabilities,258.2,16,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Liabilities,Other liabilities,234.3,16,2007,4,2007,3,09,30
+2007-09-30,2007,N,Liabilities,Total liabilities,10786.9,17,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Liabilities,Total liabilities,10412.9,17,2007,4,2007,3,09,30
+2007-09-30,2007,N,Net position,Earmarked funds,614.1,18,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Net position,Earmarked funds,419.2,18,2007,4,2007,3,09,30
+2007-09-30,2007,N,Net position,Non-earmarked funds,-9819.9,19,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Net position,Non-earmarked funds,-9335.6,19,2007,4,2007,3,09,30
+2007-09-30,2007,N,Net position,Total net position,-9205.8,20,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Net position,Total net position,-8916.4,20,2007,4,2007,3,09,30
+2007-09-30,2007,N,Net position,Total liabilities and net position,1581.1,21,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Net position,Total liabilities and net position,1496.5,21,2007,4,2007,3,09,30
+2008-09-30,2007,Y,Assets,Cash and other monetary assets,128.0,1,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Assets,"Accounts and taxes receivable, net",87.8,2,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Assets,"Loans receivable, net",231.9,3,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Assets,"Inventories and related property, net",277.1,4,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Assets,"Property, plant, and equipment, net",691.1,5,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Assets,Securities and investments,99.8,6,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Assets,Investments in Government sponsored enterprises,null,7,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Assets,Other assets,65.4,8,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Assets,Total assets,1581.1,9,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Liabilities,Accounts payable,66.2,10,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Liabilities,Federal debt securities held by the public and accrued interest,5077.7,11,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Liabilities,Federal employee and veteran benefits payable,4769.1,12,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Liabilities,Environmental and disposal liabilities,342.0,13,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Liabilities,Benefits due and payable,133.7,14,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Liabilities,Insurance program liabilities,72.7,15,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Liabilities,Loan guarantee liabilities,69.1,16,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Liabilities,Keepwell payable,null,17,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Liabilities,Other liabilities,256.4,18,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Liabilities,Total liabilities,10786.9,19,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Net position,Earmarked funds,620.2,20,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Net position,Non-earmarked funds,-9826.0,21,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Net position,Total net position,-9205.8,22,2008,4,2008,3,09,30
+2008-09-30,2008,N,Net position,Total liabilities and net position,1974.7,23,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Net position,Total liabilities and net position,1581.1,23,2008,4,2008,3,09,30
+2008-09-30,2008,N,Assets,"Accounts and taxes receivable, net",93.0,2,2008,4,2008,3,09,30
+2008-09-30,2008,N,Assets,"Loans receivable, net",263.4,3,2008,4,2008,3,09,30
+2008-09-30,2008,N,Assets,"Inventories and related property, net",289.6,4,2008,4,2008,3,09,30
+2008-09-30,2008,N,Assets,"Property, plant, and equipment, net",737.7,5,2008,4,2008,3,09,30
+2008-09-30,2008,N,Assets,Securities and investments,79.6,6,2008,4,2008,3,09,30
+2008-09-30,2008,N,Assets,Investments in Government sponsored enterprises,7.0,7,2008,4,2008,3,09,30
+2008-09-30,2008,N,Assets,Other assets,79.9,8,2008,4,2008,3,09,30
+2008-09-30,2008,N,Assets,Total assets,1974.7,9,2008,4,2008,3,09,30
+2008-09-30,2008,N,Liabilities,Accounts payable,73.3,10,2008,4,2008,3,09,30
+2008-09-30,2008,N,Liabilities,Federal debt securities held by the public and accrued interest,5836.2,11,2008,4,2008,3,09,30
+2008-09-30,2008,N,Liabilities,Federal employee and veteran benefits payable,5318.9,12,2008,4,2008,3,09,30
+2008-09-30,2008,N,Liabilities,Environmental and disposal liabilities,342.8,13,2008,4,2008,3,09,30
+2008-09-30,2008,N,Liabilities,Benefits due and payable,144.4,14,2008,4,2008,3,09,30
+2008-09-30,2008,N,Liabilities,Insurance program liabilities,77.8,15,2008,4,2008,3,09,30
+2008-09-30,2008,N,Liabilities,Loan guarantee liabilities,72.9,16,2008,4,2008,3,09,30
+2008-09-30,2008,N,Liabilities,Keepwell payable,13.8,17,2008,4,2008,3,09,30
+2008-09-30,2008,N,Liabilities,Other liabilities,298.1,18,2008,4,2008,3,09,30
+2008-09-30,2008,N,Liabilities,Total liabilities,12178.2,19,2008,4,2008,3,09,30
+2008-09-30,2008,N,Net position,Earmarked funds,704.6,20,2008,4,2008,3,09,30
+2008-09-30,2008,N,Net position,Non-earmarked funds,-10908.1,21,2008,4,2008,3,09,30
+2008-09-30,2008,N,Net position,Total net position,-10203.5,22,2008,4,2008,3,09,30
+2008-09-30,2008,N,Assets,Cash and other monetary assets,424.5,1,2008,4,2008,3,09,30
+2009-09-30,2008,Y,Assets,Cash and other monetary assets,424.5,1,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Assets,"Accounts and taxes receivable, net",93.0,2,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Assets,"Loans receivable and mortgage backed securities, net",253.8,3,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Assets,"TARP direct loans and equity investments, net",null,4,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Assets,Beneficial interest in trust,null,5,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Assets,"Inventories and related property, net",289.6,6,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Assets,"Property, plant, and equipment, net",737.7,7,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Assets,Securities and investments,79.6,8,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Assets,Investments in Government sponsored enterprises,7.0,9,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Assets,Other assets,89.5,10,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Assets,Total assets,1974.7,11,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Liabilities,Accounts payable,73.3,12,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Liabilities,Federal debt securities held by the public and accrued interest,5836.2,13,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Liabilities,Federal employee and veteran benefits payable,5318.9,14,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Liabilities,Environmental and disposal liabilities,342.8,15,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Liabilities,Benefits due and payable,144.4,16,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Liabilities,Insurance and guarantee program liabilities,85.1,17,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Liabilities,Loan guarantee liabilities,72.9,18,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Liabilities,Liquidity guarantee,13.8,19,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Liabilities,Other liabilities,290.8,20,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Liabilities,Total liabilities,12178.2,21,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Net position,Earmarked funds,704.6,22,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Net position,Non-earmarked funds,-10908.1,23,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Net position,Total net position,-10203.5,24,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Net position,Total liabilities and net position,1974.7,25,2009,4,2009,3,09,30
+2009-09-30,2009,N,Liabilities,Total liabilities,14123.8,21,2009,4,2009,3,09,30
+2009-09-30,2009,N,Net position,Earmarked funds,752.7,22,2009,4,2009,3,09,30
+2009-09-30,2009,N,Net position,Non-earmarked funds,-12208.6,23,2009,4,2009,3,09,30
+2009-09-30,2009,N,Assets,Other assets,155.9,10,2009,4,2009,3,09,30
+2009-09-30,2009,N,Net position,Total net position,-11455.9,24,2009,4,2009,3,09,30
+2009-09-30,2009,N,Net position,Total liabilities and net position,2667.9,25,2009,4,2009,3,09,30
+2009-09-30,2009,N,Assets,Cash and other monetary assets,393.2,1,2009,4,2009,3,09,30
+2009-09-30,2009,N,Assets,"Accounts and taxes receivable, net",90.2,2,2009,4,2009,3,09,30
+2009-09-30,2009,N,Assets,"Loans receivable and mortgage backed securities, net",538.9,3,2009,4,2009,3,09,30
+2009-09-30,2009,N,Assets,"TARP direct loans and equity investments, net",239.7,4,2009,4,2009,3,09,30
+2009-09-30,2009,N,Assets,Beneficial interest in trust,23.5,5,2009,4,2009,3,09,30
+2009-09-30,2009,N,Assets,"Inventories and related property, net",284.6,6,2009,4,2009,3,09,30
+2009-09-30,2009,N,Assets,"Property, plant, and equipment, net",784.1,7,2009,4,2009,3,09,30
+2009-09-30,2009,N,Assets,Securities and investments,93.1,8,2009,4,2009,3,09,30
+2009-09-30,2009,N,Assets,Investments in Government sponsored enterprises,64.7,9,2009,4,2009,3,09,30
+2009-09-30,2009,N,Assets,Total assets,2667.9,11,2009,4,2009,3,09,30
+2009-09-30,2009,N,Liabilities,Accounts payable,73.2,12,2009,4,2009,3,09,30
+2009-09-30,2009,N,Liabilities,Federal debt securities held by the public and accrued interest,7582.7,13,2009,4,2009,3,09,30
+2009-09-30,2009,N,Liabilities,Federal employee and veteran benefits payable,5283.7,14,2009,4,2009,3,09,30
+2009-09-30,2009,N,Liabilities,Environmental and disposal liabilities,341.8,15,2009,4,2009,3,09,30
+2009-09-30,2009,N,Liabilities,Benefits due and payable,160.8,16,2009,4,2009,3,09,30
+2009-09-30,2009,N,Liabilities,Insurance and guarantee program liabilities,166.2,17,2009,4,2009,3,09,30
+2009-09-30,2009,N,Liabilities,Loan guarantee liabilities,69.4,18,2009,4,2009,3,09,30
+2009-09-30,2009,N,Liabilities,Liquidity guarantee,91.9,19,2009,4,2009,3,09,30
+2009-09-30,2009,N,Liabilities,Other liabilities,354.1,20,2009,4,2009,3,09,30
+2010-09-30,2009,Y,Assets,Cash and other monetary assets,393.2,1,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Assets,"Accounts and taxes receivable, net",87.4,2,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Assets,"Loans receivable and mortgage backed securities, net",538.9,3,2010,4,2010,3,09,30
+2010-09-30,2010,N,Assets,"TARP direct loans and equity investments, net",144.7,4,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Assets,"TARP direct loans and equity investments, net",239.7,4,2010,4,2010,3,09,30
+2010-09-30,2010,N,Assets,Beneficial interest in trust,20.8,5,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Assets,Beneficial interest in trust,23.5,5,2010,4,2010,3,09,30
+2010-09-30,2010,N,Assets,"Inventories and related property, net",286.2,6,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Assets,"Inventories and related property, net",284.6,6,2010,4,2010,3,09,30
+2010-09-30,2010,N,Assets,"Property, plant, and equipment, net",828.9,7,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Assets,"Property, plant, and equipment, net",784.1,7,2010,4,2010,3,09,30
+2010-09-30,2010,N,Assets,Debt and equity securities,98.9,8,2010,4,2010,3,09,30
+2010-09-30,2010,N,Assets,Other assets,183.3,10,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Liabilities,Other liabilities,354.1,20,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Liabilities,Total liabilities,14123.8,21,2010,4,2010,3,09,30
+2010-09-30,2010,N,Assets,Cash and other monetary assets,428.6,1,2010,4,2010,3,09,30
+2010-09-30,2010,N,Assets,"Accounts and taxes receivable, net",94.6,2,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Assets,Debt and equity securities,93.1,8,2010,4,2010,3,09,30
+2010-09-30,2010,N,Assets,Investments in Government-Sponsored Enterprises,109.2,9,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Assets,Investments in Government-Sponsored Enterprises,64.7,9,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Assets,Other assets,158.7,10,2010,4,2010,3,09,30
+2010-09-30,2010,N,Assets,Total assets,2883.8,11,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Assets,Total assets,2667.9,11,2010,4,2010,3,09,30
+2010-09-30,2010,N,Liabilities,Accounts payable,72.9,12,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Liabilities,Accounts payable,73.2,12,2010,4,2010,3,09,30
+2010-09-30,2010,N,Assets,"Loans receivable and mortgage backed securities, net",688.6,3,2010,4,2010,3,09,30
+2010-09-30,2010,N,Liabilities,Other liabilities,416.5,20,2010,4,2010,3,09,30
+2010-09-30,2010,N,Liabilities,Total liabilities,16356.6,21,2010,4,2010,3,09,30
+2010-09-30,2010,N,Liabilities,Federal debt securities held by the public and accrued interest,9060.0,13,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Liabilities,Federal debt securities held by the public and accrued interest,7582.7,13,2010,4,2010,3,09,30
+2010-09-30,2010,N,Liabilities,Federal employee and veteran benefits payable,5720.3,14,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Liabilities,Federal employee and veteran benefits payable,5283.7,14,2010,4,2010,3,09,30
+2010-09-30,2010,N,Liabilities,Environmental and disposal liabilities,321.3,15,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Liabilities,Environmental and disposal liabilities,341.8,15,2010,4,2010,3,09,30
+2010-09-30,2010,N,Liabilities,Benefits due and payable,164.3,16,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Liabilities,Benefits due and payable,160.8,16,2010,4,2010,3,09,30
+2010-09-30,2010,N,Liabilities,Insurance and guarantee program liabilities,175.6,17,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Liabilities,Insurance and guarantee program liabilities,166.2,17,2010,4,2010,3,09,30
+2010-09-30,2010,N,Liabilities,Loan guarantee liabilities,65.8,18,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Liabilities,Loan guarantee liabilities,69.4,18,2010,4,2010,3,09,30
+2010-09-30,2010,N,Liabilities,Liabilities to Government-Sponsored Enterprises,359.9,19,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Liabilities,Liabilities to Government-Sponsored Enterprises,91.9,19,2010,4,2010,3,09,30
+2010-09-30,2010,N,Net position,Earmarked funds,646.9,22,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Net position,Earmarked funds,752.7,22,2010,4,2010,3,09,30
+2010-09-30,2010,N,Net position,Non-earmarked funds,-14119.7,23,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Net position,Non-earmarked funds,-12208.6,23,2010,4,2010,3,09,30
+2010-09-30,2010,N,Net position,Total net position,-13472.8,24,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Net position,Total net position,-11455.9,24,2010,4,2010,3,09,30
+2010-09-30,2010,N,Net position,Total liabilities and net position,2883.8,25,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Net position,Total liabilities and net position,2667.9,25,2010,4,2010,3,09,30
+2011-09-30,2010,Y,Assets,Cash and other monetary assets,428.6,1,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Assets,"Accounts and taxes receivable, net",94.6,2,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Assets,"Loans receivable and mortgage-backed securities, net",688.6,3,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Assets,"TARP direct loans and equity investments, net",144.7,4,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Assets,"Non-TARP Investments in American International Group, Inc.",20.8,5,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Assets,"Inventories and related property, net",286.2,6,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Assets,"Property, plant, and equipment, net",828.9,7,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Assets,Debt and equity securities,98.9,8,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Assets,Investments in Government-Sponsored Enterprises,109.2,9,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Assets,Other assets,183.3,10,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Assets,Total assets,2883.8,11,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Liabilities,Accounts payable,72.9,12,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Liabilities,Federal debt securities held by the public and accrued interest,9060.0,13,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Liabilities,Federal employee and veteran benefits payable,5720.3,14,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Liabilities,Environmental and disposal liabilities,321.3,15,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Liabilities,Benefits due and payable,164.3,16,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Liabilities,Insurance and guarantee program liabilities,175.6,17,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Liabilities,Loan guarantee liabilities,65.8,18,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Liabilities,Liabilities to Government-Sponsored Enterprises,359.9,19,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Liabilities,Other liabilities,416.5,20,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Liabilities,Total liabilities,16356.6,21,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Net position,Earmarked funds,646.9,22,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Net position,Non-earmarked funds,-14119.7,23,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Net position,Total net position,-13472.8,24,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Net position,Total liabilities and net position,2883.8,25,2011,4,2011,3,09,30
+2011-09-30,2011,N,Assets,Cash and other monetary assets,177.0,1,2011,4,2011,3,09,30
+2011-09-30,2011,N,Assets,"Accounts and taxes receivable, net",106.3,2,2011,4,2011,3,09,30
+2011-09-30,2011,N,Assets,"Loans receivable and mortgage-backed securities, net",772.1,3,2011,4,2011,3,09,30
+2011-09-30,2011,N,Assets,"TARP direct loans and equity investments, net",80.1,4,2011,4,2011,3,09,30
+2011-09-30,2011,N,Assets,"Non-TARP Investments in American International Group, Inc.",10.9,5,2011,4,2011,3,09,30
+2011-09-30,2011,N,Assets,"Inventories and related property, net",296.1,6,2011,4,2011,3,09,30
+2011-09-30,2011,N,Assets,"Property, plant, and equipment, net",852.8,7,2011,4,2011,3,09,30
+2011-09-30,2011,N,Assets,Debt and equity securities,99.7,8,2011,4,2011,3,09,30
+2011-09-30,2011,N,Assets,Investments in Government-Sponsored Enterprises,133.0,9,2011,4,2011,3,09,30
+2011-09-30,2011,N,Assets,Other assets,179.3,10,2011,4,2011,3,09,30
+2011-09-30,2011,N,Assets,Total assets,2707.3,11,2011,4,2011,3,09,30
+2011-09-30,2011,N,Liabilities,Accounts payable,63.4,12,2011,4,2011,3,09,30
+2011-09-30,2011,N,Liabilities,Federal debt securities held by the public and accrued interest,10174.1,13,2011,4,2011,3,09,30
+2011-09-30,2011,N,Liabilities,Federal employee and veteran benefits payable,5792.2,14,2011,4,2011,3,09,30
+2011-09-30,2011,N,Liabilities,Environmental and disposal liabilities,324.1,15,2011,4,2011,3,09,30
+2011-09-30,2011,N,Liabilities,Benefits due and payable,171.0,16,2011,4,2011,3,09,30
+2011-09-30,2011,N,Liabilities,Insurance and guarantee program liabilities,161.7,17,2011,4,2011,3,09,30
+2011-09-30,2011,N,Liabilities,Loan guarantee liabilities,63.0,18,2011,4,2011,3,09,30
+2011-09-30,2011,N,Liabilities,Liabilities to Government-Sponsored Enterprises,316.2,19,2011,4,2011,3,09,30
+2011-09-30,2011,N,Liabilities,Other liabilities,427.0,20,2011,4,2011,3,09,30
+2011-09-30,2011,N,Liabilities,Total liabilities,17492.7,21,2011,4,2011,3,09,30
+2011-09-30,2011,N,Net position,Earmarked funds,748.2,22,2011,4,2011,3,09,30
+2011-09-30,2011,N,Net position,Non-earmarked funds,-15533.6,23,2011,4,2011,3,09,30
+2011-09-30,2011,N,Net position,Total net position,-14785.4,24,2011,4,2011,3,09,30
+2011-09-30,2011,N,Net position,Total liabilities and net position,2707.3,25,2011,4,2011,3,09,30
+2012-09-30,2011,Y,Assets,Cash and other monetary assets,177.0,1,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Assets,"Accounts and taxes receivable, net",106.3,2,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Assets,"Loans receivable and mortgage-backed securities, net",772.1,3,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Assets,"TARP direct loans and equity investments, net",80.1,4,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Assets,"Inventories and related property, net",296.1,5,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Assets,"Property, plant, and equipment, net",852.8,6,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Assets,Debt and equity securities,110.6,7,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Assets,Investments in Government-sponsored enterprises,133.0,8,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Assets,Other assets,179.3,9,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Assets,Total assets,2707.3,10,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Liabilities,Accounts payable,63.4,11,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Liabilities,Federal debt securities held by the public and accrued interest,10174.1,12,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Liabilities,Federal employee and veteran benefits payable,5792.2,13,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Liabilities,Environmental and disposal liabilities,324.1,14,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Liabilities,Benefits due and payable,171.0,15,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Liabilities,Insurance and guarantee program liabilities,161.7,16,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Liabilities,Loan guarantee liabilities,63.0,17,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Liabilities,Liabilities to Government-sponsored enterprises,316.2,18,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Liabilities,Other liabilities,427.0,19,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Liabilities,Total liabilities,17492.7,20,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Net position,Earmarked funds,748.2,21,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Net position,Non-earmarked funds,-15533.6,22,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Net position,Total net position,-14785.4,23,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Net position,Total liabilities and net position,2707.3,24,2012,4,2012,3,09,30
+2012-09-30,2012,N,Net position,Earmarked funds,665.3,21,2012,4,2012,3,09,30
+2012-09-30,2012,N,Net position,Non-earmarked funds,-16766.3,22,2012,4,2012,3,09,30
+2012-09-30,2012,N,Net position,Total net position,-16101.0,23,2012,4,2012,3,09,30
+2012-09-30,2012,N,Assets,Cash and other monetary assets,206.2,1,2012,4,2012,3,09,30
+2012-09-30,2012,N,Assets,"Accounts and taxes receivable, net",111.2,2,2012,4,2012,3,09,30
+2012-09-30,2012,N,Assets,"Loans receivable and mortgage-backed securities, net",859.6,3,2012,4,2012,3,09,30
+2012-09-30,2012,N,Assets,"TARP direct loans and equity investments, net",40.2,4,2012,4,2012,3,09,30
+2012-09-30,2012,N,Assets,"Inventories and related property, net",299.0,5,2012,4,2012,3,09,30
+2012-09-30,2012,N,Assets,"Property, plant, and equipment, net",855.0,6,2012,4,2012,3,09,30
+2012-09-30,2012,N,Assets,Debt and equity securities,110.2,7,2012,4,2012,3,09,30
+2012-09-30,2012,N,Assets,Investments in Government-sponsored enterprises,109.3,8,2012,4,2012,3,09,30
+2012-09-30,2012,N,Assets,Other assets,157.6,9,2012,4,2012,3,09,30
+2012-09-30,2012,N,Assets,Total assets,2748.3,10,2012,4,2012,3,09,30
+2012-09-30,2012,N,Liabilities,Accounts payable,65.2,11,2012,4,2012,3,09,30
+2012-09-30,2012,N,Liabilities,Federal debt securities held by the public and accrued interest,11332.3,12,2012,4,2012,3,09,30
+2012-09-30,2012,N,Liabilities,Federal employee and veteran benefits payable,6274.0,13,2012,4,2012,3,09,30
+2012-09-30,2012,N,Liabilities,Environmental and disposal liabilities,339.0,14,2012,4,2012,3,09,30
+2012-09-30,2012,N,Liabilities,Benefits due and payable,166.2,15,2012,4,2012,3,09,30
+2012-09-30,2012,N,Liabilities,Insurance and guarantee program liabilities,156.4,16,2012,4,2012,3,09,30
+2012-09-30,2012,N,Liabilities,Loan guarantee liabilities,74.6,17,2012,4,2012,3,09,30
+2012-09-30,2012,N,Liabilities,Liabilities to Government-sponsored enterprises,9.0,18,2012,4,2012,3,09,30
+2012-09-30,2012,N,Liabilities,Other liabilities,432.6,19,2012,4,2012,3,09,30
+2012-09-30,2012,N,Liabilities,Total liabilities,18849.3,20,2012,4,2012,3,09,30
+2012-09-30,2012,N,Net position,Total liabilities and net position,2748.3,24,2012,4,2012,3,09,30
+2013-09-30,2012,Y,Assets,Cash and other monetary assets,206.2,1,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Assets,"Accounts and taxes receivable, net",111.2,2,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Assets,"Loans receivable, net",859.6,3,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Assets,"TARP direct loans and equity investments, net",40.2,4,2013,4,2013,3,09,30
+2013-09-30,2013,N,Assets,"Inventories and related property, net",311.1,5,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Assets,"Inventories and related property, net",299.0,5,2013,4,2013,3,09,30
+2013-09-30,2013,N,Assets,"Property, plant and equipment, net",896.7,6,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Assets,"Property, plant and equipment, net",855.0,6,2013,4,2013,3,09,30
+2013-09-30,2013,N,Assets,Debt and equity securities,107.8,7,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Assets,Debt and equity securities,110.2,7,2013,4,2013,3,09,30
+2013-09-30,2013,N,Assets,Investments in GSEs,140.2,8,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Assets,Investments in GSEs,109.3,8,2013,4,2013,3,09,30
+2013-09-30,2013,N,Assets,Other assets,162.8,9,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Assets,Other assets,157.6,9,2013,4,2013,3,09,30
+2013-09-30,2013,N,Assets,Total assets,2968.3,10,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Assets,Total assets,2748.3,10,2013,4,2013,3,09,30
+2013-09-30,2013,N,Liabilities,Accounts payable,66.2,11,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Liabilities,Accounts payable,65.2,11,2013,4,2013,3,09,30
+2013-09-30,2013,N,Liabilities,Federal debt securities held by the public and accrued interest,12028.4,12,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Liabilities,Federal debt securities held by the public and accrued interest,11332.3,12,2013,4,2013,3,09,30
+2013-09-30,2013,N,Liabilities,Federal employee and veteran benefits payable,6538.3,13,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Liabilities,Federal employee and veteran benefits payable,6274.0,13,2013,4,2013,3,09,30
+2013-09-30,2013,N,Liabilities,Environmental and disposal liabilities,349.1,14,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Liabilities,Environmental and disposal liabilities,339.0,14,2013,4,2013,3,09,30
+2013-09-30,2013,N,Liabilities,Benefits due and payable,174.3,15,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Liabilities,Benefits due and payable,166.2,15,2013,4,2013,3,09,30
+2013-09-30,2013,N,Liabilities,Insurance and guarantee program liabilities,130.0,16,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Liabilities,Insurance and guarantee program liabilities,156.4,16,2013,4,2013,3,09,30
+2013-09-30,2013,N,Liabilities,Loan guarantee liabilities,59.2,17,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Liabilities,Loan guarantee liabilities,74.6,17,2013,4,2013,3,09,30
+2013-09-30,2013,N,Liabilities,Liabilities to GSEs,null,18,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Liabilities,Liabilities to GSEs,9.0,18,2013,4,2013,3,09,30
+2013-09-30,2013,N,Liabilities,Other liabilities,532.1,19,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Liabilities,Other liabilities,432.6,19,2013,4,2013,3,09,30
+2013-09-30,2013,N,Liabilities,Total liabilities,19877.6,20,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Liabilities,Total liabilities,18849.3,20,2013,4,2013,3,09,30
+2013-09-30,2013,N,Net position,Funds from Dedicated Collections,3143.7,21,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Net position,Funds from Dedicated Collections,3147.8,21,2013,4,2013,3,09,30
+2013-09-30,2013,N,Net position,Funds other than those from Dedicated Collections,-20053.0,22,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Net position,Funds other than those from Dedicated Collections,-19248.8,22,2013,4,2013,3,09,30
+2013-09-30,2013,N,Net position,Total net position,-16909.3,23,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Net position,Total net position,-16101.0,23,2013,4,2013,3,09,30
+2013-09-30,2013,N,Net position,Total liabilities and net position,2968.3,24,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Net position,Total liabilities and net position,2748.3,24,2013,4,2013,3,09,30
+2013-09-30,2013,N,Assets,"TARP direct loans and equity investments, net",17.9,4,2013,4,2013,3,09,30
+2013-09-30,2013,N,Assets,Cash and other monetary assets,206.3,1,2013,4,2013,3,09,30
+2013-09-30,2013,N,Assets,"Accounts and taxes receivable, net",103.2,2,2013,4,2013,3,09,30
+2013-09-30,2013,N,Assets,"Loans receivable, net",1022.3,3,2013,4,2013,3,09,30
+2014-09-30,2013,Y,Net position,Funds other than those from Dedicated Collections,-20053.0,21,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Net position,Total net position,-16909.3,22,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Net position,Total liabilities and net position,2968.3,23,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Assets,Cash and other monetary assets,206.3,1,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Assets,"Accounts and taxes receivable, net",103.2,2,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Assets,"Loans receivable, net",1022.3,3,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Assets,"TARP direct loans and equity investments, net",17.9,4,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Assets,"Inventories and related property, net",311.1,5,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Assets,"Property, plant and equipment, net",896.7,6,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Assets,Debt and equity securities,107.8,7,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Assets,Investments in GSEs,140.2,8,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Assets,Other assets,162.8,9,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Assets,Total assets,2968.3,10,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Liabilities,Accounts payable,66.2,11,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Liabilities,Federal debt securities held by the public and accrued interest,12028.4,12,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Liabilities,Federal employee and veteran benefits payable,6538.3,13,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Liabilities,Environmental and disposal liabilities,349.1,14,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Liabilities,Benefits due and payable,174.3,15,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Liabilities,Insurance and guarantee program liabilities,139.9,16,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Liabilities,Loan guarantee liabilities,59.2,17,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Liabilities,Other liabilities,522.2,18,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Liabilities,Total liabilities,19877.6,19,2014,4,2014,3,09,30
+2014-09-30,2014,N,Net position,Funds from Dedicated Collections,3197.6,20,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Net position,Funds from Dedicated Collections,3143.7,20,2014,4,2014,3,09,30
+2014-09-30,2014,N,Liabilities,Benefits due and payable,191.6,15,2014,4,2014,3,09,30
+2014-09-30,2014,N,Net position,Funds other than those from Dedicated Collections,-20898.3,21,2014,4,2014,3,09,30
+2014-09-30,2014,N,Net position,Total net position,-17700.7,22,2014,4,2014,3,09,30
+2014-09-30,2014,N,Net position,Total liabilities and net position,3065.3,23,2014,4,2014,3,09,30
+2014-09-30,2014,N,Assets,Cash and other monetary assets,264.9,1,2014,4,2014,3,09,30
+2014-09-30,2014,N,Assets,"Accounts and taxes receivable, net",104.0,2,2014,4,2014,3,09,30
+2014-09-30,2014,N,Assets,"Loans receivable, net",1123.5,3,2014,4,2014,3,09,30
+2014-09-30,2014,N,Assets,"TARP direct loans and equity investments, net",2.2,4,2014,4,2014,3,09,30
+2014-09-30,2014,N,Assets,"Inventories and related property, net",318.4,5,2014,4,2014,3,09,30
+2014-09-30,2014,N,Assets,"Property, plant and equipment, net",878.3,6,2014,4,2014,3,09,30
+2014-09-30,2014,N,Assets,Debt and equity securities,115.4,7,2014,4,2014,3,09,30
+2014-09-30,2014,N,Assets,Investments in GSEs,95.8,8,2014,4,2014,3,09,30
+2014-09-30,2014,N,Assets,Other assets,162.8,9,2014,4,2014,3,09,30
+2014-09-30,2014,N,Assets,Total assets,3065.3,10,2014,4,2014,3,09,30
+2014-09-30,2014,N,Liabilities,Accounts payable,69.0,11,2014,4,2014,3,09,30
+2014-09-30,2014,N,Liabilities,Federal debt securities held by the public and accrued interest,12833.6,12,2014,4,2014,3,09,30
+2014-09-30,2014,N,Liabilities,Federal employee and veteran benefits payable,6672.6,13,2014,4,2014,3,09,30
+2014-09-30,2014,N,Liabilities,Environmental and disposal liabilities,369.1,14,2014,4,2014,3,09,30
+2014-09-30,2014,N,Liabilities,Insurance and guarantee program liabilities,168.2,16,2014,4,2014,3,09,30
+2014-09-30,2014,N,Liabilities,Loan guarantee liabilities,52.8,17,2014,4,2014,3,09,30
+2014-09-30,2014,N,Liabilities,Other liabilities,409.1,18,2014,4,2014,3,09,30
+2014-09-30,2014,N,Liabilities,Total liabilities,20766.0,19,2014,4,2014,3,09,30
+2015-09-30,2015,N,Liabilities,Accounts payable,68.3,10,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Liabilities,Accounts payable,69.0,10,2015,4,2015,3,09,30
+2015-09-30,2015,N,Liabilities,Federal debt securities held by the public and accrued interest,13172.5,11,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Liabilities,Federal debt securities held by the public and accrued interest,12833.6,11,2015,4,2015,3,09,30
+2015-09-30,2015,N,Liabilities,Environmental and disposal liabilities,411.6,13,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Liabilities,Insurance and guarantee program liabilities,168.2,15,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Liabilities,Loan guarantee liabilities,52.8,16,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Liabilities,Other liabilities,409.1,17,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Liabilities,Total liabilities,20766.0,18,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Net position,Funds from Dedicated Collections,3197.6,19,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Net position,Funds other than those from Dedicated Collections,-20898.3,20,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Net position,Total net position,-17700.7,21,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Net position,Total liabilities and net position,3065.3,22,2015,4,2015,3,09,30
+2015-09-30,2015,N,Liabilities,Benefits due and payable,213.9,14,2015,4,2015,3,09,30
+2015-09-30,2015,N,Liabilities,Insurance and guarantee program liabilities,177.5,15,2015,4,2015,3,09,30
+2015-09-30,2015,N,Liabilities,Loan guarantee liabilities,36.3,16,2015,4,2015,3,09,30
+2015-09-30,2015,N,Liabilities,Other liabilities,652.3,17,2015,4,2015,3,09,30
+2015-09-30,2015,N,Liabilities,Total liabilities,21451.7,18,2015,4,2015,3,09,30
+2015-09-30,2015,N,Net position,Funds from Dedicated Collections,3247.7,19,2015,4,2015,3,09,30
+2015-09-30,2015,N,Liabilities,Federal employee and veteran benefits payable,6719.3,12,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Liabilities,Federal employee and veteran benefits payable,6672.6,12,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Liabilities,Environmental and disposal liabilities,369.1,13,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Liabilities,Benefits due and payable,191.6,14,2015,4,2015,3,09,30
+2015-09-30,2015,N,Assets,Cash and other monetary assets,305.1,1,2015,4,2015,3,09,30
+2015-09-30,2015,N,Assets,"Accounts and taxes receivable, net",117.8,2,2015,4,2015,3,09,30
+2015-09-30,2015,N,Assets,"Loans receivable, net",1216.0,3,2015,4,2015,3,09,30
+2015-09-30,2015,N,Assets,"Inventories and related property, net",320.6,4,2015,4,2015,3,09,30
+2015-09-30,2015,N,Assets,"Property, plant and equipment, net",893.9,5,2015,4,2015,3,09,30
+2015-09-30,2015,N,Assets,Debt and equity securities,104.4,6,2015,4,2015,3,09,30
+2015-09-30,2015,N,Assets,Investments in government-sponsored enterprises,106.3,7,2015,4,2015,3,09,30
+2015-09-30,2015,N,Assets,Other assets,165.7,8,2015,4,2015,3,09,30
+2015-09-30,2015,N,Assets,Total assets,3229.8,9,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Assets,Cash and other monetary assets,264.9,1,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Assets,"Accounts and taxes receivable, net",104.0,2,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Assets,"Loans receivable, net",1125.7,3,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Assets,"Inventories and related property, net",318.4,4,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Assets,"Property, plant and equipment, net",878.3,5,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Assets,Debt and equity securities,115.4,6,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Assets,Investments in government-sponsored enterprises,95.8,7,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Assets,Other assets,162.8,8,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Assets,Total assets,3065.3,9,2015,4,2015,3,09,30
+2015-09-30,2015,N,Net position,Funds other than those from Dedicated Collections,-21469.6,20,2015,4,2015,3,09,30
+2015-09-30,2015,N,Net position,Total net position,-18221.9,21,2015,4,2015,3,09,30
+2015-09-30,2015,N,Net position,Total liabilities and net position,3229.8,22,2015,4,2015,3,09,30
+2016-09-30,2015,Y,Net position,Funds from Dedicated Collections,3247.7,19,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Net position,Funds other than those from Dedicated Collections,-21491.3,20,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Assets,Cash and other monetary assets,305.1,1,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Assets,"Accounts and taxes receivable, net",117.8,2,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Assets,"Loans receivable, net",1216.0,3,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Assets,"Inventories and related property, net",320.6,4,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Assets,"Property, plant and equipment, net",925.3,5,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Assets,Debt and equity securities,104.4,6,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Assets,Investments in government-sponsored enterprises,106.3,7,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Assets,Other assets,165.7,8,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Assets,Total assets,3261.2,9,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Liabilities,Accounts payable,68.3,10,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Liabilities,Federal debt securities held by the public and accrued interest,13172.5,11,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Liabilities,Federal employee and veteran benefits payable,6772.4,12,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Liabilities,Environmental and disposal liabilities,411.6,13,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Liabilities,Benefits due and payable,213.9,14,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Liabilities,Insurance and guarantee program liabilities,170.3,15,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Liabilities,Loan guarantee liabilities,36.3,16,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Liabilities,Other liabilities,659.5,17,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Liabilities,Total liabilities,21504.8,18,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Net position,Total net position,-18243.6,21,2016,4,2016,3,09,30
+2016-09-30,2016,N,Liabilities,Benefits due and payable,218.2,14,2016,4,2016,3,09,30
+2016-09-30,2016,N,Liabilities,Insurance and guarantee program liabilities,122.3,15,2016,4,2016,3,09,30
+2016-09-30,2016,N,Liabilities,Loan guarantee liabilities,18.2,16,2016,4,2016,3,09,30
+2016-09-30,2016,N,Liabilities,Total liabilities,22762.9,18,2016,4,2016,3,09,30
+2016-09-30,2016,N,Net position,Funds from Dedicated Collections,3374.3,19,2016,4,2016,3,09,30
+2016-09-30,2016,N,Net position,Funds other than those from Dedicated Collections,-22666.7,20,2016,4,2016,3,09,30
+2016-09-30,2016,N,Net position,Total net position,-19292.4,21,2016,4,2016,3,09,30
+2016-09-30,2016,N,Net position,Total liabilities and net position,3470.5,22,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Net position,Total liabilities and net position,3261.2,22,2016,4,2016,3,09,30
+2016-09-30,2016,N,Liabilities,Other liabilities,464.7,17,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,Cash and other monetary assets,464.6,1,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,"Accounts and taxes receivable, net",133.3,2,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,"Loans receivable, net",1277.6,3,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,"Inventories and related property, net",314.3,4,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,"Property, plant and equipment, net",979.5,5,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,Debt and equity securities,48.2,6,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,Investments in government-sponsored enterprises,108.6,7,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,Other assets,144.4,8,2016,4,2016,3,09,30
+2016-09-30,2016,N,Assets,Total assets,3470.5,9,2016,4,2016,3,09,30
+2016-09-30,2016,N,Liabilities,Accounts payable,62.4,10,2016,4,2016,3,09,30
+2016-09-30,2016,N,Liabilities,Federal debt securities held by the public and accrued interest,14221.1,11,2016,4,2016,3,09,30
+2016-09-30,2016,N,Liabilities,Federal employee and veteran benefits payable,7209.4,12,2016,4,2016,3,09,30
+2016-09-30,2016,N,Liabilities,Environmental and disposal liabilities,446.6,13,2016,4,2016,3,09,30
+2017-09-30,2016,Y,Assets,Cash and other monetary assets,467.9,1,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Assets,"Accounts and taxes receivable, net",133.2,2,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Assets,"Loans receivable, net",1277.6,3,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Assets,"Inventories and related property, net",314.3,4,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Assets,"Property, plant and equipment, net",979.5,5,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Assets,Debt and equity securities,108.2,6,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Assets,Investments in government-sponsored enterprises,108.6,7,2017,4,2017,3,09,30
+2017-09-30,2017,N,Assets,Other assets,147.7,8,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Assets,Other assets,145.5,8,2017,4,2017,3,09,30
+2017-09-30,2017,N,Assets,Total assets,3480.7,9,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Assets,Total assets,3534.8,9,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Accounts payable,70.8,10,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Accounts payable,62.4,10,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Federal debt securities held by the public and accrued interest,14724.1,11,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Federal debt securities held by the public and accrued interest,14221.1,11,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Federal employee and veteran benefits payable,7700.1,12,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Federal employee and veteran benefits payable,7209.4,12,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Environmental and disposal liabilities,464.5,13,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Environmental and disposal liabilities,446.6,13,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Benefits due and payable,218.8,14,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Benefits due and payable,218.2,14,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Insurance and guarantee program liabilities,202.5,15,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Insurance and guarantee program liabilities,187.0,15,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Loan guarantee liabilities,42.9,16,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Loan guarantee liabilities,18.2,16,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Other liabilities,473.2,17,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Other liabilities,468.7,17,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Total liabilities,23896.9,18,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Liabilities,Total liabilities,22831.6,18,2017,4,2017,3,09,30
+2017-09-30,2017,N,Net position,Funds from Dedicated Collections,3419.4,19,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Net position,Funds from Dedicated Collections,3374.3,19,2017,4,2017,3,09,30
+2017-09-30,2017,N,Net position,Funds other than those from Dedicated Collections,-23835.6,20,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Net position,Funds other than those from Dedicated Collections,-22671.1,20,2017,4,2017,3,09,30
+2017-09-30,2017,N,Net position,Total net position,-20416.2,21,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Net position,Total net position,-19296.8,21,2017,4,2017,3,09,30
+2017-09-30,2017,N,Net position,Total liabilities and net position,3480.7,22,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Net position,Total liabilities and net position,3534.8,22,2017,4,2017,3,09,30
+2017-09-30,2017,N,Assets,Cash and other monetary assets,271.2,1,2017,4,2017,3,09,30
+2017-09-30,2017,N,Assets,"Accounts and taxes receivable, net",143.3,2,2017,4,2017,3,09,30
+2017-09-30,2017,N,Assets,"Loans receivable, net",1348.5,3,2017,4,2017,3,09,30
+2017-09-30,2017,N,Assets,"Inventories and related property, net",326.7,4,2017,4,2017,3,09,30
+2017-09-30,2017,N,Assets,"Property, plant and equipment, net",1034.5,5,2017,4,2017,3,09,30
+2017-09-30,2017,N,Assets,Debt and equity securities,116.2,6,2017,4,2017,3,09,30
+2017-09-30,2017,N,Assets,Investments in government-sponsored enterprises,92.6,7,2017,4,2017,3,09,30
+2018-09-30,2018,N,Assets,Cash and other monetary assets,507.5,1,2018,4,2018,3,09,30
+2018-09-30,2018,N,Assets,"Accounts and taxes receivable, net",144.9,2,2018,4,2018,3,09,30
+2018-09-30,2018,N,Assets,"Loans receivable, net",1419.1,3,2018,4,2018,3,09,30
+2018-09-30,2018,N,Assets,"Inventories and related property, net",337.5,4,2018,4,2018,3,09,30
+2018-09-30,2018,N,Liabilities,Federal debt securities held by the public and accrued interest,15812.7,11,2018,4,2018,3,09,30
+2018-09-30,2018,N,Liabilities,Federal employee and veteran benefits payable,7982.3,12,2018,4,2018,3,09,30
+2018-09-30,2018,N,Liabilities,Environmental and disposal liabilities,577.3,13,2018,4,2018,3,09,30
+2018-09-30,2018,N,Liabilities,Benefits due and payable,211.1,14,2018,4,2018,3,09,30
+2018-09-30,2018,N,Liabilities,Insurance and guarantee program liabilities,170.2,15,2018,4,2018,3,09,30
+2018-09-30,2018,N,Liabilities,Loan guarantee liabilities,38.2,16,2018,4,2018,3,09,30
+2018-09-30,2018,N,Liabilities,Other liabilities,479.0,17,2018,4,2018,3,09,30
+2018-09-30,2018,N,Liabilities,Total liabilities,25357.5,18,2018,4,2018,3,09,30
+2018-09-30,2018,N,Net position,Funds from Dedicated Collections,3462.0,19,2018,4,2018,3,09,30
+2018-09-30,2018,N,Net position,Funds other than those from Dedicated Collections,-24982.8,20,2018,4,2018,3,09,30
+2018-09-30,2018,N,Net position,Total net position,-21520.8,21,2018,4,2018,3,09,30
+2018-09-30,2018,N,Net position,Total liabilities and net position,3836.7,22,2018,4,2018,3,09,30
+2018-09-30,2018,N,Assets,Other assets,113.7,8,2018,4,2018,3,09,30
+2018-09-30,2018,N,Assets,Total assets,3836.7,9,2018,4,2018,3,09,30
+2018-09-30,2018,N,Liabilities,Accounts payable,86.7,10,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Liabilities,Federal debt securities held by the public and accrued interest,14724.1,11,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Liabilities,Federal employee and veteran benefits payable,7700.1,12,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Liabilities,Environmental and disposal liabilities,464.5,13,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Liabilities,Benefits due and payable,218.8,14,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Liabilities,Insurance and guarantee program liabilities,202.5,15,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Liabilities,Loan guarantee liabilities,42.9,16,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Liabilities,Other liabilities,473.1,17,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Liabilities,Total liabilities,23896.8,18,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Net position,Funds from Dedicated Collections,3419.5,19,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Net position,Funds other than those from Dedicated Collections,-23781.4,20,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Net position,Total net position,-20361.9,21,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Net position,Total liabilities and net position,3534.9,22,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,Cash and other monetary assets,271.2,1,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,"Accounts and taxes receivable, net",143.3,2,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,"Loans receivable, net",1350.2,3,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,"Inventories and related property, net",326.7,4,2018,4,2018,3,09,30
+2018-09-30,2018,N,Assets,"Property, plant and equipment, net",1090.5,5,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,"Property, plant and equipment, net",1087.0,5,2018,4,2018,3,09,30
+2018-09-30,2018,N,Assets,Debt and equity securities,110.3,6,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,Debt and equity securities,116.2,6,2018,4,2018,3,09,30
+2018-09-30,2018,N,Assets,Investments in government-sponsored enterprises,113.2,7,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,Investments in government-sponsored enterprises,92.6,7,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,Other assets,147.7,8,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,Total assets,3534.9,9,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Liabilities,Accounts payable,70.8,10,2018,4,2018,3,09,30
+2019-09-30,2019,N,Net position,Total liabilities and net position,3992.0,22,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Assets,Cash and other monetary assets,507.5,1,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Assets,"Accounts and taxes receivable, net",144.9,2,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Assets,"Loans receivable, net",1419.1,3,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Assets,"Inventories and related property, net",337.5,4,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Assets,"Property, plant and equipment, net",1090.5,5,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Assets,Debt and equity securities,112.2,6,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Assets,Investments in government-sponsored enterprises,113.2,7,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Assets,Other assets,111.8,8,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Assets,Total assets,3836.7,9,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Liabilities,Accounts payable,86.7,10,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Liabilities,Federal debt securities held by the public and accrued interest,15812.7,11,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Liabilities,Federal employee and veteran benefits payable,7982.3,12,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Liabilities,Environmental and disposal liabilities,577.3,13,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Liabilities,Benefits due and payable,211.1,14,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Liabilities,Insurance and guarantee program liabilities,170.2,15,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Liabilities,Loan guarantee liabilities,38.2,16,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Liabilities,Other liabilities,478.9,17,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Liabilities,Total liabilities,25357.4,18,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Net position,Funds from Dedicated Collections,3480.7,19,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Net position,Funds other than those from Dedicated Collections,-25001.4,20,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Net position,Total net position,-21520.7,21,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Net position,Total liabilities and net position,3836.7,22,2019,4,2019,3,09,30
+2019-09-30,2019,N,Assets,Cash and other monetary assets,524.6,1,2019,4,2019,3,09,30
+2019-09-30,2019,N,Assets,"Accounts and taxes receivable, net",238.0,2,2019,4,2019,3,09,30
+2019-09-30,2019,N,Assets,"Loans receivable, net",1425.8,3,2019,4,2019,3,09,30
+2019-09-30,2019,N,Assets,"Inventories and related property, net",355.7,4,2019,4,2019,3,09,30
+2019-09-30,2019,N,Assets,"Property, plant and equipment, net",1106.9,5,2019,4,2019,3,09,30
+2019-09-30,2019,N,Assets,Debt and equity securities,118.3,6,2019,4,2019,3,09,30
+2019-09-30,2019,N,Assets,Investments in government-sponsored enterprises,112.1,7,2019,4,2019,3,09,30
+2019-09-30,2019,N,Assets,Other assets,110.6,8,2019,4,2019,3,09,30
+2019-09-30,2019,N,Assets,Total assets,3992.0,9,2019,4,2019,3,09,30
+2019-09-30,2019,N,Liabilities,Accounts payable,98.0,10,2019,4,2019,3,09,30
+2019-09-30,2019,N,Liabilities,Federal debt securities held by the public and accrued interest,16861.0,11,2019,4,2019,3,09,30
+2019-09-30,2019,N,Liabilities,Federal employee and veteran benefits payable,8440.3,12,2019,4,2019,3,09,30
+2019-09-30,2019,N,Liabilities,Environmental and disposal liabilities,595.4,13,2019,4,2019,3,09,30
+2019-09-30,2019,N,Liabilities,Benefits due and payable,223.6,14,2019,4,2019,3,09,30
+2019-09-30,2019,N,Liabilities,Insurance and guarantee program liabilities,194.5,15,2019,4,2019,3,09,30
+2019-09-30,2019,N,Liabilities,Loan guarantee liabilities,21.7,16,2019,4,2019,3,09,30
+2019-09-30,2019,N,Liabilities,Other liabilities,510.3,17,2019,4,2019,3,09,30
+2019-09-30,2019,N,Liabilities,Total liabilities,26944.8,18,2019,4,2019,3,09,30
+2019-09-30,2019,N,Net position,Funds from Dedicated Collections,3517.1,19,2019,4,2019,3,09,30
+2019-09-30,2019,N,Net position,Funds other than those from Dedicated Collections,-26469.9,20,2019,4,2019,3,09,30
+2019-09-30,2019,N,Net position,Total net position,-22952.8,21,2019,4,2019,3,09,30
+2020-09-30,2020,N,Liabilities,Loan guarantees liability,520.1,16,2020,4,2020,3,09,30
+2020-09-30,2020,N,Net position,Funds other than those from Dedicated Collections,-30270.7,22,2020,4,2020,3,09,30
+2020-09-30,2020,N,Net position,Total net position,-26796.3,23,2020,4,2020,3,09,30
+2020-09-30,2020,N,Net position,Total liabilities and net position,5950.7,24,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Assets,Total assets,3992.0,10,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Liabilities,Accounts payable,98.0,11,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Net position,Funds from Dedicated Collections,3517.1,21,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Net position,Funds other than those from Dedicated Collections,-26484.6,22,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Net position,Total net position,-22967.5,23,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Net position,Total liabilities and net position,3992.0,24,2020,4,2020,3,09,30
+2020-09-30,2020,N,Assets,Cash and other monetary assets,1926.9,1,2020,4,2020,3,09,30
+2020-09-30,2020,N,Assets,"Accounts receivable, net",321.2,2,2020,4,2020,3,09,30
+2020-09-30,2020,N,Assets,"Direct loans and loan guarantees receivable, net",1577.4,3,2020,4,2020,3,09,30
+2020-09-30,2020,N,Assets,"Inventory and related property, net",379.7,4,2020,4,2020,3,09,30
+2020-09-30,2020,N,Assets,"General property, plant and equipment, net",1145.0,5,2020,4,2020,3,09,30
+2020-09-30,2020,N,Assets,Securities and investments,121.9,6,2020,4,2020,3,09,30
+2020-09-30,2020,N,Assets,Investments in special purpose vehicles,108.4,7,2020,4,2020,3,09,30
+2020-09-30,2020,N,Assets,Investments in government-sponsored enterprises,108.9,8,2020,4,2020,3,09,30
+2020-09-30,2020,N,Assets,Other assets,261.3,9,2020,4,2020,3,09,30
+2020-09-30,2020,N,Assets,Total assets,5950.7,10,2020,4,2020,3,09,30
+2020-09-30,2020,N,Liabilities,Accounts payable,105.1,11,2020,4,2020,3,09,30
+2020-09-30,2020,N,Liabilities,Federal debt and interest payable,21082.9,12,2020,4,2020,3,09,30
+2020-09-30,2020,N,Liabilities,Federal employee and veteran benefits payable,9409.3,13,2020,4,2020,3,09,30
+2020-09-30,2020,N,Liabilities,Environmental and disposal liabilities,602.7,14,2020,4,2020,3,09,30
+2020-09-30,2020,N,Liabilities,Benefits due and payable,256.3,15,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Assets,Cash and other monetary assets,524.6,1,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Assets,"Accounts receivable, net",238.0,2,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Assets,"Direct loans and loan guarantees receivable, net",1425.8,3,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Assets,"Inventory and related property, net",355.7,4,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Assets,"General property, plant and equipment, net",1106.9,5,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Assets,Securities and investments,118.3,6,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Assets,Investments in special purpose vehicles,0.0,7,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Assets,Investments in government-sponsored enterprises,112.1,8,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Assets,Other assets,110.6,9,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Liabilities,Federal debt and interest payable,16861.0,12,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Liabilities,Federal employee and veteran benefits payable,8440.3,13,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Liabilities,Environmental and disposal liabilities,595.4,14,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Liabilities,Benefits due and payable,223.6,15,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Liabilities,Loan guarantees liability,21.7,16,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Liabilities,Insurance and guarantee program liabilities,194.5,17,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Liabilities,Other liabilities,510.3,18,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Liabilities,Total liabilities,26944.8,19,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Unmatched transactions and balances,Unmatched transactions and balances,14.7,20,2020,4,2020,3,09,30
+2020-09-30,2020,N,Liabilities,Insurance and guarantee program liabilities,199.3,17,2020,4,2020,3,09,30
+2020-09-30,2020,N,Liabilities,Other liabilities,568.2,18,2020,4,2020,3,09,30
+2020-09-30,2020,N,Liabilities,Total liabilities,32743.9,19,2020,4,2020,3,09,30
+2020-09-30,2020,N,Unmatched transactions and balances,Unmatched transactions and balances,3.1,20,2020,4,2020,3,09,30
+2020-09-30,2020,N,Net position,Funds from Dedicated Collections,3474.4,21,2020,4,2020,3,09,30
+2021-09-30,2020,Y,Assets,Cash and other monetary assets,1926.9,1,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Assets,"Accounts receivable, net",321.2,2,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Assets,"Loans receivable, net",1577.4,3,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Assets,"Inventory and related property, net",381.9,4,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Assets,"General property, plant and equipment, net",1139.9,5,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Assets,Investments,129.8,6,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Assets,Investments in special purpose vehicles,108.4,7,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Assets,Investments in government-sponsored enterprises,108.9,8,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Assets,Advances and prepayments,218.6,9,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Assets,Other assets,42.7,10,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Assets,Total assets,5955.7,11,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Liabilities,Accounts payable,99.0,12,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Liabilities,Federal debt and interest payable,21082.9,13,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Liabilities,Federal employee and veteran benefits payable,9415.5,14,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Liabilities,Environmental and disposal liabilities,602.7,15,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Liabilities,Benefits due and payable,256.3,16,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Liabilities,Loan guarantee liabilities,520.1,17,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Liabilities,Insurance and guarantee program liabilities,199.3,18,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Liabilities,Advances from others and deferred revenues,174.2,19,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Liabilities,Other liabilities,394.0,20,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Liabilities,Total liabilities,32744.0,21,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Unmatched transactions and balances,Unmatched transactions and balances,3.1,22,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Net position,Funds from Dedicated Collections,3474.4,23,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Net position,Funds other than those from Dedicated Collections,-30265.8,24,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Net position,Total net position,-26791.4,25,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Net position,Total liabilities and net position,5955.7,26,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,Cash and other monetary assets,475.0,1,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,"Accounts receivable, net",401.0,2,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,"Loans receivable, net",1651.0,3,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,"Inventory and related property, net",399.2,4,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,"General property, plant and equipment, net",1176.9,5,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,Investments,135.2,6,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,Investments in special purpose vehicles,26.4,7,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,Investments in government-sponsored enterprises,220.9,8,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,Advances and prepayments,369.3,9,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,Other assets,38.7,10,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,Total assets,4893.6,11,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Accounts payable,123.1,12,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Federal debt and interest payable,22344.8,13,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Federal employee and veteran benefits payable,10183.0,14,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Environmental and disposal liabilities,613.3,15,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Benefits due and payable,273.9,16,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Loan guarantee liabilities,230.7,17,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Insurance and guarantee program liabilities,129.8,18,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Advances from others and deferred revenues,202.0,19,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Other liabilities,677.1,20,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Total liabilities,34777.7,21,2021,4,2021,3,09,30
+2021-09-30,2021,N,Unmatched transactions and balances,Unmatched transactions and balances,1.7,22,2021,4,2021,3,09,30
+2021-09-30,2021,N,Net position,Funds from Dedicated Collections,3486.8,23,2021,4,2021,3,09,30
+2021-09-30,2021,N,Net position,Funds other than those from Dedicated Collections,-33372.6,24,2021,4,2021,3,09,30
+2021-09-30,2021,N,Net position,Total net position,-29885.8,25,2021,4,2021,3,09,30
+2021-09-30,2021,N,Net position,Total liabilities and net position,4893.6,26,2021,4,2021,3,09,30
+2022-09-30,2022,N,Assets,Cash and other monetary assets,877.8,1,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,Cash and other monetary assets,475.0,1,2022,4,2022,3,09,30
+2022-09-30,2022,N,Assets,"Accounts receivable, net",356.3,2,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,"Accounts receivable, net",401.0,2,2022,4,2022,3,09,30
+2022-09-30,2022,N,Assets,"Loans receivable, net",1434.1,3,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,"Loans receivable, net",1651.0,3,2022,4,2022,3,09,30
+2022-09-30,2022,N,Assets,"Inventory and related property, net",406.9,4,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,"Inventory and related property, net",399.2,4,2022,4,2022,3,09,30
+2022-09-30,2022,N,Assets,"General property, plant and equipment, net",1197.5,5,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,"General property, plant and equipment, net",1176.9,5,2022,4,2022,3,09,30
+2022-09-30,2022,N,Assets,Investments,130.3,6,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,Investments,161.6,6,2022,4,2022,3,09,30
+2022-09-30,2022,N,Assets,Investments in government-sponsored enterprises,223.7,7,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,Investments in government-sponsored enterprises,220.9,7,2022,4,2022,3,09,30
+2022-09-30,2022,N,Assets,Advances and prepayments,298.1,8,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,Advances and prepayments,369.3,8,2022,4,2022,3,09,30
+2022-09-30,2022,N,Assets,Other assets,37.7,9,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,Other assets,38.7,9,2022,4,2022,3,09,30
+2022-09-30,2022,N,Assets,Total assets,4962.4,10,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,Total assets,4893.6,10,2022,4,2022,3,09,30
+2022-09-30,2022,N,Liabilities,Accounts payable,114.6,11,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Accounts payable,123.1,11,2022,4,2022,3,09,30
+2022-09-30,2022,N,Liabilities,Federal debt and interest payable,24328.0,12,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Federal debt and interest payable,22344.8,12,2022,4,2022,3,09,30
+2022-09-30,2022,N,Liabilities,Federal employee and veteran benefits payable,12811.9,13,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Federal employee and veteran benefits payable,10183.0,13,2022,4,2022,3,09,30
+2022-09-30,2022,N,Liabilities,Environmental and disposal liabilities,626.3,14,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Environmental and disposal liabilities,613.3,14,2022,4,2022,3,09,30
+2022-09-30,2022,N,Liabilities,Benefits due and payable,288.3,15,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Benefits due and payable,273.9,15,2022,4,2022,3,09,30
+2022-09-30,2022,N,Liabilities,Loan guarantee liabilities,6.4,16,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Loan guarantee liabilities,230.7,16,2022,4,2022,3,09,30
+2022-09-30,2022,N,Liabilities,Insurance and guarantee program liabilities,104.5,17,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Insurance and guarantee program liabilities,129.8,17,2022,4,2022,3,09,30
+2022-09-30,2022,N,Liabilities,Advances from others and deferred revenues,247.2,18,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Advances from others and deferred revenues,202.0,18,2022,4,2022,3,09,30
+2022-09-30,2022,N,Liabilities,Other liabilities,495.1,19,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Other liabilities,677.1,19,2022,4,2022,3,09,30
+2022-09-30,2022,N,Liabilities,Total liabilities,39022.3,20,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Total liabilities,34777.7,20,2022,4,2022,3,09,30
+2022-09-30,2022,N,Unmatched transactions and balances,Unmatched transactions and balances,1.3,21,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Unmatched transactions and balances,Unmatched transactions and balances,1.7,21,2022,4,2022,3,09,30
+2022-09-30,2022,N,Net position,Funds from Dedicated Collections,3696.4,22,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Net position,Funds from Dedicated Collections,3483.0,22,2022,4,2022,3,09,30
+2022-09-30,2022,N,Net position,Funds other than those from Dedicated Collections,-37757.6,23,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Net position,Funds other than those from Dedicated Collections,-33368.8,23,2022,4,2022,3,09,30
+2022-09-30,2022,N,Net position,Total net position,-34061.2,24,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Net position,Total net position,-29885.8,24,2022,4,2022,3,09,30
+2022-09-30,2022,N,Net position,Total liabilities and net position,4962.4,25,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Net position,Total liabilities and net position,4893.6,25,2022,4,2022,3,09,30
+2023-09-30,2023,N,Assets,Cash and other monetary assets,922.2,1,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Assets,Cash and other monetary assets,877.8,1,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,"Accounts receivable, net",319.9,2,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Assets,"Accounts receivable, net",356.3,2,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,"Loans receivable, net",1695.1,3,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Assets,"Loans receivable, net",1434.1,3,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,Negative loan guarantee liabilities,4.6,4,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Assets,Negative loan guarantee liabilities,0.0,4,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,"Inventory and related property, net",423.0,5,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Assets,"Inventory and related property, net",406.9,5,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,"General property, plant and equipment, net",1235.0,6,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Assets,"General property, plant and equipment, net",1197.5,6,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,Investments,130.8,7,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Assets,Investments,130.3,7,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,Investments in government-sponsored enterprises,240.4,8,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Assets,Investments in government-sponsored enterprises,223.7,8,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,Advances and prepayments,252.7,9,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Assets,Advances and prepayments,298.1,9,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,Other assets,195.4,10,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Assets,Other assets,37.7,10,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,Total assets,5419.1,11,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Assets,Total assets,4962.4,11,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Accounts payable,124.2,12,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Liabilities,Accounts payable,114.6,12,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Federal debt and interest payable,26347.7,13,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Liabilities,Federal debt and interest payable,24328.0,13,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Federal employee and veteran benefits payable,14327.4,14,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Liabilities,Federal employee and veteran benefits payable,12811.9,14,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Environmental and disposal liabilities,645.3,15,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Liabilities,Environmental and disposal liabilities,626.3,15,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Benefits due and payable,325.9,16,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Liabilities,Benefits due and payable,288.3,16,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Loan guarantee liabilities,0.0,17,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Liabilities,Loan guarantee liabilities,6.4,17,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Insurance and guarantee program liabilities,99.3,18,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Liabilities,Insurance and guarantee program liabilities,104.5,18,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Advances from others and deferred revenues,355.3,19,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Liabilities,Advances from others and deferred revenues,247.2,19,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Other liabilities,673.2,20,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Liabilities,Other liabilities,495.1,20,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Total liabilities,42898.3,21,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Liabilities,Total liabilities,39022.3,21,2023,4,2023,3,09,30
+2023-09-30,2023,N,Unmatched transactions and balances,Unmatched transactions and balances,0.0,22,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Unmatched transactions and balances,Unmatched transactions and balances,1.3,22,2023,4,2023,3,09,30
+2023-09-30,2023,N,Net position,Funds from Dedicated Collections,3760.5,23,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Net position,Funds from Dedicated Collections,3696.4,23,2023,4,2023,3,09,30
+2023-09-30,2023,N,Net position,Funds other than those from Dedicated Collections,-41239.7,24,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Net position,Funds other than those from Dedicated Collections,-37757.6,24,2023,4,2023,3,09,30
+2023-09-30,2023,N,Net position,Total net position,-37479.2,25,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Net position,Total net position,-34061.2,25,2023,4,2023,3,09,30
+2023-09-30,2023,N,Net position,Total liabilities and net position,5419.1,26,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Net position,Total liabilities and net position,4962.4,26,2023,4,2023,3,09,30
+2024-09-30,2024,N,Assets,Assets,1177.7,1,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,922.2,1,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,278.7,2,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,319.9,2,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,1751.0,3,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,1695.1,3,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,27.9,4,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,4.6,4,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,447.3,5,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,423.0,5,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,1313.0,6,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,1235.0,6,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,305.8,7,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,240.4,7,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,132.4,8,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,130.8,8,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,146.4,9,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,252.7,9,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,81.9,10,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,195.4,10,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Total assets,5662.1,11,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Total assets,5419.1,11,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Liabilities,134.2,12,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Liabilities,124.2,12,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Liabilities,28338.9,13,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Liabilities,26347.7,13,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Liabilities,15033.4,14,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Liabilities,14347.6,14,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Liabilities,666.0,15,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Liabilities,645.3,15,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Liabilities,320.0,16,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Liabilities,325.9,16,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Liabilities,106.0,17,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Liabilities,99.3,17,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Liabilities,363.1,18,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Liabilities,355.3,18,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Liabilities,584.3,19,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Liabilities,653.0,19,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Total liabilities,45545.9,20,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Total liabilities,42898.3,20,2024,4,2024,3,09,30
+2024-09-30,2024,N,Net position,Net position,3707.3,21,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Net position,Net position,3760.5,21,2024,4,2024,3,09,30
+2024-09-30,2024,N,Net position,Net position,-43591.1,22,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Net position,Net position,-41239.7,22,2024,4,2024,3,09,30
+2024-09-30,2024,N,Net position,Net position,-39883.8,23,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Net position,Net position,-37479.2,23,2024,4,2024,3,09,30
+2024-09-30,2024,N,Net position,Net position,5662.1,24,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Net position,Net position,5419.1,24,2024,4,2024,3,09,30
+2025-09-30,2025,N,Assets,Cash and other monetary assets,1187.7,1,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,Cash and other monetary assets,1177.7,1,2025,4,2025,3,09,30
+2025-09-30,2025,N,Assets,"Accounts receivable, net",252.9,2,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,"Accounts receivable, net",278.7,2,2025,4,2025,3,09,30
+2025-09-30,2025,N,Assets,"Loans receivable, net",2002.5,3,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,"Loans receivable, net",1751.0,3,2025,4,2025,3,09,30
+2025-09-30,2025,N,Assets,Loan guarantees,47.3,4,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,Loan guarantees,27.9,4,2025,4,2025,3,09,30
+2025-09-30,2025,N,Assets,"Inventory and related property, net",504.2,5,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,"Inventory and related property, net",479.9,5,2025,4,2025,3,09,30
+2025-09-30,2025,N,Assets,"Property, plant and equipment, net",1400.3,6,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,"Property, plant and equipment, net",1302.1,6,2025,4,2025,3,09,30
+2025-09-30,2025,N,Assets,Investments in government-sponsored enterprises,374.5,7,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,Investments in government-sponsored enterprises,305.8,7,2025,4,2025,3,09,30
+2025-09-30,2025,N,Assets,Investments,142.9,8,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,Investments,132.4,8,2025,4,2025,3,09,30
+2025-09-30,2025,N,Assets,Advances and prepayments,70.0,9,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,Advances and prepayments,146.4,9,2025,4,2025,3,09,30
+2025-09-30,2025,N,Assets,Other assets,73.1,10,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,Other assets,81.9,10,2025,4,2025,3,09,30
+2025-09-30,2025,N,Assets,Total assets,6055.4,11,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,Total assets,5683.8,11,2025,4,2025,3,09,30
+2025-09-30,2025,N,Liabilities,Accounts payable,138.7,12,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Accounts payable,134.2,12,2025,4,2025,3,09,30
+2025-09-30,2025,N,Liabilities,Federal debt and interest payable,30334.1,13,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Federal debt and interest payable,28338.9,13,2025,4,2025,3,09,30
+2025-09-30,2025,N,Liabilities,Federal employee and veteran benefits payable,15472.2,14,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Federal employee and veteran benefits payable,15033.4,14,2025,4,2025,3,09,30
+2025-09-30,2025,N,Liabilities,Environmental and disposal liabilities,667.3,15,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Environmental and disposal liabilities,666.0,15,2025,4,2025,3,09,30
+2025-09-30,2025,N,Liabilities,Benefits due and payable,352.3,16,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Benefits due and payable,320.0,16,2025,4,2025,3,09,30
+2025-09-30,2025,N,Liabilities,Insurance and guarantee program liabilities,99.2,17,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Insurance and guarantee program liabilities,106.0,17,2025,4,2025,3,09,30
+2025-09-30,2025,N,Liabilities,Advances from others and deferred revenues,111.5,18,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Advances from others and deferred revenues,150.3,18,2025,4,2025,3,09,30
+2025-09-30,2025,N,Liabilities,Other liabilities,603.5,19,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Other liabilities,584.3,19,2025,4,2025,3,09,30
+2025-09-30,2025,N,Liabilities,Total liabilities,47778.8,20,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Total liabilities,45333.1,20,2025,4,2025,3,09,30
+2025-09-30,2025,N,Net position,Funds from Dedicated Collections,3545.9,21,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Net position,Funds from Dedicated Collections,3707.3,21,2025,4,2025,3,09,30
+2025-09-30,2025,N,Net position,Funds other than those from Dedicated Collections,-45269.3,22,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Net position,Funds other than those from Dedicated Collections,-43356.6,22,2025,4,2025,3,09,30
+2025-09-30,2025,N,Net position,Total net position,-41723.4,23,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Net position,Total net position,-39649.3,23,2025,4,2025,3,09,30
+2025-09-30,2025,N,Net position,Total liabilities and net position,6055.4,24,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Net position,Total liabilities and net position,5683.8,24,2025,4,2025,3,09,30

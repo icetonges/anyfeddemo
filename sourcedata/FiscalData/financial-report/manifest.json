@@ -1,11 +1,82 @@
 {
-  "pulled": "2026-06-10",
-  "status": "PARTIAL \u2014 FY2025 complete (40 FR entities); FY2016-2024 via local script run",
+  "pulled": "2026-06-10T20:58:16.862484+00:00",
+  "source": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service",
   "tables": {
     "statement_net_cost": {
-      "status": "OK (FY2025)",
-      "rows": 40,
-      "byAgency": true
+      "status": "OK",
+      "endpoint": "statement_net_cost",
+      "rows": 1947,
+      "statementYears": "2000-2025",
+      "perYearFiles": [
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ]
+    },
+    "balance_sheets": {
+      "status": "OK",
+      "endpoint": "balance_sheets",
+      "rows": 1330,
+      "statementYears": "1994-2025",
+      "perYearFiles": [
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ]
+    },
+    "operations_and_changes_in_net_position": {
+      "status": "NOT FOUND - endpoint name unknown; check fiscaldata.treasury.gov dataset page",
+      "tried": [
+        "statements_of_operations_and_changes_in_net_position",
+        "statement_of_operations_and_changes_in_net_position",
+        "stmt_operations_changes_net_position",
+        "operations_net_position"
+      ]
+    },
+    "reconciliation_net_cost_to_deficit": {
+      "status": "NOT FOUND - endpoint name unknown; check fiscaldata.treasury.gov dataset page",
+      "tried": [
+        "reconciliations_of_net_operating_cost_and_unified_budget_deficit",
+        "reconciliation_net_operating_cost_budget_deficit",
+        "net_cost_budget_deficit"
+      ]
+    },
+    "changes_in_cash_balance": {
+      "status": "NOT FOUND - endpoint name unknown; check fiscaldata.treasury.gov dataset page",
+      "tried": [
+        "statements_of_changes_in_cash_balance",
+        "statement_changes_cash_balance",
+        "changes_in_cash_balance"
+      ]
+    },
+    "long_term_fiscal_projections": {
+      "status": "NOT FOUND - endpoint name unknown; check fiscaldata.treasury.gov dataset page",
+      "tried": [
+        "statements_of_long_term_fiscal_projections",
+        "long_term_fiscal_projection",
+        "long_term_fiscal_projections"
+      ]
+    },
+    "social_insurance": {
+      "status": "NOT FOUND - endpoint name unknown; check fiscaldata.treasury.gov dataset page",
+      "tried": [
+        "statements_of_social_insurance",
+        "statement_social_insurance"
+      ]
     }
   }
 }

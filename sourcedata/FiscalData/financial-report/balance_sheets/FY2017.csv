@@ -1,0 +1,45 @@
+﻿record_date,stmt_fiscal_year,restmt_flag,account_desc,line_item_desc,position_bil_amt,src_line_nbr,record_fiscal_year,record_fiscal_quarter,record_calendar_year,record_calendar_quarter,record_calendar_month,record_calendar_day
+2017-09-30,2017,N,Assets,Other assets,147.7,8,2017,4,2017,3,09,30
+2017-09-30,2017,N,Assets,Total assets,3480.7,9,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Accounts payable,70.8,10,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Federal debt securities held by the public and accrued interest,14724.1,11,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Federal employee and veteran benefits payable,7700.1,12,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Environmental and disposal liabilities,464.5,13,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Benefits due and payable,218.8,14,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Insurance and guarantee program liabilities,202.5,15,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Loan guarantee liabilities,42.9,16,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Other liabilities,473.2,17,2017,4,2017,3,09,30
+2017-09-30,2017,N,Liabilities,Total liabilities,23896.9,18,2017,4,2017,3,09,30
+2017-09-30,2017,N,Net position,Funds from Dedicated Collections,3419.4,19,2017,4,2017,3,09,30
+2017-09-30,2017,N,Net position,Funds other than those from Dedicated Collections,-23835.6,20,2017,4,2017,3,09,30
+2017-09-30,2017,N,Net position,Total net position,-20416.2,21,2017,4,2017,3,09,30
+2017-09-30,2017,N,Net position,Total liabilities and net position,3480.7,22,2017,4,2017,3,09,30
+2017-09-30,2017,N,Assets,Cash and other monetary assets,271.2,1,2017,4,2017,3,09,30
+2017-09-30,2017,N,Assets,"Accounts and taxes receivable, net",143.3,2,2017,4,2017,3,09,30
+2017-09-30,2017,N,Assets,"Loans receivable, net",1348.5,3,2017,4,2017,3,09,30
+2017-09-30,2017,N,Assets,"Inventories and related property, net",326.7,4,2017,4,2017,3,09,30
+2017-09-30,2017,N,Assets,"Property, plant and equipment, net",1034.5,5,2017,4,2017,3,09,30
+2017-09-30,2017,N,Assets,Debt and equity securities,116.2,6,2017,4,2017,3,09,30
+2017-09-30,2017,N,Assets,Investments in government-sponsored enterprises,92.6,7,2017,4,2017,3,09,30
+2018-09-30,2017,Y,Liabilities,Federal debt securities held by the public and accrued interest,14724.1,11,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Liabilities,Federal employee and veteran benefits payable,7700.1,12,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Liabilities,Environmental and disposal liabilities,464.5,13,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Liabilities,Benefits due and payable,218.8,14,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Liabilities,Insurance and guarantee program liabilities,202.5,15,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Liabilities,Loan guarantee liabilities,42.9,16,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Liabilities,Other liabilities,473.1,17,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Liabilities,Total liabilities,23896.8,18,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Net position,Funds from Dedicated Collections,3419.5,19,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Net position,Funds other than those from Dedicated Collections,-23781.4,20,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Net position,Total net position,-20361.9,21,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Net position,Total liabilities and net position,3534.9,22,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,Cash and other monetary assets,271.2,1,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,"Accounts and taxes receivable, net",143.3,2,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,"Loans receivable, net",1350.2,3,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,"Inventories and related property, net",326.7,4,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,"Property, plant and equipment, net",1087.0,5,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,Debt and equity securities,116.2,6,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,Investments in government-sponsored enterprises,92.6,7,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,Other assets,147.7,8,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Assets,Total assets,3534.9,9,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Liabilities,Accounts payable,70.8,10,2018,4,2018,3,09,30

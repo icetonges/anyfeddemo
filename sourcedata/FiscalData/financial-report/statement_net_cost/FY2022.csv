@@ -1,0 +1,87 @@
+﻿record_date,stmt_fiscal_year,restmt_flag,agency_nm,gross_cost_bil_amt,earned_revenue_bil_amt,subtotal_bil_amt,change_assumptions_bil_amt,net_cost_bil_amt,src_line_nbr,record_fiscal_year,record_fiscal_quarter,record_calendar_year,record_calendar_quarter,record_calendar_month,record_calendar_day
+2022-09-30,2022,N,Department of Veterans Affairs,413.8,5.4,408.4,1526.5,1934.9,1,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Health and Human Services,1812.7,154.1,1658.6,1.4,1660.0,2,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Defense,979.6,47.6,932.0,527.0,1459.0,3,2022,4,2022,3,09,30
+2022-09-30,2022,N,Social Security Administration,1294.4,0.3,1294.1,0.0,1294.1,4,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Education,595.1,55.6,539.5,0.0,539.5,5,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of the Treasury,557.7,31.3,526.4,0.0,526.4,6,2022,4,2022,3,09,30
+2022-09-30,2022,N,Interest on Treasury Securities held by the public,496.5,0.0,496.5,0.0,496.5,7,2022,4,2022,3,09,30
+2022-09-30,2022,N,Office of Personnel Management,174.5,27.3,147.2,148.2,295.4,8,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Agriculture,250.5,9.6,240.9,0.0,240.9,9,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Transportation,116.4,1.0,115.4,0.0,115.4,10,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Homeland Security,102.2,14.8,87.4,1.2,88.6,11,2022,4,2022,3,09,30
+2022-09-30,2022,N,Security Assistance Accounts,102.1,19.3,82.8,0.0,82.8,12,2022,4,2022,3,09,30
+2022-09-30,2022,N,Small Business Administration,47.8,4.3,43.5,0.0,43.5,13,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Labor,42.4,0.0,42.4,0.0,42.4,14,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Justice,42.4,1.2,41.2,0.0,41.2,15,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of State,40.0,4.8,35.2,3.4,38.6,16,2022,4,2022,3,09,30
+2022-09-30,2022,N,Agency for International Development,29.5,0.1,29.4,0.0,29.4,17,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Energy,50.3,22.4,27.9,0.0,27.9,18,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Housing and Urban Development,28.2,1.9,26.3,0.0,26.3,19,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of the Interior,28.3,2.6,25.7,0.0,25.7,20,2022,4,2022,3,09,30
+2022-09-30,2022,N,National Aeronautics and Space Administration,22.3,0.3,22.0,0.0,22.0,21,2022,4,2022,3,09,30
+2022-09-30,2022,N,Federal Communications Commission,16.0,0.4,15.6,0.0,15.6,22,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Commerce,15.8,4.2,11.6,0.1,11.7,23,2022,4,2022,3,09,30
+2022-09-30,2022,N,Environmental Protection Agency,9.8,0.3,9.5,0.0,9.5,24,2022,4,2022,3,09,30
+2022-09-30,2022,N,National Science Foundation,8.2,0.0,8.2,0.0,8.2,25,2022,4,2022,3,09,30
+2022-09-30,2022,N,Railroad Retirement Board,8.2,0.0,8.2,0.0,8.2,26,2022,4,2022,3,09,30
+2022-09-30,2022,N,National Railroad Retirement Investment Trust,4.7,1.1,3.6,0.0,3.6,27,2022,4,2022,3,09,30
+2022-09-30,2022,N,United States Postal Service,78.7,76.2,2.5,0.0,2.5,28,2022,4,2022,3,09,30
+2022-09-30,2022,N,Smithsonian Institution,1.7,0.1,1.6,0.0,1.6,29,2022,4,2022,3,09,30
+2022-09-30,2022,N,Millennium Challenge Corporation,0.7,0.0,0.7,0.0,0.7,30,2022,4,2022,3,09,30
+2022-09-30,2022,N,Securities and Exchange Commission,2.6,2.4,0.2,0.0,0.2,31,2022,4,2022,3,09,30
+2022-09-30,2022,N,National Credit Union Administration,0.3,0.1,0.2,0.0,0.2,32,2022,4,2022,3,09,30
+2022-09-30,2022,N,U.S. Nuclear Regulatory Commission,0.8,0.7,0.1,0.0,0.1,33,2022,4,2022,3,09,30
+2022-09-30,2022,N,United States International Development Finance Corporation,0.3,0.2,0.1,0.0,0.1,34,2022,4,2022,3,09,30
+2022-09-30,2022,N,Export-Import Bank of the United States,0.0,0.5,-0.5,0.0,-0.5,35,2022,4,2022,3,09,30
+2022-09-30,2022,N,General Services Administration,0.300000000000001,0.9,-0.599999999999999,0.0,-0.599999999999999,36,2022,4,2022,3,09,30
+2022-09-30,2022,N,Farm Credit System Insurance Corporation,0.0,0.6,-0.6,0.0,-0.6,37,2022,4,2022,3,09,30
+2022-09-30,2022,N,Tennessee Valley Authority,11.3,12.4,-1.1,0.0,-1.1,38,2022,4,2022,3,09,30
+2022-09-30,2022,N,Federal Deposit Insurance Corporation,1.9,8.2,-6.3,0.0,-6.3,39,2022,4,2022,3,09,30
+2022-09-30,2022,N,Pension Benefit Guaranty Corporation,9.9,16.9,-7.0,0.0,-7.0,40,2022,4,2022,3,09,30
+2022-09-30,2022,N,All other entities,22.1,2.0,20.1,0.1,20.2,41,2022,4,2022,3,09,30
+2022-09-30,2022,N,Total,7420.0,531.1,6888.9,2207.9,9096.8,42,2022,4,2022,3,09,30
+2023-09-30,2022,Y,Department of Health and Human Services,1812.7,154.1,1658.6,1.4,1660.0,1,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Veterans Affairs,413.8,5.4,408.4,1526.5,1934.9,2,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Social Security Administration,1294.3,0.3,1294.0,0.0,1294.0,3,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Defense,979.7,47.8,931.9,527.0,1458.9,4,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Interest on Treasury Securities held by the public,496.5,0.0,496.5,0.0,496.5,5,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of the Treasury,557.7,31.3,526.4,0.0,526.4,6,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Agriculture,250.4,9.7,240.7,0.0,240.7,7,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Office of Personnel Management,174.1,27.3,146.8,148.2,295.0,8,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Transportation,116.3,1.0,115.3,0.0,115.3,9,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Security Assistance Accounts,102.1,19.3,82.8,0.0,82.8,10,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Homeland Security,102.3,14.7,87.6,1.2,88.8,11,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Energy,50.3,22.1,28.2,0.0,28.2,12,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Housing and Urban Development,28.2,1.9,26.3,0.0,26.3,13,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Justice,42.4,1.2,41.2,0.0,41.2,14,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Labor,42.3,0.0,42.3,0.0,42.3,15,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Pension Benefit Guaranty Corporation,9.9,16.9,-7.0,0.0,-7.0,16,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Agency for International Development,29.5,0.1,29.4,0.0,29.4,17,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of State,40.0,4.8,35.2,3.4,38.6,18,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Small Business Administration,47.8,4.3,43.5,0.0,43.5,19,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of the Interior,28.2,2.7,25.5,0.0,25.5,20,2023,4,2023,3,09,30
+2023-09-30,2022,Y,National Aeronautics and Space Administration,22.3,0.3,22.0,0.0,22.0,21,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Education,595.1,55.6,539.5,0.0,539.5,22,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Federal Communications Commission,16.0,0.4,15.6,0.0,15.6,23,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Railroad Retirement Board,8.2,0.0,8.2,0.0,8.2,24,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Commerce,15.8,4.2,11.6,0.1,11.7,25,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Environmental Protection Agency,9.9,0.3,9.6,0.0,9.6,26,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Federal Deposit Insurance Corporation,1.9,8.2,-6.3,0.0,-6.3,27,2023,4,2023,3,09,30
+2023-09-30,2022,Y,National Science Foundation,8.2,0.0,8.2,0.0,8.2,28,2023,4,2023,3,09,30
+2023-09-30,2022,Y,United States Postal Service,78.7,76.2,2.49999999999999,0.0,2.49999999999999,29,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Smithsonian Institution,1.7,0.1,1.6,0.0,1.6,30,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Millennium Challenge Corporation,0.7,0.0,0.7,0.0,0.7,31,2023,4,2023,3,09,30
+2023-09-30,2022,Y,National Credit Union Administration,0.3,0.1,0.2,0.0,0.2,32,2023,4,2023,3,09,30
+2023-09-30,2022,Y,U.S. Nuclear Regulatory Commission,0.8,0.7,0.1,0.0,0.1,33,2023,4,2023,3,09,30
+2023-09-30,2022,Y,General Services Administration,0.300000000000001,0.9,-0.600000000000001,0.0,-0.600000000000001,34,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Securities and Exchange Commission,2.6,2.4,0.2,0.0,0.2,35,2023,4,2023,3,09,30
+2023-09-30,2022,Y,United States International Development Finance Corporation,0.3,0.2,0.1,0.0,0.1,36,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Farm Credit System Insurance Corporation,0.0,0.6,-0.6,0.0,-0.6,37,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Tennessee Valley Authority,11.3,12.4,-1.1,0.0,-1.1,38,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Export-Import Bank of the United States,0.0,0.5,-0.5,0.0,-0.5,39,2023,4,2023,3,09,30
+2023-09-30,2022,Y,National Railroad Retirement Investment Trust,4.7,1.1,3.6,0.0,3.6,40,2023,4,2023,3,09,30
+2023-09-30,2022,Y,All other entities,23.4,2.0,21.4,0.1,21.5,41,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Subtotal,7420.70000000001,531.1,6889.60000000001,2207.9,9097.50000000001,42,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Unmatched transactions and balances (Note 1.T),-0.6,0.0,-0.6,0.0,-0.6,43,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Total,7420.10000000001,531.1,6889.00000000001,2207.9,9096.90000000001,44,2023,4,2023,3,09,30

@@ -1,11 +1,18 @@
 {
- "generated": "2026-06-10",
- "source": "fiscaldata v2 statement_net_cost (audited FR) \u2014 pulled via portal session",
+ "generated": "2026-06-10T20:58:16.862484+00:00",
  "unit": "billions USD, accrual, GAO-audited",
  "yearsHeld": [
+  "FY2016",
+  "FY2017",
+  "FY2018",
+  "FY2019",
+  "FY2020",
+  "FY2021",
+  "FY2022",
+  "FY2023",
+  "FY2024",
   "FY2025"
  ],
- "yearsRemaining": "FY2016-FY2024 \u2014 run: python scripts/fiscaldata_statements.py all",
  "registryAgenciesCovered": [
   "DHS",
   "DOC",
@@ -36,364 +43,3253 @@
   "VA"
  ],
  "agencies": {
-  "Department of Health and Human Services": {
-   "registryId": "HHS",
-   "FY2025": {
-    "grossCost": 2070.1,
-    "earnedRevenue": 184.3,
-    "changeAssumptions": 0.5,
-    "netCost": 1886.3
-   }
-  },
-  "Social Security Administration": {
-   "registryId": "SSA",
-   "FY2025": {
-    "grossCost": 1655.7,
-    "earnedRevenue": 0.3,
-    "changeAssumptions": 0.0,
-    "netCost": 1655.4
-   }
-  },
-  "Department of Defense": {
-   "registryId": "DOD",
-   "FY2025": {
-    "grossCost": 1115.4,
-    "earnedRevenue": 120.0,
-    "changeAssumptions": 241.9,
-    "netCost": 1237.3
-   }
-  },
-  "Interest on Treasury Securities held by the public": {
-   "registryId": null,
-   "FY2025": {
-    "grossCost": 987.1,
-    "earnedRevenue": 0.0,
-    "changeAssumptions": 0.0,
-    "netCost": 987.1
-   }
-  },
-  "Department of Veterans Affairs": {
-   "registryId": "VA",
-   "FY2025": {
-    "grossCost": 572.7,
-    "earnedRevenue": 6.3,
-    "changeAssumptions": -44.2,
-    "netCost": 522.2
-   }
-  },
-  "Department of the Treasury": {
-   "registryId": "TREAS",
-   "FY2025": {
-    "grossCost": 413.7,
-    "earnedRevenue": 116.9,
-    "changeAssumptions": 0.0,
-    "netCost": 296.8
-   }
-  },
-  "Department of Agriculture": {
-   "registryId": "USDA",
-   "FY2025": {
-    "grossCost": 236.5,
-    "earnedRevenue": 12.6,
-    "changeAssumptions": 0.0,
-    "netCost": 223.9
-   }
-  },
-  "Department of Transportation": {
-   "registryId": "DOT",
-   "FY2025": {
-    "grossCost": 130.2,
-    "earnedRevenue": 1.6,
-    "changeAssumptions": 0.0,
-    "netCost": 128.6
-   }
-  },
-  "Department of Homeland Security": {
-   "registryId": "DHS",
-   "FY2025": {
-    "grossCost": 141.7,
-    "earnedRevenue": 18.1,
-    "changeAssumptions": 0.5,
-    "netCost": 124.1
-   }
-  },
-  "Department of Housing and Urban Development": {
-   "registryId": "HUD",
-   "FY2025": {
-    "grossCost": 75.2,
-    "earnedRevenue": 3.8,
-    "changeAssumptions": 0.0,
-    "netCost": 71.4
-   }
-  },
-  "Department of Energy": {
-   "registryId": "DOE",
-   "FY2025": {
-    "grossCost": 72.6,
-    "earnedRevenue": 5.8,
-    "changeAssumptions": 0.0,
-    "netCost": 66.8
-   }
-  },
-  "Department of Labor": {
-   "registryId": "DOL",
-   "FY2025": {
-    "grossCost": 62.5,
-    "earnedRevenue": 0.0,
-    "changeAssumptions": 0.0,
-    "netCost": 62.5
-   }
-  },
-  "Department of Justice": {
-   "registryId": "DOJ",
-   "FY2025": {
-    "grossCost": 50.2,
-    "earnedRevenue": 1.7,
-    "changeAssumptions": 0.0,
-    "netCost": 48.5
-   }
-  },
-  "Environmental Protection Agency": {
-   "registryId": "EPA",
-   "FY2025": {
-    "grossCost": 37.6,
-    "earnedRevenue": 0.6,
-    "changeAssumptions": 0.0,
-    "netCost": 37.0
-   }
-  },
-  "Department of State": {
-   "registryId": "DOS",
-   "FY2025": {
-    "grossCost": 38.1,
-    "earnedRevenue": 6.4,
-    "changeAssumptions": 0.2,
-    "netCost": 31.9
-   }
-  },
-  "Department of the Interior": {
-   "registryId": "DOI",
-   "FY2025": {
-    "grossCost": 34.0,
-    "earnedRevenue": 3.5,
-    "changeAssumptions": 0.0,
-    "netCost": 30.5
-   }
-  },
-  "National Aeronautics and Space Administration": {
-   "registryId": "NASA",
-   "FY2025": {
-    "grossCost": 23.9,
-    "earnedRevenue": 0.4,
-    "changeAssumptions": 0.0,
-    "netCost": 23.5
-   }
-  },
-  "Department of Commerce": {
-   "registryId": "DOC",
-   "FY2025": {
-    "grossCost": 27.1,
-    "earnedRevenue": 8.6,
-    "changeAssumptions": 0.0,
-    "netCost": 18.5
-   }
-  },
-  "Agency for International Development": {
-   "registryId": "USAID",
-   "FY2025": {
-    "grossCost": 16.8,
-    "earnedRevenue": 0.9,
-    "changeAssumptions": 0.0,
-    "netCost": 15.9
-   }
-  },
-  "Railroad Retirement Board": {
-   "registryId": null,
-   "FY2025": {
-    "grossCost": 14.9,
-    "earnedRevenue": 0.0,
-    "changeAssumptions": 0.0,
-    "netCost": 14.9
-   }
-  },
-  "United States Postal Service": {
-   "registryId": null,
-   "FY2025": {
-    "grossCost": 90.6,
-    "earnedRevenue": 79.1,
-    "changeAssumptions": 0.0,
-    "netCost": 11.5
-   }
-  },
-  "Federal Communications Commission": {
-   "registryId": "FCC",
-   "FY2025": {
-    "grossCost": 11.1,
-    "earnedRevenue": 0.4,
-    "changeAssumptions": 0.0,
-    "netCost": 10.7
-   }
-  },
-  "National Science Foundation": {
-   "registryId": "NSF",
-   "FY2025": {
-    "grossCost": 9.9,
-    "earnedRevenue": 0.0,
-    "changeAssumptions": 0.0,
-    "netCost": 9.9
-   }
-  },
   "Small Business Administration": {
    "registryId": "SBA",
-   "FY2025": {
-    "grossCost": 12.4,
-    "earnedRevenue": 4.4,
-    "changeAssumptions": 0.0,
-    "netCost": 8.0
-   }
-  },
-  "National Credit Union Administration": {
-   "registryId": null,
-   "FY2025": {
-    "grossCost": 0.4,
-    "earnedRevenue": 0.1,
-    "changeAssumptions": 0.0,
-    "netCost": 0.3
-   }
-  },
-  "General Services Administration": {
-   "registryId": "GSA",
-   "FY2025": {
-    "grossCost": 1.4,
-    "earnedRevenue": 1.1,
-    "changeAssumptions": 0.0,
-    "netCost": 0.3
-   }
-  },
-  "Pension Benefit Guaranty Corporation": {
-   "registryId": null,
-   "FY2025": {
-    "grossCost": 17.1,
-    "earnedRevenue": 16.9,
-    "changeAssumptions": 0.0,
-    "netCost": 0.2
+   "years": {
+    "FY2016": {
+     "grossCost": 0.5,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": 0.2,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 0.1,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": -0.2,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 0.7,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": 0.4,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 0.3,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": -0.1,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 562.1,
+     "earnedRevenue": 3.1,
+     "changeAssumptions": 0.0,
+     "netCost": 559.0,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 350.5,
+     "earnedRevenue": 3.1,
+     "changeAssumptions": 0.0,
+     "netCost": 347.4,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 47.8,
+     "earnedRevenue": 4.3,
+     "changeAssumptions": 0.0,
+     "netCost": 43.5,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 35.5,
+     "earnedRevenue": 5.2,
+     "changeAssumptions": 0.0,
+     "netCost": 30.3,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": -0.2,
+     "earnedRevenue": 4.5,
+     "changeAssumptions": 0.0,
+     "netCost": -4.7,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 12.4,
+     "earnedRevenue": 4.4,
+     "changeAssumptions": 0.0,
+     "netCost": 8.0,
+     "restated": false
+    }
    }
   },
   "U.S. Nuclear Regulatory Commission": {
    "registryId": "NRC",
-   "FY2025": {
-    "grossCost": 1.0,
-    "earnedRevenue": 0.8,
-    "changeAssumptions": 0.0,
-    "netCost": 0.2
+   "years": {
+    "FY2016": {
+     "grossCost": 0.9,
+     "earnedRevenue": 0.8,
+     "changeAssumptions": 0.0,
+     "netCost": 0.1,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 0.9,
+     "earnedRevenue": 0.8,
+     "changeAssumptions": 0.0,
+     "netCost": 0.1,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 0.9,
+     "earnedRevenue": 0.7,
+     "changeAssumptions": 0.0,
+     "netCost": 0.2,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 0.8,
+     "earnedRevenue": 0.7,
+     "changeAssumptions": 0.0,
+     "netCost": 0.1,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 0.9,
+     "earnedRevenue": 0.7,
+     "changeAssumptions": 0.0,
+     "netCost": 0.2,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 0.9,
+     "earnedRevenue": 0.7,
+     "changeAssumptions": 0.0,
+     "netCost": 0.2,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 0.8,
+     "earnedRevenue": 0.7,
+     "changeAssumptions": 0.0,
+     "netCost": 0.1,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 0.8,
+     "earnedRevenue": 0.7,
+     "changeAssumptions": 0.0,
+     "netCost": 0.1,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 0.9,
+     "earnedRevenue": 0.7,
+     "changeAssumptions": 0.0,
+     "netCost": 0.2,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 1.0,
+     "earnedRevenue": 0.8,
+     "changeAssumptions": 0.0,
+     "netCost": 0.2,
+     "restated": false
+    }
    }
   },
-  "United States International Development Finance Corporation": {
-   "registryId": null,
-   "FY2025": {
-    "grossCost": 0.4,
-    "earnedRevenue": 0.5,
-    "changeAssumptions": 0.0,
-    "netCost": -0.1
+  "General Services Administration": {
+   "registryId": "GSA",
+   "years": {
+    "FY2016": {
+     "grossCost": 0.6,
+     "earnedRevenue": 0.7,
+     "changeAssumptions": 0.0,
+     "netCost": -0.1,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 0.2,
+     "earnedRevenue": 0.6,
+     "changeAssumptions": 0.0,
+     "netCost": -0.4,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 0.0,
+     "earnedRevenue": 0.8,
+     "changeAssumptions": 0.0,
+     "netCost": -0.8,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 0.1,
+     "earnedRevenue": 0.8,
+     "changeAssumptions": 0.0,
+     "netCost": -0.7,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 0.300000000000002,
+     "earnedRevenue": 0.8,
+     "changeAssumptions": 0.0,
+     "netCost": -0.499999999999998,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": -0.100000000000001,
+     "earnedRevenue": 0.9,
+     "changeAssumptions": 0.0,
+     "netCost": -1.0,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 0.300000000000001,
+     "earnedRevenue": 0.9,
+     "changeAssumptions": 0.0,
+     "netCost": -0.600000000000001,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 0.899999999999997,
+     "earnedRevenue": 1.1,
+     "changeAssumptions": 0.0,
+     "netCost": -0.199999999999997,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 1.59999999999999,
+     "earnedRevenue": 2.1,
+     "changeAssumptions": 0.0,
+     "netCost": -0.500000000000003,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 1.39999999999999,
+     "earnedRevenue": 1.1,
+     "changeAssumptions": 0.0,
+     "netCost": 0.3,
+     "restated": false
+    }
    }
   },
-  "Export-Import Bank of the United States": {
+  "Overseas Private Investment Corporation": {
    "registryId": null,
-   "FY2025": {
-    "grossCost": 0.1,
-    "earnedRevenue": 0.2,
-    "changeAssumptions": 0.0,
-    "netCost": -0.1
-   }
-  },
-  "Farm Credit System Insurance Corporation": {
-   "registryId": null,
-   "FY2025": {
-    "grossCost": 0.1,
-    "earnedRevenue": 0.4,
-    "changeAssumptions": 0.0,
-    "netCost": -0.3
-   }
-  },
-  "Tennessee Valley Authority": {
-   "registryId": null,
-   "FY2025": {
-    "grossCost": 12.3,
-    "earnedRevenue": 13.7,
-    "changeAssumptions": 0.0,
-    "netCost": -1.4
+   "years": {
+    "FY2016": {
+     "grossCost": 0.0,
+     "earnedRevenue": 0.1,
+     "changeAssumptions": 0.0,
+     "netCost": -0.1,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 0.0,
+     "earnedRevenue": 0.1,
+     "changeAssumptions": 0.0,
+     "netCost": -0.1,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 0.0,
+     "earnedRevenue": 0.1,
+     "changeAssumptions": 0.0,
+     "netCost": -0.1,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": -0.2,
+     "earnedRevenue": 0.1,
+     "changeAssumptions": 0.0,
+     "netCost": -0.3,
+     "restated": true
+    }
    }
   },
   "Securities and Exchange Commission": {
    "registryId": "SEC",
-   "FY2025": {
-    "grossCost": 2.3,
-    "earnedRevenue": 4.4,
-    "changeAssumptions": 0.0,
-    "netCost": -2.1
+   "years": {
+    "FY2016": {
+     "grossCost": 1.7,
+     "earnedRevenue": 2.0,
+     "changeAssumptions": 0.0,
+     "netCost": -0.3,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 1.9,
+     "earnedRevenue": 2.1,
+     "changeAssumptions": 0.0,
+     "netCost": -0.2,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 1.8,
+     "earnedRevenue": 2.3,
+     "changeAssumptions": 0.0,
+     "netCost": -0.5,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 1.8,
+     "earnedRevenue": 2.1,
+     "changeAssumptions": 0.0,
+     "netCost": -0.3,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 2.2,
+     "earnedRevenue": 3.3,
+     "changeAssumptions": 0.0,
+     "netCost": -1.1,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 2.4,
+     "earnedRevenue": 2.5,
+     "changeAssumptions": 0.0,
+     "netCost": -0.0999999999999996,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 2.6,
+     "earnedRevenue": 2.4,
+     "changeAssumptions": 0.0,
+     "netCost": 0.2,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 2.4,
+     "earnedRevenue": 2.6,
+     "changeAssumptions": 0.0,
+     "netCost": -0.2,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 3.1,
+     "earnedRevenue": 3.4,
+     "changeAssumptions": 0.0,
+     "netCost": -0.3,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 2.3,
+     "earnedRevenue": 4.4,
+     "changeAssumptions": 0.0,
+     "netCost": -2.1,
+     "restated": false
+    }
    }
   },
-  "National Railroad Retirement Investment Trust": {
+  "Farm Credit System Insurance Corporation": {
    "registryId": null,
-   "FY2025": {
-    "grossCost": 0.1,
-    "earnedRevenue": 2.7,
-    "changeAssumptions": 0.0,
-    "netCost": -2.6
+   "years": {
+    "FY2016": {
+     "grossCost": 0.0,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": -0.3,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 0.0,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": -0.4,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 0.2,
+     "earnedRevenue": 0.2,
+     "changeAssumptions": 0.0,
+     "netCost": 0.0,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 0.1,
+     "earnedRevenue": 0.2,
+     "changeAssumptions": 0.0,
+     "netCost": -0.1,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 0.1,
+     "earnedRevenue": 0.2,
+     "changeAssumptions": 0.0,
+     "netCost": -0.1,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 0.0,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": -0.4,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 0.0,
+     "earnedRevenue": 0.6,
+     "changeAssumptions": 0.0,
+     "netCost": -0.6,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 0.0,
+     "earnedRevenue": 0.6,
+     "changeAssumptions": 0.0,
+     "netCost": -0.6,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 0.1,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": -0.3,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 0.1,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": -0.3,
+     "restated": false
+    }
    }
   },
-  "Federal Deposit Insurance Corporation": {
-   "registryId": "FDIC",
-   "FY2025": {
-    "grossCost": -1.1,
-    "earnedRevenue": 15.3,
-    "changeAssumptions": 0.0,
-    "netCost": -16.4
-   }
-  },
-  "Security Assistance Accounts": {
+  "National Credit Union Administration": {
    "registryId": null,
-   "FY2025": {
-    "grossCost": -4.0,
-    "earnedRevenue": 34.7,
-    "changeAssumptions": 0.0,
-    "netCost": -38.7
+   "years": {
+    "FY2016": {
+     "grossCost": -0.7,
+     "earnedRevenue": 0.1,
+     "changeAssumptions": 0.0,
+     "netCost": -0.8,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": -0.1,
+     "earnedRevenue": 0.7,
+     "changeAssumptions": 0.0,
+     "netCost": -0.8,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 0.9,
+     "earnedRevenue": 0.6,
+     "changeAssumptions": 0.0,
+     "netCost": 0.3,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 0.4,
+     "earnedRevenue": 0.2,
+     "changeAssumptions": 0.0,
+     "netCost": 0.2,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 0.3,
+     "earnedRevenue": 0.2,
+     "changeAssumptions": 0.0,
+     "netCost": 0.1,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 0.2,
+     "earnedRevenue": 0.1,
+     "changeAssumptions": 0.0,
+     "netCost": 0.1,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 0.3,
+     "earnedRevenue": 0.1,
+     "changeAssumptions": 0.0,
+     "netCost": 0.2,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 0.4,
+     "earnedRevenue": 0.1,
+     "changeAssumptions": 0.0,
+     "netCost": 0.3,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 0.4,
+     "earnedRevenue": 0.1,
+     "changeAssumptions": 0.0,
+     "netCost": 0.3,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 0.4,
+     "earnedRevenue": 0.1,
+     "changeAssumptions": 0.0,
+     "netCost": 0.3,
+     "restated": false
+    }
+   }
+  },
+  "Tennessee Valley Authority": {
+   "registryId": null,
+   "years": {
+    "FY2016": {
+     "grossCost": 9.3,
+     "earnedRevenue": 10.6,
+     "changeAssumptions": 0.0,
+     "netCost": -1.3,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 9.9,
+     "earnedRevenue": 10.7,
+     "changeAssumptions": 0.0,
+     "netCost": -0.8,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 9.9,
+     "earnedRevenue": 11.2,
+     "changeAssumptions": 0.0,
+     "netCost": -1.3,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 9.9,
+     "earnedRevenue": 11.3,
+     "changeAssumptions": 0.0,
+     "netCost": -1.4,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 8.8,
+     "earnedRevenue": 10.1,
+     "changeAssumptions": 0.0,
+     "netCost": -1.3,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 8.8,
+     "earnedRevenue": 10.4,
+     "changeAssumptions": 0.0,
+     "netCost": -1.6,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 11.3,
+     "earnedRevenue": 12.4,
+     "changeAssumptions": 0.0,
+     "netCost": -1.1,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 11.4,
+     "earnedRevenue": 12.0,
+     "changeAssumptions": 0.0,
+     "netCost": -0.600000000000001,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 11.1,
+     "earnedRevenue": 12.3,
+     "changeAssumptions": 0.0,
+     "netCost": -1.2,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 12.3,
+     "earnedRevenue": 13.7,
+     "changeAssumptions": 0.0,
+     "netCost": -1.4,
+     "restated": false
+    }
+   }
+  },
+  "Export-Import Bank of the United States": {
+   "registryId": null,
+   "years": {
+    "FY2016": {
+     "grossCost": -0.2,
+     "earnedRevenue": 1.2,
+     "changeAssumptions": 0.0,
+     "netCost": -1.4,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 0.4,
+     "earnedRevenue": 1.2,
+     "changeAssumptions": 0.0,
+     "netCost": -0.8,
+     "restated": false
+    },
+    "FY2022": {
+     "grossCost": 0.0,
+     "earnedRevenue": 0.5,
+     "changeAssumptions": 0.0,
+     "netCost": -0.5,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 0.5,
+     "earnedRevenue": 0.7,
+     "changeAssumptions": 0.0,
+     "netCost": -0.2,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": -0.9,
+     "earnedRevenue": -0.2,
+     "changeAssumptions": 0.0,
+     "netCost": -0.7,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": -0.1,
+     "earnedRevenue": 0.2,
+     "changeAssumptions": 0.0,
+     "netCost": -0.3,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 0.1,
+     "earnedRevenue": 0.2,
+     "changeAssumptions": 0.0,
+     "netCost": -0.1,
+     "restated": false
+    }
    }
   },
   "Office of Personnel Management": {
    "registryId": "OPM",
-   "FY2025": {
-    "grossCost": 139.8,
-    "earnedRevenue": 34.9,
-    "changeAssumptions": -180.4,
-    "netCost": -75.5
+   "years": {
+    "FY2016": {
+     "grossCost": 60.2,
+     "earnedRevenue": 21.3,
+     "changeAssumptions": -47.1,
+     "netCost": -8.2,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 90.1,
+     "earnedRevenue": 22.3,
+     "changeAssumptions": 102.5,
+     "netCost": 170.3,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 101.3,
+     "earnedRevenue": 23.4,
+     "changeAssumptions": 26.2,
+     "netCost": 104.1,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 118.5,
+     "earnedRevenue": 24.1,
+     "changeAssumptions": 0.3,
+     "netCost": 94.7,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 97.3,
+     "earnedRevenue": 25.2,
+     "changeAssumptions": 89.9,
+     "netCost": 162.0,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 134.0,
+     "earnedRevenue": 26.3,
+     "changeAssumptions": 84.9,
+     "netCost": 192.6,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 174.1,
+     "earnedRevenue": 27.3,
+     "changeAssumptions": 148.2,
+     "netCost": 295.0,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 124.0,
+     "earnedRevenue": 29.4,
+     "changeAssumptions": 111.9,
+     "netCost": 206.5,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 147.7,
+     "earnedRevenue": 31.9,
+     "changeAssumptions": 83.8,
+     "netCost": 199.6,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 139.8,
+     "earnedRevenue": 34.9,
+     "changeAssumptions": -180.4,
+     "netCost": -75.5000000000001,
+     "restated": false
+    }
    }
   },
-  "Department of Education": {
-   "registryId": "ED",
-   "FY2025": {
-    "grossCost": -29.2,
-    "earnedRevenue": 48.4,
-    "changeAssumptions": 0.0,
-    "netCost": -77.6
+  "Federal Deposit Insurance Corporation": {
+   "registryId": "FDIC",
+   "years": {
+    "FY2016": {
+     "grossCost": 0.2,
+     "earnedRevenue": 9.5,
+     "changeAssumptions": 0.0,
+     "netCost": -9.3,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 1.5,
+     "earnedRevenue": 10.6,
+     "changeAssumptions": 0.0,
+     "netCost": -9.1,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 1.3,
+     "earnedRevenue": 10.8,
+     "changeAssumptions": 0.0,
+     "netCost": -9.5,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 0.4,
+     "earnedRevenue": 5.0,
+     "changeAssumptions": 0.0,
+     "netCost": -4.6,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 1.7,
+     "earnedRevenue": 6.5,
+     "changeAssumptions": 0.0,
+     "netCost": -4.8,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 1.7,
+     "earnedRevenue": 7.1,
+     "changeAssumptions": 0.0,
+     "netCost": -5.4,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 1.9,
+     "earnedRevenue": 8.2,
+     "changeAssumptions": 0.0,
+     "netCost": -6.3,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 21.8,
+     "earnedRevenue": 11.9,
+     "changeAssumptions": 0.0,
+     "netCost": 9.9,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 21.9,
+     "earnedRevenue": 35.5,
+     "changeAssumptions": 0.0,
+     "netCost": -13.6,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": -1.1,
+     "earnedRevenue": 15.3,
+     "changeAssumptions": 0.0,
+     "netCost": -16.4,
+     "restated": false
+    }
    }
   },
   "All other entities": {
    "registryId": null,
-   "FY2025": {
-    "grossCost": 30.7,
-    "earnedRevenue": 2.4,
-    "changeAssumptions": 0.1,
-    "netCost": 28.4
+   "years": {
+    "FY2016": {
+     "grossCost": 21.1,
+     "earnedRevenue": 1.3,
+     "changeAssumptions": 0.0,
+     "netCost": 19.8,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 21.4,
+     "earnedRevenue": 1.4,
+     "changeAssumptions": 0.0,
+     "netCost": 20.0,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 18.7,
+     "earnedRevenue": 1.5,
+     "changeAssumptions": 0.0,
+     "netCost": 17.2,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 22.0,
+     "earnedRevenue": 1.8,
+     "changeAssumptions": 0.0,
+     "netCost": 20.2,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 23.4,
+     "earnedRevenue": 1.7,
+     "changeAssumptions": 0.0,
+     "netCost": 21.7,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 24.9,
+     "earnedRevenue": 1.8,
+     "changeAssumptions": 0.1,
+     "netCost": 23.2,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 23.4,
+     "earnedRevenue": 2.0,
+     "changeAssumptions": 0.1,
+     "netCost": 21.5,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 31.0,
+     "earnedRevenue": 1.8,
+     "changeAssumptions": 0.1,
+     "netCost": 29.3,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 25.3,
+     "earnedRevenue": 2.2,
+     "changeAssumptions": 0.1,
+     "netCost": 23.2,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 30.7,
+     "earnedRevenue": 2.4,
+     "changeAssumptions": 0.1,
+     "netCost": 28.4,
+     "restated": false
+    }
    }
   },
   "Total": {
    "registryId": null,
-   "FY2025": {
-    "grossCost": 8071.4,
-    "earnedRevenue": 752.2,
-    "changeAssumptions": 18.6,
-    "netCost": 7337.8
+   "years": {
+    "FY2016": {
+     "grossCost": 4515.7,
+     "earnedRevenue": 383.9,
+     "changeAssumptions": 273.3,
+     "netCost": 4405.1,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 4606.2,
+     "earnedRevenue": 431.9,
+     "changeAssumptions": 356.5,
+     "netCost": 4530.8,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 4808.5,
+     "earnedRevenue": 392.8,
+     "changeAssumptions": 125.2,
+     "netCost": 4540.9,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 5287.2,
+     "earnedRevenue": 418.4,
+     "changeAssumptions": 198.9,
+     "netCost": 5067.7,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 7195.1,
+     "earnedRevenue": 461.6,
+     "changeAssumptions": 679.5,
+     "netCost": 7413.0,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 7406.6,
+     "earnedRevenue": 574.2,
+     "changeAssumptions": 518.4,
+     "netCost": 7350.8,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 7420.10000000001,
+     "earnedRevenue": 531.1,
+     "changeAssumptions": 2207.9,
+     "netCost": 9096.90000000001,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 7661.7,
+     "earnedRevenue": 539.5,
+     "changeAssumptions": 760.6,
+     "netCost": 7882.8,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 7750.2,
+     "earnedRevenue": 670.7,
+     "changeAssumptions": 283.6,
+     "netCost": 7363.1,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 8071.4,
+     "earnedRevenue": 752.2,
+     "changeAssumptions": 18.6,
+     "netCost": 7337.8,
+     "restated": false
+    }
+   }
+  },
+  "Department of Health and Human Services": {
+   "registryId": "HHS",
+   "years": {
+    "FY2016": {
+     "grossCost": 1170.0,
+     "earnedRevenue": 96.1,
+     "changeAssumptions": 0.4,
+     "netCost": 1074.3,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 1186.8,
+     "earnedRevenue": 101.1,
+     "changeAssumptions": 0.4,
+     "netCost": 1086.1,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 1252.6,
+     "earnedRevenue": 110.5,
+     "changeAssumptions": 0.4,
+     "netCost": 1142.5,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 1341.4,
+     "earnedRevenue": 119.1,
+     "changeAssumptions": 0.0,
+     "netCost": 1222.3,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 1537.0,
+     "earnedRevenue": 130.0,
+     "changeAssumptions": 0.1,
+     "netCost": 1407.1,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 1644.9,
+     "earnedRevenue": 137.7,
+     "changeAssumptions": 0.7,
+     "netCost": 1507.9,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 1812.7,
+     "earnedRevenue": 154.1,
+     "changeAssumptions": 1.4,
+     "netCost": 1660.0,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 1875.6,
+     "earnedRevenue": 161.2,
+     "changeAssumptions": -0.3,
+     "netCost": 1714.1,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 1907.3,
+     "earnedRevenue": 170.1,
+     "changeAssumptions": 1.0,
+     "netCost": 1738.2,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 2070.1,
+     "earnedRevenue": 184.3,
+     "changeAssumptions": 0.5,
+     "netCost": 1886.3,
+     "restated": false
+    }
+   }
+  },
+  "Social Security Administration": {
+   "registryId": "SSA",
+   "years": {
+    "FY2016": {
+     "grossCost": 982.1,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": 981.8,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 999.1,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": 998.8,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 1038.5,
+     "earnedRevenue": 0.2,
+     "changeAssumptions": 0.0,
+     "netCost": 1038.3,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 1101.2,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": 1100.9,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 1157.6,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": 1157.3,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 1194.1,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": 1193.8,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 1294.3,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": 1294.0,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 1433.1,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": 1432.8,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 1530.5,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": 1530.2,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 1655.7,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": 1655.4,
+     "restated": false
+    }
+   }
+  },
+  "Department of Veterans Affairs": {
+   "registryId": "VA",
+   "years": {
+    "FY2016": {
+     "grossCost": 276.5,
+     "earnedRevenue": 4.9,
+     "changeAssumptions": 377.5,
+     "netCost": 649.1,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 254.8,
+     "earnedRevenue": 4.8,
+     "changeAssumptions": 229.7,
+     "netCost": 479.7,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 272.5,
+     "earnedRevenue": 4.8,
+     "changeAssumptions": 79.2,
+     "netCost": 346.9,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 364.7,
+     "earnedRevenue": 5.1,
+     "changeAssumptions": 58.0,
+     "netCost": 417.6,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 386.5,
+     "earnedRevenue": 4.0,
+     "changeAssumptions": 602.7,
+     "netCost": 985.2,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 351.0,
+     "earnedRevenue": 3.9,
+     "changeAssumptions": 346.3,
+     "netCost": 693.4,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 413.8,
+     "earnedRevenue": 5.4,
+     "changeAssumptions": 1526.5,
+     "netCost": 1934.9,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 902.0,
+     "earnedRevenue": 5.5,
+     "changeAssumptions": 558.8,
+     "netCost": 1455.3,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 515.6,
+     "earnedRevenue": 5.9,
+     "changeAssumptions": -37.7,
+     "netCost": 472.0,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 572.7,
+     "earnedRevenue": 6.3,
+     "changeAssumptions": -44.2,
+     "netCost": 522.2,
+     "restated": false
+    }
+   }
+  },
+  "Department of Defense": {
+   "registryId": "DOD",
+   "years": {
+    "FY2016": {
+     "grossCost": 721.9,
+     "earnedRevenue": 55.1,
+     "changeAssumptions": -57.6,
+     "netCost": 609.2,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 718.7,
+     "earnedRevenue": 77.4,
+     "changeAssumptions": 24.1,
+     "netCost": 665.4,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 719.8,
+     "earnedRevenue": 38.2,
+     "changeAssumptions": 16.8,
+     "netCost": 698.4,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 813.6,
+     "earnedRevenue": 44.2,
+     "changeAssumptions": 139.0,
+     "netCost": 908.4,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 803.0,
+     "earnedRevenue": 39.8,
+     "changeAssumptions": -17.4,
+     "netCost": 745.8,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 851.8,
+     "earnedRevenue": 44.0,
+     "changeAssumptions": 82.8,
+     "netCost": 890.6,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 979.7,
+     "earnedRevenue": 47.8,
+     "changeAssumptions": 527.0,
+     "netCost": 1458.9,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 969.0,
+     "earnedRevenue": 55.0,
+     "changeAssumptions": 89.3,
+     "netCost": 1003.3,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 1049.0,
+     "earnedRevenue": 67.3,
+     "changeAssumptions": 236.7,
+     "netCost": 1218.4,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 1115.4,
+     "earnedRevenue": 120.0,
+     "changeAssumptions": 241.9,
+     "netCost": 1237.3,
+     "restated": false
+    }
+   }
+  },
+  "Interest on Treasury Securities Held by the Public": {
+   "registryId": null,
+   "years": {
+    "FY2016": {
+     "grossCost": 273.0,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 273.0,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 296.3,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 296.3,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 357.3,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 357.3,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 403.6,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 403.6,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 371.1,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 371.1,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 392.0,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 392.0,
+     "restated": false
+    }
+   }
+  },
+  "Department of Agriculture": {
+   "registryId": "USDA",
+   "years": {
+    "FY2016": {
+     "grossCost": 142.1,
+     "earnedRevenue": 8.5,
+     "changeAssumptions": 0.0,
+     "netCost": 133.6,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 142.9,
+     "earnedRevenue": 8.1,
+     "changeAssumptions": 0.0,
+     "netCost": 134.8,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 137.0,
+     "earnedRevenue": 6.6,
+     "changeAssumptions": 0.0,
+     "netCost": 130.4,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 149.1,
+     "earnedRevenue": 8.3,
+     "changeAssumptions": 0.0,
+     "netCost": 140.8,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 198.0,
+     "earnedRevenue": 10.1,
+     "changeAssumptions": 0.0,
+     "netCost": 187.9,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 239.4,
+     "earnedRevenue": 8.8,
+     "changeAssumptions": 0.0,
+     "netCost": 230.6,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 250.4,
+     "earnedRevenue": 9.7,
+     "changeAssumptions": 0.0,
+     "netCost": 240.7,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 238.1,
+     "earnedRevenue": 11.8,
+     "changeAssumptions": 0.0,
+     "netCost": 226.3,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 213.7,
+     "earnedRevenue": 10.6,
+     "changeAssumptions": 0.0,
+     "netCost": 203.1,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 236.5,
+     "earnedRevenue": 12.6,
+     "changeAssumptions": 0.0,
+     "netCost": 223.9,
+     "restated": false
+    }
+   }
+  },
+  "Department of the Treasury": {
+   "registryId": "TREAS",
+   "years": {
+    "FY2016": {
+     "grossCost": 148.7,
+     "earnedRevenue": 19.4,
+     "changeAssumptions": 0.0,
+     "netCost": 129.3,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 179.5,
+     "earnedRevenue": 37.9,
+     "changeAssumptions": 0.0,
+     "netCost": 141.6,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 150.5,
+     "earnedRevenue": 21.9,
+     "changeAssumptions": 0.0,
+     "netCost": 128.6,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 181.0,
+     "earnedRevenue": 25.3,
+     "changeAssumptions": 0.0,
+     "netCost": 155.7,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 581.3,
+     "earnedRevenue": 20.6,
+     "changeAssumptions": 0.0,
+     "netCost": 560.7,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 966.5,
+     "earnedRevenue": 135.7,
+     "changeAssumptions": 0.0,
+     "netCost": 830.8,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 557.7,
+     "earnedRevenue": 31.3,
+     "changeAssumptions": 0.0,
+     "netCost": 526.4,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 357.4,
+     "earnedRevenue": 53.7,
+     "changeAssumptions": 0.0,
+     "netCost": 303.7,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 321.5,
+     "earnedRevenue": 99.2,
+     "changeAssumptions": 0.0,
+     "netCost": 222.3,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 413.7,
+     "earnedRevenue": 116.9,
+     "changeAssumptions": 0.0,
+     "netCost": 296.8,
+     "restated": false
+    }
+   }
+  },
+  "Department of Transportation": {
+   "registryId": "DOT",
+   "years": {
+    "FY2016": {
+     "grossCost": 80.7,
+     "earnedRevenue": 0.9,
+     "changeAssumptions": 0.0,
+     "netCost": 79.8,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 79.6,
+     "earnedRevenue": 0.9,
+     "changeAssumptions": 0.0,
+     "netCost": 78.7,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 79.0,
+     "earnedRevenue": 1.1,
+     "changeAssumptions": 0.0,
+     "netCost": 77.9,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 82.2,
+     "earnedRevenue": 1.1,
+     "changeAssumptions": 0.0,
+     "netCost": 81.1,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 108.8,
+     "earnedRevenue": 1.1,
+     "changeAssumptions": 0.0,
+     "netCost": 107.7,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 102.9,
+     "earnedRevenue": 1.0,
+     "changeAssumptions": 0.0,
+     "netCost": 101.9,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 116.3,
+     "earnedRevenue": 1.0,
+     "changeAssumptions": 0.0,
+     "netCost": 115.3,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 108.2,
+     "earnedRevenue": 1.5,
+     "changeAssumptions": 0.0,
+     "netCost": 106.7,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 116.8,
+     "earnedRevenue": 1.5,
+     "changeAssumptions": 0.0,
+     "netCost": 115.3,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 130.2,
+     "earnedRevenue": 1.6,
+     "changeAssumptions": 0.0,
+     "netCost": 128.6,
+     "restated": false
+    }
+   }
+  },
+  "Smithsonian Institution": {
+   "registryId": null,
+   "years": {
+    "FY2016": {
+     "grossCost": 0.8,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 0.8,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 0.9,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 0.9,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 1.5,
+     "earnedRevenue": 0.5,
+     "changeAssumptions": 0.0,
+     "netCost": 1.0,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 1.5,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 1.1,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 1.5,
+     "earnedRevenue": 0.5,
+     "changeAssumptions": 0.0,
+     "netCost": 1.0,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 1.5,
+     "earnedRevenue": 0.8,
+     "changeAssumptions": 0.0,
+     "netCost": 0.7,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 1.7,
+     "earnedRevenue": 0.1,
+     "changeAssumptions": 0.0,
+     "netCost": 1.6,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 2.0,
+     "earnedRevenue": 0.5,
+     "changeAssumptions": 0.0,
+     "netCost": 1.5,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 1.6,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 1.2,
+     "restated": false
+    }
+   }
+  },
+  "Department of Education": {
+   "registryId": "ED",
+   "years": {
+    "FY2016": {
+     "grossCost": 103.1,
+     "earnedRevenue": 29.9,
+     "changeAssumptions": 0.0,
+     "netCost": 73.2,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 84.4,
+     "earnedRevenue": 30.6,
+     "changeAssumptions": 0.0,
+     "netCost": 53.8,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 79.2,
+     "earnedRevenue": 31.4,
+     "changeAssumptions": 0.0,
+     "netCost": 47.8,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 153.9,
+     "earnedRevenue": 31.9,
+     "changeAssumptions": 0.0,
+     "netCost": 122.0,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 190.2,
+     "earnedRevenue": 33.3,
+     "changeAssumptions": 0.0,
+     "netCost": 156.9,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 243.0,
+     "earnedRevenue": 34.4,
+     "changeAssumptions": 0.0,
+     "netCost": 208.6,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 595.1,
+     "earnedRevenue": 55.6,
+     "changeAssumptions": 0.0,
+     "netCost": 539.5,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 50.9,
+     "earnedRevenue": 32.4,
+     "changeAssumptions": 0.0,
+     "netCost": 18.5,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 218.8,
+     "earnedRevenue": 27.1,
+     "changeAssumptions": 0.0,
+     "netCost": 191.7,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": -29.2,
+     "earnedRevenue": 48.4,
+     "changeAssumptions": 0.0,
+     "netCost": -77.6,
+     "restated": false
+    }
+   }
+  },
+  "Department of Energy": {
+   "registryId": "DOE",
+   "years": {
+    "FY2016": {
+     "grossCost": 68.6,
+     "earnedRevenue": 4.3,
+     "changeAssumptions": 0.0,
+     "netCost": 64.3,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 46.9,
+     "earnedRevenue": 5.6,
+     "changeAssumptions": 0.0,
+     "netCost": 41.3,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 147.0,
+     "earnedRevenue": 6.1,
+     "changeAssumptions": 0.0,
+     "netCost": 140.9,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 59.3,
+     "earnedRevenue": 5.7,
+     "changeAssumptions": 0.0,
+     "netCost": 53.6,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 60.9,
+     "earnedRevenue": 5.4,
+     "changeAssumptions": 0.0,
+     "netCost": 55.5,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 43.2,
+     "earnedRevenue": 6.2,
+     "changeAssumptions": 0.0,
+     "netCost": 37.0,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 50.3,
+     "earnedRevenue": 22.1,
+     "changeAssumptions": 0.0,
+     "netCost": 28.2,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 86.2,
+     "earnedRevenue": 11.3,
+     "changeAssumptions": 0.0,
+     "netCost": 74.9,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 81.3,
+     "earnedRevenue": 5.8,
+     "changeAssumptions": 0.0,
+     "netCost": 75.5,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 72.6,
+     "earnedRevenue": 5.8,
+     "changeAssumptions": 0.0,
+     "netCost": 66.8,
+     "restated": false
+    }
+   }
+  },
+  "Department of Homeland Security": {
+   "registryId": "DHS",
+   "years": {
+    "FY2016": {
+     "grossCost": 66.5,
+     "earnedRevenue": 13.1,
+     "changeAssumptions": 0.2,
+     "netCost": 53.6,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 77.3,
+     "earnedRevenue": 12.3,
+     "changeAssumptions": -0.5,
+     "netCost": 64.5,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 78.3,
+     "earnedRevenue": 14.8,
+     "changeAssumptions": 1.1,
+     "netCost": 64.6,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 77.0,
+     "earnedRevenue": 14.0,
+     "changeAssumptions": 0.9,
+     "netCost": 63.9,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 122.3,
+     "earnedRevenue": 11.8,
+     "changeAssumptions": 3.1,
+     "netCost": 113.6,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 101.0,
+     "earnedRevenue": 12.9,
+     "changeAssumptions": 1.6,
+     "netCost": 89.7,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 102.3,
+     "earnedRevenue": 14.7,
+     "changeAssumptions": 1.2,
+     "netCost": 88.8,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 111.2,
+     "earnedRevenue": 15.6,
+     "changeAssumptions": 1.0,
+     "netCost": 96.6,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 118.4,
+     "earnedRevenue": 17.0,
+     "changeAssumptions": 0.0,
+     "netCost": 101.4,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 141.7,
+     "earnedRevenue": 18.1,
+     "changeAssumptions": 0.5,
+     "netCost": 124.1,
+     "restated": false
+    }
+   }
+  },
+  "Department of Labor": {
+   "registryId": "DOL",
+   "years": {
+    "FY2016": {
+     "grossCost": 46.4,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 46.4,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 43.5,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 43.5,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 41.1,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 41.1,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 40.5,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 40.5,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 493.2,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 493.2,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 396.8,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 396.8,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 42.3,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 42.3,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 45.3,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 45.3,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 40.6,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 40.6,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 62.5,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 62.5,
+     "restated": false
+    }
+   }
+  },
+  "Department of Justice": {
+   "registryId": "DOJ",
+   "years": {
+    "FY2016": {
+     "grossCost": 38.7,
+     "earnedRevenue": 1.6,
+     "changeAssumptions": 0.0,
+     "netCost": 37.1,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 34.2,
+     "earnedRevenue": 1.6,
+     "changeAssumptions": 0.0,
+     "netCost": 32.6,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 35.4,
+     "earnedRevenue": 1.9,
+     "changeAssumptions": 0.0,
+     "netCost": 33.5,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 40.8,
+     "earnedRevenue": 3.5,
+     "changeAssumptions": 0.0,
+     "netCost": 37.3,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 39.1,
+     "earnedRevenue": 1.8,
+     "changeAssumptions": 0.0,
+     "netCost": 37.3,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 41.4,
+     "earnedRevenue": 2.6,
+     "changeAssumptions": 0.0,
+     "netCost": 38.8,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 42.4,
+     "earnedRevenue": 1.2,
+     "changeAssumptions": 0.0,
+     "netCost": 41.2,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 51.6,
+     "earnedRevenue": 3.7,
+     "changeAssumptions": 0.0,
+     "netCost": 47.9,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 49.4,
+     "earnedRevenue": 1.9,
+     "changeAssumptions": 0.0,
+     "netCost": 47.5,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 50.2,
+     "earnedRevenue": 1.7,
+     "changeAssumptions": 0.0,
+     "netCost": 48.5,
+     "restated": false
+    }
+   }
+  },
+  "Defense Security Cooperation Agency": {
+   "registryId": null,
+   "years": {
+    "FY2016": {
+     "grossCost": 36.0,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 36.0,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 36.7,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 36.7,
+     "restated": false
+    }
+   }
+  },
+  "Department of Housing and Urban Development": {
+   "registryId": "HUD",
+   "years": {
+    "FY2016": {
+     "grossCost": 31.2,
+     "earnedRevenue": 1.7,
+     "changeAssumptions": 0.0,
+     "netCost": 29.5,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 69.1,
+     "earnedRevenue": 1.7,
+     "changeAssumptions": 0.0,
+     "netCost": 67.4,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 43.3,
+     "earnedRevenue": 1.8,
+     "changeAssumptions": 0.0,
+     "netCost": 41.5,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 29.6,
+     "earnedRevenue": 1.8,
+     "changeAssumptions": 0.0,
+     "netCost": 27.8,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 36.3,
+     "earnedRevenue": 2.2,
+     "changeAssumptions": 0.0,
+     "netCost": 34.1,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 35.3,
+     "earnedRevenue": 1.9,
+     "changeAssumptions": 0.0,
+     "netCost": 33.4,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 28.2,
+     "earnedRevenue": 1.9,
+     "changeAssumptions": 0.0,
+     "netCost": 26.3,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 71.4,
+     "earnedRevenue": 4.1,
+     "changeAssumptions": 0.0,
+     "netCost": 67.3,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 51.2,
+     "earnedRevenue": 4.4,
+     "changeAssumptions": 0.0,
+     "netCost": 46.8,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 75.2,
+     "earnedRevenue": 3.8,
+     "changeAssumptions": 0.0,
+     "netCost": 71.4,
+     "restated": false
+    }
+   }
+  },
+  "Department of State": {
+   "registryId": "DOS",
+   "years": {
+    "FY2016": {
+     "grossCost": 32.6,
+     "earnedRevenue": 4.7,
+     "changeAssumptions": -0.1,
+     "netCost": 27.8,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 31.3,
+     "earnedRevenue": 4.8,
+     "changeAssumptions": 0.3,
+     "netCost": 26.8,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 32.3,
+     "earnedRevenue": 4.8,
+     "changeAssumptions": 1.5,
+     "netCost": 29.0,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 33.9,
+     "earnedRevenue": 4.6,
+     "changeAssumptions": 0.7,
+     "netCost": 30.0,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 34.6,
+     "earnedRevenue": 2.8,
+     "changeAssumptions": 1.1,
+     "netCost": 32.9,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 40.2,
+     "earnedRevenue": 3.5,
+     "changeAssumptions": 1.9,
+     "netCost": 38.6,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 40.0,
+     "earnedRevenue": 4.8,
+     "changeAssumptions": 3.4,
+     "netCost": 38.6,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 41.6,
+     "earnedRevenue": 6.0,
+     "changeAssumptions": -0.2,
+     "netCost": 35.4,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 44.2,
+     "earnedRevenue": 6.1,
+     "changeAssumptions": -0.3,
+     "netCost": 37.8,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 38.1,
+     "earnedRevenue": 6.4,
+     "changeAssumptions": 0.2,
+     "netCost": 31.9,
+     "restated": false
+    }
+   }
+  },
+  "National Aeronautics and Space Administration": {
+   "registryId": "NASA",
+   "years": {
+    "FY2016": {
+     "grossCost": 20.0,
+     "earnedRevenue": 0.2,
+     "changeAssumptions": 0.0,
+     "netCost": 19.8,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 19.6,
+     "earnedRevenue": 0.2,
+     "changeAssumptions": 0.0,
+     "netCost": 19.4,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 20.3,
+     "earnedRevenue": 0.2,
+     "changeAssumptions": 0.0,
+     "netCost": 20.1,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 21.0,
+     "earnedRevenue": 0.2,
+     "changeAssumptions": 0.0,
+     "netCost": 20.8,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 22.3,
+     "earnedRevenue": 0.2,
+     "changeAssumptions": 0.0,
+     "netCost": 22.1,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 22.1,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": 21.8,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 22.3,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": 22.0,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 24.8,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 24.4,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 25.0,
+     "earnedRevenue": 0.5,
+     "changeAssumptions": 0.0,
+     "netCost": 24.5,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 23.9,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 23.5,
+     "restated": false
+    }
+   }
+  },
+  "Department of the Interior": {
+   "registryId": "DOI",
+   "years": {
+    "FY2016": {
+     "grossCost": 19.2,
+     "earnedRevenue": 2.5,
+     "changeAssumptions": 0.0,
+     "netCost": 16.7,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 20.2,
+     "earnedRevenue": 2.7,
+     "changeAssumptions": 0.0,
+     "netCost": 17.5,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 20.4,
+     "earnedRevenue": 2.9,
+     "changeAssumptions": 0.0,
+     "netCost": 17.5,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 21.1,
+     "earnedRevenue": 2.6,
+     "changeAssumptions": 0.0,
+     "netCost": 18.5,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 23.0,
+     "earnedRevenue": 2.4,
+     "changeAssumptions": 0.0,
+     "netCost": 20.6,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 23.8,
+     "earnedRevenue": 2.3,
+     "changeAssumptions": 0.0,
+     "netCost": 21.5,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 28.2,
+     "earnedRevenue": 2.7,
+     "changeAssumptions": 0.0,
+     "netCost": 25.5,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 29.5,
+     "earnedRevenue": 3.0,
+     "changeAssumptions": 0.0,
+     "netCost": 26.5,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 32.1,
+     "earnedRevenue": 3.4,
+     "changeAssumptions": 0.0,
+     "netCost": 28.7,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 34.0,
+     "earnedRevenue": 3.5,
+     "changeAssumptions": 0.0,
+     "netCost": 30.5,
+     "restated": false
+    }
+   }
+  },
+  "U.S. Agency for International Development": {
+   "registryId": null,
+   "years": {
+    "FY2016": {
+     "grossCost": 12.6,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 12.6,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 13.2,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 13.2,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 13.1,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 13.1,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 12.2,
+     "earnedRevenue": 0.1,
+     "changeAssumptions": 0.0,
+     "netCost": 12.1,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 13.8,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 13.8,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 16.0,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 16.0,
+     "restated": false
+    }
+   }
+  },
+  "Railroad Retirement Board": {
+   "registryId": null,
+   "years": {
+    "FY2016": {
+     "grossCost": 15.3,
+     "earnedRevenue": 3.9,
+     "changeAssumptions": 0.0,
+     "netCost": 11.4,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 13.0,
+     "earnedRevenue": 3.8,
+     "changeAssumptions": 0.0,
+     "netCost": 9.2,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 13.1,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 13.1,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 12.1,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 12.1,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 13.1,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 13.1,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 17.3,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 17.3,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 8.2,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 8.2,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 15.6,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 15.6,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 14.6,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 14.6,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 14.9,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 14.9,
+     "restated": false
+    }
+   }
+  },
+  "Federal Communications Commission": {
+   "registryId": "FCC",
+   "years": {
+    "FY2016": {
+     "grossCost": 10.4,
+     "earnedRevenue": 0.5,
+     "changeAssumptions": 0.0,
+     "netCost": 9.9,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 20.7,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 20.3,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 10.8,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 10.4,
+     "restated": false
+    },
+    "FY2019": {
+     "grossCost": 11.2,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 10.8,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 13.9,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 13.5,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 11.7,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 11.3,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 16.0,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 15.6,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 18.6,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 18.2,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 17.6,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 17.2,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 11.1,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 10.7,
+     "restated": false
+    }
+   }
+  },
+  "Department of Commerce": {
+   "registryId": "DOC",
+   "years": {
+    "FY2016": {
+     "grossCost": 12.5,
+     "earnedRevenue": 3.3,
+     "changeAssumptions": 0.0,
+     "netCost": 9.2,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 12.9,
+     "earnedRevenue": 3.3,
+     "changeAssumptions": 0.0,
+     "netCost": 9.6,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 11.8,
+     "earnedRevenue": 3.6,
+     "changeAssumptions": 0.0,
+     "netCost": 8.2,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 13.8,
+     "earnedRevenue": 3.6,
+     "changeAssumptions": 0.0,
+     "netCost": 10.2,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 19.4,
+     "earnedRevenue": 3.9,
+     "changeAssumptions": 0.0,
+     "netCost": 15.5,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 15.5,
+     "earnedRevenue": 3.6,
+     "changeAssumptions": 0.1,
+     "netCost": 12.0,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 15.8,
+     "earnedRevenue": 4.2,
+     "changeAssumptions": 0.1,
+     "netCost": 11.7,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 17.3,
+     "earnedRevenue": 4.3,
+     "changeAssumptions": 0.0,
+     "netCost": 13.0,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 20.2,
+     "earnedRevenue": 4.7,
+     "changeAssumptions": 0.0,
+     "netCost": 15.5,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 27.1,
+     "earnedRevenue": 8.6,
+     "changeAssumptions": 0.0,
+     "netCost": 18.5,
+     "restated": false
+    }
+   }
+  },
+  "Environmental Protection Agency": {
+   "registryId": "EPA",
+   "years": {
+    "FY2016": {
+     "grossCost": 9.0,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 8.6,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 8.8,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 8.4,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 8.3,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 7.9,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 8.8,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": 8.5,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 9.1,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 8.7,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 8.9,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 8.5,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 9.9,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": 9.6,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 12.3,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 11.9,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 14.3,
+     "earnedRevenue": 0.6,
+     "changeAssumptions": 0.0,
+     "netCost": 13.7,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 37.6,
+     "earnedRevenue": 0.6,
+     "changeAssumptions": 0.0,
+     "netCost": 37.0,
+     "restated": false
+    }
+   }
+  },
+  "National Science Foundation": {
+   "registryId": "NSF",
+   "years": {
+    "FY2016": {
+     "grossCost": 7.0,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 7.0,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 7.1,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 7.1,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 7.3,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 7.3,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 7.3,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 7.3,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 7.3,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 7.3,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 7.4,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 7.4,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 8.2,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 8.2,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 9.0,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 9.0,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 9.4,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 9.4,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 9.9,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 9.9,
+     "restated": false
+    }
+   }
+  },
+  "U.S. Postal Service": {
+   "registryId": null,
+   "years": {
+    "FY2016": {
+     "grossCost": 77.2,
+     "earnedRevenue": 70.4,
+     "changeAssumptions": 0.0,
+     "netCost": 6.8,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 71.9,
+     "earnedRevenue": 68.7,
+     "changeAssumptions": 0.0,
+     "netCost": 3.2,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 71.4,
+     "earnedRevenue": 69.7,
+     "changeAssumptions": 0.0,
+     "netCost": 1.7,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 77.5,
+     "earnedRevenue": 70.2,
+     "changeAssumptions": 0.0,
+     "netCost": 7.3,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 79.2,
+     "earnedRevenue": 71.7,
+     "changeAssumptions": 0.0,
+     "netCost": 7.5,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 77.9,
+     "earnedRevenue": 75.7,
+     "changeAssumptions": 0.0,
+     "netCost": 2.2,
+     "restated": false
+    }
+   }
+  },
+  "Pension Benefit Guaranty Corporation": {
+   "registryId": null,
+   "years": {
+    "FY2016": {
+     "grossCost": 19.4,
+     "earnedRevenue": 14.0,
+     "changeAssumptions": 0.0,
+     "netCost": 5.4,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 9.8,
+     "earnedRevenue": 14.1,
+     "changeAssumptions": 0.0,
+     "netCost": -4.3,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": -7.8,
+     "earnedRevenue": 16.7,
+     "changeAssumptions": 0.0,
+     "netCost": -24.5,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 35.7,
+     "earnedRevenue": 27.8,
+     "changeAssumptions": 0.0,
+     "netCost": 7.9,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 19.2,
+     "earnedRevenue": 22.0,
+     "changeAssumptions": 0.0,
+     "netCost": -2.8,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": -56.5,
+     "earnedRevenue": 22.6,
+     "changeAssumptions": 0.0,
+     "netCost": -79.1,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 9.9,
+     "earnedRevenue": 16.9,
+     "changeAssumptions": 0.0,
+     "netCost": -7.0,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 55.0,
+     "earnedRevenue": 17.0,
+     "changeAssumptions": 0.0,
+     "netCost": 38.0,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 35.3,
+     "earnedRevenue": 24.8,
+     "changeAssumptions": 0.0,
+     "netCost": 10.5,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 17.1,
+     "earnedRevenue": 16.9,
+     "changeAssumptions": 0.0,
+     "netCost": 0.200000000000003,
+     "restated": false
+    }
+   }
+  },
+  "Millennium Challenge Corporation": {
+   "registryId": null,
+   "years": {
+    "FY2016": {
+     "grossCost": 0.6,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 0.6,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 0.7,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 0.7,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 0.8,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 0.8,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 0.5,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 0.5,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 0.6,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 0.6,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 0.7,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 0.7,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 0.7,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 0.7,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 0.7,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 0.7,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 0.7,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 0.7,
+     "restated": false
+    }
+   }
+  },
+  "National Railroad Retirement Investment Trust": {
+   "registryId": null,
+   "years": {
+    "FY2018": {
+     "grossCost": 0.1,
+     "earnedRevenue": 1.9,
+     "changeAssumptions": 0.0,
+     "netCost": -1.8,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 0.1,
+     "earnedRevenue": 0.7,
+     "changeAssumptions": 0.0,
+     "netCost": -0.6,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 0.1,
+     "earnedRevenue": 1.8,
+     "changeAssumptions": 0.0,
+     "netCost": -1.7,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 0.1,
+     "earnedRevenue": 6.6,
+     "changeAssumptions": 0.0,
+     "netCost": -6.5,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 4.7,
+     "earnedRevenue": 1.1,
+     "changeAssumptions": 0.0,
+     "netCost": 3.6,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 0.1,
+     "earnedRevenue": 2.8,
+     "changeAssumptions": 0.0,
+     "netCost": -2.7,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 0.1,
+     "earnedRevenue": 4.6,
+     "changeAssumptions": 0.0,
+     "netCost": -4.5,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 0.1,
+     "earnedRevenue": 2.7,
+     "changeAssumptions": 0.0,
+     "netCost": -2.6,
+     "restated": false
+    }
+   }
+  },
+  "Security Assistance Accounts": {
+   "registryId": null,
+   "years": {
+    "FY2018": {
+     "grossCost": 37.9,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 37.9,
+     "restated": true
+    },
+    "FY2017": {
+     "grossCost": 36.7,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 36.7,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": 38.6,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 38.6,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 154.8,
+     "earnedRevenue": 42.8,
+     "changeAssumptions": 0.0,
+     "netCost": 112.0,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 92.9,
+     "earnedRevenue": 14.4,
+     "changeAssumptions": 0.0,
+     "netCost": 78.5,
+     "restated": true
+    },
+    "FY2022": {
+     "grossCost": 102.1,
+     "earnedRevenue": 19.3,
+     "changeAssumptions": 0.0,
+     "netCost": 82.8,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 109.3,
+     "earnedRevenue": 6.1,
+     "changeAssumptions": 0.0,
+     "netCost": 103.2,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 89.4,
+     "earnedRevenue": 42.9,
+     "changeAssumptions": 0.0,
+     "netCost": 46.5,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": -4.0,
+     "earnedRevenue": 34.7,
+     "changeAssumptions": 0.0,
+     "netCost": -38.7,
+     "restated": false
+    }
+   }
+  },
+  "Export-Import Bank of the U.S.": {
+   "registryId": null,
+   "years": {
+    "FY2017": {
+     "grossCost": 0.4,
+     "earnedRevenue": 1.2,
+     "changeAssumptions": 0.0,
+     "netCost": -0.8,
+     "restated": true
+    },
+    "FY2018": {
+     "grossCost": 0.0,
+     "earnedRevenue": 0.5,
+     "changeAssumptions": 0.0,
+     "netCost": -0.5,
+     "restated": true
+    },
+    "FY2019": {
+     "grossCost": -0.1,
+     "earnedRevenue": 0.5,
+     "changeAssumptions": 0.0,
+     "netCost": -0.6,
+     "restated": true
+    },
+    "FY2020": {
+     "grossCost": 0.8,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 0.4,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 0.5,
+     "earnedRevenue": 0.7,
+     "changeAssumptions": 0.0,
+     "netCost": -0.2,
+     "restated": false
+    }
+   }
+  },
+  "Federal Communication Commission": {
+   "registryId": null,
+   "years": {
+    "FY2019": {
+     "grossCost": 11.2,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 10.8,
+     "restated": false
+    },
+    "FY2018": {
+     "grossCost": 10.8,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": 10.4,
+     "restated": true
+    }
+   }
+  },
+  "U.S. International Development Finance Corporation": {
+   "registryId": null,
+   "years": {
+    "FY2020": {
+     "grossCost": 0.0,
+     "earnedRevenue": 0.1,
+     "changeAssumptions": 0.0,
+     "netCost": -0.1,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 0.0,
+     "earnedRevenue": 0.2,
+     "changeAssumptions": 0.0,
+     "netCost": -0.2,
+     "restated": false
+    }
+   }
+  },
+  "Interest on Treasury Securities held by the public": {
+   "registryId": null,
+   "years": {
+    "FY2022": {
+     "grossCost": 496.5,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 496.5,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 392.0,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 392.0,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 678.0,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 678.0,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 909.1,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 909.1,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 987.1,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 987.1,
+     "restated": false
+    }
+   }
+  },
+  "Agency for International Development": {
+   "registryId": "USAID",
+   "years": {
+    "FY2022": {
+     "grossCost": 29.5,
+     "earnedRevenue": 0.1,
+     "changeAssumptions": 0.0,
+     "netCost": 29.4,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 16.0,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 16.0,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 36.8,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": 36.8,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 23.5,
+     "earnedRevenue": 0.1,
+     "changeAssumptions": 0.0,
+     "netCost": 23.4,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 16.8,
+     "earnedRevenue": 0.9,
+     "changeAssumptions": 0.0,
+     "netCost": 15.9,
+     "restated": false
+    }
+   }
+  },
+  "United States Postal Service": {
+   "registryId": null,
+   "years": {
+    "FY2022": {
+     "grossCost": 78.7,
+     "earnedRevenue": 76.2,
+     "changeAssumptions": 0.0,
+     "netCost": 2.49999999999999,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 77.9,
+     "earnedRevenue": 75.7,
+     "changeAssumptions": 0.0,
+     "netCost": 2.2,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 83.8,
+     "earnedRevenue": 77.0,
+     "changeAssumptions": 0.0,
+     "netCost": 6.8,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 89.4,
+     "earnedRevenue": 77.8,
+     "changeAssumptions": 0.0,
+     "netCost": 11.6,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 90.6,
+     "earnedRevenue": 79.1,
+     "changeAssumptions": 0.0,
+     "netCost": 11.5,
+     "restated": false
+    }
+   }
+  },
+  "United States International Development Finance Corporation": {
+   "registryId": null,
+   "years": {
+    "FY2022": {
+     "grossCost": 0.3,
+     "earnedRevenue": 0.2,
+     "changeAssumptions": 0.0,
+     "netCost": 0.1,
+     "restated": true
+    },
+    "FY2021": {
+     "grossCost": 0.0,
+     "earnedRevenue": 0.2,
+     "changeAssumptions": 0.0,
+     "netCost": -0.2,
+     "restated": true
+    },
+    "FY2023": {
+     "grossCost": 0.0,
+     "earnedRevenue": 0.3,
+     "changeAssumptions": 0.0,
+     "netCost": -0.3,
+     "restated": true
+    },
+    "FY2024": {
+     "grossCost": 0.1,
+     "earnedRevenue": 0.4,
+     "changeAssumptions": 0.0,
+     "netCost": -0.3,
+     "restated": true
+    },
+    "FY2025": {
+     "grossCost": 0.4,
+     "earnedRevenue": 0.5,
+     "changeAssumptions": 0.0,
+     "netCost": -0.1,
+     "restated": false
+    }
+   }
+  },
+  "Subtotal": {
+   "registryId": null,
+   "years": {
+    "FY2022": {
+     "grossCost": 7420.70000000001,
+     "earnedRevenue": 531.1,
+     "changeAssumptions": 2207.9,
+     "netCost": 9097.50000000001,
+     "restated": true
+    }
+   }
+  },
+  "Unmatched transactions and balances (Note 1.T)": {
+   "registryId": null,
+   "years": {
+    "FY2022": {
+     "grossCost": -0.6,
+     "earnedRevenue": 0.0,
+     "changeAssumptions": 0.0,
+     "netCost": -0.6,
+     "restated": true
+    }
    }
   }
  }

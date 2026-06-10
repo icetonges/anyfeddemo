@@ -1,0 +1,51 @@
+﻿record_date,stmt_fiscal_year,restmt_flag,account_desc,line_item_desc,position_bil_amt,src_line_nbr,record_fiscal_year,record_fiscal_quarter,record_calendar_year,record_calendar_quarter,record_calendar_month,record_calendar_day
+2023-09-30,2023,N,Assets,Cash and other monetary assets,922.2,1,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,"Accounts receivable, net",319.9,2,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,"Loans receivable, net",1695.1,3,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,Negative loan guarantee liabilities,4.6,4,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,"Inventory and related property, net",423.0,5,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,"General property, plant and equipment, net",1235.0,6,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,Investments,130.8,7,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,Investments in government-sponsored enterprises,240.4,8,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,Advances and prepayments,252.7,9,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,Other assets,195.4,10,2023,4,2023,3,09,30
+2023-09-30,2023,N,Assets,Total assets,5419.1,11,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Accounts payable,124.2,12,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Federal debt and interest payable,26347.7,13,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Federal employee and veteran benefits payable,14327.4,14,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Environmental and disposal liabilities,645.3,15,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Benefits due and payable,325.9,16,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Loan guarantee liabilities,0.0,17,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Insurance and guarantee program liabilities,99.3,18,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Advances from others and deferred revenues,355.3,19,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Other liabilities,673.2,20,2023,4,2023,3,09,30
+2023-09-30,2023,N,Liabilities,Total liabilities,42898.3,21,2023,4,2023,3,09,30
+2023-09-30,2023,N,Unmatched transactions and balances,Unmatched transactions and balances,0.0,22,2023,4,2023,3,09,30
+2023-09-30,2023,N,Net position,Funds from Dedicated Collections,3760.5,23,2023,4,2023,3,09,30
+2023-09-30,2023,N,Net position,Funds other than those from Dedicated Collections,-41239.7,24,2023,4,2023,3,09,30
+2023-09-30,2023,N,Net position,Total net position,-37479.2,25,2023,4,2023,3,09,30
+2023-09-30,2023,N,Net position,Total liabilities and net position,5419.1,26,2023,4,2023,3,09,30
+2024-09-30,2023,Y,Assets,Assets,922.2,1,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,319.9,2,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,1695.1,3,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,4.6,4,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,423.0,5,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,1235.0,6,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,240.4,7,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,130.8,8,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,252.7,9,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Assets,195.4,10,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Assets,Total assets,5419.1,11,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Liabilities,124.2,12,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Liabilities,26347.7,13,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Liabilities,14347.6,14,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Liabilities,645.3,15,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Liabilities,325.9,16,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Liabilities,99.3,17,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Liabilities,355.3,18,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Liabilities,653.0,19,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Liabilities,Total liabilities,42898.3,20,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Net position,Net position,3760.5,21,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Net position,Net position,-41239.7,22,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Net position,Net position,-37479.2,23,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Net position,Net position,5419.1,24,2024,4,2024,3,09,30

@@ -1,0 +1,52 @@
+﻿record_date,stmt_fiscal_year,restmt_flag,account_desc,line_item_desc,position_bil_amt,src_line_nbr,record_fiscal_year,record_fiscal_quarter,record_calendar_year,record_calendar_quarter,record_calendar_month,record_calendar_day
+2021-09-30,2021,N,Assets,Cash and other monetary assets,475.0,1,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,"Accounts receivable, net",401.0,2,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,"Loans receivable, net",1651.0,3,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,"Inventory and related property, net",399.2,4,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,"General property, plant and equipment, net",1176.9,5,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,Investments,135.2,6,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,Investments in special purpose vehicles,26.4,7,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,Investments in government-sponsored enterprises,220.9,8,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,Advances and prepayments,369.3,9,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,Other assets,38.7,10,2021,4,2021,3,09,30
+2021-09-30,2021,N,Assets,Total assets,4893.6,11,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Accounts payable,123.1,12,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Federal debt and interest payable,22344.8,13,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Federal employee and veteran benefits payable,10183.0,14,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Environmental and disposal liabilities,613.3,15,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Benefits due and payable,273.9,16,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Loan guarantee liabilities,230.7,17,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Insurance and guarantee program liabilities,129.8,18,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Advances from others and deferred revenues,202.0,19,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Other liabilities,677.1,20,2021,4,2021,3,09,30
+2021-09-30,2021,N,Liabilities,Total liabilities,34777.7,21,2021,4,2021,3,09,30
+2021-09-30,2021,N,Unmatched transactions and balances,Unmatched transactions and balances,1.7,22,2021,4,2021,3,09,30
+2021-09-30,2021,N,Net position,Funds from Dedicated Collections,3486.8,23,2021,4,2021,3,09,30
+2021-09-30,2021,N,Net position,Funds other than those from Dedicated Collections,-33372.6,24,2021,4,2021,3,09,30
+2021-09-30,2021,N,Net position,Total net position,-29885.8,25,2021,4,2021,3,09,30
+2021-09-30,2021,N,Net position,Total liabilities and net position,4893.6,26,2021,4,2021,3,09,30
+2022-09-30,2021,Y,Assets,Cash and other monetary assets,475.0,1,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,"Accounts receivable, net",401.0,2,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,"Loans receivable, net",1651.0,3,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,"Inventory and related property, net",399.2,4,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,"General property, plant and equipment, net",1176.9,5,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,Investments,161.6,6,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,Investments in government-sponsored enterprises,220.9,7,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,Advances and prepayments,369.3,8,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,Other assets,38.7,9,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Assets,Total assets,4893.6,10,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Accounts payable,123.1,11,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Federal debt and interest payable,22344.8,12,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Federal employee and veteran benefits payable,10183.0,13,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Environmental and disposal liabilities,613.3,14,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Benefits due and payable,273.9,15,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Loan guarantee liabilities,230.7,16,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Insurance and guarantee program liabilities,129.8,17,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Advances from others and deferred revenues,202.0,18,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Other liabilities,677.1,19,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Liabilities,Total liabilities,34777.7,20,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Unmatched transactions and balances,Unmatched transactions and balances,1.7,21,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Net position,Funds from Dedicated Collections,3483.0,22,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Net position,Funds other than those from Dedicated Collections,-33368.8,23,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Net position,Total net position,-29885.8,24,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Net position,Total liabilities and net position,4893.6,25,2022,4,2022,3,09,30

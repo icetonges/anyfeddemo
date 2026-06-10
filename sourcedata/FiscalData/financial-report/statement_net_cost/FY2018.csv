@@ -1,0 +1,85 @@
+﻿record_date,stmt_fiscal_year,restmt_flag,agency_nm,gross_cost_bil_amt,earned_revenue_bil_amt,subtotal_bil_amt,change_assumptions_bil_amt,net_cost_bil_amt,src_line_nbr,record_fiscal_year,record_fiscal_quarter,record_calendar_year,record_calendar_quarter,record_calendar_month,record_calendar_day
+2018-09-30,2018,N,Tennessee Valley Authority,9.9,11.2,-1.3,null,-1.3,37,2018,4,2018,3,09,30
+2018-09-30,2018,N,National Railroad Retirement Investment Trust,0.1,1.9,-1.8,null,-1.8,38,2018,4,2018,3,09,30
+2018-09-30,2018,N,Federal Deposit Insurance Corporation,1.3,10.8,-9.5,null,-9.5,39,2018,4,2018,3,09,30
+2018-09-30,2018,N,Pension Benefit Guaranty Corporation,-7.8,16.7,-24.5,null,-24.5,40,2018,4,2018,3,09,30
+2018-09-30,2018,N,All other entities,18.7,1.5,17.2,null,17.2,41,2018,4,2018,3,09,30
+2018-09-30,2018,N,Total,4808.5,392.8,4415.7,125.2,4540.9,42,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Health and Human Services,1252.6,110.5,1142.1,0.4,1142.5,1,2018,4,2018,3,09,30
+2018-09-30,2018,N,Social Security Administration,1038.5,0.2,1038.3,null,1038.3,2,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Defense,719.8,38.2,681.6,16.8,698.4,3,2018,4,2018,3,09,30
+2018-09-30,2018,N,Interest on Treasury Securities Held by the Public,357.3,null,357.3,null,357.3,4,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Veterans Affairs,272.5,4.8,267.7,79.2,346.9,5,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Energy,147.0,6.1,140.9,null,140.9,6,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Agriculture,137.0,6.6,130.4,null,130.4,7,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of the Treasury,150.5,21.9,128.6,null,128.6,8,2018,4,2018,3,09,30
+2018-09-30,2018,N,Office of Personnel Management,101.3,23.4,77.9,26.2,104.1,9,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Transportation,79.0,1.1,77.9,null,77.9,10,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Homeland Security,78.3,14.8,63.5,1.1,64.6,11,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Education,79.2,31.4,47.8,null,47.8,12,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Housing and Urban Development,43.3,1.8,41.5,null,41.5,13,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Labor,41.1,null,41.1,null,41.1,14,2018,4,2018,3,09,30
+2018-09-30,2018,N,Security Assistance Accounts,37.9,null,37.9,null,37.9,15,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Justice,35.4,1.9,33.5,null,33.5,16,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of State,32.3,4.8,27.5,1.5,29.0,17,2018,4,2018,3,09,30
+2018-09-30,2018,N,National Aeronautics and Space Administration,20.3,0.2,20.1,null,20.1,18,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of the Interior,20.4,2.9,17.5,null,17.5,19,2018,4,2018,3,09,30
+2018-09-30,2018,N,U.S. Agency for International Development,13.1,null,13.1,null,13.1,20,2018,4,2018,3,09,30
+2018-09-30,2018,N,Railroad Retirement Board,13.1,null,13.1,null,13.1,21,2018,4,2018,3,09,30
+2018-09-30,2018,N,Federal Communications Commission,10.8,0.4,10.4,null,10.4,22,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Commerce,11.8,3.6,8.2,null,8.2,23,2018,4,2018,3,09,30
+2018-09-30,2018,N,Environmental Protection Agency,8.3,0.4,7.9,null,7.9,24,2018,4,2018,3,09,30
+2018-09-30,2018,N,National Science Foundation,7.3,null,7.3,null,7.3,25,2018,4,2018,3,09,30
+2018-09-30,2018,N,U.S. Postal Service,71.4,69.7,1.7,null,1.7,26,2018,4,2018,3,09,30
+2018-09-30,2018,N,Smithsonian Institution,1.5,0.5,1.0,null,1.0,27,2018,4,2018,3,09,30
+2018-09-30,2018,N,Millennium Challenge Corporation,0.8,null,0.8,null,0.8,28,2018,4,2018,3,09,30
+2018-09-30,2018,N,Small Business Administration,0.7,0.3,0.4,null,0.4,29,2018,4,2018,3,09,30
+2018-09-30,2018,N,U.S. Nuclear Regulatory Commission,0.9,0.7,0.2,null,0.2,31,2018,4,2018,3,09,30
+2018-09-30,2018,N,National Credit Union Administration,0.9,0.6,0.3,null,0.3,30,2018,4,2018,3,09,30
+2018-09-30,2018,N,Farm Credit System Insurance Corporation,0.2,0.2,null,null,null,32,2018,4,2018,3,09,30
+2018-09-30,2018,N,Overseas Private Investment Corporation,null,0.1,-0.1,null,-0.1,33,2018,4,2018,3,09,30
+2018-09-30,2018,N,Export-Import Bank of the U.S.,null,0.5,-0.5,null,-0.5,34,2018,4,2018,3,09,30
+2018-09-30,2018,N,Securities and Exchange Commission,1.8,2.3,-0.5,null,-0.5,35,2018,4,2018,3,09,30
+2018-09-30,2018,N,General Services Administration,null,0.8,-0.8,null,-0.8,36,2018,4,2018,3,09,30
+2019-09-30,2018,Y,Department of Health and Human Services,1252.6,110.5,1142.1,0.4,1142.5,1,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Social Security Administration,1038.5,0.2,1038.3,null,1038.3,2,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Defense,719.8,38.2,681.6,16.8,698.4,3,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Veterans Affairs,272.5,4.8,267.7,79.2,346.9,4,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Interest on Treasury Securities Held by the Public,357.3,null,357.3,null,357.3,5,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of the Treasury,150.5,21.9,128.6,null,128.6,6,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Agriculture,137.0,6.6,130.4,null,130.4,7,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Education,79.2,31.4,47.8,null,47.8,8,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Office of Personnel Management,101.3,23.4,77.9,26.2,104.1,9,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Transportation,79.0,1.1,77.9,null,77.9,10,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Homeland Security,78.3,14.8,63.5,1.1,64.6,11,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Energy,147.0,6.1,140.9,null,140.9,12,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Labor,41.1,null,41.1,null,41.1,13,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Security Assistance Accounts,37.9,null,37.9,null,37.9,14,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Justice,35.4,1.9,33.5,null,33.5,15,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of State,32.3,4.8,27.5,1.5,29.0,16,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Housing and Urban Development,43.3,1.8,41.5,null,41.5,17,2019,4,2019,3,09,30
+2019-09-30,2018,Y,National Aeronautics and Space Administration,20.3,0.2,20.1,null,20.1,18,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of the Interior,20.4,2.9,17.5,null,17.5,19,2019,4,2019,3,09,30
+2019-09-30,2018,Y,U.S. Agency for International Development,13.1,null,13.1,null,13.1,20,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Railroad Retirement Board,13.1,null,13.1,null,13.1,21,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Federal Communication Commission,10.8,0.4,10.4,null,10.4,22,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Commerce,11.8,3.6,8.2,null,8.2,23,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Environmental Protection Agency,8.3,0.4,7.9,null,7.9,24,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Pension Benefit Guaranty Corporation,-7.8,16.7,-24.5,null,-24.5,25,2019,4,2019,3,09,30
+2019-09-30,2018,Y,National Science Foundation,7.3,null,7.3,null,7.3,26,2019,4,2019,3,09,30
+2019-09-30,2018,Y,U.S. Postal Service,71.4,69.7,1.7,null,1.7,27,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Smithsonian Institution,1.5,0.5,1.0,null,1.0,28,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Millennium Challenge Corporation,0.8,null,0.8,null,0.8,29,2019,4,2019,3,09,30
+2019-09-30,2018,Y,National Credit Union Administration,0.9,0.6,0.3,null,0.3,30,2019,4,2019,3,09,30
+2019-09-30,2018,Y,U.S. Nuclear Regulatory Commission,0.9,0.7,0.2,null,0.2,31,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Farm Credit System Insurance Corporation,0.2,0.2,null,null,null,32,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Small Business Administration,0.7,0.3,0.4,null,0.4,33,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Overseas Private Investment Corporation,null,0.1,-0.1,null,-0.1,34,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Securities and Exchange Commission,1.8,2.3,-0.5,null,-0.5,35,2019,4,2019,3,09,30
+2019-09-30,2018,Y,National Railroad Retirement Investment Trust,0.1,1.9,-1.8,null,-1.8,36,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Export-Import Bank of the U.S.,null,0.5,-0.5,null,-0.5,37,2019,4,2019,3,09,30
+2019-09-30,2018,Y,General Services Administration,null,0.8,-0.8,null,-0.8,38,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Tennessee Valley Authority,9.9,11.2,-1.3,null,-1.3,39,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Federal Deposit Insurance Corporation,1.3,10.8,-9.5,null,-9.5,40,2019,4,2019,3,09,30
+2019-09-30,2018,Y,All other entities,18.7,1.5,17.2,null,17.2,41,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Total,4808.5,392.8,4415.7,125.2,4540.9,42,2019,4,2019,3,09,30

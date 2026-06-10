@@ -1,0 +1,41 @@
+﻿record_date,stmt_fiscal_year,restmt_flag,agency_nm,gross_cost_bil_amt,earned_revenue_bil_amt,subtotal_bil_amt,change_assumptions_bil_amt,net_cost_bil_amt,src_line_nbr,record_fiscal_year,record_fiscal_quarter,record_calendar_year,record_calendar_quarter,record_calendar_month,record_calendar_day
+2025-09-30,2025,N,Department of Transportation,130.2,1.6,128.6,0.0,128.6,8,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Homeland Security,141.7,18.1,123.6,0.5,124.1,9,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Housing and Urban Development,75.2,3.8,71.4,0.0,71.4,10,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Energy,72.6,5.8,66.8,0.0,66.8,11,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Labor,62.5,0.0,62.5,0.0,62.5,12,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Justice,50.2,1.7,48.5,0.0,48.5,13,2025,4,2025,3,09,30
+2025-09-30,2025,N,Environmental Protection Agency,37.6,0.6,37.0,0.0,37.0,14,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of State,38.1,6.4,31.7,0.2,31.9,15,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of the Interior,34.0,3.5,30.5,0.0,30.5,16,2025,4,2025,3,09,30
+2025-09-30,2025,N,National Aeronautics and Space Administration,23.9,0.4,23.5,0.0,23.5,17,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Commerce,27.1,8.6,18.5,0.0,18.5,18,2025,4,2025,3,09,30
+2025-09-30,2025,N,Agency for International Development,16.8,0.9,15.9,0.0,15.9,19,2025,4,2025,3,09,30
+2025-09-30,2025,N,Railroad Retirement Board,14.9,0.0,14.9,0.0,14.9,20,2025,4,2025,3,09,30
+2025-09-30,2025,N,United States Postal Service,90.6,79.1,11.5,0.0,11.5,21,2025,4,2025,3,09,30
+2025-09-30,2025,N,Federal Communications Commission,11.1,0.4,10.7,0.0,10.7,22,2025,4,2025,3,09,30
+2025-09-30,2025,N,National Science Foundation,9.9,0.0,9.9,0.0,9.9,23,2025,4,2025,3,09,30
+2025-09-30,2025,N,Small Business Administration,12.4,4.4,8.0,0.0,8.0,24,2025,4,2025,3,09,30
+2025-09-30,2025,N,National Credit Union Administration,0.4,0.1,0.3,0.0,0.3,25,2025,4,2025,3,09,30
+2025-09-30,2025,N,General Services Administration,1.39999999999999,1.1,0.3,0.0,0.3,26,2025,4,2025,3,09,30
+2025-09-30,2025,N,Pension Benefit Guaranty Corporation,17.1,16.9,0.200000000000003,0.0,0.200000000000003,27,2025,4,2025,3,09,30
+2025-09-30,2025,N,U.S. Nuclear Regulatory Commission,1.0,0.8,0.2,0.0,0.2,28,2025,4,2025,3,09,30
+2025-09-30,2025,N,United States International Development Finance Corporation,0.4,0.5,-0.1,0.0,-0.1,29,2025,4,2025,3,09,30
+2025-09-30,2025,N,Export-Import Bank of the United States,0.1,0.2,-0.1,0.0,-0.1,30,2025,4,2025,3,09,30
+2025-09-30,2025,N,Farm Credit System Insurance Corporation,0.1,0.4,-0.3,0.0,-0.3,31,2025,4,2025,3,09,30
+2025-09-30,2025,N,Tennessee Valley Authority,12.3,13.7,-1.4,0.0,-1.4,32,2025,4,2025,3,09,30
+2025-09-30,2025,N,Securities and Exchange Commission,2.3,4.4,-2.1,0.0,-2.1,33,2025,4,2025,3,09,30
+2025-09-30,2025,N,National Railroad Retirement Investment Trust,0.1,2.7,-2.6,0.0,-2.6,34,2025,4,2025,3,09,30
+2025-09-30,2025,N,Federal Deposit Insurance Corporation,-1.1,15.3,-16.4,0.0,-16.4,35,2025,4,2025,3,09,30
+2025-09-30,2025,N,Security Assistance Accounts,-4.0,34.7,-38.7,0.0,-38.7,36,2025,4,2025,3,09,30
+2025-09-30,2025,N,Office of Personnel Management,139.8,34.9,104.9,-180.4,-75.5000000000001,37,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Education,-29.2,48.4,-77.6,0.0,-77.6,38,2025,4,2025,3,09,30
+2025-09-30,2025,N,All other entities,30.7,2.4,28.3,0.1,28.4,39,2025,4,2025,3,09,30
+2025-09-30,2025,N,Total,8071.4,752.2,7319.2,18.6,7337.8,40,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Health and Human Services,2070.1,184.3,1885.8,0.5,1886.3,1,2025,4,2025,3,09,30
+2025-09-30,2025,N,Social Security Administration,1655.7,0.3,1655.4,0.0,1655.4,2,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Defense,1115.4,120.0,995.4,241.9,1237.3,3,2025,4,2025,3,09,30
+2025-09-30,2025,N,Interest on Treasury Securities held by the public,987.1,0.0,987.1,0.0,987.1,4,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Veterans Affairs,572.7,6.3,566.4,-44.2,522.2,5,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of the Treasury,413.7,116.9,296.8,0.0,296.8,6,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Agriculture,236.5,12.6,223.9,0.0,223.9,7,2025,4,2025,3,09,30

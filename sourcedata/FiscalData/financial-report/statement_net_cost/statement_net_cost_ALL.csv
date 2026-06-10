@@ -1,0 +1,1948 @@
+﻿record_date,stmt_fiscal_year,restmt_flag,agency_nm,gross_cost_bil_amt,earned_revenue_bil_amt,subtotal_bil_amt,change_assumptions_bil_amt,net_cost_bil_amt,src_line_nbr,record_fiscal_year,record_fiscal_quarter,record_calendar_year,record_calendar_quarter,record_calendar_month,record_calendar_day
+2001-09-30,2001,N,Department of Agriculture,83.5,11.1,null,null,72.4,1,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Department of Agriculture,81.8,9.0,null,null,72.8,1,2001,4,2001,3,09,30
+2001-09-30,2001,N,Department of Commerce,7.4,1.2,null,null,6.2,2,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Department of Commerce,11.0,1.1,null,null,9.9,2,2001,4,2001,3,09,30
+2001-09-30,2001,N,Department of Defense,776.8,12.6,null,null,764.2,3,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Department of Defense,393.5,11.3,null,null,382.2,3,2001,4,2001,3,09,30
+2001-09-30,2001,N,Department of Education,39.9,4.1,null,null,35.8,4,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Department of Education,32.9,3.3,null,null,29.6,4,2001,4,2001,3,09,30
+2001-09-30,2001,N,Department of Energy,27.0,5.2,null,null,21.8,5,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Department of Energy,28.9,4.7,null,null,24.2,5,2001,4,2001,3,09,30
+2001-09-30,2001,N,Department of Health & Human Services,459.2,24.7,null,null,434.5,6,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Department of Health & Human Services,410.2,23.0,null,null,387.2,6,2001,4,2001,3,09,30
+2001-09-30,2001,N,Department of Housing & Urban Development,34.5,2.4,null,null,32.1,7,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Department of Housing & Urban Development,36.5,3.1,null,null,33.4,7,2001,4,2001,3,09,30
+2001-09-30,2001,N,Department of Interior,11.7,0.3,null,null,11.4,8,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Department of Interior,13.3,2.9,null,null,10.4,8,2001,4,2001,3,09,30
+2001-09-30,2001,N,Department of Justice,26.5,2.3,null,null,24.2,9,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Department of Justice,27.0,1.9,null,null,25.1,9,2001,4,2001,3,09,30
+2001-09-30,2001,N,Department of Labor,42.3,null,null,null,42.3,10,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Department of Labor,32.8,1.2,null,null,31.6,10,2001,4,2001,3,09,30
+2001-09-30,2001,N,Department of State,10.0,1.0,null,null,9.0,11,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Department of State,9.4,0.5,null,null,8.9,11,2001,4,2001,3,09,30
+2001-09-30,2001,N,Department of Transportation,63.6,0.3,null,null,63.3,12,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Department of Transportation,48.9,0.2,null,null,48.7,12,2001,4,2001,3,09,30
+2001-09-30,2001,N,Department of the Treasury,60.0,4.4,null,null,55.6,13,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Department of the Treasury,65.4,6.3,null,null,59.1,13,2001,4,2001,3,09,30
+2001-09-30,2001,N,Interest on debt held by the public,217.7,null,null,null,217.7,14,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Interest on debt held by the public,230.2,null,null,null,230.2,14,2001,4,2001,3,09,30
+2001-09-30,2001,N,Department of Veteran Affairs,196.0,2.7,null,null,193.3,15,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Department of Veteran Affairs,118.6,2.2,null,null,116.4,15,2001,4,2001,3,09,30
+2001-09-30,2001,N,Agency for International Development,7.1,0.1,null,null,7.0,16,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Agency for International Development,6.9,null,null,null,6.9,16,2001,4,2001,3,09,30
+2001-09-30,2001,N,Environmental Protection Agency,8.4,0.5,null,null,7.9,17,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Environmental Protection Agency,8.3,0.3,null,null,8.0,17,2001,4,2001,3,09,30
+2001-09-30,2001,N,Federal Emergency Management Agency,6.3,1.6,null,null,4.7,18,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Federal Emergency Management Agency,4.7,1.6,null,null,3.1,18,2001,4,2001,3,09,30
+2001-09-30,2001,N,General Services Administration,0.1,0.3,null,null,-0.2,19,2001,4,2001,3,09,30
+2001-09-30,2000,Y,General Services Administration,0.3,0.3,null,null,null,19,2001,4,2001,3,09,30
+2001-09-30,2001,N,National Aeronautics & Space Administration,9.2,0.1,null,null,9.1,20,2001,4,2001,3,09,30
+2001-09-30,2000,Y,National Aeronautics & Space Administration,11.7,0.1,null,null,11.6,20,2001,4,2001,3,09,30
+2001-09-30,2001,N,National Science Foundation,3.7,null,null,null,3.7,21,2001,4,2001,3,09,30
+2001-09-30,2000,Y,National Science Foundation,3.5,null,null,null,3.5,21,2001,4,2001,3,09,30
+2001-09-30,2001,N,U.S. Nuclear Regulatory Commission,0.6,0.4,null,null,0.2,22,2001,4,2001,3,09,30
+2001-09-30,2000,Y,U.S. Nuclear Regulatory Commission,0.6,0.4,null,null,0.2,22,2001,4,2001,3,09,30
+2001-09-30,2001,N,Office of Personnel Management,0.2,null,null,null,0.2,23,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Office of Personnel Management,0.2,null,null,null,0.2,23,2001,4,2001,3,09,30
+2001-09-30,2001,N,Small Business Administration,0.8,0.2,null,null,0.6,24,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Small Business Administration,0.9,0.3,null,null,0.6,24,2001,4,2001,3,09,30
+2001-09-30,2001,N,Social Security Administration,465.3,0.3,null,null,465.0,25,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Social Security Administration,448.7,3.9,null,null,444.8,25,2001,4,2001,3,09,30
+2001-09-30,2001,N,Export-Import Bank of the United States,0.8,0.3,null,null,0.5,26,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Export-Import Bank of the United States,1.1,1.2,null,null,-0.1,26,2001,4,2001,3,09,30
+2001-09-30,2001,N,Federal Communications Commission,14.9,6.7,null,null,8.2,27,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Federal Communications Commission,1.4,5.7,null,null,-4.3,27,2001,4,2001,3,09,30
+2001-09-30,2001,N,Federal Deposit Insurance Corporation,3.1,0.5,null,null,2.6,28,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Federal Deposit Insurance Corporation,1.4,-0.5,null,null,1.9,28,2001,4,2001,3,09,30
+2001-09-30,2001,N,National Credit Union Administration,0.3,0.4,null,null,-0.1,29,2001,4,2001,3,09,30
+2001-09-30,2000,Y,National Credit Union Administration,0.3,0.1,null,null,0.2,29,2001,4,2001,3,09,30
+2001-09-30,2001,N,Pension Benefit Guaranty Corporation,2.3,0.8,null,null,1.5,30,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Pension Benefit Guaranty Corporation,0.6,0.8,null,null,-0.2,30,2001,4,2001,3,09,30
+2001-09-30,2001,N,Railroad Retirement Board,9.0,null,null,null,9.0,31,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Railroad Retirement Board,9.0,null,null,null,9.0,31,2001,4,2001,3,09,30
+2001-09-30,2001,N,Tennessee Valley Authority,11.8,6.9,null,null,4.9,32,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Tennessee Valley Authority,7.6,6.7,null,null,0.9,32,2001,4,2001,3,09,30
+2001-09-30,2001,N,United States Postal Service,86.2,65.6,null,null,20.6,33,2001,4,2001,3,09,30
+2001-09-30,2000,Y,United States Postal Service,92.0,64.5,null,null,27.5,33,2001,4,2001,3,09,30
+2001-09-30,2001,N,All other entities,19.6,3.0,null,null,16.6,34,2001,4,2001,3,09,30
+2001-09-30,2000,Y,All other entities,17.7,0.8,null,null,16.9,34,2001,4,2001,3,09,30
+2001-09-30,2001,N,Total,2705.8,160.0,null,null,2545.8,35,2001,4,2001,3,09,30
+2001-09-30,2000,Y,Total,2157.3,156.9,null,null,2000.4,35,2001,4,2001,3,09,30
+2002-09-30,2001,Y,Department of Agriculture,83.5,11.1,null,null,72.4,1,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Department of Commerce,7.4,1.2,null,null,6.2,2,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Department of Defense,776.8,12.6,null,null,764.2,3,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Department of Education,39.9,4.1,null,null,35.8,4,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Department of Energy,27.0,5.2,null,null,21.8,5,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Department of Health & Human Services,459.2,24.7,null,null,434.5,6,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Department of Housing & Urban Development,34.5,2.4,null,null,32.1,7,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Department of Interior,11.7,0.3,null,null,11.4,8,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Department of Justice,26.5,2.3,null,null,24.2,9,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Department of Labor,42.3,null,null,null,42.3,10,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Department of State,10.0,1.0,null,null,9.0,11,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Department of Transportation,63.6,0.3,null,null,63.3,12,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Department of the Treasury,60.0,4.4,null,null,55.6,13,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Interest on debt held by the public,217.7,null,null,null,217.7,14,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Department of Veterans Affairs,196.0,2.7,null,null,193.3,15,2002,4,2002,3,09,30
+2002-09-30,2001,Y,U.S. Agency for International Development,7.1,0.1,null,null,7.0,16,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Environmental Protection Agency,8.4,0.5,null,null,7.9,17,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Federal Emergency Management Agency,6.3,1.6,null,null,4.7,18,2002,4,2002,3,09,30
+2002-09-30,2001,Y,General Services Administration,0.1,0.3,null,null,-0.2,19,2002,4,2002,3,09,30
+2002-09-30,2001,Y,National Aeronautics & Space Administration,9.2,0.1,null,null,9.1,20,2002,4,2002,3,09,30
+2002-09-30,2001,Y,National Science Foundation,3.7,null,null,null,3.7,21,2002,4,2002,3,09,30
+2002-09-30,2001,Y,U.S. Nuclear Regulatory Commission,0.6,0.4,null,null,0.2,22,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Office of Personnel Management,0.2,null,null,null,0.2,23,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Small Business Administration,0.8,0.2,null,null,0.6,24,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Social Security Administration,465.3,0.3,null,null,465.0,25,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Export-Import Bank of the United States,0.8,0.3,null,null,0.5,26,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Federal Communications Commission,14.9,6.7,null,null,8.2,27,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Federal Deposit Insurance Corporation,3.1,0.5,null,null,2.6,28,2002,4,2002,3,09,30
+2002-09-30,2001,Y,National Credit Union Administration,0.3,0.4,null,null,-0.1,29,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Pension Benefit Guaranty Corporation,2.3,0.8,null,null,1.5,30,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Railroad Retirement Board,9.0,null,null,null,9.0,31,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Tennessee Valley Authority,11.8,6.9,null,null,4.9,32,2002,4,2002,3,09,30
+2002-09-30,2002,N,United States Postal Service,83.1,66.4,null,null,16.7,33,2002,4,2002,3,09,30
+2002-09-30,2001,Y,United States Postal Service,86.2,65.6,null,null,20.6,33,2002,4,2002,3,09,30
+2002-09-30,2001,Y,All other entities,19.6,3.0,null,null,16.6,34,2002,4,2002,3,09,30
+2002-09-30,2001,Y,Total,2705.8,160.0,null,null,2545.8,35,2002,4,2002,3,09,30
+2002-09-30,2002,N,Department of Agriculture,80.5,9.6,null,null,70.9,1,2002,4,2002,3,09,30
+2002-09-30,2002,N,Department of Defense,420.4,13.9,null,null,406.5,3,2002,4,2002,3,09,30
+2002-09-30,2002,N,Department of Education,49.9,4.8,null,null,45.1,4,2002,4,2002,3,09,30
+2002-09-30,2002,N,Department of Energy,-3.0,4.8,null,null,-7.8,5,2002,4,2002,3,09,30
+2002-09-30,2002,N,Department of Health & Human Services,499.9,27.0,null,null,472.9,6,2002,4,2002,3,09,30
+2002-09-30,2002,N,Department of Housing & Urban Development,36.3,2.2,null,null,34.1,7,2002,4,2002,3,09,30
+2002-09-30,2002,N,Department of Interior,15.0,0.7,null,null,14.3,8,2002,4,2002,3,09,30
+2002-09-30,2002,N,Department of Justice,29.5,2.3,null,null,27.2,9,2002,4,2002,3,09,30
+2002-09-30,2002,N,Department of Labor,64.7,null,null,null,64.7,10,2002,4,2002,3,09,30
+2002-09-30,2002,N,Department of State,10.9,0.9,null,null,10.0,11,2002,4,2002,3,09,30
+2002-09-30,2002,N,Department of Transportation,65.4,1.6,null,null,63.8,12,2002,4,2002,3,09,30
+2002-09-30,2002,N,Department of the Treasury,66.0,3.6,null,null,62.4,13,2002,4,2002,3,09,30
+2002-09-30,2002,N,Interest on debt held by the public,175.4,null,null,null,175.4,14,2002,4,2002,3,09,30
+2002-09-30,2002,N,Department of Veterans Affairs,218.4,2.6,null,null,215.8,15,2002,4,2002,3,09,30
+2002-09-30,2002,N,U.S. Agency for International Development,8.0,null,null,null,8.0,16,2002,4,2002,3,09,30
+2002-09-30,2002,N,Environmental Protection Agency,8.2,0.5,null,null,7.7,17,2002,4,2002,3,09,30
+2002-09-30,2002,N,Federal Emergency Management Agency,6.2,1.8,null,null,4.4,18,2002,4,2002,3,09,30
+2002-09-30,2002,N,General Services Administration,-0.1,0.3,null,null,-0.4,19,2002,4,2002,3,09,30
+2002-09-30,2002,N,National Aeronautics & Space Administration,14.7,0.1,null,null,14.6,20,2002,4,2002,3,09,30
+2002-09-30,2002,N,National Science Foundation,4.2,null,null,null,4.2,21,2002,4,2002,3,09,30
+2002-09-30,2002,N,U.S. Nuclear Regulatory Commission,0.6,0.4,null,null,0.2,22,2002,4,2002,3,09,30
+2002-09-30,2002,N,Office of Personnel Management,0.2,null,null,null,0.2,23,2002,4,2002,3,09,30
+2002-09-30,2002,N,Small Business Administration,1.3,0.5,null,null,0.8,24,2002,4,2002,3,09,30
+2002-09-30,2002,N,Social Security Administration,492.9,0.3,null,null,492.6,25,2002,4,2002,3,09,30
+2002-09-30,2002,N,Export-Import Bank of the United States,-1.2,0.3,null,null,-1.5,26,2002,4,2002,3,09,30
+2002-09-30,2002,N,Federal Communications Commission,6.8,1.1,null,null,5.7,27,2002,4,2002,3,09,30
+2002-09-30,2002,N,Federal Deposit Insurance Corporation,1.8,0.7,null,null,1.1,28,2002,4,2002,3,09,30
+2002-09-30,2002,N,National Credit Union Administration,0.2,0.5,null,null,-0.3,29,2002,4,2002,3,09,30
+2002-09-30,2002,N,Pension Benefit Guaranty Corporation,12.7,0.9,null,null,11.8,30,2002,4,2002,3,09,30
+2002-09-30,2002,N,Railroad Retirement Board,9.3,null,null,null,9.3,31,2002,4,2002,3,09,30
+2002-09-30,2002,N,Tennessee Valley Authority,7.9,6.8,null,null,1.1,32,2002,4,2002,3,09,30
+2002-09-30,2002,N,Department of Commerce,7.4,1.2,null,null,6.2,2,2002,4,2002,3,09,30
+2002-09-30,2002,N,All other entities,22.8,0.8,null,null,22.0,34,2002,4,2002,3,09,30
+2002-09-30,2002,N,Total,2416.3,156.6,null,null,2259.7,35,2002,4,2002,3,09,30
+2003-09-30,2002,Y,Department of Agriculture,80.5,9.6,null,null,70.9,1,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Department of Commerce,7.4,1.2,null,null,6.2,2,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Department of Defense,420.4,13.9,null,null,406.5,3,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Department of Education,49.9,4.8,null,null,45.1,4,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Department of Energy,-3.0,4.8,null,null,-7.8,5,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Department of Health & Human Services,499.9,27.0,null,null,472.9,6,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Department of Homeland Security,null,null,null,null,null,7,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Department of Housing & Urban Development,36.3,2.2,null,null,34.1,8,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Department of the Interior,15.0,0.7,null,null,14.3,9,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Department of Justice,29.5,2.3,null,null,27.2,10,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Department of Labor,64.7,null,null,null,64.7,11,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Department of State,10.9,0.9,null,null,10.0,12,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Department of Transportation,65.4,1.6,null,null,63.8,13,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Department of the Treasury,66.0,3.6,null,null,62.4,14,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Interest on Treasury securities held by the public,175.4,null,null,null,175.4,15,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Department of Veterans Affairs,218.4,2.6,null,null,215.8,16,2003,4,2003,3,09,30
+2003-09-30,2002,Y,U.S. Agency for International Development,8.0,null,null,null,8.0,17,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Environmental Protection Agency,8.2,0.5,null,null,7.7,18,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Federal Emergency Management Agency,6.2,1.8,null,null,4.4,19,2003,4,2003,3,09,30
+2003-09-30,2002,Y,General Services Administration,-0.1,0.3,null,null,-0.4,20,2003,4,2003,3,09,30
+2003-09-30,2002,Y,National Aeronautics & Space Administration,14.7,0.1,null,null,14.6,21,2003,4,2003,3,09,30
+2003-09-30,2002,Y,National Science Foundation,4.2,null,null,null,4.2,22,2003,4,2003,3,09,30
+2003-09-30,2002,Y,U.S. Nuclear Regulatory Commission,0.6,0.4,null,null,0.2,23,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Office of Personnel Management,0.2,null,null,null,0.2,24,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Small Business Administration,1.3,0.5,null,null,0.8,25,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Social Security Administration,492.9,0.3,null,null,492.6,26,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Export-Import Bank of the United States,-1.2,0.3,null,null,-1.5,27,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Federal Communications Commission,6.8,1.1,null,null,5.7,28,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Federal Deposit Insurance Corporation,1.8,0.7,null,null,1.1,29,2003,4,2003,3,09,30
+2003-09-30,2002,Y,National Credit Union Administration,0.2,0.5,null,null,-0.3,30,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Pension Benefit Guaranty Corporation,12.7,0.9,null,null,11.8,31,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Railroad Retirement Board,9.3,null,null,null,9.3,32,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Tennessee Valley Authority,7.9,6.8,null,null,1.1,33,2003,4,2003,3,09,30
+2003-09-30,2003,N,Department of Agriculture,95.6,10.7,null,null,84.9,1,2003,4,2003,3,09,30
+2003-09-30,2003,N,Department of Commerce,8.8,1.3,null,null,7.5,2,2003,4,2003,3,09,30
+2003-09-30,2003,N,Department of Defense,562.4,12.5,null,null,549.9,3,2003,4,2003,3,09,30
+2003-09-30,2003,N,Department of Education,59.0,5.0,null,null,54.0,4,2003,4,2003,3,09,30
+2003-09-30,2003,N,Department of Energy,2.0,5.3,null,null,-3.3,5,2003,4,2003,3,09,30
+2003-09-30,2003,N,Department of Health & Human Services,542.6,29.7,null,null,512.9,6,2003,4,2003,3,09,30
+2003-09-30,2003,N,Department of Homeland Security,27.5,2.6,null,null,24.9,7,2003,4,2003,3,09,30
+2003-09-30,2003,N,Department of Housing & Urban Development,44.1,2.0,null,null,42.1,8,2003,4,2003,3,09,30
+2003-09-30,2003,N,Department of the Interior,16.0,4.7,null,null,11.3,9,2003,4,2003,3,09,30
+2003-09-30,2003,N,Department of Justice,30.7,1.3,null,null,29.4,10,2003,4,2003,3,09,30
+2003-09-30,2003,N,Department of Labor,68.1,null,null,null,68.1,11,2003,4,2003,3,09,30
+2003-09-30,2003,N,Department of State,12.7,1.4,null,null,11.3,12,2003,4,2003,3,09,30
+2003-09-30,2003,N,Department of Transportation,64.2,1.2,null,null,63.0,13,2003,4,2003,3,09,30
+2003-09-30,2003,N,Department of the Treasury,75.0,2.6,null,null,72.4,14,2003,4,2003,3,09,30
+2003-09-30,2003,N,Interest on Treasury securities held by the public,156.8,null,null,null,156.8,15,2003,4,2003,3,09,30
+2003-09-30,2003,N,Department of Veterans Affairs,175.7,2.1,null,null,173.6,16,2003,4,2003,3,09,30
+2003-09-30,2003,N,U.S. Agency for International Development,10.3,0.1,null,null,10.2,17,2003,4,2003,3,09,30
+2003-09-30,2003,N,Environmental Protection Agency,9.5,0.4,null,null,9.1,18,2003,4,2003,3,09,30
+2003-09-30,2003,N,Federal Emergency Management Agency,2.5,0.8,null,null,1.7,19,2003,4,2003,3,09,30
+2003-09-30,2003,N,General Services Administration,0.8,0.3,null,null,0.5,20,2003,4,2003,3,09,30
+2003-09-30,2003,N,National Aeronautics & Space Administration,12.9,0.1,null,null,12.8,21,2003,4,2003,3,09,30
+2003-09-30,2003,N,National Science Foundation,4.8,null,null,null,4.8,22,2003,4,2003,3,09,30
+2003-09-30,2003,N,U.S. Nuclear Regulatory Commission,0.7,0.5,null,null,0.2,23,2003,4,2003,3,09,30
+2003-09-30,2003,N,Office of Personnel Management,0.3,null,null,null,0.3,24,2003,4,2003,3,09,30
+2003-09-30,2003,N,Small Business Administration,3.8,0.7,null,null,3.1,25,2003,4,2003,3,09,30
+2003-09-30,2003,N,Social Security Administration,512.6,0.3,null,null,512.3,26,2003,4,2003,3,09,30
+2003-09-30,2003,N,Export-Import Bank of the United States,0.1,0.3,null,null,-0.2,27,2003,4,2003,3,09,30
+2003-09-30,2003,N,Federal Communications Commission,7.1,1.2,null,null,5.9,28,2003,4,2003,3,09,30
+2003-09-30,2003,N,Federal Deposit Insurance Corporation,-0.2,0.2,null,null,-0.4,29,2003,4,2003,3,09,30
+2003-09-30,2003,N,National Credit Union Administration,0.2,0.5,null,null,-0.3,30,2003,4,2003,3,09,30
+2003-09-30,2003,N,Pension Benefit Guaranty Corporation,12.3,1.2,null,null,11.1,31,2003,4,2003,3,09,30
+2003-09-30,2003,N,Railroad Retirement Board,9.6,null,null,null,9.6,32,2003,4,2003,3,09,30
+2003-09-30,2003,N,Tennessee Valley Authority,8.2,7.0,null,null,1.2,33,2003,4,2003,3,09,30
+2003-09-30,2003,N,Total,2650.3,164.8,null,null,2485.5,36,2003,4,2003,3,09,30
+2003-09-30,2003,N,United States Postal Service,81.5,67.6,null,null,13.9,34,2003,4,2003,3,09,30
+2003-09-30,2002,Y,United States Postal Service,83.1,66.4,null,null,16.7,34,2003,4,2003,3,09,30
+2003-09-30,2003,N,All other entities,32.1,1.2,null,null,30.9,35,2003,4,2003,3,09,30
+2003-09-30,2002,Y,All other entities,22.8,0.8,null,null,22.0,35,2003,4,2003,3,09,30
+2003-09-30,2002,Y,Total,2416.3,156.6,null,null,2259.7,36,2003,4,2003,3,09,30
+2004-09-30,2003,Y,Department of Defense,562.2,12.5,null,null,549.7,1,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Department of Health & Human Services,542.3,29.7,null,null,512.6,2,2004,4,2004,3,09,30
+2004-09-30,2004,N,Social Security Administration,534.9,2.6,null,null,532.3,3,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Social Security Administration,512.6,0.3,null,null,512.3,3,2004,4,2004,3,09,30
+2004-09-30,2004,N,Interest on Treasury Securities held by the public,158.3,null,null,null,158.3,4,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Interest on Treasury Securities held by the public,156.8,null,null,null,156.8,4,2004,4,2004,3,09,30
+2004-09-30,2004,N,Department of Agriculture,84.1,7.6,null,null,76.5,5,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Department of Agriculture,95.0,10.7,null,null,84.3,5,2004,4,2004,3,09,30
+2004-09-30,2004,N,Department of the Treasury,79.2,4.0,null,null,75.2,6,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Department of the Treasury,79.0,2.6,null,null,76.4,6,2004,4,2004,3,09,30
+2004-09-30,2004,N,Department of Education,63.9,4.8,null,null,59.1,7,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Department of Education,59.0,5.0,null,null,54.0,7,2004,4,2004,3,09,30
+2004-09-30,2004,N,Department of Labor,58.6,null,null,null,58.6,8,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Department of Labor,68.1,null,null,null,68.1,8,2004,4,2004,3,09,30
+2004-09-30,2004,N,Department of Transportation,56.7,0.6,null,null,56.1,9,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Department of Transportation,63.3,1.2,null,null,62.1,9,2004,4,2004,3,09,30
+2004-09-30,2004,N,Department of Veterans Affairs,51.1,3.2,null,null,47.9,10,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Department of Veterans Affairs,175.7,2.1,null,null,173.6,10,2004,4,2004,3,09,30
+2004-09-30,2004,N,Department of Housing and Urban Development,41.8,1.3,null,null,40.5,11,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Department of Housing and Urban Development,44.1,2.0,null,null,42.1,11,2004,4,2004,3,09,30
+2004-09-30,2004,N,Department of Homeland Security,45.7,5.7,null,null,40.0,12,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Department of Homeland Security,27.5,2.6,null,null,24.9,12,2004,4,2004,3,09,30
+2004-09-30,2004,N,Department of Justice,35.4,0.8,null,null,34.6,13,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Department of Justice,30.7,1.3,null,null,29.4,13,2004,4,2004,3,09,30
+2004-09-30,2004,N,Department of Energy,27.3,4.9,null,null,22.4,14,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Department of Energy,2.0,5.3,null,null,-3.3,14,2004,4,2004,3,09,30
+2004-09-30,2004,N,National Aeronautics and Space Administration,17.3,0.1,null,null,17.2,15,2004,4,2004,3,09,30
+2004-09-30,2003,Y,National Aeronautics and Space Administration,12.9,0.1,null,null,12.8,15,2004,4,2004,3,09,30
+2004-09-30,2004,N,Department of the Interior,18.8,2.2,null,null,16.6,16,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Department of the Interior,16.0,4.7,null,null,11.3,16,2004,4,2004,3,09,30
+2004-09-30,2004,N,Pension Benefit Guaranty Corporation,16.9,3.9,null,null,13.0,17,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Pension Benefit Guaranty Corporation,12.3,1.2,null,null,11.1,17,2004,4,2004,3,09,30
+2004-09-30,2004,N,Department of State,13.9,1.3,null,null,12.6,18,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Department of State,12.7,1.4,null,null,11.3,18,2004,4,2004,3,09,30
+2004-09-30,2004,N,Agency for International Development,10.7,0.1,null,null,10.6,19,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Agency for International Development,10.3,0.1,null,null,10.2,19,2004,4,2004,3,09,30
+2004-09-30,2004,N,Railroad Retirement Board,9.3,null,null,null,9.3,20,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Railroad Retirement Board,9.6,null,null,null,9.6,20,2004,4,2004,3,09,30
+2004-09-30,2004,N,Environmental Protection Agency,9.5,0.3,null,null,9.2,21,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Environmental Protection Agency,9.5,0.4,null,null,9.1,21,2004,4,2004,3,09,30
+2004-09-30,2004,N,Office of Personnel Management,22.3,13.9,null,null,8.4,22,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Office of Personnel Management,0.3,null,null,null,0.3,22,2004,4,2004,3,09,30
+2004-09-30,2004,N,Department of Commerce,9.1,1.4,null,null,7.7,23,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Department of Commerce,8.8,1.3,null,null,7.5,23,2004,4,2004,3,09,30
+2004-09-30,2004,N,Federal Communications Commission,7.6,0.8,null,null,6.8,24,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Federal Communications Commission,7.1,1.2,null,null,5.9,24,2004,4,2004,3,09,30
+2004-09-30,2004,N,National Science Foundation,5.2,null,null,null,5.2,25,2004,4,2004,3,09,30
+2004-09-30,2003,Y,National Science Foundation,4.8,null,null,null,4.8,25,2004,4,2004,3,09,30
+2004-09-30,2004,N,Small Business Administration,2.1,0.5,null,null,1.6,26,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Small Business Administration,5.0,0.7,null,null,4.3,26,2004,4,2004,3,09,30
+2004-09-30,2004,N,Federal Deposit Insurance Corporation,0.8,0.2,null,null,0.6,27,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Federal Deposit Insurance Corporation,-0.2,0.2,null,null,-0.4,27,2004,4,2004,3,09,30
+2004-09-30,2004,N,Nuclear Regulatory Commission,0.8,0.5,null,null,0.3,28,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Nuclear Regulatory Commission,0.7,0.5,null,null,0.2,28,2004,4,2004,3,09,30
+2004-09-30,2004,N,Tennessee Valley Authority,8.6,8.3,null,null,0.3,29,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Tennessee Valley Authority,8.0,7.0,null,null,1.0,29,2004,4,2004,3,09,30
+2004-09-30,2004,N,National Credit Union Administration,0.2,0.1,null,null,0.1,30,2004,4,2004,3,09,30
+2004-09-30,2003,Y,National Credit Union Administration,0.2,0.5,null,null,-0.3,30,2004,4,2004,3,09,30
+2004-09-30,2004,N,General Services Administration,null,0.5,null,null,-0.5,31,2004,4,2004,3,09,30
+2004-09-30,2003,Y,General Services Administration,0.8,0.3,null,null,0.5,31,2004,4,2004,3,09,30
+2004-09-30,2004,N,Export-Import Bank of the United States,1.3,2.7,null,null,-1.4,32,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Export-Import Bank of the United States,-0.3,0.3,null,null,-0.6,32,2004,4,2004,3,09,30
+2004-09-30,2004,N,U.S. Postal Service,54.0,68.0,null,null,-14.0,33,2004,4,2004,3,09,30
+2004-09-30,2003,Y,U.S. Postal Service,81.5,67.6,null,null,13.9,33,2004,4,2004,3,09,30
+2004-09-30,2004,N,All other entities,30.6,11.1,null,null,19.5,34,2004,4,2004,3,09,30
+2004-09-30,2003,Y,All other entities,34.6,2.0,null,null,32.6,34,2004,4,2004,3,09,30
+2004-09-30,2004,N,Total,2732.0,207.1,null,null,2524.9,35,2004,4,2004,3,09,30
+2004-09-30,2003,Y,Total,2652.9,164.8,null,null,2488.1,35,2004,4,2004,3,09,30
+2004-09-30,2004,N,Department of Defense,672.1,22.3,null,null,649.8,1,2004,4,2004,3,09,30
+2004-09-30,2004,N,Department of Health & Human Services,583.9,33.4,null,null,550.5,2,2004,4,2004,3,09,30
+2005-09-30,2004,Y,Department of Defense,672.1,22.3,null,null,649.8,1,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Department of Health & Human Services,583.9,33.4,null,null,550.5,2,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Social Security Administration,534.9,2.6,null,null,532.3,3,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Department of Veterans Affairs,51.1,3.2,null,null,47.9,4,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Interest on Treasury Securities held by the public,158.3,null,null,null,158.3,5,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Department of Agriculture,84.1,7.6,null,null,76.5,6,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Department of the Treasury,79.2,4.0,null,null,75.2,7,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Department of Education,63.9,4.8,null,null,59.1,8,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Department of Homeland Security,45.7,5.7,null,null,40.0,9,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Department of Transportation,56.7,0.6,null,null,56.1,10,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Department of Labor,58.6,null,null,null,58.6,11,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Department of Energy,27.3,4.9,null,null,22.4,12,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Department of Housing and Urban Development,41.8,1.3,null,null,40.5,13,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Department of Justice,35.4,0.8,null,null,34.6,14,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Office of Personnel Management,22.3,13.9,null,null,8.4,15,2005,4,2005,3,09,30
+2005-09-30,2004,Y,National Aeronautics and Space Administration,17.3,0.1,null,null,17.2,16,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Department of the Interior,18.8,2.2,null,null,16.6,17,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Department of State,13.9,1.3,null,null,12.6,18,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Agency for International Development,10.7,0.1,null,null,10.6,19,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Railroad Retirement Board,9.3,null,null,null,9.3,20,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Environmental Protection Agency,9.5,0.3,null,null,9.2,21,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Department of Commerce,9.1,1.4,null,null,7.7,22,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Federal Communications Commission,7.6,0.8,null,null,6.8,23,2005,4,2005,3,09,30
+2005-09-30,2004,Y,National Science Foundation,5.2,null,null,null,5.2,24,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Federal Deposit Insurance Corporation,0.8,0.2,null,null,0.6,25,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Small Business Administration,2.1,0.5,null,null,1.6,26,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Pension Benefit Guaranty Corporation,16.9,3.9,null,null,13.0,27,2005,4,2005,3,09,30
+2005-09-30,2004,Y,U.S. Nuclear Regulatory Commission,0.8,0.5,null,null,0.3,28,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Tennessee Valley Authority,8.6,8.3,null,null,0.3,29,2005,4,2005,3,09,30
+2005-09-30,2004,Y,National Credit Union Administration,0.2,0.1,null,null,0.1,30,2005,4,2005,3,09,30
+2005-09-30,2004,Y,General Services Administration,null,0.5,null,null,-0.5,31,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Export-Import Bank of the United States,1.3,2.7,null,null,-1.4,32,2005,4,2005,3,09,30
+2005-09-30,2004,Y,U.S. Postal Service,54.0,68.0,null,null,-14.0,33,2005,4,2005,3,09,30
+2005-09-30,2004,Y,All other entities,30.6,11.1,null,null,19.5,34,2005,4,2005,3,09,30
+2005-09-30,2004,Y,Total,2732.0,207.1,null,null,2524.9,35,2005,4,2005,3,09,30
+2005-09-30,2005,N,Interest on Treasury Securities held by the public,181.2,null,null,null,181.2,5,2005,4,2005,3,09,30
+2005-09-30,2005,N,Department of the Treasury,82.3,3.1,null,null,79.2,7,2005,4,2005,3,09,30
+2005-09-30,2005,N,Department of Education,75.6,4.7,null,null,70.9,8,2005,4,2005,3,09,30
+2005-09-30,2005,N,Department of Homeland Security,74.6,6.7,null,null,67.9,9,2005,4,2005,3,09,30
+2005-09-30,2005,N,Department of Transportation,62.4,0.6,null,null,61.8,10,2005,4,2005,3,09,30
+2005-09-30,2005,N,Department of Labor,50.0,null,null,null,50.0,11,2005,4,2005,3,09,30
+2005-09-30,2005,N,Department of Energy,46.8,3.7,null,null,43.1,12,2005,4,2005,3,09,30
+2005-09-30,2005,N,Department of Housing and Urban Development,43.6,1.3,null,null,42.3,13,2005,4,2005,3,09,30
+2005-09-30,2005,N,Department of Justice,27.3,0.8,null,null,26.5,14,2005,4,2005,3,09,30
+2005-09-30,2005,N,Office of Personnel Management,33.1,14.4,null,null,18.7,15,2005,4,2005,3,09,30
+2005-09-30,2005,N,National Aeronautics and Space Administration,16.5,0.1,null,null,16.4,16,2005,4,2005,3,09,30
+2005-09-30,2005,N,Department of the Interior,19.5,3.2,null,null,16.3,17,2005,4,2005,3,09,30
+2005-09-30,2005,N,Department of State,15.6,2.0,null,null,13.6,18,2005,4,2005,3,09,30
+2005-09-30,2005,N,Agency for International Development,13.0,0.2,null,null,12.8,19,2005,4,2005,3,09,30
+2005-09-30,2005,N,Railroad Retirement Board,9.5,null,null,null,9.5,20,2005,4,2005,3,09,30
+2005-09-30,2005,N,Environmental Protection Agency,9.3,0.4,null,null,8.9,21,2005,4,2005,3,09,30
+2005-09-30,2005,N,Department of Commerce,9.2,1.5,null,null,7.7,22,2005,4,2005,3,09,30
+2005-09-30,2005,N,Federal Communications Commission,7.2,0.6,null,null,6.6,23,2005,4,2005,3,09,30
+2005-09-30,2005,N,National Science Foundation,5.5,null,null,null,5.5,24,2005,4,2005,3,09,30
+2005-09-30,2005,N,Federal Deposit Insurance Corporation,1.4,0.2,null,null,1.2,25,2005,4,2005,3,09,30
+2005-09-30,2005,N,Small Business Administration,1.4,0.4,null,null,1.0,26,2005,4,2005,3,09,30
+2005-09-30,2005,N,Pension Benefit Guaranty Corporation,5.1,4.3,null,null,0.8,27,2005,4,2005,3,09,30
+2005-09-30,2005,N,U.S. Nuclear Regulatory Commission,0.9,0.5,null,null,0.4,28,2005,4,2005,3,09,30
+2005-09-30,2005,N,U.S. Postal Service,56.0,68.9,null,null,-12.9,33,2005,4,2005,3,09,30
+2005-09-30,2005,N,Tennessee Valley Authority,8.6,8.7,null,null,-0.1,29,2005,4,2005,3,09,30
+2005-09-30,2005,N,National Credit Union Administration,0.1,0.2,null,null,-0.1,30,2005,4,2005,3,09,30
+2005-09-30,2005,N,General Services Administration,0.2,0.4,null,null,-0.2,31,2005,4,2005,3,09,30
+2005-09-30,2005,N,Export-Import Bank of the United States,-0.2,2.5,null,null,-2.7,32,2005,4,2005,3,09,30
+2005-09-30,2005,N,All other entities,30.3,7.6,null,null,22.7,34,2005,4,2005,3,09,30
+2005-09-30,2005,N,Total,3174.6,224.8,null,null,2949.8,35,2005,4,2005,3,09,30
+2005-09-30,2005,N,Department of Defense,703.9,26.9,null,null,677.0,1,2005,4,2005,3,09,30
+2005-09-30,2005,N,Department of Health & Human Services,623.4,39.6,null,null,583.8,2,2005,4,2005,3,09,30
+2005-09-30,2005,N,Social Security Administration,572.1,-2.0,null,null,574.1,3,2005,4,2005,3,09,30
+2005-09-30,2005,N,Department of Veterans Affairs,276.6,3.4,null,null,273.2,4,2005,4,2005,3,09,30
+2005-09-30,2005,N,Department of Agriculture,112.6,19.9,null,null,92.7,6,2005,4,2005,3,09,30
+2006-09-30,2005,Y,Department of Defense,703.9,26.9,null,null,677.0,1,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Department of Health & Human Services,623.4,39.6,null,null,583.8,2,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Social Security Administration,572.1,-2.0,null,null,574.1,3,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Interest on Treasury Securities held by the public,181.2,null,null,null,181.2,4,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Department of Veterans Affairs,276.6,3.4,null,null,273.2,5,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Department of Agriculture,112.6,19.9,null,null,92.7,6,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Department of Education,75.6,4.7,null,null,70.9,7,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Department of the Treasury,82.3,3.1,null,null,79.2,8,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Department of Transportation,62.4,0.6,null,null,61.8,9,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Department of Energy,46.8,3.7,null,null,43.1,10,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Department of Homeland Security,74.6,6.7,null,null,67.9,11,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Department of Labor,50.0,null,null,null,50.0,12,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Department of Housing and Urban Development,43.6,1.3,null,null,42.3,13,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Department of Justice,27.3,0.8,null,null,26.5,14,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Office of Personnel Management,33.1,14.4,null,null,18.7,15,2006,4,2006,3,09,30
+2006-09-30,2005,Y,National Aeronautics and Space Administration,16.5,0.1,null,null,16.4,16,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Department of the Interior,19.5,3.2,null,null,16.3,17,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Department of State,15.6,2.0,null,null,13.6,18,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Agency for International Development,13.0,0.2,null,null,12.8,19,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Environmental Protection Agency,9.3,0.4,null,null,8.9,20,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Department of Commerce,9.2,1.5,null,null,7.7,21,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Federal Communications Commission,7.2,0.6,null,null,6.6,22,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Railroad Retirement Board,9.5,null,null,null,9.5,23,2006,4,2006,3,09,30
+2006-09-30,2005,Y,National Science Foundation,5.5,null,null,null,5.5,24,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Federal Deposit Insurance Corporation,1.4,0.2,null,null,1.2,25,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Small Business Administration,1.4,0.4,null,null,1.0,26,2006,4,2006,3,09,30
+2006-09-30,2005,Y,U.S. Nuclear Regulatory Commission,0.9,0.5,null,null,0.4,27,2006,4,2006,3,09,30
+2006-09-30,2005,Y,General Services Administration,0.2,0.4,null,null,-0.2,28,2006,4,2006,3,09,30
+2006-09-30,2005,Y,National Credit Union Administration,0.1,0.2,null,null,-0.1,29,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Tennessee Valley Authority,8.6,8.7,null,null,-0.1,30,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Export-Import Bank of the United States,-0.2,2.5,null,null,-2.7,31,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Pension Benefit Guaranty Corporation,5.1,4.3,null,null,0.8,32,2006,4,2006,3,09,30
+2006-09-30,2005,Y,U.S. Postal Service,56.0,68.9,null,null,-12.9,33,2006,4,2006,3,09,30
+2006-09-30,2005,Y,All other entities,30.3,7.6,null,null,22.7,34,2006,4,2006,3,09,30
+2006-09-30,2005,Y,Total,3174.6,224.8,null,null,2949.8,35,2006,4,2006,3,09,30
+2006-09-30,2006,N,Railroad Retirement Board,12.1,5.0,null,null,7.1,23,2006,4,2006,3,09,30
+2006-09-30,2006,N,National Science Foundation,5.7,null,null,null,5.7,24,2006,4,2006,3,09,30
+2006-09-30,2006,N,Federal Deposit Insurance Corporation,1.8,0.1,null,null,1.7,25,2006,4,2006,3,09,30
+2006-09-30,2006,N,Small Business Administration,1.7,0.3,null,null,1.4,26,2006,4,2006,3,09,30
+2006-09-30,2006,N,U.S. Nuclear Regulatory Commission,1.0,0.6,null,null,0.4,27,2006,4,2006,3,09,30
+2006-09-30,2006,N,General Services Administration,0.9,0.5,null,null,0.4,28,2006,4,2006,3,09,30
+2006-09-30,2006,N,National Credit Union Administration,0.2,0.1,null,null,0.1,29,2006,4,2006,3,09,30
+2006-09-30,2006,N,Tennessee Valley Authority,9.5,10.0,null,null,-0.5,30,2006,4,2006,3,09,30
+2006-09-30,2006,N,Export-Import Bank of the United States,null,1.3,null,null,-1.3,31,2006,4,2006,3,09,30
+2006-09-30,2006,N,Pension Benefit Guaranty Corporation,-0.5,3.8,null,null,-4.3,32,2006,4,2006,3,09,30
+2006-09-30,2006,N,U.S. Postal Service,58.9,71.6,null,null,-12.7,33,2006,4,2006,3,09,30
+2006-09-30,2006,N,Department of Defense,658.0,24.1,null,null,633.9,1,2006,4,2006,3,09,30
+2006-09-30,2006,N,Department of Health & Human Services,678.8,51.4,null,null,627.4,2,2006,4,2006,3,09,30
+2006-09-30,2006,N,Social Security Administration,593.1,0.3,null,null,592.8,3,2006,4,2006,3,09,30
+2006-09-30,2006,N,Interest on Treasury Securities held by the public,221.5,null,null,null,221.5,4,2006,4,2006,3,09,30
+2006-09-30,2006,N,Department of Veterans Affairs,117.3,3.5,null,null,113.8,5,2006,4,2006,3,09,30
+2006-09-30,2006,N,Department of Agriculture,109.0,11.4,null,null,97.6,6,2006,4,2006,3,09,30
+2006-09-30,2006,N,Department of Education,97.3,4.7,null,null,92.6,7,2006,4,2006,3,09,30
+2006-09-30,2006,N,Department of the Treasury,85.5,4.1,null,null,81.4,8,2006,4,2006,3,09,30
+2006-09-30,2006,N,Department of Transportation,66.6,0.6,null,null,66.0,9,2006,4,2006,3,09,30
+2006-09-30,2006,N,Department of Energy,70.9,5.1,null,null,65.8,10,2006,4,2006,3,09,30
+2006-09-30,2006,N,Department of Homeland Security,63.4,6.8,null,null,56.6,11,2006,4,2006,3,09,30
+2006-09-30,2006,N,Department of Labor,48.2,null,null,null,48.2,12,2006,4,2006,3,09,30
+2006-09-30,2006,N,Department of Housing and Urban Development,43.0,1.0,null,null,42.0,13,2006,4,2006,3,09,30
+2006-09-30,2006,N,Department of Justice,28.6,1.0,null,null,27.6,14,2006,4,2006,3,09,30
+2006-09-30,2006,N,Office of Personnel Management,34.8,15.1,null,null,19.7,15,2006,4,2006,3,09,30
+2006-09-30,2006,N,National Aeronautics and Space Administration,19.2,null,null,null,19.2,16,2006,4,2006,3,09,30
+2006-09-30,2006,N,All other entities,27.0,-3.5,null,null,30.5,34,2006,4,2006,3,09,30
+2006-09-30,2006,N,Total,3127.7,226.4,null,null,2901.3,35,2006,4,2006,3,09,30
+2006-09-30,2006,N,Department of the Interior,20.0,2.9,null,null,17.1,17,2006,4,2006,3,09,30
+2006-09-30,2006,N,Department of State,16.0,2.2,null,null,13.8,18,2006,4,2006,3,09,30
+2006-09-30,2006,N,Agency for International Development,10.5,0.1,null,null,10.4,19,2006,4,2006,3,09,30
+2006-09-30,2006,N,Environmental Protection Agency,9.9,0.3,null,null,9.6,20,2006,4,2006,3,09,30
+2006-09-30,2006,N,Department of Commerce,9.9,1.7,null,null,8.2,21,2006,4,2006,3,09,30
+2006-09-30,2006,N,Federal Communications Commission,7.9,0.3,null,null,7.6,22,2006,4,2006,3,09,30
+2007-09-30,2007,N,Environmental Protection Agency,10.0,0.4,null,null,9.6,19,2007,4,2007,3,09,30
+2007-09-30,2007,N,Agency for International Development,9.7,0.3,null,null,9.4,20,2007,4,2007,3,09,30
+2007-09-30,2007,N,Department of Commerce,9.6,1.9,null,null,7.7,21,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Department of Health & Human Services,678.8,51.4,null,null,627.4,1,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Department of Defense,658.0,24.1,null,null,633.9,2,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Social Security Administration,593.1,0.3,null,null,592.8,3,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Interest on Treasury Securities held by the public,221.5,null,null,null,221.5,4,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Department of Agriculture,109.0,11.4,null,null,97.6,5,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Department of the Treasury,85.5,4.1,null,null,81.4,6,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Department of Transportation,66.6,0.6,null,null,66.0,7,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Department of Energy,70.9,5.1,null,null,65.8,8,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Department of Education,97.3,4.7,null,null,92.6,9,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Department of Veterans Affairs,117.3,3.5,null,null,113.8,10,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Department of Housing and Urban Development,43.0,1.0,null,null,42.0,11,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Department of Labor,48.2,null,null,null,48.2,12,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Department of Homeland Security,63.4,6.8,null,null,56.6,13,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Department of Justice,28.6,1.0,null,null,27.6,14,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Office of Personnel Management,34.8,15.1,null,null,19.7,15,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Department of the Interior,20.0,2.9,null,null,17.1,16,2007,4,2007,3,09,30
+2007-09-30,2006,Y,National Aeronautics and Space Administration,19.2,null,null,null,19.2,17,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Department of State,16.0,2.2,null,null,13.8,18,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Environmental Protection Agency,9.9,0.3,null,null,9.6,19,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Agency for International Development,10.5,0.1,null,null,10.4,20,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Department of Commerce,9.9,1.7,null,null,8.2,21,2007,4,2007,3,09,30
+2007-09-30,2007,N,Federal Communications Commission,7.9,0.4,null,null,7.5,22,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Federal Communications Commission,7.9,0.3,null,null,7.6,22,2007,4,2007,3,09,30
+2007-09-30,2007,N,National Science Foundation,5.7,null,null,null,5.7,23,2007,4,2007,3,09,30
+2007-09-30,2006,Y,National Science Foundation,5.7,null,null,null,5.7,23,2007,4,2007,3,09,30
+2007-09-30,2007,N,Railroad Retirement Board,15.7,10.3,null,null,5.4,24,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Railroad Retirement Board,12.1,5.0,null,null,7.1,24,2007,4,2007,3,09,30
+2007-09-30,2007,N,Small Business Administration,1.3,0.4,null,null,0.9,25,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Small Business Administration,1.7,0.3,null,null,1.4,25,2007,4,2007,3,09,30
+2007-09-30,2007,N,Federal Deposit Insurance Corporation,1.7,0.9,null,null,0.8,26,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Federal Deposit Insurance Corporation,1.8,0.1,null,null,1.7,26,2007,4,2007,3,09,30
+2007-09-30,2007,N,Tennessee Valley Authority,10.9,10.4,null,null,0.5,27,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Tennessee Valley Authority,9.5,10.0,null,null,-0.5,27,2007,4,2007,3,09,30
+2007-09-30,2007,N,U.S. Nuclear Regulatory Commission,1.0,0.6,null,null,0.4,28,2007,4,2007,3,09,30
+2007-09-30,2006,Y,U.S. Nuclear Regulatory Commission,1.0,0.6,null,null,0.4,28,2007,4,2007,3,09,30
+2007-09-30,2007,N,National Credit Union Administration,0.3,0.1,null,null,0.2,29,2007,4,2007,3,09,30
+2007-09-30,2006,Y,National Credit Union Administration,0.2,0.1,null,null,0.1,29,2007,4,2007,3,09,30
+2007-09-30,2007,N,General Services Administration,0.6,0.5,null,null,0.1,30,2007,4,2007,3,09,30
+2007-09-30,2007,N,Department of Health & Human Services,718.6,51.8,null,null,666.8,1,2007,4,2007,3,09,30
+2007-09-30,2007,N,Department of Defense,689.6,25.1,null,null,664.5,2,2007,4,2007,3,09,30
+2007-09-30,2007,N,Social Security Administration,626.4,0.3,null,null,626.1,3,2007,4,2007,3,09,30
+2007-09-30,2007,N,Interest on Treasury Securities held by the public,238.9,null,null,null,238.9,4,2007,4,2007,3,09,30
+2007-09-30,2007,N,Department of Agriculture,98.6,12.1,null,null,86.5,5,2007,4,2007,3,09,30
+2007-09-30,2007,N,Department of the Treasury,86.9,6.3,null,null,80.6,6,2007,4,2007,3,09,30
+2007-09-30,2007,N,Department of Transportation,66.2,0.5,null,null,65.7,7,2007,4,2007,3,09,30
+2007-09-30,2007,N,Department of Energy,67.5,4.3,null,null,63.2,8,2007,4,2007,3,09,30
+2007-09-30,2007,N,Department of Education,66.3,4.5,null,null,61.8,9,2007,4,2007,3,09,30
+2007-09-30,2007,N,Department of Veterans Affairs,63.1,3.7,null,null,59.4,10,2007,4,2007,3,09,30
+2007-09-30,2007,N,Department of Housing and Urban Development,54.0,0.9,null,null,53.1,11,2007,4,2007,3,09,30
+2007-09-30,2007,N,Department of Labor,50.1,null,null,null,50.1,12,2007,4,2007,3,09,30
+2007-09-30,2007,N,Department of Homeland Security,51.1,7.1,null,null,44.0,13,2007,4,2007,3,09,30
+2007-09-30,2007,N,Department of Justice,28.8,1.0,null,null,27.8,14,2007,4,2007,3,09,30
+2007-09-30,2007,N,Office of Personnel Management,36.2,15.5,null,null,20.7,15,2007,4,2007,3,09,30
+2007-09-30,2007,N,Department of the Interior,18.6,2.0,null,null,16.6,16,2007,4,2007,3,09,30
+2007-09-30,2007,N,National Aeronautics and Space Administration,16.3,0.1,null,null,16.2,17,2007,4,2007,3,09,30
+2007-09-30,2007,N,Department of State,18.4,3.4,null,null,15.0,18,2007,4,2007,3,09,30
+2007-09-30,2006,Y,General Services Administration,0.9,0.5,null,null,0.4,30,2007,4,2007,3,09,30
+2007-09-30,2007,N,Export-Import Bank of the United States,0.5,0.9,null,null,-0.4,31,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Export-Import Bank of the United States,null,1.3,null,null,-1.3,31,2007,4,2007,3,09,30
+2007-09-30,2007,N,Pension Benefit Guaranty Corporation,1.5,6.1,null,null,-4.6,32,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Pension Benefit Guaranty Corporation,-0.5,3.8,null,null,-4.3,32,2007,4,2007,3,09,30
+2007-09-30,2007,N,U.S. Postal Service,60.1,73.7,null,null,-13.6,33,2007,4,2007,3,09,30
+2007-09-30,2006,Y,U.S. Postal Service,58.9,71.6,null,null,-12.7,33,2007,4,2007,3,09,30
+2007-09-30,2007,N,All other entities,25.2,2.3,null,null,22.9,34,2007,4,2007,3,09,30
+2007-09-30,2006,Y,All other entities,27.0,-3.5,null,null,30.5,34,2007,4,2007,3,09,30
+2007-09-30,2007,N,Total,3157.3,247.8,null,null,2909.5,35,2007,4,2007,3,09,30
+2007-09-30,2006,Y,Total,3127.7,226.4,null,null,2901.3,35,2007,4,2007,3,09,30
+2008-09-30,2008,N,Department of Defense,767.6,26.8,null,null,740.8,1,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Department of Defense,689.6,25.1,null,null,664.5,1,2008,4,2008,3,09,30
+2008-09-30,2008,N,Department of Health and Human Services,769.1,56.4,null,null,712.7,2,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Department of Health and Human Services,718.6,51.8,null,null,666.8,2,2008,4,2008,3,09,30
+2008-09-30,2008,N,Social Security Administration,663.9,0.3,null,null,663.6,3,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Social Security Administration,626.4,0.3,null,null,626.1,3,2008,4,2008,3,09,30
+2008-09-30,2008,N,Department of Veterans Affairs,434.6,4.2,null,null,430.4,4,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Department of Veterans Affairs,63.1,3.7,null,null,59.4,4,2008,4,2008,3,09,30
+2008-09-30,2008,N,Interest on Treasury Securities held by the public,241.6,null,null,null,241.6,5,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Interest on Treasury Securities held by the public,238.9,null,null,null,238.9,5,2008,4,2008,3,09,30
+2008-09-30,2008,N,Department of the Treasury,197.0,12.4,null,null,184.6,6,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Department of the Treasury,86.9,6.3,null,null,80.6,6,2008,4,2008,3,09,30
+2008-09-30,2008,N,Department of Agriculture,109.3,9.8,null,null,99.5,7,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Department of Agriculture,98.6,12.1,null,null,86.5,7,2008,4,2008,3,09,30
+2008-09-30,2008,N,Department of Transportation,71.5,0.8,null,null,70.7,8,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Department of Transportation,66.2,0.5,null,null,65.7,8,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Department of Education,66.3,4.5,null,null,61.8,9,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Department of Labor,50.1,null,null,null,50.1,10,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Department of Housing and Urban Development,54.0,0.9,null,null,53.1,11,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Department of Homeland Security,51.1,7.1,null,null,44.0,12,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Department of Energy,67.5,4.3,null,null,63.2,13,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Department of Justice,28.8,1.0,null,null,27.8,14,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Office of Personnel Management,36.2,15.5,null,null,20.7,15,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Federal Deposit Insurance Corporation,1.7,0.9,null,null,0.8,16,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Department of the Interior,18.6,2.0,null,null,16.6,17,2008,4,2008,3,09,30
+2008-09-30,2007,Y,National Aeronautics and Space Administration,16.3,0.1,null,null,16.2,18,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Department of State,18.4,3.4,null,null,15.0,19,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Railroad Retirement Board,15.7,10.3,null,null,5.4,20,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Department of Commerce,9.6,1.9,null,null,7.7,21,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Environmental Protection Agency,10.0,0.4,null,null,9.6,22,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Agency for International Development,9.7,0.3,null,null,9.4,23,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Federal Communications Commission,7.9,0.4,null,null,7.5,24,2008,4,2008,3,09,30
+2008-09-30,2007,Y,National Science Foundation,5.7,null,null,null,5.7,25,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Small Business Administration,1.3,0.4,null,null,0.9,26,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Smithsonian Institution,0.7,null,null,null,0.7,27,2008,4,2008,3,09,30
+2008-09-30,2007,Y,General Services Administration,0.6,0.5,null,null,0.1,28,2008,4,2008,3,09,30
+2008-09-30,2007,Y,U.S. Nuclear Regulatory Commission,1.0,0.6,null,null,0.4,29,2008,4,2008,3,09,30
+2008-09-30,2007,Y,National Credit Union Administration,0.3,0.1,null,null,0.2,30,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Securities and Exchange Commission,1.0,1.5,null,null,-0.5,31,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Tennessee Valley Authority,10.9,10.4,null,null,0.5,32,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Farm Credit System Insurance Corporation,null,0.1,null,null,-0.1,33,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Export-Import Bank of the United States,0.5,0.9,null,null,-0.4,34,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Pension Benefit Guaranty Corporation,1.5,6.1,null,null,-4.6,35,2008,4,2008,3,09,30
+2008-09-30,2007,Y,U.S. Postal Service,60.1,73.7,null,null,-13.6,36,2008,4,2008,3,09,30
+2008-09-30,2007,Y,All other entities,23.5,0.7,null,null,22.8,37,2008,4,2008,3,09,30
+2008-09-30,2007,Y,Total,3157.3,247.8,null,null,2909.5,38,2008,4,2008,3,09,30
+2008-09-30,2008,N,U.S. Postal Service,60.0,73.7,null,null,-13.7,36,2008,4,2008,3,09,30
+2008-09-30,2008,N,Department of Education,66.9,5.0,null,null,61.9,9,2008,4,2008,3,09,30
+2008-09-30,2008,N,Department of Labor,60.6,null,null,null,60.6,10,2008,4,2008,3,09,30
+2008-09-30,2008,N,Department of Housing and Urban Development,60.6,0.8,null,null,59.8,11,2008,4,2008,3,09,30
+2008-09-30,2008,N,Department of Homeland Security,60.0,7.9,null,null,52.1,12,2008,4,2008,3,09,30
+2008-09-30,2008,N,Department of Energy,35.8,4.2,null,null,31.6,13,2008,4,2008,3,09,30
+2008-09-30,2008,N,Department of Justice,31.7,1.1,null,null,30.6,14,2008,4,2008,3,09,30
+2008-09-30,2008,N,Office of Personnel Management,39.5,16.0,null,null,23.5,15,2008,4,2008,3,09,30
+2008-09-30,2008,N,Federal Deposit Insurance Corporation,24.3,1.7,null,null,22.6,16,2008,4,2008,3,09,30
+2008-09-30,2008,N,Department of the Interior,23.4,2.1,null,null,21.3,17,2008,4,2008,3,09,30
+2008-09-30,2008,N,National Aeronautics and Space Administration,20.4,0.2,null,null,20.2,18,2008,4,2008,3,09,30
+2008-09-30,2008,N,Department of State,22.1,2.6,null,null,19.5,19,2008,4,2008,3,09,30
+2008-09-30,2008,N,Railroad Retirement Board,20.7,4.2,null,null,16.5,20,2008,4,2008,3,09,30
+2008-09-30,2008,N,Department of Commerce,11.9,2.0,null,null,9.9,21,2008,4,2008,3,09,30
+2008-09-30,2008,N,Environmental Protection Agency,10.1,0.5,null,null,9.6,22,2008,4,2008,3,09,30
+2008-09-30,2008,N,Agency for International Development,9.1,-0.1,null,null,9.2,23,2008,4,2008,3,09,30
+2008-09-30,2008,N,Federal Communications Commission,8.5,0.4,null,null,8.1,24,2008,4,2008,3,09,30
+2008-09-30,2008,N,National Science Foundation,6.0,null,null,null,6.0,25,2008,4,2008,3,09,30
+2008-09-30,2008,N,Small Business Administration,1.9,0.4,null,null,1.5,26,2008,4,2008,3,09,30
+2008-09-30,2008,N,Smithsonian Institution,0.9,null,null,null,0.9,27,2008,4,2008,3,09,30
+2008-09-30,2008,N,General Services Administration,1.0,0.5,null,null,0.5,28,2008,4,2008,3,09,30
+2008-09-30,2008,N,U.S. Nuclear Regulatory Commission,1.2,0.8,null,null,0.4,29,2008,4,2008,3,09,30
+2008-09-30,2008,N,National Credit Union Administration,0.5,0.1,null,null,0.4,30,2008,4,2008,3,09,30
+2008-09-30,2008,N,Securities and Exchange Commission,1.1,1.0,null,null,0.1,31,2008,4,2008,3,09,30
+2008-09-30,2008,N,Tennessee Valley Authority,10.2,10.1,null,null,0.1,32,2008,4,2008,3,09,30
+2008-09-30,2008,N,Farm Credit System Insurance Corporation,null,0.2,null,null,-0.2,33,2008,4,2008,3,09,30
+2008-09-30,2008,N,Export-Import Bank of the United States,0.4,0.7,null,null,-0.3,34,2008,4,2008,3,09,30
+2008-09-30,2008,N,Pension Benefit Guaranty Corporation,2.3,3.5,null,null,-1.2,35,2008,4,2008,3,09,30
+2008-09-30,2008,N,All other entities,45.9,0.6,null,null,45.3,37,2008,4,2008,3,09,30
+2008-09-30,2008,N,Total,3891.6,250.9,null,null,3640.7,38,2008,4,2008,3,09,30
+2009-09-30,2009,N,Department of Health and Human Services,866.4,59.5,null,null,806.9,1,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Department of Health and Human Services,769.1,56.4,null,null,712.7,1,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Social Security Administration,663.9,0.3,null,null,663.6,2,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Department of Defense,767.6,26.8,null,null,740.8,3,2009,4,2009,3,09,30
+2009-09-30,2009,N,Department of the Treasury,254.6,19.4,null,null,235.2,4,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Department of the Treasury,197.0,12.4,null,null,184.6,4,2009,4,2009,3,09,30
+2009-09-30,2009,N,Interest on Treasury Securities held by the public,189.1,null,null,null,189.1,5,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Interest on Treasury Securities held by the public,241.6,null,null,null,241.6,5,2009,4,2009,3,09,30
+2009-09-30,2009,N,Department of Labor,140.2,null,null,null,140.2,6,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Department of Labor,60.6,null,null,null,60.6,6,2009,4,2009,3,09,30
+2009-09-30,2009,N,Department of Agriculture,132.0,10.5,null,null,121.5,7,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Department of Agriculture,109.3,9.8,null,null,99.5,7,2009,4,2009,3,09,30
+2009-09-30,2009,N,Department of Transportation,80.1,0.5,null,null,79.6,8,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Department of Transportation,71.5,0.8,null,null,70.7,8,2009,4,2009,3,09,30
+2009-09-30,2009,N,Department of Housing and Urban Development,62.6,1.0,null,null,61.6,9,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Department of Housing and Urban Development,60.6,0.8,null,null,59.8,9,2009,4,2009,3,09,30
+2009-09-30,2009,N,Department of Homeland Security,62.1,8.4,null,null,53.7,10,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Department of Homeland Security,60.0,7.9,null,null,52.1,10,2009,4,2009,3,09,30
+2009-09-30,2009,N,Federal Deposit Insurance Corporation,63.4,18.8,null,null,44.6,11,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Federal Deposit Insurance Corporation,24.3,1.7,null,null,22.6,11,2009,4,2009,3,09,30
+2009-09-30,2009,N,Department of Energy,46.8,3.9,null,null,42.9,12,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Department of Energy,35.8,4.2,null,null,31.6,12,2009,4,2009,3,09,30
+2009-09-30,2009,N,Department of Education,44.9,6.5,null,null,38.4,13,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Department of Education,66.9,5.0,null,null,61.9,13,2009,4,2009,3,09,30
+2009-09-30,2009,N,Department of Justice,31.2,1.1,null,null,30.1,14,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Department of Justice,31.7,1.1,null,null,30.6,14,2009,4,2009,3,09,30
+2009-09-30,2009,N,Office of Personnel Management,41.2,16.9,null,null,24.3,15,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Office of Personnel Management,39.5,16.0,null,null,23.5,15,2009,4,2009,3,09,30
+2009-09-30,2009,N,National Aeronautics and Space Administration,24.2,0.1,null,null,24.1,16,2009,4,2009,3,09,30
+2009-09-30,2008,Y,National Aeronautics and Space Administration,20.4,0.2,null,null,20.2,16,2009,4,2009,3,09,30
+2009-09-30,2009,N,Department of State,25.6,2.5,null,null,23.1,17,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Department of State,22.1,2.6,null,null,19.5,17,2009,4,2009,3,09,30
+2009-09-30,2009,N,Department of the Interior,20.8,2.2,null,null,18.6,18,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Department of the Interior,23.4,2.1,null,null,21.3,18,2009,4,2009,3,09,30
+2009-09-30,2009,N,Pension Benefit Guaranty Corporation,22.9,10.5,null,null,12.4,19,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Pension Benefit Guaranty Corporation,2.3,3.5,null,null,-1.2,19,2009,4,2009,3,09,30
+2009-09-30,2009,N,Department of Commerce,13.9,2.1,null,null,11.8,20,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Department of Commerce,11.9,2.0,null,null,9.9,20,2009,4,2009,3,09,30
+2009-09-30,2009,N,Railroad Retirement Board,22.7,11.2,null,null,11.5,21,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Railroad Retirement Board,20.7,4.2,null,null,16.5,21,2009,4,2009,3,09,30
+2009-09-30,2009,N,Agency for International Development,11.8,0.7,null,null,11.1,22,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Agency for International Development,9.1,-0.1,null,null,9.2,22,2009,4,2009,3,09,30
+2009-09-30,2009,N,Environmental Protection Agency,10.1,0.6,null,null,9.5,23,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Environmental Protection Agency,10.1,0.5,null,null,9.6,23,2009,4,2009,3,09,30
+2009-09-30,2009,N,Federal Communications Commission,8.8,0.5,null,null,8.3,24,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Federal Communications Commission,8.5,0.4,null,null,8.1,24,2009,4,2009,3,09,30
+2009-09-30,2009,N,National Science Foundation,6.1,null,null,null,6.1,25,2009,4,2009,3,09,30
+2009-09-30,2008,Y,National Science Foundation,6.0,null,null,null,6.0,25,2009,4,2009,3,09,30
+2009-09-30,2009,N,Small Business Administration,6.3,0.4,null,null,5.9,26,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Small Business Administration,1.9,0.4,null,null,1.5,26,2009,4,2009,3,09,30
+2009-09-30,2009,N,National Credit Union Administration,6.1,1.3,null,null,4.8,27,2009,4,2009,3,09,30
+2009-09-30,2008,Y,National Credit Union Administration,0.5,0.1,null,null,0.4,27,2009,4,2009,3,09,30
+2009-09-30,2009,N,Smithsonian Institution,0.9,null,null,null,0.9,28,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Smithsonian Institution,0.9,null,null,null,0.9,28,2009,4,2009,3,09,30
+2009-09-30,2009,N,Export-Import Bank of the United States,1.5,0.8,null,null,0.7,29,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Export-Import Bank of the United States,0.4,0.7,null,null,-0.3,29,2009,4,2009,3,09,30
+2009-09-30,2009,N,U.S. Nuclear Regulatory Commission,1.3,0.8,null,null,0.5,30,2009,4,2009,3,09,30
+2009-09-30,2008,Y,U.S. Nuclear Regulatory Commission,1.2,0.8,null,null,0.4,30,2009,4,2009,3,09,30
+2009-09-30,2009,N,General Services Administration,1.0,0.5,null,null,0.5,31,2009,4,2009,3,09,30
+2009-09-30,2008,Y,General Services Administration,1.0,0.5,null,null,0.5,31,2009,4,2009,3,09,30
+2009-09-30,2009,N,Securities and Exchange Commission,1.1,1.1,null,null,null,32,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Securities and Exchange Commission,1.1,1.0,null,null,0.1,32,2009,4,2009,3,09,30
+2009-09-30,2009,N,Farm Credit System Insurance Corporation,null,0.3,null,null,-0.3,33,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Farm Credit System Insurance Corporation,null,0.2,null,null,-0.2,33,2009,4,2009,3,09,30
+2009-09-30,2009,N,Tennessee Valley Authority,10.2,11.0,null,null,-0.8,34,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Tennessee Valley Authority,10.2,10.1,null,null,0.1,34,2009,4,2009,3,09,30
+2009-09-30,2009,N,U.S. Postal Service,58.2,67.1,null,null,-8.9,35,2009,4,2009,3,09,30
+2009-09-30,2008,Y,U.S. Postal Service,60.0,73.7,null,null,-13.7,35,2009,4,2009,3,09,30
+2009-09-30,2009,N,Department of Veterans Affairs,-38.8,4.0,null,null,-42.8,36,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Department of Veterans Affairs,434.6,4.2,null,null,430.4,36,2009,4,2009,3,09,30
+2009-09-30,2009,N,All other entities,51.3,0.7,null,null,50.6,37,2009,4,2009,3,09,30
+2009-09-30,2008,Y,All other entities,45.9,0.6,null,null,45.3,37,2009,4,2009,3,09,30
+2009-09-30,2009,N,Total,3735.6,300.9,null,null,3434.7,38,2009,4,2009,3,09,30
+2009-09-30,2008,Y,Total,3891.6,250.9,null,null,3640.7,38,2009,4,2009,3,09,30
+2009-09-30,2009,N,Social Security Administration,736.6,0.4,null,null,736.2,2,2009,4,2009,3,09,30
+2009-09-30,2009,N,Department of Defense,718.4,35.6,null,null,682.8,3,2009,4,2009,3,09,30
+2010-09-30,2010,N,Department of Defense,929.0,39.8,null,null,889.2,1,2010,4,2010,3,09,30
+2010-09-30,2010,N,Department of Health and Human Services,920.4,62.7,null,null,857.7,2,2010,4,2010,3,09,30
+2010-09-30,2010,N,Social Security Administration,754.2,0.3,null,null,753.9,3,2010,4,2010,3,09,30
+2010-09-30,2010,N,Department of the Treasury,402.3,29.4,null,null,372.9,4,2010,4,2010,3,09,30
+2010-09-30,2010,N,Department of Veterans Affairs,240.2,4.7,null,null,235.5,5,2010,4,2010,3,09,30
+2010-09-30,2010,N,Interest on Treasury Securities held by the public,214.8,null,null,null,214.8,6,2010,4,2010,3,09,30
+2010-09-30,2010,N,Department of Labor,179.0,null,null,null,179.0,7,2010,4,2010,3,09,30
+2010-09-30,2010,N,Department of Agriculture,136.6,6.0,null,null,130.6,8,2010,4,2010,3,09,30
+2010-09-30,2010,N,Department of Education,100.8,11.3,null,null,89.5,9,2010,4,2010,3,09,30
+2010-09-30,2010,N,Department of Transportation,80.4,0.6,null,null,79.8,10,2010,4,2010,3,09,30
+2010-09-30,2010,N,Department of Homeland Security,58.9,8.9,null,null,50.0,11,2010,4,2010,3,09,30
+2010-09-30,2010,N,U.S. Postal Service,57.3,65.7,null,null,-8.4,12,2010,4,2010,3,09,30
+2010-09-30,2010,N,Department of Housing and Urban Development,56.7,1.3,null,null,55.4,13,2010,4,2010,3,09,30
+2010-09-30,2010,N,Office of Personnel Management,43.5,18.0,null,null,25.5,14,2010,4,2010,3,09,30
+2010-09-30,2010,N,Department of Justice,32.7,1.2,null,null,31.5,15,2010,4,2010,3,09,30
+2010-09-30,2010,N,Department of Energy,28.9,3.8,null,null,25.1,16,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Department of Defense,718.4,35.6,null,null,682.8,1,2010,4,2010,3,09,30
+2010-09-30,2010,N,Department of State,24.5,2.8,null,null,21.7,17,2010,4,2010,3,09,30
+2010-09-30,2010,N,National Aeronautics and Space Administration,22.1,0.1,null,null,22.0,18,2010,4,2010,3,09,30
+2010-09-30,2010,N,Department of the Interior,20.7,2.4,null,null,18.3,19,2010,4,2010,3,09,30
+2010-09-30,2010,N,Federal Deposit Insurance Corporation,16.8,16.1,null,null,0.7,20,2010,4,2010,3,09,30
+2010-09-30,2010,N,Department of Commerce,16.5,2.3,null,null,14.2,21,2010,4,2010,3,09,30
+2010-09-30,2010,N,Railroad Retirement Board,14.6,5.8,null,null,8.8,22,2010,4,2010,3,09,30
+2010-09-30,2010,N,Environmental Protection Agency,12.7,0.5,null,null,12.2,23,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Department of Health and Human Services,866.4,59.5,null,null,806.9,2,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Social Security Administration,736.6,0.4,null,null,736.2,3,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Department of the Treasury,254.6,19.4,null,null,235.2,4,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Department of Veterans Affairs,-38.8,4.0,null,null,-42.8,5,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Interest on Treasury Securities held by the public,189.1,null,null,null,189.1,6,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Department of Labor,140.2,null,null,null,140.2,7,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Department of Agriculture,132.0,10.5,null,null,121.5,8,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Department of Education,44.9,6.5,null,null,38.4,9,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Department of Transportation,80.1,0.5,null,null,79.6,10,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Department of Homeland Security,62.1,8.4,null,null,53.7,11,2010,4,2010,3,09,30
+2010-09-30,2009,Y,U.S. Postal Service,58.2,67.1,null,null,-8.9,12,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Department of Housing and Urban Development,62.6,1.0,null,null,61.6,13,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Office of Personnel Management,41.2,16.9,null,null,24.3,14,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Department of Justice,31.2,1.1,null,null,30.1,15,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Department of Energy,46.8,3.9,null,null,42.9,16,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Department of State,25.6,2.5,null,null,23.1,17,2010,4,2010,3,09,30
+2010-09-30,2009,Y,National Aeronautics and Space Administration,24.2,0.1,null,null,24.1,18,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Department of the Interior,20.8,2.2,null,null,18.6,19,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Federal Deposit Insurance Corporation,63.4,18.8,null,null,44.6,20,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Department of Commerce,13.9,2.1,null,null,11.8,21,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Railroad Retirement Board,22.7,11.2,null,null,11.5,22,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Environmental Protection Agency,10.1,0.6,null,null,9.5,23,2010,4,2010,3,09,30
+2010-09-30,2010,N,Pension Benefit Guaranty Corporation,11.9,8.1,null,null,3.8,24,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Pension Benefit Guaranty Corporation,22.9,10.5,null,null,12.4,24,2010,4,2010,3,09,30
+2010-09-30,2010,N,Agency for International Development,10.7,0.2,null,null,10.5,25,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Agency for International Development,11.8,0.7,null,null,11.1,25,2010,4,2010,3,09,30
+2010-09-30,2010,N,Tennessee Valley Authority,9.7,10.8,null,null,-1.1,26,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Tennessee Valley Authority,10.2,11.0,null,null,-0.8,26,2010,4,2010,3,09,30
+2010-09-30,2010,N,Federal Communications Commission,9.5,0.5,null,null,9.0,27,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Federal Communications Commission,8.8,0.5,null,null,8.3,27,2010,4,2010,3,09,30
+2010-09-30,2010,N,National Science Foundation,6.9,null,null,null,6.9,28,2010,4,2010,3,09,30
+2010-09-30,2009,Y,National Science Foundation,6.1,null,null,null,6.1,28,2010,4,2010,3,09,30
+2010-09-30,2010,N,Small Business Administration,5.4,0.4,null,null,5.0,29,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Small Business Administration,6.3,0.4,null,null,5.9,29,2010,4,2010,3,09,30
+2010-09-30,2010,N,National Credit Union Administration,3.2,1.1,null,null,2.1,30,2010,4,2010,3,09,30
+2010-09-30,2009,Y,National Credit Union Administration,6.1,1.3,null,null,4.8,30,2010,4,2010,3,09,30
+2010-09-30,2010,N,U.S. Nuclear Regulatory Commission,1.2,0.9,null,null,0.3,31,2010,4,2010,3,09,30
+2010-09-30,2009,Y,U.S. Nuclear Regulatory Commission,1.3,0.8,null,null,0.5,31,2010,4,2010,3,09,30
+2010-09-30,2010,N,Securities and Exchange Commission,1.1,1.4,null,null,-0.3,32,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Securities and Exchange Commission,1.1,1.1,null,null,null,32,2010,4,2010,3,09,30
+2010-09-30,2010,N,Smithsonian Institution,0.8,null,null,null,0.8,33,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Smithsonian Institution,0.9,null,null,null,0.9,33,2010,4,2010,3,09,30
+2010-09-30,2010,N,General Services Administration,0.6,0.6,null,null,null,34,2010,4,2010,3,09,30
+2010-09-30,2009,Y,General Services Administration,1.0,0.5,null,null,0.5,34,2010,4,2010,3,09,30
+2010-09-30,2010,N,Export-Import Bank of the United States,0.4,0.7,null,null,-0.3,35,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Export-Import Bank of the United States,1.5,0.8,null,null,0.7,35,2010,4,2010,3,09,30
+2010-09-30,2010,N,Farm Credit System Insurance Corporation,null,0.1,null,null,-0.1,36,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Farm Credit System Insurance Corporation,null,0.3,null,null,-0.3,36,2010,4,2010,3,09,30
+2010-09-30,2010,N,All other entities,47.3,0.7,null,null,46.6,37,2010,4,2010,3,09,30
+2010-09-30,2009,Y,All other entities,51.3,0.7,null,null,50.6,37,2010,4,2010,3,09,30
+2010-09-30,2010,N,Subtotal before loss/(gain) from changes in assumptions in 2010,4472.3,309.2,null,null,4163.1,38,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Subtotal before loss/(gain) from changes in assumptions in 2010,3735.6,300.9,null,null,3434.7,38,2010,4,2010,3,09,30
+2010-09-30,2010,N,Subtotal of loss/(gain) from changes in assumptions,132.9,null,null,null,132.9,39,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Subtotal of loss/(gain) from changes in assumptions,null,null,null,null,null,39,2010,4,2010,3,09,30
+2010-09-30,2010,N,Total,4605.2,309.2,null,null,4296.0,40,2010,4,2010,3,09,30
+2010-09-30,2009,Y,Total,3735.6,300.9,null,null,3434.7,40,2010,4,2010,3,09,30
+2011-09-30,2011,N,Department of Justice,31.3,1.3,30.0,null,30.0,14,2011,4,2011,3,09,30
+2011-09-30,2011,N,Department of the Interior,23.8,2.7,21.1,null,21.1,17,2011,4,2011,3,09,30
+2011-09-30,2011,N,National Aeronautics and Space Administration,18.8,0.1,18.7,null,18.7,18,2011,4,2011,3,09,30
+2011-09-30,2011,N,Agency for International Development,12.1,0.7,11.4,null,11.4,19,2011,4,2011,3,09,30
+2011-09-30,2011,N,Railroad Retirement Board,17.0,5.9,11.1,null,11.1,20,2011,4,2011,3,09,30
+2011-09-30,2011,N,Environmental Protection Agency,11.3,0.5,10.8,null,10.8,21,2011,4,2011,3,09,30
+2011-09-30,2011,N,Federal Communications Commission,9.3,0.4,8.9,null,8.9,22,2011,4,2011,3,09,30
+2011-09-30,2011,N,Department of Commerce,11.3,2.5,8.8,null,8.8,23,2011,4,2011,3,09,30
+2011-09-30,2011,N,National Science Foundation,7.1,null,7.1,null,7.1,24,2011,4,2011,3,09,30
+2011-09-30,2011,N,Pension Benefit Guaranty Corporation,12.8,7.4,5.4,null,5.4,25,2011,4,2011,3,09,30
+2011-09-30,2011,N,Small Business Administration,3.6,0.4,3.2,null,3.2,26,2011,4,2011,3,09,30
+2011-09-30,2011,N,Smithsonian Institution,0.7,null,0.7,null,0.7,27,2011,4,2011,3,09,30
+2011-09-30,2011,N,U.S. Nuclear Regulatory Commission,1.0,0.8,0.2,null,0.2,28,2011,4,2011,3,09,30
+2011-09-30,2011,N,Farm Credit System Insurance Corporation,null,0.1,-0.1,null,-0.1,29,2011,4,2011,3,09,30
+2011-09-30,2011,N,Export-Import Bank of the United States,0.6,0.7,-0.1,null,-0.1,30,2011,4,2011,3,09,30
+2011-09-30,2011,N,General Services Administration,0.4,0.6,-0.2,null,-0.2,31,2011,4,2011,3,09,30
+2011-09-30,2011,N,Tennessee Valley Authority,11.5,11.8,-0.3,null,-0.3,32,2011,4,2011,3,09,30
+2011-09-30,2011,N,Securities and Exchange Commission,1.1,1.6,-0.5,null,-0.5,33,2011,4,2011,3,09,30
+2011-09-30,2011,N,National Credit Union Administration,0.2,3.1,-2.9,null,-2.9,34,2011,4,2011,3,09,30
+2011-09-30,2011,N,U.S. Postal Service,56.2,64.6,-8.4,null,-8.4,35,2011,4,2011,3,09,30
+2011-09-30,2011,N,Federal Deposit Insurance Corporation,-2.1,13.7,-15.8,null,-15.8,36,2011,4,2011,3,09,30
+2011-09-30,2011,N,All other entities,47.4,0.5,46.9,null,46.9,37,2011,4,2011,3,09,30
+2011-09-30,2011,N,Total,3998.3,365.6,3632.7,28.1,3660.8,38,2011,4,2011,3,09,30
+2011-09-30,2011,N,Department of Health and Human Services,943.4,66.4,877.0,0.1,877.1,1,2011,4,2011,3,09,30
+2011-09-30,2011,N,Social Security Administration,782.9,0.4,782.5,null,782.5,2,2011,4,2011,3,09,30
+2011-09-30,2011,N,Department of Defense,828.7,78.0,750.7,-32.0,718.7,3,2011,4,2011,3,09,30
+2011-09-30,2011,N,Interest on Treasury Securities Held by the Public,250.9,null,250.9,null,250.9,4,2011,4,2011,3,09,30
+2011-09-30,2011,N,Department of Veterans Affairs,124.3,4.7,119.6,58.9,178.5,5,2011,4,2011,3,09,30
+2011-09-30,2011,N,Department of Agriculture,154.2,9.4,144.8,null,144.8,6,2011,4,2011,3,09,30
+2011-09-30,2011,N,Department of Labor,132.8,null,132.8,null,132.8,7,2011,4,2011,3,09,30
+2011-09-30,2011,N,Department of the Treasury,115.2,30.6,84.6,null,84.6,8,2011,4,2011,3,09,30
+2011-09-30,2011,N,Department of Transportation,77.9,0.7,77.2,null,77.2,9,2011,4,2011,3,09,30
+2011-09-30,2011,N,Department of Housing and Urban Development,60.8,1.2,59.6,null,59.6,10,2011,4,2011,3,09,30
+2011-09-30,2011,N,Department of Education,69.7,15.0,54.7,null,54.7,11,2011,4,2011,3,09,30
+2011-09-30,2011,N,Department of Homeland Security,58.9,9.4,49.5,0.4,49.9,12,2011,4,2011,3,09,30
+2011-09-30,2011,N,Department of Energy,52.5,7.9,44.6,null,44.6,13,2011,4,2011,3,09,30
+2011-09-30,2011,N,Office of Personnel Management,43.7,19.1,24.6,0.3,24.9,15,2011,4,2011,3,09,30
+2011-09-30,2011,N,Department of State,27.0,3.4,23.6,0.4,24.0,16,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Department of Health and Human Services,920.4,62.7,857.7,-0.1,857.6,1,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Social Security Administration,754.2,0.3,753.9,null,753.9,2,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Department of Defense,929.0,39.8,889.2,-58.8,830.4,3,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Interest on Treasury Securities Held by the Public,214.8,null,214.8,null,214.8,4,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Department of Veterans Affairs,240.2,4.7,235.5,101.4,336.9,5,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Department of Agriculture,136.6,6.0,130.6,null,130.6,6,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Department of Labor,179.0,null,179.0,null,179.0,7,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Department of the Treasury,402.3,29.4,372.9,null,372.9,8,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Department of Transportation,80.4,0.6,79.8,null,79.8,9,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Department of Housing and Urban Development,56.7,1.3,55.4,null,55.4,10,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Department of Education,100.8,11.3,89.5,null,89.5,11,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Department of Homeland Security,58.9,8.9,50.0,5.7,55.7,12,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Department of Energy,28.9,3.8,25.1,null,25.1,13,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Department of Justice,32.7,1.2,31.5,null,31.5,14,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Office of Personnel Management,43.5,18.0,25.5,84.1,109.6,15,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Department of State,24.5,2.8,21.7,0.6,22.3,16,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Department of the Interior,20.7,2.4,18.3,null,18.3,17,2011,4,2011,3,09,30
+2011-09-30,2010,Y,National Aeronautics and Space Administration,22.1,0.1,22.0,null,22.0,18,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Agency for International Development,10.7,0.2,10.5,null,10.5,19,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Railroad Retirement Board,14.6,5.8,8.8,null,8.8,20,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Environmental Protection Agency,12.7,0.5,12.2,null,12.2,21,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Federal Communications Commission,9.5,0.5,9.0,null,9.0,22,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Department of Commerce,16.5,2.3,14.2,null,14.2,23,2011,4,2011,3,09,30
+2011-09-30,2010,Y,National Science Foundation,6.9,null,6.9,null,6.9,24,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Pension Benefit Guaranty Corporation,11.9,8.1,3.8,null,3.8,25,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Small Business Administration,5.4,0.4,5.0,null,5.0,26,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Smithsonian Institution,0.8,null,0.8,null,0.8,27,2011,4,2011,3,09,30
+2011-09-30,2010,Y,U.S. Nuclear Regulatory Commission,1.2,0.9,0.3,null,0.3,28,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Farm Credit System Insurance Corporation,null,0.1,-0.1,null,-0.1,29,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Export-Import Bank of the United States,0.4,0.7,-0.3,null,-0.3,30,2011,4,2011,3,09,30
+2011-09-30,2010,Y,General Services Administration,0.6,0.6,null,null,null,31,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Tennessee Valley Authority,9.7,10.8,-1.1,null,-1.1,32,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Securities and Exchange Commission,1.1,1.4,-0.3,null,-0.3,33,2011,4,2011,3,09,30
+2011-09-30,2010,Y,National Credit Union Administration,3.2,1.1,2.1,null,2.1,34,2011,4,2011,3,09,30
+2011-09-30,2010,Y,U.S. Postal Service,57.3,65.7,-8.4,null,-8.4,35,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Federal Deposit Insurance Corporation,16.8,16.1,0.7,null,0.7,36,2011,4,2011,3,09,30
+2011-09-30,2010,Y,All other entities,47.3,0.7,46.6,null,46.6,37,2011,4,2011,3,09,30
+2011-09-30,2010,Y,Total,4472.3,309.2,4163.1,132.9,4296.0,38,2011,4,2011,3,09,30
+2012-09-30,2012,N,Office of Personnel Management,48.2,19.1,29.1,98.9,128.0,7,2012,4,2012,3,09,30
+2012-09-30,2012,N,Department of Labor,107.3,null,107.3,null,107.3,8,2012,4,2012,3,09,30
+2012-09-30,2012,N,Department of Transportation,79.0,0.8,78.2,null,78.2,9,2012,4,2012,3,09,30
+2012-09-30,2012,N,Department of Housing and Urban Development,74.5,1.5,73.0,null,73.0,10,2012,4,2012,3,09,30
+2012-09-30,2012,N,Department of Energy,60.8,4.3,56.5,null,56.5,11,2012,4,2012,3,09,30
+2012-09-30,2012,N,Department of Homeland Security,58.2,9.9,48.3,0.4,48.7,12,2012,4,2012,3,09,30
+2012-09-30,2012,N,Department of Education,62.7,20.0,42.7,null,42.7,13,2012,4,2012,3,09,30
+2012-09-30,2012,N,Department of Justice,38.9,1.3,37.6,null,37.6,14,2012,4,2012,3,09,30
+2012-09-30,2012,N,Department of State,29.8,3.5,26.3,0.8,27.1,15,2012,4,2012,3,09,30
+2012-09-30,2012,N,Department of the Interior,23.3,2.7,20.6,null,20.6,16,2012,4,2012,3,09,30
+2012-09-30,2012,N,National Aeronautics and Space Administration,19.0,0.2,18.8,null,18.8,17,2012,4,2012,3,09,30
+2012-09-30,2012,N,Agency for International Development,11.4,0.2,11.2,null,11.2,18,2012,4,2012,3,09,30
+2012-09-30,2012,N,Environmental Protection Agency,11.4,0.3,11.1,null,11.1,19,2012,4,2012,3,09,30
+2012-09-30,2012,N,Railroad Retirement Board,15.3,5.1,10.2,null,10.2,20,2012,4,2012,3,09,30
+2012-09-30,2012,N,Department of Commerce,12.8,2.6,10.2,null,10.2,21,2012,4,2012,3,09,30
+2012-09-30,2012,N,Pension Benefit Guaranty Corporation,20.2,10.4,9.8,null,9.8,22,2012,4,2012,3,09,30
+2012-09-30,2012,N,Federal Communications Commission,10.1,0.4,9.7,null,9.7,23,2012,4,2012,3,09,30
+2012-09-30,2012,N,U.S. Postal Service,72.8,64.2,8.6,null,8.6,24,2012,4,2012,3,09,30
+2012-09-30,2012,N,National Science Foundation,7.4,null,7.4,null,7.4,25,2012,4,2012,3,09,30
+2012-09-30,2012,N,Small Business Administration,1.6,0.4,1.2,null,1.2,26,2012,4,2012,3,09,30
+2012-09-30,2012,N,Smithsonian Institution,0.8,null,0.8,null,0.8,27,2012,4,2012,3,09,30
+2012-09-30,2012,N,Export-Import Bank of the United States,1.2,0.8,0.4,null,0.4,28,2012,4,2012,3,09,30
+2012-09-30,2012,N,U.S. Nuclear Regulatory Commission,1.1,0.8,0.3,null,0.3,29,2012,4,2012,3,09,30
+2012-09-30,2012,N,National Credit Union Administration,1.3,1.0,0.3,null,0.3,30,2012,4,2012,3,09,30
+2012-09-30,2012,N,General Services Administration,0.5,0.5,null,null,null,31,2012,4,2012,3,09,30
+2012-09-30,2012,N,Farm Credit System Insurance Corporation,null,0.1,-0.1,null,-0.1,32,2012,4,2012,3,09,30
+2012-09-30,2012,N,Tennessee Valley Authority,11.0,11.3,-0.3,0.1,-0.2,33,2012,4,2012,3,09,30
+2012-09-30,2012,N,Securities and Exchange Commission,1.2,1.6,-0.4,null,-0.4,34,2012,4,2012,3,09,30
+2012-09-30,2012,N,Federal Deposit Insurance Corporation,2.6,19.3,-16.7,null,-16.7,35,2012,4,2012,3,09,30
+2012-09-30,2012,N,Department of the Treasury,-150.0,27.5,-177.5,null,-177.5,36,2012,4,2012,3,09,30
+2012-09-30,2012,N,All other entities,56.4,0.8,55.6,null,55.6,37,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Department of Health and Human Services,943.3,66.4,876.9,0.1,877.0,1,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Social Security Administration,782.9,0.4,782.5,null,782.5,2,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Department of Defense,827.0,78.0,749.0,-32.0,717.0,3,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Department of Veterans Affairs,123.7,4.7,119.0,58.9,177.9,4,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Interest on Treasury Securities Held by the Public,250.9,null,250.9,null,250.9,5,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Department of Agriculture,153.8,9.4,144.4,null,144.4,6,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Office of Personnel Management,43.6,19.1,24.5,0.3,24.8,7,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Department of Labor,132.7,null,132.7,null,132.7,8,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Department of Transportation,77.7,0.7,77.0,null,77.0,9,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Department of Housing and Urban Development,60.7,1.2,59.5,null,59.5,10,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Department of Energy,52.5,7.9,44.6,null,44.6,11,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Department of Homeland Security,58.6,9.4,49.2,0.4,49.6,12,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Department of Education,69.7,15.0,54.7,null,54.7,13,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Department of Justice,31.1,1.3,29.8,null,29.8,14,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Department of State,26.9,3.4,23.5,0.4,23.9,15,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Department of the Interior,23.6,2.7,20.9,null,20.9,16,2012,4,2012,3,09,30
+2012-09-30,2011,Y,National Aeronautics and Space Administration,18.7,0.1,18.6,null,18.6,17,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Agency for International Development,12.1,0.7,11.4,null,11.4,18,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Environmental Protection Agency,11.2,0.5,10.7,null,10.7,19,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Railroad Retirement Board,16.9,5.9,11.0,null,11.0,20,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Department of Commerce,11.2,2.5,8.7,null,8.7,21,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Pension Benefit Guaranty Corporation,12.8,7.4,5.4,null,5.4,22,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Federal Communications Commission,9.3,0.4,8.9,null,8.9,23,2012,4,2012,3,09,30
+2012-09-30,2011,Y,U.S. Postal Service,61.7,64.6,-2.9,null,-2.9,24,2012,4,2012,3,09,30
+2012-09-30,2011,Y,National Science Foundation,7.1,null,7.1,null,7.1,25,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Small Business Administration,3.6,0.4,3.2,null,3.2,26,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Smithsonian Institution,0.7,null,0.7,null,0.7,27,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Export-Import Bank of the United States,0.6,0.7,-0.1,null,-0.1,28,2012,4,2012,3,09,30
+2012-09-30,2011,Y,U.S. Nuclear Regulatory Commission,1.0,0.8,0.2,null,0.2,29,2012,4,2012,3,09,30
+2012-09-30,2011,Y,National Credit Union Administration,0.2,3.1,-2.9,null,-2.9,30,2012,4,2012,3,09,30
+2012-09-30,2011,Y,General Services Administration,0.3,0.6,-0.3,null,-0.3,31,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Farm Credit System Insurance Corporation,null,0.1,-0.1,null,-0.1,32,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Tennessee Valley Authority,11.5,11.8,-0.3,null,-0.3,33,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Securities and Exchange Commission,1.0,1.6,-0.6,null,-0.6,34,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Federal Deposit Insurance Corporation,-2.2,13.7,-15.9,null,-15.9,35,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Department of the Treasury,114.8,30.6,84.2,null,84.2,36,2012,4,2012,3,09,30
+2012-09-30,2011,Y,All other entities,47.1,0.5,46.6,null,46.6,37,2012,4,2012,3,09,30
+2012-09-30,2011,Y,Total,3998.3,365.6,3632.7,28.1,3660.8,38,2012,4,2012,3,09,30
+2012-09-30,2012,N,Total,3844.9,350.8,3494.1,320.2,3814.3,38,2012,4,2012,3,09,30
+2012-09-30,2012,N,Department of Health and Human Services,924.0,67.8,856.2,0.3,856.5,1,2012,4,2012,3,09,30
+2012-09-30,2012,N,Social Security Administration,825.4,0.3,825.1,null,825.1,2,2012,4,2012,3,09,30
+2012-09-30,2012,N,Department of Defense,784.7,56.0,728.7,70.4,799.1,3,2012,4,2012,3,09,30
+2012-09-30,2012,N,Department of Veterans Affairs,213.6,4.1,209.5,149.3,358.8,4,2012,4,2012,3,09,30
+2012-09-30,2012,N,Interest on Treasury Securities Held by the Public,245.4,null,245.4,null,245.4,5,2012,4,2012,3,09,30
+2012-09-30,2012,N,Department of Agriculture,161.0,12.0,149.0,null,149.0,6,2012,4,2012,3,09,30
+2013-09-30,2013,N,Department of Health and Human Services,968.4,72.9,895.5,0.2,895.7,1,2013,4,2013,3,09,30
+2013-09-30,2013,N,Department of Defense,685.1,44.9,640.2,-62.8,577.4,3,2013,4,2013,3,09,30
+2013-09-30,2013,N,Department of Veterans Affairs,243.3,4.5,238.8,114.1,352.9,4,2013,4,2013,3,09,30
+2013-09-30,2013,N,Interest on Treasury Securities Held by the Public,247.6,null,247.6,null,247.6,5,2013,4,2013,3,09,30
+2013-09-30,2013,N,Department of Agriculture,147.6,7.5,140.1,null,140.1,6,2013,4,2013,3,09,30
+2013-09-30,2013,N,Office of Personnel Management,67.3,19.2,48.1,81.9,130.0,7,2013,4,2013,3,09,30
+2013-09-30,2013,N,Department of Labor,80.1,null,80.1,null,80.1,8,2013,4,2013,3,09,30
+2013-09-30,2013,N,Department of Transportation,77.3,0.9,76.4,null,76.4,9,2013,4,2013,3,09,30
+2013-09-30,2013,N,Department of Homeland Security,70.7,9.7,61.0,-2.4,58.6,10,2013,4,2013,3,09,30
+2013-09-30,2013,N,Department of Housing and Urban Development,42.6,1.5,41.1,null,41.1,11,2013,4,2013,3,09,30
+2013-09-30,2013,N,Department of Energy,38.5,4.3,34.2,null,34.2,12,2013,4,2013,3,09,30
+2013-09-30,2013,N,Department of Justice,31.8,1.3,30.5,null,30.5,13,2013,4,2013,3,09,30
+2013-09-30,2013,N,Department of State,29.4,4.2,25.2,0.4,25.6,14,2013,4,2013,3,09,30
+2013-09-30,2013,N,National Aeronautics and Space Administration,18.1,0.2,17.9,null,17.9,15,2013,4,2013,3,09,30
+2013-09-30,2013,N,Department of the Interior,16.9,2.7,14.2,null,14.2,16,2013,4,2013,3,09,30
+2013-09-30,2013,N,Agency for International Development,10.6,0.2,10.4,null,10.4,17,2013,4,2013,3,09,30
+2013-09-30,2013,N,Department of Education,32.9,23.2,9.7,null,9.7,18,2013,4,2013,3,09,30
+2013-09-30,2013,N,Federal Communications Commission,9.9,0.4,9.5,null,9.5,19,2013,4,2013,3,09,30
+2013-09-30,2013,N,Railroad Retirement Board,13.5,4.2,9.3,null,9.3,20,2013,4,2013,3,09,30
+2013-09-30,2013,N,Environmental Protection Agency,9.8,0.5,9.3,null,9.3,21,2013,4,2013,3,09,30
+2013-09-30,2013,N,Department of Commerce,11.1,2.9,8.2,null,8.2,22,2013,4,2013,3,09,30
+2013-09-30,2013,N,National Science Foundation,7.1,null,7.1,null,7.1,23,2013,4,2013,3,09,30
+2013-09-30,2013,N,U.S. Postal Service,72.4,66.3,6.1,null,6.1,24,2013,4,2013,3,09,30
+2013-09-30,2013,N,Smithsonian Institution,0.8,null,0.8,null,0.8,25,2013,4,2013,3,09,30
+2013-09-30,2013,N,Small Business Administration,0.7,0.4,0.3,null,0.3,26,2013,4,2013,3,09,30
+2013-09-30,2013,N,U.S. Nuclear Regulatory Commission,1.0,0.8,0.2,null,0.2,27,2013,4,2013,3,09,30
+2013-09-30,2013,N,Export-Import Bank of the United States,1.1,1.0,0.1,null,0.1,28,2013,4,2013,3,09,30
+2013-09-30,2013,N,Farm Credit System Insurance Corporation,null,0.1,-0.1,null,-0.1,29,2013,4,2013,3,09,30
+2013-09-30,2013,N,Pension Benefit Guaranty Corporation,9.1,9.4,-0.3,null,-0.3,30,2013,4,2013,3,09,30
+2013-09-30,2013,N,Securities and Exchange Commission,1.3,1.8,-0.5,null,-0.5,31,2013,4,2013,3,09,30
+2013-09-30,2013,N,Tennessee Valley Authority,10.7,11.0,-0.3,-0.2,-0.5,32,2013,4,2013,3,09,30
+2013-09-30,2013,N,General Services Administration,0.1,0.7,-0.6,null,-0.6,33,2013,4,2013,3,09,30
+2013-09-30,2013,N,National Credit Union Administration,-1.8,0.9,-2.7,null,-2.7,34,2013,4,2013,3,09,30
+2013-09-30,2013,N,Federal Deposit Insurance Corporation,-2.9,12.7,-15.6,null,-15.6,35,2013,4,2013,3,09,30
+2013-09-30,2013,N,Department of the Treasury,75.3,103.5,-28.2,null,-28.2,36,2013,4,2013,3,09,30
+2013-09-30,2013,N,All other entities,46.1,1.3,44.8,null,44.8,37,2013,4,2013,3,09,30
+2013-09-30,2013,N,Total,3940.9,415.5,3525.4,131.2,3656.6,38,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Department of Health and Human Services,922.4,67.8,854.6,0.3,854.9,1,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Social Security Administration,822.9,0.3,822.6,null,822.6,2,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Department of Defense,769.6,56.0,713.6,70.4,784.0,3,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Department of Veterans Affairs,209.9,4.1,205.8,149.3,355.1,4,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Interest on Treasury Securities Held by the Public,245.4,null,245.4,null,245.4,5,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Department of Agriculture,158.8,12.0,146.8,null,146.8,6,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Office of Personnel Management,82.0,19.1,62.9,98.9,161.8,7,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Department of Labor,102.6,null,102.6,null,102.6,8,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Department of Transportation,77.3,0.8,76.5,null,76.5,9,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Department of Homeland Security,58.9,9.9,49.0,0.4,49.4,10,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Department of Housing and Urban Development,74.0,1.5,72.5,null,72.5,11,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Department of Energy,60.2,4.3,55.9,null,55.9,12,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Department of Justice,38.8,1.3,37.5,null,37.5,13,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Department of State,29.5,3.5,26.0,0.8,26.8,14,2013,4,2013,3,09,30
+2013-09-30,2012,Y,National Aeronautics and Space Administration,18.1,0.2,17.9,null,17.9,15,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Department of the Interior,21.7,2.7,19.0,null,19.0,16,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Agency for International Development,11.4,0.2,11.2,null,11.2,17,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Department of Education,62.6,20.0,42.6,null,42.6,18,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Federal Communications Commission,10.0,0.4,9.6,null,9.6,19,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Railroad Retirement Board,15.2,5.1,10.1,null,10.1,20,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Environmental Protection Agency,10.7,0.3,10.4,null,10.4,21,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Department of Commerce,12.0,2.6,9.4,null,9.4,22,2013,4,2013,3,09,30
+2013-09-30,2012,Y,National Science Foundation,7.3,null,7.3,null,7.3,23,2013,4,2013,3,09,30
+2013-09-30,2012,Y,U.S. Postal Service,81.5,64.2,17.3,null,17.3,24,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Smithsonian Institution,0.7,null,0.7,null,0.7,25,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Small Business Administration,1.5,0.4,1.1,null,1.1,26,2013,4,2013,3,09,30
+2013-09-30,2012,Y,U.S. Nuclear Regulatory Commission,1.0,0.8,0.2,null,0.2,27,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Export-Import Bank of the United States,1.2,0.8,0.4,null,0.4,28,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Farm Credit System Insurance Corporation,null,0.1,-0.1,null,-0.1,29,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Pension Benefit Guaranty Corporation,20.2,10.4,9.8,null,9.8,30,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Securities and Exchange Commission,1.2,1.6,-0.4,null,-0.4,31,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Tennessee Valley Authority,11.0,11.3,-0.3,0.1,-0.2,32,2013,4,2013,3,09,30
+2013-09-30,2012,Y,General Services Administration,0.1,0.5,-0.4,null,-0.4,33,2013,4,2013,3,09,30
+2013-09-30,2012,Y,National Credit Union Administration,1.3,1.0,0.3,null,0.3,34,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Federal Deposit Insurance Corporation,2.4,19.3,-16.9,null,-16.9,35,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Department of the Treasury,-152.9,27.5,-180.4,null,-180.4,36,2013,4,2013,3,09,30
+2013-09-30,2012,Y,All other entities,54.4,0.8,53.6,null,53.6,37,2013,4,2013,3,09,30
+2013-09-30,2012,Y,Total,3844.9,350.8,3494.1,320.2,3814.3,38,2013,4,2013,3,09,30
+2013-09-30,2013,N,Social Security Administration,867.4,0.4,867.0,null,867.0,2,2013,4,2013,3,09,30
+2014-09-30,2014,N,National Credit Union Administration,-1.2,0.1,-1.3,null,-1.3,37,2014,4,2014,3,09,30
+2014-09-30,2014,N,Federal Deposit Insurance Corporation,-4.4,8.8,-13.2,null,-13.2,38,2014,4,2014,3,09,30
+2014-09-30,2014,N,All other entities,54.9,1.3,53.6,null,53.6,39,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Department of Health and Human Services,968.4,72.9,895.5,0.2,895.7,1,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Social Security Administration,867.4,0.4,867.0,null,867.0,2,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Department of Defense,685.1,44.9,640.2,-62.8,577.4,3,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Interest on Treasury Securities Held by the Public,247.6,null,247.6,null,247.6,4,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Department of Veterans Affairs,243.3,4.5,238.8,114.1,352.9,5,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Department of Agriculture,147.6,7.5,140.1,null,140.1,6,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Department of the Treasury,75.3,103.5,-28.2,null,-28.2,7,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Office of Personnel Management,67.3,19.2,48.1,81.9,130.0,8,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Department of Transportation,77.3,0.9,76.4,null,76.4,9,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Department of Education,32.9,23.2,9.7,null,9.7,10,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Department of Labor,80.1,null,80.1,null,80.1,11,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Department of Energy,38.5,4.3,34.2,null,34.2,12,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Department of Homeland Security,70.7,9.7,61.0,-2.4,58.6,13,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Department of Housing and Urban Development,42.6,1.5,41.1,null,41.1,14,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Department of Justice,31.8,1.3,30.5,null,30.5,15,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Pension Benefit Guaranty Corporation,9.1,9.4,-0.3,null,-0.3,16,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Department of State,29.4,4.2,25.2,0.4,25.6,17,2014,4,2014,3,09,30
+2014-09-30,2013,Y,National Aeronautics and Space Administration,18.1,0.2,17.9,null,17.9,18,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Department of the Interior,16.9,2.7,14.2,null,14.2,19,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Agency for International Development,10.6,0.2,10.4,null,10.4,20,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Federal Communications Commission,9.9,0.4,9.5,null,9.5,21,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Department of Commerce,11.1,2.9,8.2,null,8.2,22,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Environmental Protection Agency,9.8,0.5,9.3,null,9.3,23,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Railroad Retirement Board,13.5,4.2,9.3,null,9.3,24,2014,4,2014,3,09,30
+2014-09-30,2013,Y,National Science Foundation,7.1,null,7.1,null,7.1,25,2014,4,2014,3,09,30
+2014-09-30,2013,Y,U.S. Postal Service,72.4,66.3,6.1,null,6.1,26,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Millennium Challenge Corporation,1.7,null,1.7,null,1.7,27,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Smithsonian Institution,0.8,null,0.8,null,0.8,28,2014,4,2014,3,09,30
+2014-09-30,2014,N,Department of Health and Human Services,1029.5,78.1,951.4,0.1,951.5,1,2014,4,2014,3,09,30
+2014-09-30,2014,N,Social Security Administration,906.8,0.4,906.4,null,906.4,2,2014,4,2014,3,09,30
+2014-09-30,2014,N,Department of Defense,716.9,61.5,655.4,6.9,662.3,3,2014,4,2014,3,09,30
+2014-09-30,2014,N,Interest on Treasury Securities Held by the Public,260.0,null,260.0,null,260.0,4,2014,4,2014,3,09,30
+2014-09-30,2014,N,Department of Veterans Affairs,207.4,4.3,203.1,-22.1,181.0,5,2014,4,2014,3,09,30
+2014-09-30,2014,N,Department of Agriculture,150.5,9.3,141.2,null,141.2,6,2014,4,2014,3,09,30
+2014-09-30,2014,N,Department of the Treasury,182.9,79.9,103.0,null,103.0,7,2014,4,2014,3,09,30
+2014-09-30,2014,N,Office of Personnel Management,85.3,19.5,65.8,21.3,87.1,8,2014,4,2014,3,09,30
+2014-09-30,2014,N,Department of Transportation,77.2,0.9,76.3,null,76.3,9,2014,4,2014,3,09,30
+2014-09-30,2014,N,Department of Education,80.9,24.8,56.1,null,56.1,10,2014,4,2014,3,09,30
+2014-09-30,2014,N,Department of Energy,57.0,5.0,52.0,null,52.0,12,2014,4,2014,3,09,30
+2014-09-30,2014,N,Department of Homeland Security,58.1,10.3,47.8,-1.3,46.5,13,2014,4,2014,3,09,30
+2014-09-30,2014,N,Department of Housing and Urban Development,44.4,1.6,42.8,null,42.8,14,2014,4,2014,3,09,30
+2014-09-30,2014,N,Department of Justice,33.0,1.7,31.3,null,31.3,15,2014,4,2014,3,09,30
+2014-09-30,2014,N,Pension Benefit Guaranty Corporation,38.5,11.2,27.3,null,27.3,16,2014,4,2014,3,09,30
+2014-09-30,2014,N,Department of State,30.6,3.8,26.8,-1.4,25.4,17,2014,4,2014,3,09,30
+2014-09-30,2014,N,National Aeronautics and Space Administration,18.4,0.2,18.2,null,18.2,18,2014,4,2014,3,09,30
+2014-09-30,2014,N,Department of the Interior,18.7,2.4,16.3,null,16.3,19,2014,4,2014,3,09,30
+2014-09-30,2014,N,Agency for International Development,11.7,null,11.7,null,11.7,20,2014,4,2014,3,09,30
+2014-09-30,2014,N,Securities and Exchange Commission,1.4,1.9,-0.5,null,-0.5,34,2014,4,2014,3,09,30
+2014-09-30,2014,N,Tennessee Valley Authority,10.5,11.1,-0.6,null,-0.6,35,2014,4,2014,3,09,30
+2014-09-30,2014,N,Small Business Administration,-0.3,0.4,-0.7,null,-0.7,36,2014,4,2014,3,09,30
+2014-09-30,2014,N,Department of Labor,53.6,null,53.6,null,53.6,11,2014,4,2014,3,09,30
+2014-09-30,2014,N,Federal Communications Commission,9.3,0.4,8.9,null,8.9,21,2014,4,2014,3,09,30
+2014-09-30,2014,N,Department of Commerce,12.0,3.2,8.8,null,8.8,22,2014,4,2014,3,09,30
+2014-09-30,2014,N,Environmental Protection Agency,8.9,0.5,8.4,null,8.4,23,2014,4,2014,3,09,30
+2014-09-30,2014,N,Railroad Retirement Board,13.9,5.6,8.3,null,8.3,24,2014,4,2014,3,09,30
+2014-09-30,2014,N,National Science Foundation,7.2,null,7.2,null,7.2,25,2014,4,2014,3,09,30
+2014-09-30,2014,N,U.S. Postal Service,73.6,66.9,6.7,null,6.7,26,2014,4,2014,3,09,30
+2014-09-30,2014,N,Millennium Challenge Corporation,1.0,null,1.0,null,1.0,27,2014,4,2014,3,09,30
+2014-09-30,2014,N,Smithsonian Institution,0.7,null,0.7,null,0.7,28,2014,4,2014,3,09,30
+2014-09-30,2014,N,U.S. Nuclear Regulatory Commission,1.0,0.8,0.2,null,0.2,29,2014,4,2014,3,09,30
+2014-09-30,2014,N,General Services Administration,0.7,0.6,0.1,null,0.1,30,2014,4,2014,3,09,30
+2014-09-30,2014,N,Export-Import Bank of the United States,1.1,1.1,null,null,null,31,2014,4,2014,3,09,30
+2014-09-30,2014,N,Farm Credit System Insurance Corporation,null,0.2,-0.2,null,-0.2,32,2014,4,2014,3,09,30
+2014-09-30,2014,N,Overseas Private Investments Corporation,-0.3,0.1,-0.4,null,-0.4,33,2014,4,2014,3,09,30
+2014-09-30,2014,N,Total,4251.4,417.9,3833.5,3.5,3837.0,40,2014,4,2014,3,09,30
+2014-09-30,2013,Y,U.S. Nuclear Regulatory Commission,1.0,0.8,0.2,null,0.2,29,2014,4,2014,3,09,30
+2014-09-30,2013,Y,General Services Administration,0.1,0.7,-0.6,null,-0.6,30,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Export-Import Bank of the United States,1.1,1.0,0.1,null,0.1,31,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Farm Credit System Insurance Corporation,null,0.1,-0.1,null,-0.1,32,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Overseas Private Investments Corporation,0.3,0.1,0.2,null,0.2,33,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Securities and Exchange Commission,1.3,1.8,-0.5,null,-0.5,34,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Tennessee Valley Authority,10.7,11.0,-0.3,-0.2,-0.5,35,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Small Business Administration,0.7,0.4,0.3,null,0.3,36,2014,4,2014,3,09,30
+2014-09-30,2013,Y,National Credit Union Administration,-1.8,0.9,-2.7,null,-2.7,37,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Federal Deposit Insurance Corporation,-2.9,12.7,-15.6,null,-15.6,38,2014,4,2014,3,09,30
+2014-09-30,2013,Y,All other entities,44.1,1.2,42.9,null,42.9,39,2014,4,2014,3,09,30
+2014-09-30,2013,Y,Total,3940.9,415.5,3525.4,131.2,3656.6,40,2014,4,2014,3,09,30
+2015-09-30,2014,Y,Department of Housing and Urban Development,44.4,1.6,42.8,null,42.8,15,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Department of Justice,33.0,1.7,31.3,null,31.3,16,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Department of State,30.6,3.8,26.8,-1.4,25.4,17,2015,4,2015,3,09,30
+2015-09-30,2014,Y,National Aeronautics and Space Administration,18.4,0.2,18.2,null,18.2,18,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Department of the Interior,18.7,2.4,16.3,null,16.3,19,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Pension Benefit Guaranty Corporation,38.5,11.2,27.3,null,27.3,20,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Railroad Retirement Board,13.9,5.6,8.3,null,8.3,21,2015,4,2015,3,09,30
+2015-09-30,2014,Y,U.S. Agency for International Development,11.7,null,11.7,null,11.7,22,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Federal Communications Commission,9.3,0.4,8.9,null,8.9,23,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Department of Commerce,12.0,3.2,8.8,null,8.8,24,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Environmental Protection Agency,8.9,0.5,8.4,null,8.4,25,2015,4,2015,3,09,30
+2015-09-30,2014,Y,National Science Foundation,7.2,null,7.2,null,7.2,26,2015,4,2015,3,09,30
+2015-09-30,2014,Y,U.S. Postal Service,73.6,66.9,6.7,null,6.7,27,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Millennium Challenge Corporation,1.0,null,1.0,null,1.0,28,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Smithsonian Institution,0.7,null,0.7,null,0.7,29,2015,4,2015,3,09,30
+2015-09-30,2014,Y,U.S. Nuclear Regulatory Commission,1.0,0.8,0.2,null,0.2,30,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Farm Credit System Insurance Corporation,null,0.2,-0.2,null,-0.2,31,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Overseas Private Investment Corporation,-0.3,0.1,-0.4,null,-0.4,32,2015,4,2015,3,09,30
+2015-09-30,2014,Y,General Services Administration,0.7,0.6,0.1,null,0.1,33,2015,4,2015,3,09,30
+2015-09-30,2014,Y,National Credit Union Administration,-1.2,0.1,-1.3,null,-1.3,34,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Securities and Exchange Commission,1.4,1.9,-0.5,null,-0.5,35,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Small Business Administration,-0.3,0.4,-0.7,null,-0.7,36,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Tennessee Valley Authority,10.5,11.1,-0.6,null,-0.6,37,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Export-Import Bank of the United States,1.1,1.1,null,null,null,38,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Federal Deposit Insurance Corporation,-4.4,8.8,-13.2,null,-13.2,39,2015,4,2015,3,09,30
+2015-09-30,2014,Y,All other entities,20.0,1.3,18.7,null,18.7,40,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Total,4251.4,417.9,3833.5,3.5,3837.0,41,2015,4,2015,3,09,30
+2015-09-30,2015,N,Department of Health and Human Services,1130.9,101.3,1029.6,-0.1,1029.5,1,2015,4,2015,3,09,30
+2015-09-30,2015,N,Social Security Administration,945.0,0.3,944.7,null,944.7,2,2015,4,2015,3,09,30
+2015-09-30,2015,N,Department of Defense,646.6,45.5,601.1,-27.5,573.6,3,2015,4,2015,3,09,30
+2015-09-30,2015,N,Interest on Treasury Securities Held by the Public,250.8,null,250.8,null,250.8,4,2015,4,2015,3,09,30
+2015-09-30,2015,N,Department of Veterans Affairs,186.9,4.8,182.1,-13.0,169.1,5,2015,4,2015,3,09,30
+2015-09-30,2015,N,Department of Agriculture,147.7,9.1,138.6,null,138.6,6,2015,4,2015,3,09,30
+2015-09-30,2015,N,Department of the Treasury,146.0,29.3,116.7,null,116.7,7,2015,4,2015,3,09,30
+2015-09-30,2015,N,Office of Personnel Management,104.9,20.3,84.6,17.1,101.7,8,2015,4,2015,3,09,30
+2015-09-30,2015,N,Department of Transportation,76.1,0.8,75.3,null,75.3,9,2015,4,2015,3,09,30
+2015-09-30,2015,N,Department of Energy,76.5,4.6,71.9,null,71.9,10,2015,4,2015,3,09,30
+2015-09-30,2015,N,Department of Homeland Security,60.2,12.1,48.1,4.1,52.2,11,2015,4,2015,3,09,30
+2015-09-30,2015,N,Department of Labor,45.8,null,45.8,null,45.8,12,2015,4,2015,3,09,30
+2015-09-30,2015,N,Department of Education,71.3,26.6,44.7,null,44.7,13,2015,4,2015,3,09,30
+2015-09-30,2015,N,Defense Security Cooperation Agency,38.8,null,38.8,null,38.8,14,2015,4,2015,3,09,30
+2015-09-30,2015,N,Department of Housing and Urban Development,32.7,1.5,31.2,null,31.2,15,2015,4,2015,3,09,30
+2015-09-30,2015,N,Department of Justice,32.3,1.7,30.6,null,30.6,16,2015,4,2015,3,09,30
+2015-09-30,2015,N,Department of State,30.2,4.3,25.9,0.1,26.0,17,2015,4,2015,3,09,30
+2015-09-30,2015,N,National Aeronautics and Space Administration,19.8,0.2,19.6,null,19.6,18,2015,4,2015,3,09,30
+2015-09-30,2015,N,Department of the Interior,19.2,2.7,16.5,null,16.5,19,2015,4,2015,3,09,30
+2015-09-30,2015,N,Pension Benefit Guaranty Corporation,23.7,8.0,15.7,null,15.7,20,2015,4,2015,3,09,30
+2015-09-30,2015,N,Railroad Retirement Board,16.3,3.4,12.9,null,12.9,21,2015,4,2015,3,09,30
+2015-09-30,2015,N,U.S. Agency for International Development,12.7,0.1,12.6,null,12.6,22,2015,4,2015,3,09,30
+2015-09-30,2015,N,Federal Communications Commission,9.6,0.3,9.3,null,9.3,23,2015,4,2015,3,09,30
+2015-09-30,2015,N,Department of Commerce,12.3,3.2,9.1,null,9.1,24,2015,4,2015,3,09,30
+2015-09-30,2015,N,Environmental Protection Agency,9.3,0.7,8.6,null,8.6,25,2015,4,2015,3,09,30
+2015-09-30,2015,N,National Science Foundation,7.0,null,7.0,null,7.0,26,2015,4,2015,3,09,30
+2015-09-30,2015,N,U.S. Postal Service,73.8,67.9,5.9,null,5.9,27,2015,4,2015,3,09,30
+2015-09-30,2015,N,Millennium Challenge Corporation,0.8,null,0.8,null,0.8,28,2015,4,2015,3,09,30
+2015-09-30,2015,N,Smithsonian Institution,0.8,null,0.8,null,0.8,29,2015,4,2015,3,09,30
+2015-09-30,2015,N,U.S. Nuclear Regulatory Commission,1.0,0.8,0.2,null,0.2,30,2015,4,2015,3,09,30
+2015-09-30,2015,N,Farm Credit System Insurance Corporation,null,0.2,-0.2,null,-0.2,31,2015,4,2015,3,09,30
+2015-09-30,2015,N,Overseas Private Investment Corporation,-0.1,0.1,-0.2,null,-0.2,32,2015,4,2015,3,09,30
+2015-09-30,2015,N,General Services Administration,0.3,0.6,-0.3,null,-0.3,33,2015,4,2015,3,09,30
+2015-09-30,2015,N,National Credit Union Administration,null,0.3,-0.3,null,-0.3,34,2015,4,2015,3,09,30
+2015-09-30,2015,N,Securities and Exchange Commission,1.5,2.0,-0.5,null,-0.5,35,2015,4,2015,3,09,30
+2015-09-30,2015,N,Small Business Administration,-0.5,0.4,-0.9,null,-0.9,36,2015,4,2015,3,09,30
+2015-09-30,2015,N,Tennessee Valley Authority,9.8,10.9,-1.1,null,-1.1,37,2015,4,2015,3,09,30
+2015-09-30,2015,N,Export-Import Bank of the United States,-0.6,1.3,-1.9,null,-1.9,38,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Department of Health and Human Services,1029.5,78.1,951.4,0.1,951.5,1,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Social Security Administration,906.8,0.4,906.4,null,906.4,2,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Department of Defense,716.9,61.5,655.4,6.9,662.3,3,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Interest on Treasury Securities Held by the Public,260.0,null,260.0,null,260.0,4,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Department of Veterans Affairs,207.4,4.3,203.1,-22.1,181.0,5,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Department of Agriculture,150.5,9.3,141.2,null,141.2,6,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Department of the Treasury,182.9,79.9,103.0,null,103.0,7,2015,4,2015,3,09,30
+2015-09-30,2015,N,Federal Deposit Insurance Corporation,-6.5,8.6,-15.1,null,-15.1,39,2015,4,2015,3,09,30
+2015-09-30,2015,N,All other entities,20.8,1.7,19.1,null,19.1,40,2015,4,2015,3,09,30
+2015-09-30,2015,N,Total,4253.7,375.6,3878.1,-19.3,3858.8,41,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Office of Personnel Management,85.3,19.5,65.8,21.3,87.1,8,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Department of Transportation,77.2,0.9,76.3,null,76.3,9,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Department of Energy,57.0,5.0,52.0,null,52.0,10,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Department of Homeland Security,58.1,10.3,47.8,-1.3,46.5,11,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Department of Labor,53.6,null,53.6,null,53.6,12,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Department of Education,80.9,24.8,56.1,null,56.1,13,2015,4,2015,3,09,30
+2015-09-30,2014,Y,Defense Security Cooperation Agency,34.9,null,34.9,null,34.9,14,2015,4,2015,3,09,30
+2016-09-30,2016,N,Small Business Administration,0.5,0.3,0.2,null,0.2,29,2016,4,2016,3,09,30
+2016-09-30,2016,N,U.S. Nuclear Regulatory Commission,0.9,0.8,0.1,null,0.1,30,2016,4,2016,3,09,30
+2016-09-30,2016,N,General Services Administration,0.6,0.7,-0.1,null,-0.1,31,2016,4,2016,3,09,30
+2016-09-30,2016,N,Overseas Private Investment Corporation,null,0.1,-0.1,null,-0.1,32,2016,4,2016,3,09,30
+2016-09-30,2016,N,Securities and Exchange Commission,1.7,2.0,-0.3,null,-0.3,33,2016,4,2016,3,09,30
+2016-09-30,2016,N,Farm Credit System Insurance Corporation,null,0.3,-0.3,null,-0.3,34,2016,4,2016,3,09,30
+2016-09-30,2016,N,National Credit Union Administration,-0.7,0.1,-0.8,null,-0.8,35,2016,4,2016,3,09,30
+2016-09-30,2016,N,Tennessee Valley Authority,9.3,10.6,-1.3,null,-1.3,36,2016,4,2016,3,09,30
+2016-09-30,2016,N,Export-Import Bank of the United States,-0.2,1.2,-1.4,null,-1.4,37,2016,4,2016,3,09,30
+2016-09-30,2016,N,Office of Personnel Management,60.2,21.3,38.9,-47.1,-8.2,38,2016,4,2016,3,09,30
+2016-09-30,2016,N,Federal Deposit Insurance Corporation,0.2,9.5,-9.3,null,-9.3,39,2016,4,2016,3,09,30
+2016-09-30,2016,N,All other entities,21.1,1.3,19.8,null,19.8,40,2016,4,2016,3,09,30
+2016-09-30,2016,N,Total,4507.7,376.6,4131.1,273.3,4404.4,41,2016,4,2016,3,09,30
+2016-09-30,2016,N,Department of Health and Human Services,1170.0,96.1,1073.9,0.4,1074.3,1,2016,4,2016,3,09,30
+2016-09-30,2016,N,Social Security Administration,982.1,0.3,981.8,null,981.8,2,2016,4,2016,3,09,30
+2016-09-30,2016,N,Department of Veterans Affairs,276.5,4.9,271.6,377.5,649.1,3,2016,4,2016,3,09,30
+2016-09-30,2016,N,Department of Defense,721.9,55.1,666.8,-57.6,609.2,4,2016,4,2016,3,09,30
+2016-09-30,2016,N,Interest on Treasury Securities Held by the Public,273.0,null,273.0,null,273.0,5,2016,4,2016,3,09,30
+2016-09-30,2016,N,Department of Agriculture,142.1,8.5,133.6,null,133.6,6,2016,4,2016,3,09,30
+2016-09-30,2016,N,Department of the Treasury,148.7,19.4,129.3,null,129.3,7,2016,4,2016,3,09,30
+2016-09-30,2016,N,Department of Transportation,80.7,0.9,79.8,null,79.8,8,2016,4,2016,3,09,30
+2016-09-30,2016,N,Smithsonian Institution,0.8,null,0.8,null,0.8,27,2016,4,2016,3,09,30
+2016-09-30,2016,N,Department of Education,103.1,29.9,73.2,null,73.2,9,2016,4,2016,3,09,30
+2016-09-30,2016,N,Department of Energy,68.6,4.3,64.3,null,64.3,10,2016,4,2016,3,09,30
+2016-09-30,2016,N,Department of Homeland Security,66.5,13.1,53.4,0.2,53.6,11,2016,4,2016,3,09,30
+2016-09-30,2016,N,Department of Labor,46.4,null,46.4,null,46.4,12,2016,4,2016,3,09,30
+2016-09-30,2016,N,Department of Justice,38.7,1.6,37.1,null,37.1,13,2016,4,2016,3,09,30
+2016-09-30,2016,N,Defense Security Cooperation Agency,36.0,null,36.0,null,36.0,14,2016,4,2016,3,09,30
+2016-09-30,2016,N,Department of Housing and Urban Development,31.2,1.7,29.5,null,29.5,15,2016,4,2016,3,09,30
+2016-09-30,2016,N,Department of State,32.6,4.7,27.9,-0.1,27.8,16,2016,4,2016,3,09,30
+2016-09-30,2016,N,National Aeronautics and Space Administration,20.0,0.2,19.8,null,19.8,17,2016,4,2016,3,09,30
+2016-09-30,2016,N,Department of the Interior,19.2,2.5,16.7,null,16.7,18,2016,4,2016,3,09,30
+2016-09-30,2016,N,U.S. Agency for International Development,12.6,null,12.6,null,12.6,19,2016,4,2016,3,09,30
+2016-09-30,2016,N,Railroad Retirement Board,15.3,3.9,11.4,null,11.4,20,2016,4,2016,3,09,30
+2016-09-30,2016,N,Federal Communications Commission,10.4,0.5,9.9,null,9.9,21,2016,4,2016,3,09,30
+2016-09-30,2016,N,Department of Commerce,12.5,3.3,9.2,null,9.2,22,2016,4,2016,3,09,30
+2016-09-30,2016,N,Environmental Protection Agency,9.0,0.4,8.6,null,8.6,23,2016,4,2016,3,09,30
+2016-09-30,2016,N,National Science Foundation,7.0,null,7.0,null,7.0,24,2016,4,2016,3,09,30
+2016-09-30,2016,N,U.S. Postal Service,77.2,70.4,6.8,null,6.8,25,2016,4,2016,3,09,30
+2016-09-30,2016,N,Pension Benefit Guaranty Corporation,11.4,6.7,4.7,null,4.7,26,2016,4,2016,3,09,30
+2016-09-30,2016,N,Millennium Challenge Corporation,0.6,null,0.6,null,0.6,28,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Department of Health and Human Services,1130.9,101.3,1029.6,-0.1,1029.5,1,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Social Security Administration,945.0,0.3,944.7,null,944.7,2,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Department of Veterans Affairs,193.1,4.8,188.3,-13.0,175.3,3,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Department of Defense,634.9,45.5,589.4,-27.5,561.9,4,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Interest on Treasury Securities Held by the Public,250.8,null,250.8,null,250.8,5,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Department of Agriculture,147.7,9.1,138.6,null,138.6,6,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Department of the Treasury,146.0,29.3,116.7,null,116.7,7,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Department of Transportation,76.1,0.8,75.3,null,75.3,8,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Department of Education,71.3,26.6,44.7,null,44.7,9,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Department of Energy,76.5,4.6,71.9,null,71.9,10,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Department of Homeland Security,60.2,12.1,48.1,4.1,52.2,11,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Department of Labor,45.8,null,45.8,null,45.8,12,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Department of Justice,32.3,1.7,30.6,null,30.6,13,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Defense Security Cooperation Agency,38.8,null,38.8,null,38.8,14,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Department of Housing and Urban Development,32.7,1.5,31.2,null,31.2,15,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Department of State,30.2,4.3,25.9,0.1,26.0,16,2016,4,2016,3,09,30
+2016-09-30,2015,Y,National Aeronautics and Space Administration,19.8,0.2,19.6,null,19.6,17,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Department of the Interior,19.2,2.7,16.5,null,16.5,18,2016,4,2016,3,09,30
+2016-09-30,2015,Y,U.S. Agency for International Development,12.7,0.1,12.6,null,12.6,19,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Railroad Retirement Board,16.3,3.4,12.9,null,12.9,20,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Federal Communications Commission,9.6,0.3,9.3,null,9.3,21,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Department of Commerce,12.3,3.2,9.1,null,9.1,22,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Environmental Protection Agency,9.3,0.7,8.6,null,8.6,23,2016,4,2016,3,09,30
+2016-09-30,2015,Y,National Science Foundation,7.0,null,7.0,null,7.0,24,2016,4,2016,3,09,30
+2016-09-30,2015,Y,U.S. Postal Service,73.8,67.9,5.9,null,5.9,25,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Pension Benefit Guaranty Corporation,23.7,8.0,15.7,null,15.7,26,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Smithsonian Institution,0.8,null,0.8,null,0.8,27,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Millennium Challenge Corporation,0.8,null,0.8,null,0.8,28,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Small Business Administration,-0.5,0.4,-0.9,null,-0.9,29,2016,4,2016,3,09,30
+2016-09-30,2015,Y,U.S. Nuclear Regulatory Commission,1.0,0.8,0.2,null,0.2,30,2016,4,2016,3,09,30
+2016-09-30,2015,Y,General Services Administration,0.3,0.6,-0.3,null,-0.3,31,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Overseas Private Investment Corporation,-0.1,0.1,-0.2,null,-0.2,32,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Securities and Exchange Commission,1.5,2.0,-0.5,null,-0.5,33,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Farm Credit System Insurance Corporation,null,0.2,-0.2,null,-0.2,34,2016,4,2016,3,09,30
+2016-09-30,2015,Y,National Credit Union Administration,null,0.3,-0.3,null,-0.3,35,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Tennessee Valley Authority,9.8,10.9,-1.1,null,-1.1,36,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Export-Import Bank of the United States,-0.6,1.3,-1.9,null,-1.9,37,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Office of Personnel Management,104.9,20.3,84.6,17.1,101.7,38,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Federal Deposit Insurance Corporation,-6.5,8.6,-15.1,null,-15.1,39,2016,4,2016,3,09,30
+2016-09-30,2015,Y,All other entities,20.8,1.7,19.1,null,19.1,40,2016,4,2016,3,09,30
+2016-09-30,2015,Y,Total,4248.2,375.6,3872.6,-19.3,3853.3,41,2016,4,2016,3,09,30
+2017-09-30,2017,N,Department of Health and Human Services,1186.8,101.1,1085.7,0.4,1086.1,1,2017,4,2017,3,09,30
+2017-09-30,2017,N,Social Security Administration,999.1,0.3,998.8,null,998.8,2,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Defense,718.7,77.4,641.3,24.1,665.4,3,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Veterans Affairs,254.8,4.8,250.0,229.7,479.7,4,2017,4,2017,3,09,30
+2017-09-30,2017,N,Interest on Treasury Securities Held by the Public,296.3,null,296.3,null,296.3,5,2017,4,2017,3,09,30
+2017-09-30,2017,N,Office of Personnel Management,90.1,22.3,67.8,102.5,170.3,6,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of the Treasury,179.5,37.9,141.6,null,141.6,7,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Agriculture,142.9,8.1,134.8,null,134.8,8,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Transportation,79.6,0.9,78.7,null,78.7,9,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Housing and Urban Development,70.9,1.7,69.2,null,69.2,10,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Homeland Security,77.3,12.3,65.0,-0.5,64.5,11,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Education,84.4,30.6,53.8,null,53.8,12,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Labor,43.5,null,43.5,null,43.5,13,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Energy,46.9,5.6,41.3,null,41.3,14,2017,4,2017,3,09,30
+2017-09-30,2017,N,Defense Security Cooperation Agency,36.7,null,36.7,null,36.7,15,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Justice,34.2,1.6,32.6,null,32.6,16,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of State,31.3,4.8,26.5,0.3,26.8,17,2017,4,2017,3,09,30
+2017-09-30,2017,N,Federal Communications Commission,20.7,0.4,20.3,null,20.3,18,2017,4,2017,3,09,30
+2017-09-30,2017,N,National Aeronautics and Space Administration,19.6,0.2,19.4,null,19.4,19,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of the Interior,20.2,2.7,17.5,null,17.5,20,2017,4,2017,3,09,30
+2017-09-30,2017,N,U.S. Agency for International Development,13.2,null,13.2,null,13.2,21,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Commerce,12.9,3.3,9.6,null,9.6,22,2017,4,2017,3,09,30
+2017-09-30,2017,N,Railroad Retirement Board,13.0,3.8,9.2,null,9.2,23,2017,4,2017,3,09,30
+2017-09-30,2017,N,Environmental Protection Agency,8.8,0.4,8.4,null,8.4,24,2017,4,2017,3,09,30
+2017-09-30,2017,N,National Science Foundation,7.1,null,7.1,null,7.1,25,2017,4,2017,3,09,30
+2017-09-30,2017,N,U.S. Postal Service,71.9,68.7,3.2,null,3.2,26,2017,4,2017,3,09,30
+2017-09-30,2017,N,Smithsonian Institution,0.9,null,0.9,null,0.9,27,2017,4,2017,3,09,30
+2017-09-30,2017,N,Millennium Challenge Corporation,0.7,null,0.7,null,0.7,28,2017,4,2017,3,09,30
+2017-09-30,2017,N,U.S. Nuclear Regulatory Commission,0.9,0.8,0.1,null,0.1,29,2017,4,2017,3,09,30
+2017-09-30,2017,N,Overseas Private Investment Corporation,null,0.1,-0.1,null,-0.1,30,2017,4,2017,3,09,30
+2017-09-30,2017,N,Small Business Administration,0.1,0.3,-0.2,null,-0.2,32,2017,4,2017,3,09,30
+2017-09-30,2017,N,Securities and Exchange Commission,1.9,2.1,-0.2,null,-0.2,31,2017,4,2017,3,09,30
+2017-09-30,2017,N,Farm Credit System Insurance Corporation,null,0.4,-0.4,null,-0.4,33,2017,4,2017,3,09,30
+2017-09-30,2017,N,General Services Administration,0.2,0.6,-0.4,null,-0.4,34,2017,4,2017,3,09,30
+2017-09-30,2017,N,National Credit Union Administration,-0.1,0.7,-0.8,null,-0.8,35,2017,4,2017,3,09,30
+2017-09-30,2017,N,Tennessee Valley Authority,9.9,10.7,-0.8,null,-0.8,36,2017,4,2017,3,09,30
+2017-09-30,2017,N,Export-Import Bank of the United States,0.4,1.2,-0.8,null,-0.8,37,2017,4,2017,3,09,30
+2017-09-30,2017,N,Pension Benefit Guaranty Corporation,9.8,14.1,-4.3,null,-4.3,38,2017,4,2017,3,09,30
+2017-09-30,2017,N,Federal Deposit Insurance Corporation,1.5,10.6,-9.1,null,-9.1,39,2017,4,2017,3,09,30
+2017-09-30,2017,N,All other entities,22.7,1.4,21.3,null,21.3,40,2017,4,2017,3,09,30
+2017-09-30,2017,N,Total,4609.3,431.9,4177.4,356.5,4533.9,41,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Department of Health and Human Services,1170.0,96.1,1073.9,0.4,1074.3,1,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Social Security Administration,982.1,0.3,981.8,null,981.8,2,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Department of Defense,721.9,55.1,666.8,-57.6,609.2,3,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Department of Veterans Affairs,276.5,4.9,271.6,377.5,649.1,4,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Interest on Treasury Securities Held by the Public,273.0,null,273.0,null,273.0,5,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Office of Personnel Management,60.2,21.3,38.9,-47.1,-8.2,6,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Department of the Treasury,148.7,19.4,129.3,null,129.3,7,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Department of Agriculture,142.1,8.5,133.6,null,133.6,8,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Department of Transportation,80.7,0.9,79.8,null,79.8,9,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Department of Housing and Urban Development,31.2,1.7,29.5,null,29.5,10,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Department of Homeland Security,66.5,13.1,53.4,0.2,53.6,11,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Department of Education,103.1,29.9,73.2,null,73.2,12,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Department of Labor,46.4,null,46.4,null,46.4,13,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Department of Energy,68.6,4.3,64.3,null,64.3,14,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Defense Security Cooperation Agency,36.0,null,36.0,null,36.0,15,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Department of Justice,38.7,1.6,37.1,null,37.1,16,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Department of State,32.6,4.7,27.9,-0.1,27.8,17,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Federal Communications Commission,10.4,0.5,9.9,null,9.9,18,2017,4,2017,3,09,30
+2017-09-30,2016,Y,National Aeronautics and Space Administration,20.0,0.2,19.8,null,19.8,19,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Department of the Interior,19.2,2.5,16.7,null,16.7,20,2017,4,2017,3,09,30
+2017-09-30,2016,Y,U.S. Agency for International Development,12.6,null,12.6,null,12.6,21,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Department of Commerce,12.5,3.3,9.2,null,9.2,22,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Railroad Retirement Board,15.3,3.9,11.4,null,11.4,23,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Environmental Protection Agency,9.0,0.4,8.6,null,8.6,24,2017,4,2017,3,09,30
+2017-09-30,2016,Y,National Science Foundation,7.0,null,7.0,null,7.0,25,2017,4,2017,3,09,30
+2017-09-30,2016,Y,U.S. Postal Service,77.2,70.4,6.8,null,6.8,26,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Smithsonian Institution,0.8,null,0.8,null,0.8,27,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Millennium Challenge Corporation,0.6,null,0.6,null,0.6,28,2017,4,2017,3,09,30
+2017-09-30,2016,Y,U.S. Nuclear Regulatory Commission,0.9,0.8,0.1,null,0.1,29,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Overseas Private Investment Corporation,null,0.1,-0.1,null,-0.1,30,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Securities and Exchange Commission,1.7,2.0,-0.3,null,-0.3,31,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Small Business Administration,0.5,0.3,0.2,null,0.2,32,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Farm Credit System Insurance Corporation,null,0.3,-0.3,null,-0.3,33,2017,4,2017,3,09,30
+2017-09-30,2016,Y,General Services Administration,0.6,0.7,-0.1,null,-0.1,34,2017,4,2017,3,09,30
+2017-09-30,2016,Y,National Credit Union Administration,-0.7,0.1,-0.8,null,-0.8,35,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Tennessee Valley Authority,9.3,10.6,-1.3,null,-1.3,36,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Export-Import Bank of the United States,-0.2,1.2,-1.4,null,-1.4,37,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Pension Benefit Guaranty Corporation,19.4,14.0,5.4,null,5.4,38,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Federal Deposit Insurance Corporation,0.2,9.5,-9.3,null,-9.3,39,2017,4,2017,3,09,30
+2017-09-30,2016,Y,All other entities,21.1,1.3,19.8,null,19.8,40,2017,4,2017,3,09,30
+2017-09-30,2016,Y,Total,4515.7,383.9,4131.8,273.3,4405.1,41,2017,4,2017,3,09,30
+2018-09-30,2018,N,Tennessee Valley Authority,9.9,11.2,-1.3,null,-1.3,37,2018,4,2018,3,09,30
+2018-09-30,2018,N,National Railroad Retirement Investment Trust,0.1,1.9,-1.8,null,-1.8,38,2018,4,2018,3,09,30
+2018-09-30,2018,N,Federal Deposit Insurance Corporation,1.3,10.8,-9.5,null,-9.5,39,2018,4,2018,3,09,30
+2018-09-30,2018,N,Pension Benefit Guaranty Corporation,-7.8,16.7,-24.5,null,-24.5,40,2018,4,2018,3,09,30
+2018-09-30,2018,N,All other entities,18.7,1.5,17.2,null,17.2,41,2018,4,2018,3,09,30
+2018-09-30,2018,N,Total,4808.5,392.8,4415.7,125.2,4540.9,42,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Health and Human Services,1186.8,101.1,1085.7,0.4,1086.1,1,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Social Security Administration,999.1,0.3,998.8,null,998.8,2,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Defense,718.7,77.4,641.3,24.1,665.4,3,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Health and Human Services,1252.6,110.5,1142.1,0.4,1142.5,1,2018,4,2018,3,09,30
+2018-09-30,2018,N,Social Security Administration,1038.5,0.2,1038.3,null,1038.3,2,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Defense,719.8,38.2,681.6,16.8,698.4,3,2018,4,2018,3,09,30
+2018-09-30,2018,N,Interest on Treasury Securities Held by the Public,357.3,null,357.3,null,357.3,4,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Veterans Affairs,272.5,4.8,267.7,79.2,346.9,5,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Energy,147.0,6.1,140.9,null,140.9,6,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Agriculture,137.0,6.6,130.4,null,130.4,7,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of the Treasury,150.5,21.9,128.6,null,128.6,8,2018,4,2018,3,09,30
+2018-09-30,2018,N,Office of Personnel Management,101.3,23.4,77.9,26.2,104.1,9,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Transportation,79.0,1.1,77.9,null,77.9,10,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Homeland Security,78.3,14.8,63.5,1.1,64.6,11,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Education,79.2,31.4,47.8,null,47.8,12,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Housing and Urban Development,43.3,1.8,41.5,null,41.5,13,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Labor,41.1,null,41.1,null,41.1,14,2018,4,2018,3,09,30
+2018-09-30,2018,N,Security Assistance Accounts,37.9,null,37.9,null,37.9,15,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Justice,35.4,1.9,33.5,null,33.5,16,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of State,32.3,4.8,27.5,1.5,29.0,17,2018,4,2018,3,09,30
+2018-09-30,2018,N,National Aeronautics and Space Administration,20.3,0.2,20.1,null,20.1,18,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of the Interior,20.4,2.9,17.5,null,17.5,19,2018,4,2018,3,09,30
+2018-09-30,2018,N,U.S. Agency for International Development,13.1,null,13.1,null,13.1,20,2018,4,2018,3,09,30
+2018-09-30,2018,N,Railroad Retirement Board,13.1,null,13.1,null,13.1,21,2018,4,2018,3,09,30
+2018-09-30,2018,N,Federal Communications Commission,10.8,0.4,10.4,null,10.4,22,2018,4,2018,3,09,30
+2018-09-30,2018,N,Department of Commerce,11.8,3.6,8.2,null,8.2,23,2018,4,2018,3,09,30
+2018-09-30,2018,N,Environmental Protection Agency,8.3,0.4,7.9,null,7.9,24,2018,4,2018,3,09,30
+2018-09-30,2018,N,National Science Foundation,7.3,null,7.3,null,7.3,25,2018,4,2018,3,09,30
+2018-09-30,2018,N,U.S. Postal Service,71.4,69.7,1.7,null,1.7,26,2018,4,2018,3,09,30
+2018-09-30,2018,N,Smithsonian Institution,1.5,0.5,1.0,null,1.0,27,2018,4,2018,3,09,30
+2018-09-30,2018,N,Millennium Challenge Corporation,0.8,null,0.8,null,0.8,28,2018,4,2018,3,09,30
+2018-09-30,2018,N,Small Business Administration,0.7,0.3,0.4,null,0.4,29,2018,4,2018,3,09,30
+2018-09-30,2018,N,U.S. Nuclear Regulatory Commission,0.9,0.7,0.2,null,0.2,31,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Interest on Treasury Securities Held by the Public,296.3,null,296.3,null,296.3,4,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Veterans Affairs,254.8,4.8,250.0,229.7,479.7,5,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Energy,46.9,5.6,41.3,null,41.3,6,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Agriculture,142.9,8.1,134.8,null,134.8,7,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of the Treasury,179.5,37.9,141.6,null,141.6,8,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Office of Personnel Management,90.1,22.3,67.8,102.5,170.3,9,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Transportation,79.6,0.9,78.7,null,78.7,10,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Homeland Security,77.3,12.3,65.0,-0.5,64.5,11,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Education,84.4,30.6,53.8,null,53.8,12,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Housing and Urban Development,69.1,1.7,67.4,null,67.4,13,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Labor,43.5,null,43.5,null,43.5,14,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Security Assistance Accounts,36.7,null,36.7,null,36.7,15,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Justice,34.2,1.6,32.6,null,32.6,16,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of State,31.3,4.8,26.5,0.3,26.8,17,2018,4,2018,3,09,30
+2018-09-30,2017,Y,National Aeronautics and Space Administration,19.6,0.2,19.4,null,19.4,18,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of the Interior,20.2,2.7,17.5,null,17.5,19,2018,4,2018,3,09,30
+2018-09-30,2017,Y,U.S. Agency for International Development,13.2,null,13.2,null,13.2,20,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Railroad Retirement Board,13.0,3.8,9.2,null,9.2,21,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Federal Communications Commission,20.7,0.4,20.3,null,20.3,22,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Commerce,12.9,3.3,9.6,null,9.6,23,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Environmental Protection Agency,8.8,0.4,8.4,null,8.4,24,2018,4,2018,3,09,30
+2018-09-30,2017,Y,National Science Foundation,7.1,null,7.1,null,7.1,25,2018,4,2018,3,09,30
+2018-09-30,2017,Y,U.S. Postal Service,71.9,68.7,3.2,null,3.2,26,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Smithsonian Institution,0.9,null,0.9,null,0.9,27,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Millennium Challenge Corporation,0.7,null,0.7,null,0.7,28,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Small Business Administration,0.1,0.3,-0.2,null,-0.2,29,2018,4,2018,3,09,30
+2018-09-30,2017,Y,National Credit Union Administration,-0.1,0.7,-0.8,null,-0.8,30,2018,4,2018,3,09,30
+2018-09-30,2017,Y,U.S. Nuclear Regulatory Commission,0.9,0.8,0.1,null,0.1,31,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Farm Credit System Insurance Corporation,null,0.4,-0.4,null,-0.4,32,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Overseas Private Investment Corporation,null,0.1,-0.1,null,-0.1,33,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Export-Import Bank of the U.S.,0.4,1.2,-0.8,null,-0.8,34,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Securities and Exchange Commission,1.9,2.1,-0.2,null,-0.2,35,2018,4,2018,3,09,30
+2018-09-30,2017,Y,General Services Administration,0.2,0.6,-0.4,null,-0.4,36,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Tennessee Valley Authority,9.9,10.7,-0.8,null,-0.8,37,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Federal Deposit Insurance Corporation,1.5,10.6,-9.1,null,-9.1,38,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Pension Benefit Guaranty Corporation,9.8,14.1,-4.3,null,-4.3,39,2018,4,2018,3,09,30
+2018-09-30,2017,Y,All other entities,21.4,1.4,20.0,null,20.0,40,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Total,4606.2,431.9,4174.3,356.5,4530.8,41,2018,4,2018,3,09,30
+2018-09-30,2018,N,National Credit Union Administration,0.9,0.6,0.3,null,0.3,30,2018,4,2018,3,09,30
+2018-09-30,2018,N,Farm Credit System Insurance Corporation,0.2,0.2,null,null,null,32,2018,4,2018,3,09,30
+2018-09-30,2018,N,Overseas Private Investment Corporation,null,0.1,-0.1,null,-0.1,33,2018,4,2018,3,09,30
+2018-09-30,2018,N,Export-Import Bank of the U.S.,null,0.5,-0.5,null,-0.5,34,2018,4,2018,3,09,30
+2018-09-30,2018,N,Securities and Exchange Commission,1.8,2.3,-0.5,null,-0.5,35,2018,4,2018,3,09,30
+2018-09-30,2018,N,General Services Administration,null,0.8,-0.8,null,-0.8,36,2018,4,2018,3,09,30
+2019-09-30,2019,N,Department of Homeland Security,77.0,14.0,63.0,0.9,63.9,11,2019,4,2019,3,09,30
+2019-09-30,2019,N,Department of Energy,59.3,5.7,53.6,null,53.6,12,2019,4,2019,3,09,30
+2019-09-30,2019,N,Security Assistance Accounts,38.6,null,38.6,null,38.6,14,2019,4,2019,3,09,30
+2019-09-30,2019,N,Department of Justice,40.8,3.5,37.3,null,37.3,15,2019,4,2019,3,09,30
+2019-09-30,2019,N,Department of State,33.9,4.6,29.3,0.7,30.0,16,2019,4,2019,3,09,30
+2019-09-30,2019,N,Department of Housing and Urban Development,29.6,1.8,27.8,null,27.8,17,2019,4,2019,3,09,30
+2019-09-30,2019,N,National Aeronautics and Space Administration,21.0,0.2,20.8,null,20.8,18,2019,4,2019,3,09,30
+2019-09-30,2019,N,Department of the Interior,21.1,2.6,18.5,null,18.5,19,2019,4,2019,3,09,30
+2019-09-30,2019,N,U.S. Agency for International Development,12.2,0.1,12.1,null,12.1,20,2019,4,2019,3,09,30
+2019-09-30,2019,N,Railroad Retirement Board,12.1,null,12.1,null,12.1,21,2019,4,2019,3,09,30
+2019-09-30,2019,N,Federal Communication Commission,11.2,0.4,10.8,null,10.8,22,2019,4,2019,3,09,30
+2019-09-30,2019,N,Department of Commerce,13.8,3.6,10.2,null,10.2,23,2019,4,2019,3,09,30
+2019-09-30,2019,N,Environmental Protection Agency,8.8,0.3,8.5,null,8.5,24,2019,4,2019,3,09,30
+2019-09-30,2019,N,Pension Benefit Guaranty Corporation,35.7,27.8,7.9,null,7.9,25,2019,4,2019,3,09,30
+2019-09-30,2019,N,National Science Foundation,7.3,null,7.3,null,7.3,26,2019,4,2019,3,09,30
+2019-09-30,2019,N,Department of Labor,40.5,null,40.5,null,40.5,13,2019,4,2019,3,09,30
+2019-09-30,2019,N,U.S. Postal Service,77.5,70.2,7.3,null,7.3,27,2019,4,2019,3,09,30
+2019-09-30,2019,N,Smithsonian Institution,1.5,0.4,1.1,null,1.1,28,2019,4,2019,3,09,30
+2019-09-30,2019,N,Millennium Challenge Corporation,0.5,null,0.5,null,0.5,29,2019,4,2019,3,09,30
+2019-09-30,2019,N,National Credit Union Administration,0.4,0.2,0.2,null,0.2,30,2019,4,2019,3,09,30
+2019-09-30,2019,N,U.S. Nuclear Regulatory Commission,0.8,0.7,0.1,null,0.1,31,2019,4,2019,3,09,30
+2019-09-30,2019,N,Farm Credit System Insurance Corporation,0.1,0.2,-0.1,null,-0.1,32,2019,4,2019,3,09,30
+2019-09-30,2019,N,Small Business Administration,0.3,0.4,-0.1,null,-0.1,33,2019,4,2019,3,09,30
+2019-09-30,2019,N,Overseas Private Investment Corporation,-0.2,0.1,-0.3,null,-0.3,34,2019,4,2019,3,09,30
+2019-09-30,2019,N,Securities and Exchange Commission,1.8,2.1,-0.3,null,-0.3,35,2019,4,2019,3,09,30
+2019-09-30,2019,N,National Railroad Retirement Investment Trust,0.1,0.7,-0.6,null,-0.6,36,2019,4,2019,3,09,30
+2019-09-30,2019,N,Export-Import Bank of the U.S.,-0.1,0.5,-0.6,null,-0.6,37,2019,4,2019,3,09,30
+2019-09-30,2019,N,General Services Administration,0.1,0.8,-0.7,null,-0.7,38,2019,4,2019,3,09,30
+2019-09-30,2019,N,Tennessee Valley Authority,9.9,11.3,-1.4,null,-1.4,39,2019,4,2019,3,09,30
+2019-09-30,2019,N,Federal Deposit Insurance Corporation,0.4,5.0,-4.6,null,-4.6,40,2019,4,2019,3,09,30
+2019-09-30,2019,N,All other entities,22.0,1.8,20.2,null,20.2,41,2019,4,2019,3,09,30
+2019-09-30,2019,N,Total,5287.2,418.4,4868.8,198.9,5067.7,42,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Health and Human Services,1252.6,110.5,1142.1,0.4,1142.5,1,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Social Security Administration,1038.5,0.2,1038.3,null,1038.3,2,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Defense,719.8,38.2,681.6,16.8,698.4,3,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Veterans Affairs,272.5,4.8,267.7,79.2,346.9,4,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Interest on Treasury Securities Held by the Public,357.3,null,357.3,null,357.3,5,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of the Treasury,150.5,21.9,128.6,null,128.6,6,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Agriculture,137.0,6.6,130.4,null,130.4,7,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Education,79.2,31.4,47.8,null,47.8,8,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Office of Personnel Management,101.3,23.4,77.9,26.2,104.1,9,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Transportation,79.0,1.1,77.9,null,77.9,10,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Homeland Security,78.3,14.8,63.5,1.1,64.6,11,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Energy,147.0,6.1,140.9,null,140.9,12,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Labor,41.1,null,41.1,null,41.1,13,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Security Assistance Accounts,37.9,null,37.9,null,37.9,14,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Justice,35.4,1.9,33.5,null,33.5,15,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of State,32.3,4.8,27.5,1.5,29.0,16,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Housing and Urban Development,43.3,1.8,41.5,null,41.5,17,2019,4,2019,3,09,30
+2019-09-30,2018,Y,National Aeronautics and Space Administration,20.3,0.2,20.1,null,20.1,18,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of the Interior,20.4,2.9,17.5,null,17.5,19,2019,4,2019,3,09,30
+2019-09-30,2018,Y,U.S. Agency for International Development,13.1,null,13.1,null,13.1,20,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Railroad Retirement Board,13.1,null,13.1,null,13.1,21,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Federal Communication Commission,10.8,0.4,10.4,null,10.4,22,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Department of Commerce,11.8,3.6,8.2,null,8.2,23,2019,4,2019,3,09,30
+2019-09-30,2019,N,Department of Health and Human Services,1341.4,119.1,1222.3,null,1222.3,1,2019,4,2019,3,09,30
+2019-09-30,2019,N,Social Security Administration,1101.2,0.3,1100.9,null,1100.9,2,2019,4,2019,3,09,30
+2019-09-30,2019,N,Department of Defense,813.6,44.2,769.4,139.0,908.4,3,2019,4,2019,3,09,30
+2019-09-30,2019,N,Department of Veterans Affairs,364.7,5.1,359.6,58.0,417.6,4,2019,4,2019,3,09,30
+2019-09-30,2019,N,Interest on Treasury Securities Held by the Public,403.6,null,403.6,null,403.6,5,2019,4,2019,3,09,30
+2019-09-30,2019,N,Department of the Treasury,181.0,25.3,155.7,null,155.7,6,2019,4,2019,3,09,30
+2019-09-30,2019,N,Department of Agriculture,149.1,8.3,140.8,null,140.8,7,2019,4,2019,3,09,30
+2019-09-30,2019,N,Department of Education,153.9,31.9,122.0,null,122.0,8,2019,4,2019,3,09,30
+2019-09-30,2019,N,Office of Personnel Management,118.5,24.1,94.4,0.3,94.7,9,2019,4,2019,3,09,30
+2019-09-30,2019,N,Department of Transportation,82.2,1.1,81.1,null,81.1,10,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Environmental Protection Agency,8.3,0.4,7.9,null,7.9,24,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Pension Benefit Guaranty Corporation,-7.8,16.7,-24.5,null,-24.5,25,2019,4,2019,3,09,30
+2019-09-30,2018,Y,National Science Foundation,7.3,null,7.3,null,7.3,26,2019,4,2019,3,09,30
+2019-09-30,2018,Y,U.S. Postal Service,71.4,69.7,1.7,null,1.7,27,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Smithsonian Institution,1.5,0.5,1.0,null,1.0,28,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Millennium Challenge Corporation,0.8,null,0.8,null,0.8,29,2019,4,2019,3,09,30
+2019-09-30,2018,Y,National Credit Union Administration,0.9,0.6,0.3,null,0.3,30,2019,4,2019,3,09,30
+2019-09-30,2018,Y,U.S. Nuclear Regulatory Commission,0.9,0.7,0.2,null,0.2,31,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Farm Credit System Insurance Corporation,0.2,0.2,null,null,null,32,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Small Business Administration,0.7,0.3,0.4,null,0.4,33,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Overseas Private Investment Corporation,null,0.1,-0.1,null,-0.1,34,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Securities and Exchange Commission,1.8,2.3,-0.5,null,-0.5,35,2019,4,2019,3,09,30
+2019-09-30,2018,Y,National Railroad Retirement Investment Trust,0.1,1.9,-1.8,null,-1.8,36,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Export-Import Bank of the U.S.,null,0.5,-0.5,null,-0.5,37,2019,4,2019,3,09,30
+2019-09-30,2018,Y,General Services Administration,null,0.8,-0.8,null,-0.8,38,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Tennessee Valley Authority,9.9,11.2,-1.3,null,-1.3,39,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Federal Deposit Insurance Corporation,1.3,10.8,-9.5,null,-9.5,40,2019,4,2019,3,09,30
+2019-09-30,2018,Y,All other entities,18.7,1.5,17.2,null,17.2,41,2019,4,2019,3,09,30
+2019-09-30,2018,Y,Total,4808.5,392.8,4415.7,125.2,4540.9,42,2019,4,2019,3,09,30
+2020-09-30,2019,Y,Department of Health and Human Services,1341.4,119.1,1222.3,0.0,1222.3,1,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Social Security Administration,1101.2,0.3,1100.9,0.0,1100.9,2,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Department of Veterans Affairs,364.7,5.1,359.6,58.0,417.6,3,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Department of Defense,813.6,44.2,769.4,139.0,908.4,4,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Department of the Treasury,181.0,25.3,155.7,0.0,155.7,5,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Small Business Administration,0.3,0.4,-0.1,0.0,-0.1,6,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Department of Labor,40.5,0.0,40.5,0.0,40.5,7,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Interest on Treasury Securities Held by the Public,403.6,0.0,403.6,0.0,403.6,8,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Department of Agriculture,149.1,8.3,140.8,0.0,140.8,9,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Office of Personnel Management,118.5,24.1,94.4,0.3,94.7,10,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Department of Education,153.9,31.9,122.0,0.0,122.0,11,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Department of Homeland Security,77.0,14.0,63.0,0.9,63.9,12,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Security Assistance Accounts,38.6,0.0,38.6,0.0,38.6,13,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Department of Transportation,82.2,1.1,81.1,0.0,81.1,14,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Department of Energy,59.3,5.7,53.6,0.0,53.6,15,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Department of Justice,40.8,3.5,37.3,0.0,37.3,16,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Department of Housing and Urban Development,29.6,1.8,27.8,0.0,27.8,17,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Department of State,33.9,4.6,29.3,0.7,30.0,18,2020,4,2020,3,09,30
+2020-09-30,2019,Y,National Aeronautics and Space Administration,21.0,0.2,20.8,0.0,20.8,19,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Department of the Interior,21.1,2.6,18.5,0.0,18.5,20,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Department of Commerce,13.8,3.6,10.2,0.0,10.2,21,2020,4,2020,3,09,30
+2020-09-30,2019,Y,U.S. Agency for International Development,12.2,0.1,12.1,0.0,12.1,22,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Federal Communications Commission,11.2,0.4,10.8,0.0,10.8,23,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Railroad Retirement Board,12.1,0.0,12.1,0.0,12.1,24,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Environmental Protection Agency,8.8,0.3,8.5,0.0,8.5,25,2020,4,2020,3,09,30
+2020-09-30,2019,Y,U.S. Postal Service,77.5,70.2,7.3,0.0,7.3,26,2020,4,2020,3,09,30
+2020-09-30,2019,Y,National Science Foundation,7.3,0.0,7.3,0.0,7.3,27,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Smithsonian Institution,1.5,0.4,1.1,0.0,1.1,28,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Millennium Challenge Corporation,0.5,0.0,0.5,0.0,0.5,29,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Export-Import Bank of the U.S.,-0.1,0.5,-0.6,0.0,-0.6,30,2020,4,2020,3,09,30
+2020-09-30,2019,Y,U.S. Nuclear Regulatory Commission,0.8,0.7,0.1,0.0,0.1,31,2020,4,2020,3,09,30
+2020-09-30,2019,Y,National Credit Union Administration,0.4,0.2,0.2,0.0,0.2,32,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Overseas Private Investment Corporation,-0.2,0.1,-0.3,0.0,-0.3,33,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Farm Credit System Insurance Corporation,0.1,0.2,-0.1,0.0,-0.1,34,2020,4,2020,3,09,30
+2020-09-30,2019,Y,General Services Administration,0.1,0.8,-0.7,0.0,-0.7,35,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Securities and Exchange Commission,1.8,2.1,-0.3,0.0,-0.3,36,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Tennessee Valley Authority,9.9,11.3,-1.4,0.0,-1.4,37,2020,4,2020,3,09,30
+2020-09-30,2019,Y,National Railroad Retirement Investment Trust,0.1,0.7,-0.6,0.0,-0.6,38,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Pension Benefit Guaranty Corporation,35.7,27.8,7.9,0.0,7.9,39,2020,4,2020,3,09,30
+2020-09-30,2020,N,Total,7194.1,461.6,6732.5,679.5,7412.0,42,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Federal Deposit Insurance Corporation,0.4,5.0,-4.6,0.0,-4.6,40,2020,4,2020,3,09,30
+2020-09-30,2019,Y,All other entities,22.0,1.8,20.2,0.0,20.2,41,2020,4,2020,3,09,30
+2020-09-30,2019,Y,Total,5287.2,418.4,4868.8,198.9,5067.7,42,2020,4,2020,3,09,30
+2020-09-30,2020,N,Department of Health and Human Services,1537.0,130.0,1407.0,0.1,1407.1,1,2020,4,2020,3,09,30
+2020-09-30,2020,N,Social Security Administration,1157.6,0.3,1157.3,0.0,1157.3,2,2020,4,2020,3,09,30
+2020-09-30,2020,N,Department of Veterans Affairs,386.3,4.0,382.3,602.7,985.0,3,2020,4,2020,3,09,30
+2020-09-30,2020,N,Department of Defense,802.2,39.8,762.4,-17.4,745.0,4,2020,4,2020,3,09,30
+2020-09-30,2020,N,Department of the Treasury,581.3,20.6,560.7,0.0,560.7,5,2020,4,2020,3,09,30
+2020-09-30,2020,N,Small Business Administration,562.1,3.1,559.0,0.0,559.0,6,2020,4,2020,3,09,30
+2020-09-30,2020,N,Department of Labor,493.2,0.0,493.2,0.0,493.2,7,2020,4,2020,3,09,30
+2020-09-30,2020,N,Interest on Treasury Securities Held by the Public,371.1,0.0,371.1,0.0,371.1,8,2020,4,2020,3,09,30
+2020-09-30,2020,N,Department of Agriculture,198.0,10.1,187.9,0.0,187.9,9,2020,4,2020,3,09,30
+2020-09-30,2020,N,Office of Personnel Management,97.3,25.2,72.1,89.9,162.0,10,2020,4,2020,3,09,30
+2020-09-30,2020,N,Department of Education,190.2,33.3,156.9,0.0,156.9,11,2020,4,2020,3,09,30
+2020-09-30,2020,N,Department of Homeland Security,122.3,11.8,110.5,3.1,113.6,12,2020,4,2020,3,09,30
+2020-09-30,2020,N,Security Assistance Accounts,154.8,42.8,112.0,0.0,112.0,13,2020,4,2020,3,09,30
+2020-09-30,2020,N,Department of Transportation,108.8,1.1,107.7,0.0,107.7,14,2020,4,2020,3,09,30
+2020-09-30,2020,N,Department of Energy,60.9,5.4,55.5,0.0,55.5,15,2020,4,2020,3,09,30
+2020-09-30,2020,N,Department of Justice,39.1,1.8,37.3,0.0,37.3,16,2020,4,2020,3,09,30
+2020-09-30,2020,N,Department of Housing and Urban Development,36.3,2.2,34.1,0.0,34.1,17,2020,4,2020,3,09,30
+2020-09-30,2020,N,Department of State,34.6,2.8,31.8,1.1,32.9,18,2020,4,2020,3,09,30
+2020-09-30,2020,N,National Aeronautics and Space Administration,22.3,0.2,22.1,0.0,22.1,19,2020,4,2020,3,09,30
+2020-09-30,2020,N,U.S. Agency for International Development,13.8,0.0,13.8,0.0,13.8,22,2020,4,2020,3,09,30
+2020-09-30,2020,N,Federal Communications Commission,13.9,0.4,13.5,0.0,13.5,23,2020,4,2020,3,09,30
+2020-09-30,2020,N,Railroad Retirement Board,13.1,0.0,13.1,0.0,13.1,24,2020,4,2020,3,09,30
+2020-09-30,2020,N,Environmental Protection Agency,9.1,0.4,8.7,0.0,8.7,25,2020,4,2020,3,09,30
+2020-09-30,2020,N,U.S. Postal Service,79.2,71.7,7.5,0.0,7.5,26,2020,4,2020,3,09,30
+2020-09-30,2020,N,National Science Foundation,7.3,0.0,7.3,0.0,7.3,27,2020,4,2020,3,09,30
+2020-09-30,2020,N,Smithsonian Institution,1.5,0.5,1.0,0.0,1.0,28,2020,4,2020,3,09,30
+2020-09-30,2020,N,Millennium Challenge Corporation,0.6,0.0,0.6,0.0,0.6,29,2020,4,2020,3,09,30
+2020-09-30,2020,N,Export-Import Bank of the U.S.,0.8,0.4,0.4,0.0,0.4,30,2020,4,2020,3,09,30
+2020-09-30,2020,N,U.S. Nuclear Regulatory Commission,0.9,0.7,0.2,0.0,0.2,31,2020,4,2020,3,09,30
+2020-09-30,2020,N,National Credit Union Administration,0.3,0.2,0.1,0.0,0.1,32,2020,4,2020,3,09,30
+2020-09-30,2020,N,U.S. International Development Finance Corporation,0.0,0.1,-0.1,0.0,-0.1,33,2020,4,2020,3,09,30
+2020-09-30,2020,N,Farm Credit System Insurance Corporation,0.1,0.2,-0.1,0.0,-0.1,34,2020,4,2020,3,09,30
+2020-09-30,2020,N,General Services Administration,0.3,0.8,-0.5,0.0,-0.5,35,2020,4,2020,3,09,30
+2020-09-30,2020,N,Securities and Exchange Commission,2.2,3.3,-1.1,0.0,-1.1,36,2020,4,2020,3,09,30
+2020-09-30,2020,N,Tennessee Valley Authority,8.8,10.1,-1.3,0.0,-1.3,37,2020,4,2020,3,09,30
+2020-09-30,2020,N,National Railroad Retirement Investment Trust,0.1,1.8,-1.7,0.0,-1.7,38,2020,4,2020,3,09,30
+2020-09-30,2020,N,Department of the Interior,23.0,2.4,20.6,0.0,20.6,20,2020,4,2020,3,09,30
+2020-09-30,2020,N,Department of Commerce,19.4,3.9,15.5,0.0,15.5,21,2020,4,2020,3,09,30
+2020-09-30,2020,N,Pension Benefit Guaranty Corporation,19.2,22.0,-2.8,0.0,-2.8,39,2020,4,2020,3,09,30
+2020-09-30,2020,N,Federal Deposit Insurance Corporation,1.7,6.5,-4.8,0.0,-4.8,40,2020,4,2020,3,09,30
+2020-09-30,2020,N,All other entities,23.4,1.7,21.7,0.0,21.7,41,2020,4,2020,3,09,30
+2021-09-30,2020,Y,Department of Health and Human Services,1537.0,130.0,1407.0,0.1,1407.1,1,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Social Security Administration,1157.6,0.3,1157.3,0.0,1157.3,2,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Department of Defense,803.0,39.8,763.2,-17.4,745.8,3,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Department of the Treasury,581.3,20.6,560.7,0.0,560.7,4,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Department of Veterans Affairs,386.5,4.0,382.5,602.7,985.2,5,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Department of Labor,493.2,0.0,493.2,0.0,493.2,6,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Interest on Treasury Securities Held by the Public,371.1,0.0,371.1,0.0,371.1,7,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Small Business Administration,562.1,3.1,559.0,0.0,559.0,8,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Department of Agriculture,198.0,10.1,187.9,0.0,187.9,9,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Department of Education,190.2,33.3,156.9,0.0,156.9,10,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Office of Personnel Management,97.3,25.2,72.1,89.9,162.0,11,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Department of Transportation,108.8,1.1,107.7,0.0,107.7,12,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Department of Homeland Security,122.3,11.8,110.5,3.1,113.6,13,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Security Assistance Accounts,154.8,42.8,112.0,0.0,112.0,14,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Department of Justice,39.1,1.8,37.3,0.0,37.3,15,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Department of State,34.6,2.8,31.8,1.1,32.9,16,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Department of Energy,60.9,5.4,55.5,0.0,55.5,17,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Department of Housing and Urban Development,36.3,2.2,34.1,0.0,34.1,18,2021,4,2021,3,09,30
+2021-09-30,2020,Y,National Aeronautics and Space Administration,22.3,0.2,22.1,0.0,22.1,19,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Department of the Interior,23.0,2.4,20.6,0.0,20.6,20,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Railroad Retirement Board,13.1,0.0,13.1,0.0,13.1,21,2021,4,2021,3,09,30
+2021-09-30,2020,Y,U.S. Agency for International Development,13.8,0.0,13.8,0.0,13.8,22,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Department of Commerce,19.4,3.9,15.5,0.0,15.5,23,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Federal Communications Commission,13.9,0.4,13.5,0.0,13.5,24,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Environmental Protection Agency,9.1,0.4,8.7,0.0,8.7,25,2021,4,2021,3,09,30
+2021-09-30,2020,Y,National Science Foundation,7.3,0.0,7.3,0.0,7.3,26,2021,4,2021,3,09,30
+2021-09-30,2020,Y,U.S. Postal Service,79.2,71.7,7.5,0.0,7.5,27,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Smithsonian Institution,1.5,0.5,1.0,0.0,1.0,28,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Millennium Challenge Corporation,0.6,0.0,0.6,0.0,0.6,29,2021,4,2021,3,09,30
+2021-09-30,2020,Y,U.S. Nuclear Regulatory Commission,0.9,0.7,0.2,0.0,0.2,30,2021,4,2021,3,09,30
+2021-09-30,2020,Y,National Credit Union Administration,0.3,0.2,0.1,0.0,0.1,31,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Securities and Exchange Commission,2.2,3.3,-1.1,0.0,-1.1,32,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Export-Import Bank of the U.S.,0.8,0.4,0.4,0.0,0.4,33,2021,4,2021,3,09,30
+2021-09-30,2020,Y,U.S. International Development Finance Corporation,0.0,0.1,-0.1,0.0,-0.1,34,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Farm Credit System Insurance Corporation,0.1,0.2,-0.1,0.0,-0.1,35,2021,4,2021,3,09,30
+2021-09-30,2020,Y,General Services Administration,0.300000000000002,0.8,-0.499999999999998,0.0,-0.499999999999998,36,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Tennessee Valley Authority,8.8,10.1,-1.3,0.0,-1.3,37,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Federal Deposit Insurance Corporation,1.7,6.5,-4.8,0.0,-4.8,38,2021,4,2021,3,09,30
+2021-09-30,2020,Y,National Railroad Retirement Investment Trust,0.1,1.8,-1.7,0.0,-1.7,39,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Pension Benefit Guaranty Corporation,19.2,22.0,-2.8,0.0,-2.8,40,2021,4,2021,3,09,30
+2021-09-30,2020,Y,All other entities,23.4,1.7,21.7,0.0,21.7,41,2021,4,2021,3,09,30
+2021-09-30,2020,Y,Total,7195.1,461.6,6733.5,679.5,7413.0,42,2021,4,2021,3,09,30
+2021-09-30,2021,N,Department of Health and Human Services,1644.9,137.7,1507.2,0.7,1507.9,1,2021,4,2021,3,09,30
+2021-09-30,2021,N,Social Security Administration,1194.1,0.3,1193.8,0.0,1193.8,2,2021,4,2021,3,09,30
+2021-09-30,2021,N,Department of Defense,851.8,44.0,807.8,82.8,890.6,3,2021,4,2021,3,09,30
+2021-09-30,2021,N,Department of the Treasury,854.6,23.8,830.8,0.0,830.8,4,2021,4,2021,3,09,30
+2021-09-30,2021,N,Department of Veterans Affairs,351.0,3.9,347.1,346.3,693.4,5,2021,4,2021,3,09,30
+2021-09-30,2021,N,Department of Labor,396.8,0.0,396.8,0.0,396.8,6,2021,4,2021,3,09,30
+2021-09-30,2021,N,Interest on Treasury Securities Held by the Public,392.0,0.0,392.0,0.0,392.0,7,2021,4,2021,3,09,30
+2021-09-30,2021,N,Small Business Administration,350.5,3.1,347.4,0.0,347.4,8,2021,4,2021,3,09,30
+2021-09-30,2021,N,Department of Agriculture,239.4,8.8,230.6,0.0,230.6,9,2021,4,2021,3,09,30
+2021-09-30,2021,N,Department of Education,243.0,34.4,208.6,0.0,208.6,10,2021,4,2021,3,09,30
+2021-09-30,2021,N,Office of Personnel Management,134.0,26.3,107.7,84.9,192.6,11,2021,4,2021,3,09,30
+2021-09-30,2021,N,Department of Transportation,102.9,1.0,101.9,0.0,101.9,12,2021,4,2021,3,09,30
+2021-09-30,2021,N,Department of Homeland Security,101.0,12.9,88.1,1.6,89.7,13,2021,4,2021,3,09,30
+2021-09-30,2021,N,Security Assistance Accounts,92.9,14.4,78.5,0.0,78.5,14,2021,4,2021,3,09,30
+2021-09-30,2021,N,Department of Justice,41.4,2.6,38.8,0.0,38.8,15,2021,4,2021,3,09,30
+2021-09-30,2021,N,Department of State,40.2,3.5,36.7,1.9,38.6,16,2021,4,2021,3,09,30
+2021-09-30,2021,N,Department of Energy,43.2,6.2,37.0,0.0,37.0,17,2021,4,2021,3,09,30
+2021-09-30,2021,N,Department of Housing and Urban Development,35.3,1.9,33.4,0.0,33.4,18,2021,4,2021,3,09,30
+2021-09-30,2021,N,National Aeronautics and Space Administration,22.1,0.3,21.8,0.0,21.8,19,2021,4,2021,3,09,30
+2021-09-30,2021,N,Department of the Interior,23.8,2.3,21.5,0.0,21.5,20,2021,4,2021,3,09,30
+2021-09-30,2021,N,Railroad Retirement Board,17.3,0.0,17.3,0.0,17.3,21,2021,4,2021,3,09,30
+2021-09-30,2021,N,U.S. Agency for International Development,16.0,0.0,16.0,0.0,16.0,22,2021,4,2021,3,09,30
+2021-09-30,2021,N,Department of Commerce,15.5,3.6,11.9,0.1,12.0,23,2021,4,2021,3,09,30
+2021-09-30,2021,N,Federal Communications Commission,11.7,0.4,11.3,0.0,11.3,24,2021,4,2021,3,09,30
+2021-09-30,2021,N,Environmental Protection Agency,8.9,0.4,8.5,0.0,8.5,25,2021,4,2021,3,09,30
+2021-09-30,2021,N,National Science Foundation,7.4,0.0,7.4,0.0,7.4,26,2021,4,2021,3,09,30
+2021-09-30,2021,N,U.S. Postal Service,77.9,75.7,2.2,0.0,2.2,27,2021,4,2021,3,09,30
+2021-09-30,2021,N,Smithsonian Institution,1.5,0.8,0.7,0.0,0.7,28,2021,4,2021,3,09,30
+2021-09-30,2021,N,Millennium Challenge Corporation,0.7,0.0,0.7,0.0,0.7,29,2021,4,2021,3,09,30
+2021-09-30,2021,N,U.S. Nuclear Regulatory Commission,0.9,0.7,0.2,0.0,0.2,30,2021,4,2021,3,09,30
+2021-09-30,2021,N,National Credit Union Administration,0.2,0.1,0.1,0.0,0.1,31,2021,4,2021,3,09,30
+2021-09-30,2021,N,Securities and Exchange Commission,2.4,2.5,-0.0999999999999996,0.0,-0.0999999999999996,32,2021,4,2021,3,09,30
+2021-09-30,2021,N,Export-Import Bank of the U.S.,0.5,0.7,-0.2,0.0,-0.2,33,2021,4,2021,3,09,30
+2021-09-30,2021,N,U.S. International Development Finance Corporation,0.0,0.2,-0.2,0.0,-0.2,34,2021,4,2021,3,09,30
+2021-09-30,2021,N,Farm Credit System Insurance Corporation,0.0,0.4,-0.4,0.0,-0.4,35,2021,4,2021,3,09,30
+2021-09-30,2021,N,General Services Administration,-0.100000000000001,0.9,-1.0,0.0,-1.0,36,2021,4,2021,3,09,30
+2021-09-30,2021,N,Tennessee Valley Authority,8.8,10.4,-1.6,0.0,-1.6,37,2021,4,2021,3,09,30
+2021-09-30,2021,N,Federal Deposit Insurance Corporation,1.7,7.1,-5.4,0.0,-5.4,38,2021,4,2021,3,09,30
+2021-09-30,2021,N,National Railroad Retirement Investment Trust,0.1,6.6,-6.5,0.0,-6.5,39,2021,4,2021,3,09,30
+2021-09-30,2021,N,Pension Benefit Guaranty Corporation,-56.5,22.6,-79.1,0.0,-79.1,40,2021,4,2021,3,09,30
+2021-09-30,2021,N,All other entities,24.9,1.8,23.1,0.1,23.2,41,2021,4,2021,3,09,30
+2021-09-30,2021,N,Total,7294.7,462.3,6832.4,518.4,7350.8,42,2021,4,2021,3,09,30
+2022-09-30,2022,N,Department of Veterans Affairs,413.8,5.4,408.4,1526.5,1934.9,1,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Health and Human Services,1812.7,154.1,1658.6,1.4,1660.0,2,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Defense,979.6,47.6,932.0,527.0,1459.0,3,2022,4,2022,3,09,30
+2022-09-30,2022,N,Social Security Administration,1294.4,0.3,1294.1,0.0,1294.1,4,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Education,595.1,55.6,539.5,0.0,539.5,5,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of the Treasury,557.7,31.3,526.4,0.0,526.4,6,2022,4,2022,3,09,30
+2022-09-30,2022,N,Interest on Treasury Securities held by the public,496.5,0.0,496.5,0.0,496.5,7,2022,4,2022,3,09,30
+2022-09-30,2022,N,Office of Personnel Management,174.5,27.3,147.2,148.2,295.4,8,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Agriculture,250.5,9.6,240.9,0.0,240.9,9,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Transportation,116.4,1.0,115.4,0.0,115.4,10,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Homeland Security,102.2,14.8,87.4,1.2,88.6,11,2022,4,2022,3,09,30
+2022-09-30,2022,N,Security Assistance Accounts,102.1,19.3,82.8,0.0,82.8,12,2022,4,2022,3,09,30
+2022-09-30,2022,N,Small Business Administration,47.8,4.3,43.5,0.0,43.5,13,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Labor,42.4,0.0,42.4,0.0,42.4,14,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Justice,42.4,1.2,41.2,0.0,41.2,15,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of State,40.0,4.8,35.2,3.4,38.6,16,2022,4,2022,3,09,30
+2022-09-30,2022,N,Agency for International Development,29.5,0.1,29.4,0.0,29.4,17,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Energy,50.3,22.4,27.9,0.0,27.9,18,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Housing and Urban Development,28.2,1.9,26.3,0.0,26.3,19,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of the Interior,28.3,2.6,25.7,0.0,25.7,20,2022,4,2022,3,09,30
+2022-09-30,2022,N,National Aeronautics and Space Administration,22.3,0.3,22.0,0.0,22.0,21,2022,4,2022,3,09,30
+2022-09-30,2022,N,Federal Communications Commission,16.0,0.4,15.6,0.0,15.6,22,2022,4,2022,3,09,30
+2022-09-30,2022,N,Department of Commerce,15.8,4.2,11.6,0.1,11.7,23,2022,4,2022,3,09,30
+2022-09-30,2022,N,Environmental Protection Agency,9.8,0.3,9.5,0.0,9.5,24,2022,4,2022,3,09,30
+2022-09-30,2022,N,National Science Foundation,8.2,0.0,8.2,0.0,8.2,25,2022,4,2022,3,09,30
+2022-09-30,2022,N,Railroad Retirement Board,8.2,0.0,8.2,0.0,8.2,26,2022,4,2022,3,09,30
+2022-09-30,2022,N,National Railroad Retirement Investment Trust,4.7,1.1,3.6,0.0,3.6,27,2022,4,2022,3,09,30
+2022-09-30,2022,N,United States Postal Service,78.7,76.2,2.5,0.0,2.5,28,2022,4,2022,3,09,30
+2022-09-30,2022,N,Smithsonian Institution,1.7,0.1,1.6,0.0,1.6,29,2022,4,2022,3,09,30
+2022-09-30,2022,N,Millennium Challenge Corporation,0.7,0.0,0.7,0.0,0.7,30,2022,4,2022,3,09,30
+2022-09-30,2022,N,Securities and Exchange Commission,2.6,2.4,0.2,0.0,0.2,31,2022,4,2022,3,09,30
+2022-09-30,2022,N,National Credit Union Administration,0.3,0.1,0.2,0.0,0.2,32,2022,4,2022,3,09,30
+2022-09-30,2022,N,U.S. Nuclear Regulatory Commission,0.8,0.7,0.1,0.0,0.1,33,2022,4,2022,3,09,30
+2022-09-30,2022,N,United States International Development Finance Corporation,0.3,0.2,0.1,0.0,0.1,34,2022,4,2022,3,09,30
+2022-09-30,2022,N,Export-Import Bank of the United States,0.0,0.5,-0.5,0.0,-0.5,35,2022,4,2022,3,09,30
+2022-09-30,2022,N,General Services Administration,0.300000000000001,0.9,-0.599999999999999,0.0,-0.599999999999999,36,2022,4,2022,3,09,30
+2022-09-30,2022,N,Farm Credit System Insurance Corporation,0.0,0.6,-0.6,0.0,-0.6,37,2022,4,2022,3,09,30
+2022-09-30,2022,N,Tennessee Valley Authority,11.3,12.4,-1.1,0.0,-1.1,38,2022,4,2022,3,09,30
+2022-09-30,2022,N,Federal Deposit Insurance Corporation,1.9,8.2,-6.3,0.0,-6.3,39,2022,4,2022,3,09,30
+2022-09-30,2022,N,Pension Benefit Guaranty Corporation,9.9,16.9,-7.0,0.0,-7.0,40,2022,4,2022,3,09,30
+2022-09-30,2022,N,All other entities,22.1,2.0,20.1,0.1,20.2,41,2022,4,2022,3,09,30
+2022-09-30,2022,N,Total,7420.0,531.1,6888.9,2207.9,9096.8,42,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Department of Veterans Affairs,351.0,3.9,347.1,346.3,693.4,1,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Department of Health and Human Services,1644.9,137.7,1507.2,0.7,1507.9,2,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Department of Defense,851.8,44.0,807.8,82.8,890.6,3,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Social Security Administration,1194.1,0.3,1193.8,0.0,1193.8,4,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Department of Education,243.0,34.4,208.6,0.0,208.6,5,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Department of the Treasury,966.5,135.7,830.8,0.0,830.8,6,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Interest on Treasury Securities held by the public,392.0,0.0,392.0,0.0,392.0,7,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Office of Personnel Management,134.0,26.3,107.7,84.9,192.6,8,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Department of Agriculture,239.4,8.8,230.6,0.0,230.6,9,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Department of Transportation,102.9,1.0,101.9,0.0,101.9,10,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Department of Homeland Security,101.0,12.9,88.1,1.6,89.7,11,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Security Assistance Accounts,92.9,14.4,78.5,0.0,78.5,12,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Small Business Administration,350.5,3.1,347.4,0.0,347.4,13,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Department of Labor,396.8,0.0,396.8,0.0,396.8,14,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Department of Justice,41.4,2.6,38.8,0.0,38.8,15,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Department of State,40.2,3.5,36.7,1.9,38.6,16,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Agency for International Development,16.0,0.0,16.0,0.0,16.0,17,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Department of Energy,43.2,6.2,37.0,0.0,37.0,18,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Department of Housing and Urban Development,35.3,1.9,33.4,0.0,33.4,19,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Department of the Interior,23.8,2.3,21.5,0.0,21.5,20,2022,4,2022,3,09,30
+2022-09-30,2021,Y,National Aeronautics and Space Administration,22.1,0.3,21.8,0.0,21.8,21,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Federal Communications Commission,11.7,0.4,11.3,0.0,11.3,22,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Department of Commerce,15.5,3.6,11.9,0.1,12.0,23,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Environmental Protection Agency,8.9,0.4,8.5,0.0,8.5,24,2022,4,2022,3,09,30
+2022-09-30,2021,Y,National Science Foundation,7.4,0.0,7.4,0.0,7.4,25,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Railroad Retirement Board,17.3,0.0,17.3,0.0,17.3,26,2022,4,2022,3,09,30
+2022-09-30,2021,Y,National Railroad Retirement Investment Trust,0.1,6.6,-6.5,0.0,-6.5,27,2022,4,2022,3,09,30
+2022-09-30,2021,Y,United States Postal Service,77.9,75.7,2.2,0.0,2.2,28,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Smithsonian Institution,1.5,0.8,0.7,0.0,0.7,29,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Millennium Challenge Corporation,0.7,0.0,0.7,0.0,0.7,30,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Securities and Exchange Commission,2.4,2.5,-0.0999999999999996,0.0,-0.0999999999999996,31,2022,4,2022,3,09,30
+2022-09-30,2021,Y,National Credit Union Administration,0.2,0.1,0.1,0.0,0.1,32,2022,4,2022,3,09,30
+2022-09-30,2021,Y,U.S. Nuclear Regulatory Commission,0.9,0.7,0.2,0.0,0.2,33,2022,4,2022,3,09,30
+2022-09-30,2021,Y,United States International Development Finance Corporation,0.0,0.2,-0.2,0.0,-0.2,34,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Export-Import Bank of the United States,0.5,0.7,-0.2,0.0,-0.2,35,2022,4,2022,3,09,30
+2022-09-30,2021,Y,General Services Administration,-0.100000000000001,0.9,-1.0,0.0,-1.0,36,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Farm Credit System Insurance Corporation,0.0,0.4,-0.4,0.0,-0.4,37,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Tennessee Valley Authority,8.8,10.4,-1.6,0.0,-1.6,38,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Federal Deposit Insurance Corporation,1.7,7.1,-5.4,0.0,-5.4,39,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Pension Benefit Guaranty Corporation,-56.5,22.6,-79.1,0.0,-79.1,40,2022,4,2022,3,09,30
+2022-09-30,2021,Y,All other entities,24.9,1.8,23.1,0.1,23.2,41,2022,4,2022,3,09,30
+2022-09-30,2021,Y,Total,7406.6,574.2,6832.4,518.4,7350.8,42,2022,4,2022,3,09,30
+2023-09-30,2022,Y,Department of Health and Human Services,1812.7,154.1,1658.6,1.4,1660.0,1,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Veterans Affairs,413.8,5.4,408.4,1526.5,1934.9,2,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Social Security Administration,1294.3,0.3,1294.0,0.0,1294.0,3,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Defense,979.7,47.8,931.9,527.0,1458.9,4,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Interest on Treasury Securities held by the public,496.5,0.0,496.5,0.0,496.5,5,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of the Treasury,557.7,31.3,526.4,0.0,526.4,6,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Agriculture,250.4,9.7,240.7,0.0,240.7,7,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Office of Personnel Management,174.1,27.3,146.8,148.2,295.0,8,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Transportation,116.3,1.0,115.3,0.0,115.3,9,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Security Assistance Accounts,102.1,19.3,82.8,0.0,82.8,10,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Homeland Security,102.3,14.7,87.6,1.2,88.8,11,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Energy,50.3,22.1,28.2,0.0,28.2,12,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Housing and Urban Development,28.2,1.9,26.3,0.0,26.3,13,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Justice,42.4,1.2,41.2,0.0,41.2,14,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Labor,42.3,0.0,42.3,0.0,42.3,15,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Pension Benefit Guaranty Corporation,9.9,16.9,-7.0,0.0,-7.0,16,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Agency for International Development,29.5,0.1,29.4,0.0,29.4,17,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of State,40.0,4.8,35.2,3.4,38.6,18,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Small Business Administration,47.8,4.3,43.5,0.0,43.5,19,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of the Interior,28.2,2.7,25.5,0.0,25.5,20,2023,4,2023,3,09,30
+2023-09-30,2022,Y,National Aeronautics and Space Administration,22.3,0.3,22.0,0.0,22.0,21,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Education,595.1,55.6,539.5,0.0,539.5,22,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Federal Communications Commission,16.0,0.4,15.6,0.0,15.6,23,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Railroad Retirement Board,8.2,0.0,8.2,0.0,8.2,24,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Department of Commerce,15.8,4.2,11.6,0.1,11.7,25,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Environmental Protection Agency,9.9,0.3,9.6,0.0,9.6,26,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Federal Deposit Insurance Corporation,1.9,8.2,-6.3,0.0,-6.3,27,2023,4,2023,3,09,30
+2023-09-30,2022,Y,National Science Foundation,8.2,0.0,8.2,0.0,8.2,28,2023,4,2023,3,09,30
+2023-09-30,2022,Y,United States Postal Service,78.7,76.2,2.49999999999999,0.0,2.49999999999999,29,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Smithsonian Institution,1.7,0.1,1.6,0.0,1.6,30,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Millennium Challenge Corporation,0.7,0.0,0.7,0.0,0.7,31,2023,4,2023,3,09,30
+2023-09-30,2022,Y,National Credit Union Administration,0.3,0.1,0.2,0.0,0.2,32,2023,4,2023,3,09,30
+2023-09-30,2022,Y,U.S. Nuclear Regulatory Commission,0.8,0.7,0.1,0.0,0.1,33,2023,4,2023,3,09,30
+2023-09-30,2022,Y,General Services Administration,0.300000000000001,0.9,-0.600000000000001,0.0,-0.600000000000001,34,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Securities and Exchange Commission,2.6,2.4,0.2,0.0,0.2,35,2023,4,2023,3,09,30
+2023-09-30,2022,Y,United States International Development Finance Corporation,0.3,0.2,0.1,0.0,0.1,36,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Farm Credit System Insurance Corporation,0.0,0.6,-0.6,0.0,-0.6,37,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Tennessee Valley Authority,11.3,12.4,-1.1,0.0,-1.1,38,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Export-Import Bank of the United States,0.0,0.5,-0.5,0.0,-0.5,39,2023,4,2023,3,09,30
+2023-09-30,2022,Y,National Railroad Retirement Investment Trust,4.7,1.1,3.6,0.0,3.6,40,2023,4,2023,3,09,30
+2023-09-30,2022,Y,All other entities,23.4,2.0,21.4,0.1,21.5,41,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Subtotal,7420.70000000001,531.1,6889.60000000001,2207.9,9097.50000000001,42,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Unmatched transactions and balances (Note 1.T),-0.6,0.0,-0.6,0.0,-0.6,43,2023,4,2023,3,09,30
+2023-09-30,2022,Y,Total,7420.10000000001,531.1,6889.00000000001,2207.9,9096.90000000001,44,2023,4,2023,3,09,30
+2023-09-30,2023,N,Department of Health and Human Services,1875.6,161.2,1714.4,-0.3,1714.1,1,2023,4,2023,3,09,30
+2023-09-30,2023,N,Department of Veterans Affairs,902.0,5.5,896.5,558.8,1455.3,2,2023,4,2023,3,09,30
+2023-09-30,2023,N,Social Security Administration,1433.1,0.3,1432.8,0.0,1432.8,3,2023,4,2023,3,09,30
+2023-09-30,2023,N,Department of Defense,969.0,55.0,914.0,89.3,1003.3,4,2023,4,2023,3,09,30
+2023-09-30,2023,N,Interest on Treasury Securities held by the public,678.0,0.0,678.0,0.0,678.0,5,2023,4,2023,3,09,30
+2023-09-30,2023,N,Department of the Treasury,357.4,53.7,303.7,0.0,303.7,6,2023,4,2023,3,09,30
+2023-09-30,2023,N,Department of Agriculture,238.1,11.8,226.3,0.0,226.3,7,2023,4,2023,3,09,30
+2023-09-30,2023,N,Office of Personnel Management,124.0,29.4,94.6,111.9,206.5,8,2023,4,2023,3,09,30
+2023-09-30,2023,N,Department of Transportation,108.2,1.5,106.7,0.0,106.7,9,2023,4,2023,3,09,30
+2023-09-30,2023,N,Security Assistance Accounts,109.3,6.1,103.2,0.0,103.2,10,2023,4,2023,3,09,30
+2023-09-30,2023,N,Department of Homeland Security,111.2,15.6,95.6,1.0,96.6,11,2023,4,2023,3,09,30
+2023-09-30,2023,N,Department of Energy,86.2,11.3,74.9,0.0,74.9,12,2023,4,2023,3,09,30
+2023-09-30,2023,N,Department of Housing and Urban Development,71.4,4.1,67.3,0.0,67.3,13,2023,4,2023,3,09,30
+2023-09-30,2023,N,Department of Justice,51.6,3.7,47.9,0.0,47.9,14,2023,4,2023,3,09,30
+2023-09-30,2023,N,Department of Labor,45.3,0.0,45.3,0.0,45.3,15,2023,4,2023,3,09,30
+2023-09-30,2023,N,Pension Benefit Guaranty Corporation,55.0,17.0,38.0,0.0,38.0,16,2023,4,2023,3,09,30
+2023-09-30,2023,N,Agency for International Development,36.8,0.0,36.8,0.0,36.8,17,2023,4,2023,3,09,30
+2023-09-30,2023,N,Department of State,41.6,6.0,35.6,-0.2,35.4,18,2023,4,2023,3,09,30
+2023-09-30,2023,N,Small Business Administration,35.5,5.2,30.3,0.0,30.3,19,2023,4,2023,3,09,30
+2023-09-30,2023,N,Department of the Interior,29.5,3.0,26.5,0.0,26.5,20,2023,4,2023,3,09,30
+2023-09-30,2023,N,National Aeronautics and Space Administration,24.8,0.4,24.4,0.0,24.4,21,2023,4,2023,3,09,30
+2023-09-30,2023,N,Department of Education,50.9,32.4,18.5,0.0,18.5,22,2023,4,2023,3,09,30
+2023-09-30,2023,N,Federal Communications Commission,18.6,0.4,18.2,0.0,18.2,23,2023,4,2023,3,09,30
+2023-09-30,2023,N,Railroad Retirement Board,15.6,0.0,15.6,0.0,15.6,24,2023,4,2023,3,09,30
+2023-09-30,2023,N,Department of Commerce,17.3,4.3,13.0,0.0,13.0,25,2023,4,2023,3,09,30
+2023-09-30,2023,N,Environmental Protection Agency,12.3,0.4,11.9,0.0,11.9,26,2023,4,2023,3,09,30
+2023-09-30,2023,N,Federal Deposit Insurance Corporation,21.8,11.9,9.9,0.0,9.9,27,2023,4,2023,3,09,30
+2023-09-30,2023,N,National Science Foundation,9.0,0.0,9.0,0.0,9.0,28,2023,4,2023,3,09,30
+2023-09-30,2023,N,United States Postal Service,83.8,77.0,6.8,0.0,6.8,29,2023,4,2023,3,09,30
+2023-09-30,2023,N,Smithsonian Institution,2.0,0.5,1.5,0.0,1.5,30,2023,4,2023,3,09,30
+2023-09-30,2023,N,Millennium Challenge Corporation,0.7,0.0,0.7,0.0,0.7,31,2023,4,2023,3,09,30
+2023-09-30,2023,N,National Credit Union Administration,0.4,0.1,0.3,0.0,0.3,32,2023,4,2023,3,09,30
+2023-09-30,2023,N,U.S. Nuclear Regulatory Commission,0.8,0.7,0.1,0.0,0.1,33,2023,4,2023,3,09,30
+2023-09-30,2023,N,General Services Administration,0.899999999999997,1.1,-0.199999999999997,0.0,-0.199999999999997,34,2023,4,2023,3,09,30
+2023-09-30,2023,N,Securities and Exchange Commission,2.4,2.6,-0.2,0.0,-0.2,35,2023,4,2023,3,09,30
+2023-09-30,2023,N,United States International Development Finance Corporation,0.0,0.3,-0.3,0.0,-0.3,36,2023,4,2023,3,09,30
+2023-09-30,2023,N,Farm Credit System Insurance Corporation,0.0,0.6,-0.6,0.0,-0.6,37,2023,4,2023,3,09,30
+2023-09-30,2023,N,Tennessee Valley Authority,11.4,12.0,-0.600000000000001,0.0,-0.600000000000001,38,2023,4,2023,3,09,30
+2023-09-30,2023,N,Export-Import Bank of the United States,-0.9,-0.2,-0.7,0.0,-0.7,39,2023,4,2023,3,09,30
+2023-09-30,2023,N,National Railroad Retirement Investment Trust,0.1,2.8,-2.7,0.0,-2.7,40,2023,4,2023,3,09,30
+2023-09-30,2023,N,All other entities,31.0,1.8,29.2,0.1,29.3,41,2023,4,2023,3,09,30
+2023-09-30,2023,N,Total,7661.70000000001,539.5,7122.20000000001,760.6,7882.80000000001,42,2023,4,2023,3,09,30
+2024-09-30,2023,Y,Department of the Treasury,357.4,53.7,303.7,0.0,303.7,6,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Department of Agriculture,238.1,11.8,226.3,0.0,226.3,7,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Office of Personnel Management,124.0,29.4,94.6,111.9,206.5,8,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Department of Education,50.9,32.4,18.5,0.0,18.5,9,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Department of Transportation,108.2,1.5,106.7,0.0,106.7,10,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Department of Homeland Security,111.2,15.6,95.6,1.0,96.6,11,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Department of Energy,86.2,11.3,74.9,0.0,74.9,12,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Security Assistance Accounts,109.3,6.1,103.2,0.0,103.2,13,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Department of Justice,51.6,3.7,47.9,0.0,47.9,14,2024,4,2024,3,09,30
+2024-09-30,2024,N,Department of Health and Human Services,1907.3,170.1,1737.2,1.0,1738.2,1,2024,4,2024,3,09,30
+2024-09-30,2024,N,Social Security Administration,1530.5,0.3,1530.2,0.0,1530.2,2,2024,4,2024,3,09,30
+2024-09-30,2024,N,Department of Defense,1062.9,67.3,995.6,236.7,1232.3,3,2024,4,2024,3,09,30
+2024-09-30,2024,N,Interest on Treasury Securities held by the public,909.1,0.0,909.1,0.0,909.1,4,2024,4,2024,3,09,30
+2024-09-30,2024,N,Department of Veterans Affairs,515.6,5.9,509.7,-37.7,472.0,5,2024,4,2024,3,09,30
+2024-09-30,2024,N,Department of the Treasury,321.5,99.2,222.3,0.0,222.3,6,2024,4,2024,3,09,30
+2024-09-30,2024,N,Department of Agriculture,213.7,10.6,203.1,0.0,203.1,7,2024,4,2024,3,09,30
+2024-09-30,2024,N,Office of Personnel Management,147.7,31.9,115.8,83.8,199.6,8,2024,4,2024,3,09,30
+2024-09-30,2024,N,Department of Education,218.8,27.1,191.7,0.0,191.7,9,2024,4,2024,3,09,30
+2024-09-30,2024,N,Department of Transportation,116.8,1.5,115.3,0.0,115.3,10,2024,4,2024,3,09,30
+2024-09-30,2024,N,Department of Homeland Security,118.4,17.0,101.4,0.0,101.4,11,2024,4,2024,3,09,30
+2024-09-30,2024,N,Department of Energy,81.3,5.8,75.5,0.0,75.5,12,2024,4,2024,3,09,30
+2024-09-30,2024,N,Security Assistance Accounts,99.5,25.1,74.4,0.0,74.4,13,2024,4,2024,3,09,30
+2024-09-30,2024,N,Department of Justice,49.4,1.9,47.5,0.0,47.5,14,2024,4,2024,3,09,30
+2024-09-30,2024,N,Department of Housing and Urban Development,51.2,4.4,46.8,0.0,46.8,15,2024,4,2024,3,09,30
+2024-09-30,2024,N,Department of Labor,40.6,0.0,40.6,0.0,40.6,16,2024,4,2024,3,09,30
+2024-09-30,2024,N,Department of State,44.2,6.1,38.1,-0.3,37.8,17,2024,4,2024,3,09,30
+2024-09-30,2024,N,Department of the Interior,32.1,3.4,28.7,0.0,28.7,18,2024,4,2024,3,09,30
+2024-09-30,2024,N,National Aeronautics and Space Administration,25.0,0.5,24.5,0.0,24.5,19,2024,4,2024,3,09,30
+2024-09-30,2024,N,Agency for International Development,23.5,0.1,23.4,0.0,23.4,20,2024,4,2024,3,09,30
+2024-09-30,2024,N,Federal Communications Commission,17.6,0.4,17.2,0.0,17.2,21,2024,4,2024,3,09,30
+2024-09-30,2024,N,Department of Commerce,20.2,4.7,15.5,0.0,15.5,22,2024,4,2024,3,09,30
+2024-09-30,2024,N,Railroad Retirement Board,14.6,0.0,14.6,0.0,14.6,23,2024,4,2024,3,09,30
+2024-09-30,2024,N,Environmental Protection Agency,14.3,0.6,13.7,0.0,13.7,24,2024,4,2024,3,09,30
+2024-09-30,2024,N,United States Postal Service,89.4,77.8,11.6,0.0,11.6,25,2024,4,2024,3,09,30
+2024-09-30,2024,N,Pension Benefit Guaranty Corporation,35.3,24.8,10.5,0.0,10.5,26,2024,4,2024,3,09,30
+2024-09-30,2024,N,National Science Foundation,9.4,0.0,9.4,0.0,9.4,27,2024,4,2024,3,09,30
+2024-09-30,2024,N,Smithsonian Institution,1.6,0.4,1.2,0.0,1.2,28,2024,4,2024,3,09,30
+2024-09-30,2024,N,Millennium Challenge Corporation,0.7,0.0,0.7,0.0,0.7,29,2024,4,2024,3,09,30
+2024-09-30,2024,N,National Credit Union Administration,0.4,0.1,0.3,0.0,0.3,30,2024,4,2024,3,09,30
+2024-09-30,2024,N,U.S. Nuclear Regulatory Commission,0.9,0.7,0.2,0.0,0.2,31,2024,4,2024,3,09,30
+2024-09-30,2024,N,Securities and Exchange Commission,3.1,3.4,-0.3,0.0,-0.3,32,2024,4,2024,3,09,30
+2024-09-30,2024,N,Farm Credit System Insurance Corporation,0.1,0.4,-0.3,0.0,-0.3,33,2024,4,2024,3,09,30
+2024-09-30,2024,N,Export-Import Bank of the United States,-0.1,0.2,-0.3,0.0,-0.3,34,2024,4,2024,3,09,30
+2024-09-30,2024,N,United States International Development Finance Corporation,0.1,0.4,-0.3,0.0,-0.3,35,2024,4,2024,3,09,30
+2024-09-30,2024,N,General Services Administration,1.59999999999999,2.1,-0.500000000000003,0.0,-0.500000000000003,36,2024,4,2024,3,09,30
+2024-09-30,2024,N,Tennessee Valley Authority,11.1,12.3,-1.2,0.0,-1.2,37,2024,4,2024,3,09,30
+2024-09-30,2024,N,National Railroad Retirement Investment Trust,0.1,4.6,-4.5,0.0,-4.5,38,2024,4,2024,3,09,30
+2024-09-30,2024,N,Small Business Administration,-0.2,4.5,-4.7,0.0,-4.7,39,2024,4,2024,3,09,30
+2024-09-30,2024,N,Federal Deposit Insurance Corporation,21.9,35.5,-13.6,0.0,-13.6,40,2024,4,2024,3,09,30
+2024-09-30,2024,N,All other entities,21.0,1.8,19.2,0.1,19.3,41,2024,4,2024,3,09,30
+2024-09-30,2024,N,Total,7772.20000000001,652.9,7119.30000000001,283.6,7402.90000000001,42,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Department of Health and Human Services,1875.6,161.2,1714.4,-0.3,1714.1,1,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Social Security Administration,1433.1,0.3,1432.8,0.0,1432.8,2,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Department of Defense,969.0,55.0,914.0,89.3,1003.3,3,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Interest on Treasury Securities held by the public,678.0,0.0,678.0,0.0,678.0,4,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Department of Veterans Affairs,902.0,5.5,896.5,558.8,1455.3,5,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Department of Housing and Urban Development,71.4,4.1,67.3,0.0,67.3,15,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Department of Labor,45.3,0.0,45.3,0.0,45.3,16,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Department of State,41.6,6.0,35.6,-0.2,35.4,17,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Department of the Interior,29.5,3.0,26.5,0.0,26.5,18,2024,4,2024,3,09,30
+2024-09-30,2023,Y,National Aeronautics and Space Administration,24.8,0.4,24.4,0.0,24.4,19,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Agency for International Development,36.8,0.0,36.8,0.0,36.8,20,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Federal Communications Commission,18.6,0.4,18.2,0.0,18.2,21,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Department of Commerce,17.3,4.3,13.0,0.0,13.0,22,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Railroad Retirement Board,15.6,0.0,15.6,0.0,15.6,23,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Environmental Protection Agency,12.3,0.4,11.9,0.0,11.9,24,2024,4,2024,3,09,30
+2024-09-30,2023,Y,United States Postal Service,83.8,77.0,6.8,0.0,6.8,25,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Pension Benefit Guaranty Corporation,55.0,17.0,38.0,0.0,38.0,26,2024,4,2024,3,09,30
+2024-09-30,2023,Y,National Science Foundation,9.0,0.0,9.0,0.0,9.0,27,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Smithsonian Institution,2.0,0.5,1.5,0.0,1.5,28,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Millennium Challenge Corporation,0.7,0.0,0.7,0.0,0.7,29,2024,4,2024,3,09,30
+2024-09-30,2023,Y,National Credit Union Administration,0.4,0.1,0.3,0.0,0.3,30,2024,4,2024,3,09,30
+2024-09-30,2023,Y,U.S. Nuclear Regulatory Commission,0.8,0.7,0.1,0.0,0.1,31,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Securities and Exchange Commission,2.4,2.6,-0.2,0.0,-0.2,32,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Farm Credit System Insurance Corporation,0.0,0.6,-0.6,0.0,-0.6,33,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Export-Import Bank of the United States,-0.9,-0.2,-0.7,0.0,-0.7,34,2024,4,2024,3,09,30
+2024-09-30,2023,Y,United States International Development Finance Corporation,0.0,0.3,-0.3,0.0,-0.3,35,2024,4,2024,3,09,30
+2024-09-30,2023,Y,General Services Administration,0.899999999999997,1.1,-0.199999999999997,0.0,-0.199999999999997,36,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Tennessee Valley Authority,11.4,12.0,-0.600000000000001,0.0,-0.600000000000001,37,2024,4,2024,3,09,30
+2024-09-30,2023,Y,National Railroad Retirement Investment Trust,0.1,2.8,-2.7,0.0,-2.7,38,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Small Business Administration,35.5,5.2,30.3,0.0,30.3,39,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Federal Deposit Insurance Corporation,21.8,11.9,9.9,0.0,9.9,40,2024,4,2024,3,09,30
+2024-09-30,2023,Y,All other entities,31.0,1.8,29.2,0.1,29.3,41,2024,4,2024,3,09,30
+2024-09-30,2023,Y,Total,7661.7,539.5,7122.2,760.6,7882.8,42,2024,4,2024,3,09,30
+2025-09-30,2025,N,Department of Transportation,130.2,1.6,128.6,0.0,128.6,8,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Homeland Security,141.7,18.1,123.6,0.5,124.1,9,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Housing and Urban Development,75.2,3.8,71.4,0.0,71.4,10,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Energy,72.6,5.8,66.8,0.0,66.8,11,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Labor,62.5,0.0,62.5,0.0,62.5,12,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Justice,50.2,1.7,48.5,0.0,48.5,13,2025,4,2025,3,09,30
+2025-09-30,2025,N,Environmental Protection Agency,37.6,0.6,37.0,0.0,37.0,14,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of State,38.1,6.4,31.7,0.2,31.9,15,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of the Interior,34.0,3.5,30.5,0.0,30.5,16,2025,4,2025,3,09,30
+2025-09-30,2025,N,National Aeronautics and Space Administration,23.9,0.4,23.5,0.0,23.5,17,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Commerce,27.1,8.6,18.5,0.0,18.5,18,2025,4,2025,3,09,30
+2025-09-30,2025,N,Agency for International Development,16.8,0.9,15.9,0.0,15.9,19,2025,4,2025,3,09,30
+2025-09-30,2025,N,Railroad Retirement Board,14.9,0.0,14.9,0.0,14.9,20,2025,4,2025,3,09,30
+2025-09-30,2025,N,United States Postal Service,90.6,79.1,11.5,0.0,11.5,21,2025,4,2025,3,09,30
+2025-09-30,2025,N,Federal Communications Commission,11.1,0.4,10.7,0.0,10.7,22,2025,4,2025,3,09,30
+2025-09-30,2025,N,National Science Foundation,9.9,0.0,9.9,0.0,9.9,23,2025,4,2025,3,09,30
+2025-09-30,2025,N,Small Business Administration,12.4,4.4,8.0,0.0,8.0,24,2025,4,2025,3,09,30
+2025-09-30,2025,N,National Credit Union Administration,0.4,0.1,0.3,0.0,0.3,25,2025,4,2025,3,09,30
+2025-09-30,2025,N,General Services Administration,1.39999999999999,1.1,0.3,0.0,0.3,26,2025,4,2025,3,09,30
+2025-09-30,2025,N,Pension Benefit Guaranty Corporation,17.1,16.9,0.200000000000003,0.0,0.200000000000003,27,2025,4,2025,3,09,30
+2025-09-30,2025,N,U.S. Nuclear Regulatory Commission,1.0,0.8,0.2,0.0,0.2,28,2025,4,2025,3,09,30
+2025-09-30,2025,N,United States International Development Finance Corporation,0.4,0.5,-0.1,0.0,-0.1,29,2025,4,2025,3,09,30
+2025-09-30,2025,N,Export-Import Bank of the United States,0.1,0.2,-0.1,0.0,-0.1,30,2025,4,2025,3,09,30
+2025-09-30,2025,N,Farm Credit System Insurance Corporation,0.1,0.4,-0.3,0.0,-0.3,31,2025,4,2025,3,09,30
+2025-09-30,2025,N,Tennessee Valley Authority,12.3,13.7,-1.4,0.0,-1.4,32,2025,4,2025,3,09,30
+2025-09-30,2025,N,Securities and Exchange Commission,2.3,4.4,-2.1,0.0,-2.1,33,2025,4,2025,3,09,30
+2025-09-30,2025,N,National Railroad Retirement Investment Trust,0.1,2.7,-2.6,0.0,-2.6,34,2025,4,2025,3,09,30
+2025-09-30,2025,N,Federal Deposit Insurance Corporation,-1.1,15.3,-16.4,0.0,-16.4,35,2025,4,2025,3,09,30
+2025-09-30,2025,N,Security Assistance Accounts,-4.0,34.7,-38.7,0.0,-38.7,36,2025,4,2025,3,09,30
+2025-09-30,2025,N,Office of Personnel Management,139.8,34.9,104.9,-180.4,-75.5000000000001,37,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Education,-29.2,48.4,-77.6,0.0,-77.6,38,2025,4,2025,3,09,30
+2025-09-30,2025,N,All other entities,30.7,2.4,28.3,0.1,28.4,39,2025,4,2025,3,09,30
+2025-09-30,2025,N,Total,8071.4,752.2,7319.2,18.6,7337.8,40,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Department of Health and Human Services,1907.3,170.1,1737.2,1.0,1738.2,1,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Social Security Administration,1530.5,0.3,1530.2,0.0,1530.2,2,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Health and Human Services,2070.1,184.3,1885.8,0.5,1886.3,1,2025,4,2025,3,09,30
+2025-09-30,2025,N,Social Security Administration,1655.7,0.3,1655.4,0.0,1655.4,2,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Defense,1115.4,120.0,995.4,241.9,1237.3,3,2025,4,2025,3,09,30
+2025-09-30,2025,N,Interest on Treasury Securities held by the public,987.1,0.0,987.1,0.0,987.1,4,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Veterans Affairs,572.7,6.3,566.4,-44.2,522.2,5,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of the Treasury,413.7,116.9,296.8,0.0,296.8,6,2025,4,2025,3,09,30
+2025-09-30,2025,N,Department of Agriculture,236.5,12.6,223.9,0.0,223.9,7,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Department of Defense,1049.0,67.3,981.7,236.7,1218.4,3,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Interest on Treasury Securities held by the public,909.1,0.0,909.1,0.0,909.1,4,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Department of Veterans Affairs,515.6,5.9,509.7,-37.7,472.0,5,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Department of the Treasury,321.5,99.2,222.3,0.0,222.3,6,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Department of Agriculture,213.7,10.6,203.1,0.0,203.1,7,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Department of Transportation,116.8,1.5,115.3,0.0,115.3,8,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Department of Homeland Security,118.4,17.0,101.4,0.0,101.4,9,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Department of Housing and Urban Development,51.2,4.4,46.8,0.0,46.8,10,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Department of Energy,81.3,5.8,75.5,0.0,75.5,11,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Department of Labor,40.6,0.0,40.6,0.0,40.6,12,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Department of Justice,49.4,1.9,47.5,0.0,47.5,13,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Environmental Protection Agency,14.3,0.6,13.7,0.0,13.7,14,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Department of State,44.2,6.1,38.1,-0.3,37.8,15,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Department of the Interior,32.1,3.4,28.7,0.0,28.7,16,2025,4,2025,3,09,30
+2025-09-30,2024,Y,National Aeronautics and Space Administration,25.0,0.5,24.5,0.0,24.5,17,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Department of Commerce,20.2,4.7,15.5,0.0,15.5,18,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Agency for International Development,23.5,0.1,23.4,0.0,23.4,19,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Railroad Retirement Board,14.6,0.0,14.6,0.0,14.6,20,2025,4,2025,3,09,30
+2025-09-30,2024,Y,United States Postal Service,89.4,77.8,11.6,0.0,11.6,21,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Federal Communications Commission,17.6,0.4,17.2,0.0,17.2,22,2025,4,2025,3,09,30
+2025-09-30,2024,Y,National Science Foundation,9.4,0.0,9.4,0.0,9.4,23,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Small Business Administration,-0.2,4.5,-4.7,0.0,-4.7,24,2025,4,2025,3,09,30
+2025-09-30,2024,Y,National Credit Union Administration,0.4,0.1,0.3,0.0,0.3,25,2025,4,2025,3,09,30
+2025-09-30,2024,Y,General Services Administration,1.59999999999999,2.1,-0.500000000000003,0.0,-0.500000000000003,26,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Pension Benefit Guaranty Corporation,35.3,24.8,10.5,0.0,10.5,27,2025,4,2025,3,09,30
+2025-09-30,2024,Y,U.S. Nuclear Regulatory Commission,0.9,0.7,0.2,0.0,0.2,28,2025,4,2025,3,09,30
+2025-09-30,2024,Y,United States International Development Finance Corporation,0.1,0.4,-0.3,0.0,-0.3,29,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Export-Import Bank of the United States,-0.1,0.2,-0.3,0.0,-0.3,30,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Farm Credit System Insurance Corporation,0.1,0.4,-0.3,0.0,-0.3,31,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Tennessee Valley Authority,11.1,12.3,-1.2,0.0,-1.2,32,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Securities and Exchange Commission,3.1,3.4,-0.3,0.0,-0.3,33,2025,4,2025,3,09,30
+2025-09-30,2024,Y,National Railroad Retirement Investment Trust,0.1,4.6,-4.5,0.0,-4.5,34,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Federal Deposit Insurance Corporation,21.9,35.5,-13.6,0.0,-13.6,35,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Security Assistance Accounts,89.4,42.9,46.5,0.0,46.5,36,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Office of Personnel Management,147.7,31.9,115.8,83.8,199.6,37,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Department of Education,218.8,27.1,191.7,0.0,191.7,38,2025,4,2025,3,09,30
+2025-09-30,2024,Y,All other entities,25.3,2.2,23.1,0.1,23.2,39,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Total,7750.2,670.7,7079.5,283.6,7363.1,40,2025,4,2025,3,09,30

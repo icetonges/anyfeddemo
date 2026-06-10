@@ -1,0 +1,83 @@
+﻿record_date,stmt_fiscal_year,restmt_flag,agency_nm,gross_cost_bil_amt,earned_revenue_bil_amt,subtotal_bil_amt,change_assumptions_bil_amt,net_cost_bil_amt,src_line_nbr,record_fiscal_year,record_fiscal_quarter,record_calendar_year,record_calendar_quarter,record_calendar_month,record_calendar_day
+2017-09-30,2017,N,Department of Health and Human Services,1186.8,101.1,1085.7,0.4,1086.1,1,2017,4,2017,3,09,30
+2017-09-30,2017,N,Social Security Administration,999.1,0.3,998.8,null,998.8,2,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Defense,718.7,77.4,641.3,24.1,665.4,3,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Veterans Affairs,254.8,4.8,250.0,229.7,479.7,4,2017,4,2017,3,09,30
+2017-09-30,2017,N,Interest on Treasury Securities Held by the Public,296.3,null,296.3,null,296.3,5,2017,4,2017,3,09,30
+2017-09-30,2017,N,Office of Personnel Management,90.1,22.3,67.8,102.5,170.3,6,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of the Treasury,179.5,37.9,141.6,null,141.6,7,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Agriculture,142.9,8.1,134.8,null,134.8,8,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Transportation,79.6,0.9,78.7,null,78.7,9,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Housing and Urban Development,70.9,1.7,69.2,null,69.2,10,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Homeland Security,77.3,12.3,65.0,-0.5,64.5,11,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Education,84.4,30.6,53.8,null,53.8,12,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Labor,43.5,null,43.5,null,43.5,13,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Energy,46.9,5.6,41.3,null,41.3,14,2017,4,2017,3,09,30
+2017-09-30,2017,N,Defense Security Cooperation Agency,36.7,null,36.7,null,36.7,15,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Justice,34.2,1.6,32.6,null,32.6,16,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of State,31.3,4.8,26.5,0.3,26.8,17,2017,4,2017,3,09,30
+2017-09-30,2017,N,Federal Communications Commission,20.7,0.4,20.3,null,20.3,18,2017,4,2017,3,09,30
+2017-09-30,2017,N,National Aeronautics and Space Administration,19.6,0.2,19.4,null,19.4,19,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of the Interior,20.2,2.7,17.5,null,17.5,20,2017,4,2017,3,09,30
+2017-09-30,2017,N,U.S. Agency for International Development,13.2,null,13.2,null,13.2,21,2017,4,2017,3,09,30
+2017-09-30,2017,N,Department of Commerce,12.9,3.3,9.6,null,9.6,22,2017,4,2017,3,09,30
+2017-09-30,2017,N,Railroad Retirement Board,13.0,3.8,9.2,null,9.2,23,2017,4,2017,3,09,30
+2017-09-30,2017,N,Environmental Protection Agency,8.8,0.4,8.4,null,8.4,24,2017,4,2017,3,09,30
+2017-09-30,2017,N,National Science Foundation,7.1,null,7.1,null,7.1,25,2017,4,2017,3,09,30
+2017-09-30,2017,N,U.S. Postal Service,71.9,68.7,3.2,null,3.2,26,2017,4,2017,3,09,30
+2017-09-30,2017,N,Smithsonian Institution,0.9,null,0.9,null,0.9,27,2017,4,2017,3,09,30
+2017-09-30,2017,N,Millennium Challenge Corporation,0.7,null,0.7,null,0.7,28,2017,4,2017,3,09,30
+2017-09-30,2017,N,U.S. Nuclear Regulatory Commission,0.9,0.8,0.1,null,0.1,29,2017,4,2017,3,09,30
+2017-09-30,2017,N,Overseas Private Investment Corporation,null,0.1,-0.1,null,-0.1,30,2017,4,2017,3,09,30
+2017-09-30,2017,N,Small Business Administration,0.1,0.3,-0.2,null,-0.2,32,2017,4,2017,3,09,30
+2017-09-30,2017,N,Securities and Exchange Commission,1.9,2.1,-0.2,null,-0.2,31,2017,4,2017,3,09,30
+2017-09-30,2017,N,Farm Credit System Insurance Corporation,null,0.4,-0.4,null,-0.4,33,2017,4,2017,3,09,30
+2017-09-30,2017,N,General Services Administration,0.2,0.6,-0.4,null,-0.4,34,2017,4,2017,3,09,30
+2017-09-30,2017,N,National Credit Union Administration,-0.1,0.7,-0.8,null,-0.8,35,2017,4,2017,3,09,30
+2017-09-30,2017,N,Tennessee Valley Authority,9.9,10.7,-0.8,null,-0.8,36,2017,4,2017,3,09,30
+2017-09-30,2017,N,Export-Import Bank of the United States,0.4,1.2,-0.8,null,-0.8,37,2017,4,2017,3,09,30
+2017-09-30,2017,N,Pension Benefit Guaranty Corporation,9.8,14.1,-4.3,null,-4.3,38,2017,4,2017,3,09,30
+2017-09-30,2017,N,Federal Deposit Insurance Corporation,1.5,10.6,-9.1,null,-9.1,39,2017,4,2017,3,09,30
+2017-09-30,2017,N,All other entities,22.7,1.4,21.3,null,21.3,40,2017,4,2017,3,09,30
+2017-09-30,2017,N,Total,4609.3,431.9,4177.4,356.5,4533.9,41,2017,4,2017,3,09,30
+2018-09-30,2017,Y,Department of Health and Human Services,1186.8,101.1,1085.7,0.4,1086.1,1,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Social Security Administration,999.1,0.3,998.8,null,998.8,2,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Defense,718.7,77.4,641.3,24.1,665.4,3,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Interest on Treasury Securities Held by the Public,296.3,null,296.3,null,296.3,4,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Veterans Affairs,254.8,4.8,250.0,229.7,479.7,5,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Energy,46.9,5.6,41.3,null,41.3,6,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Agriculture,142.9,8.1,134.8,null,134.8,7,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of the Treasury,179.5,37.9,141.6,null,141.6,8,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Office of Personnel Management,90.1,22.3,67.8,102.5,170.3,9,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Transportation,79.6,0.9,78.7,null,78.7,10,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Homeland Security,77.3,12.3,65.0,-0.5,64.5,11,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Education,84.4,30.6,53.8,null,53.8,12,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Housing and Urban Development,69.1,1.7,67.4,null,67.4,13,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Labor,43.5,null,43.5,null,43.5,14,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Security Assistance Accounts,36.7,null,36.7,null,36.7,15,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Justice,34.2,1.6,32.6,null,32.6,16,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of State,31.3,4.8,26.5,0.3,26.8,17,2018,4,2018,3,09,30
+2018-09-30,2017,Y,National Aeronautics and Space Administration,19.6,0.2,19.4,null,19.4,18,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of the Interior,20.2,2.7,17.5,null,17.5,19,2018,4,2018,3,09,30
+2018-09-30,2017,Y,U.S. Agency for International Development,13.2,null,13.2,null,13.2,20,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Railroad Retirement Board,13.0,3.8,9.2,null,9.2,21,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Federal Communications Commission,20.7,0.4,20.3,null,20.3,22,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Department of Commerce,12.9,3.3,9.6,null,9.6,23,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Environmental Protection Agency,8.8,0.4,8.4,null,8.4,24,2018,4,2018,3,09,30
+2018-09-30,2017,Y,National Science Foundation,7.1,null,7.1,null,7.1,25,2018,4,2018,3,09,30
+2018-09-30,2017,Y,U.S. Postal Service,71.9,68.7,3.2,null,3.2,26,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Smithsonian Institution,0.9,null,0.9,null,0.9,27,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Millennium Challenge Corporation,0.7,null,0.7,null,0.7,28,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Small Business Administration,0.1,0.3,-0.2,null,-0.2,29,2018,4,2018,3,09,30
+2018-09-30,2017,Y,National Credit Union Administration,-0.1,0.7,-0.8,null,-0.8,30,2018,4,2018,3,09,30
+2018-09-30,2017,Y,U.S. Nuclear Regulatory Commission,0.9,0.8,0.1,null,0.1,31,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Farm Credit System Insurance Corporation,null,0.4,-0.4,null,-0.4,32,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Overseas Private Investment Corporation,null,0.1,-0.1,null,-0.1,33,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Export-Import Bank of the U.S.,0.4,1.2,-0.8,null,-0.8,34,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Securities and Exchange Commission,1.9,2.1,-0.2,null,-0.2,35,2018,4,2018,3,09,30
+2018-09-30,2017,Y,General Services Administration,0.2,0.6,-0.4,null,-0.4,36,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Tennessee Valley Authority,9.9,10.7,-0.8,null,-0.8,37,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Federal Deposit Insurance Corporation,1.5,10.6,-9.1,null,-9.1,38,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Pension Benefit Guaranty Corporation,9.8,14.1,-4.3,null,-4.3,39,2018,4,2018,3,09,30
+2018-09-30,2017,Y,All other entities,21.4,1.4,20.0,null,20.0,40,2018,4,2018,3,09,30
+2018-09-30,2017,Y,Total,4606.2,431.9,4174.3,356.5,4530.8,41,2018,4,2018,3,09,30

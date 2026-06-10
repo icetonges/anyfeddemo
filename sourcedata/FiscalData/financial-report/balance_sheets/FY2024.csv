@@ -1,0 +1,49 @@
+﻿record_date,stmt_fiscal_year,restmt_flag,account_desc,line_item_desc,position_bil_amt,src_line_nbr,record_fiscal_year,record_fiscal_quarter,record_calendar_year,record_calendar_quarter,record_calendar_month,record_calendar_day
+2024-09-30,2024,N,Assets,Assets,1177.7,1,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,278.7,2,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,1751.0,3,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,27.9,4,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,447.3,5,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,1313.0,6,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,305.8,7,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,132.4,8,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,146.4,9,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Assets,81.9,10,2024,4,2024,3,09,30
+2024-09-30,2024,N,Assets,Total assets,5662.1,11,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Liabilities,134.2,12,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Liabilities,28338.9,13,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Liabilities,15033.4,14,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Liabilities,666.0,15,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Liabilities,320.0,16,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Liabilities,106.0,17,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Liabilities,363.1,18,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Liabilities,584.3,19,2024,4,2024,3,09,30
+2024-09-30,2024,N,Liabilities,Total liabilities,45545.9,20,2024,4,2024,3,09,30
+2024-09-30,2024,N,Net position,Net position,3707.3,21,2024,4,2024,3,09,30
+2024-09-30,2024,N,Net position,Net position,-43591.1,22,2024,4,2024,3,09,30
+2024-09-30,2024,N,Net position,Net position,-39883.8,23,2024,4,2024,3,09,30
+2024-09-30,2024,N,Net position,Net position,5662.1,24,2024,4,2024,3,09,30
+2025-09-30,2024,Y,Assets,Cash and other monetary assets,1177.7,1,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,"Accounts receivable, net",278.7,2,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,"Loans receivable, net",1751.0,3,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,Loan guarantees,27.9,4,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,"Inventory and related property, net",479.9,5,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,"Property, plant and equipment, net",1302.1,6,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,Investments in government-sponsored enterprises,305.8,7,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,Investments,132.4,8,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,Advances and prepayments,146.4,9,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,Other assets,81.9,10,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Assets,Total assets,5683.8,11,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Accounts payable,134.2,12,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Federal debt and interest payable,28338.9,13,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Federal employee and veteran benefits payable,15033.4,14,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Environmental and disposal liabilities,666.0,15,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Benefits due and payable,320.0,16,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Insurance and guarantee program liabilities,106.0,17,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Advances from others and deferred revenues,150.3,18,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Other liabilities,584.3,19,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Liabilities,Total liabilities,45333.1,20,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Net position,Funds from Dedicated Collections,3707.3,21,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Net position,Funds other than those from Dedicated Collections,-43356.6,22,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Net position,Total net position,-39649.3,23,2025,4,2025,3,09,30
+2025-09-30,2024,Y,Net position,Total liabilities and net position,5683.8,24,2025,4,2025,3,09,30
