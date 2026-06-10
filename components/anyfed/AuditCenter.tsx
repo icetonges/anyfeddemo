@@ -53,7 +53,7 @@ export default function AuditCenter({ agency, onNavigate }: { agency: Agency; on
           <div style={{ display:"flex", gap:8, margin:"18px 0 12px", flexWrap:"wrap" }}>
             {CATS.map(c => (
               <button key={c} onClick={() => setCat(c)}
-                style={{ padding:"6px 14px", borderRadius:8, fontSize:12, fontWeight:600, cursor:"pointer",
+                style={{ padding:"6px 14px", borderRadius:8, fontSize:16, fontWeight:600, cursor:"pointer",
                          border:`1px solid ${cat === c ? C.borderAccent : C.border}`,
                          background: cat === c ? `${C.blue}22` : C.card, color: cat === c ? C.blue : C.muted }}>
                 {c} {c === "All" ? `(${DOD_MATERIAL_WEAKNESSES.length})` : `(${DOD_MATERIAL_WEAKNESSES.filter(m => m.category === c).length})`}
@@ -71,13 +71,13 @@ export default function AuditCenter({ agency, onNavigate }: { agency: Agency; on
                            borderRadius:10, padding:"13px 15px", cursor: hasDeep ? "pointer" : "default",
                            opacity: hasDeep ? 1 : 0.78 }}>
                   <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:8 }}>
-                    <div style={{ fontSize:13, fontWeight:600, color: on ? C.blue : C.text }}>MW #{mw.num} — {mw.title}</div>
+                    <div style={{ fontSize:17.5, fontWeight:600, color: on ? C.blue : C.text }}>MW #{mw.num} — {mw.title}</div>
                     <Badge color={mw.category === "IT & Systems" ? C.purple : mw.category === "Transactions & Balances" ? C.orange : C.cyan}>
                       {mw.category.split(" ")[0]}
                     </Badge>
                   </div>
-                  <div style={{ fontSize:12, color:C.textSub, marginTop:6, lineHeight:1.55 }}>{mw.issue}</div>
-                  {hasDeep && <div style={{ fontSize:11, color: on ? C.blue : C.gold, marginTop:8, fontWeight:600 }}>
+                  <div style={{ fontSize:16, color:C.textSub, marginTop:6, lineHeight:1.55 }}>{mw.issue}</div>
+                  {hasDeep && <div style={{ fontSize:15, color: on ? C.blue : C.gold, marginTop:8, fontWeight:600 }}>
                     🔬 {on ? "Deep dive open below ▾" : "Click for deep dive: analysis · components · Advana solution · live demo"}</div>}
                 </div>
               )
@@ -96,11 +96,11 @@ export default function AuditCenter({ agency, onNavigate }: { agency: Agency; on
             <Row>
               {FIAR_PHASES.map((p, i) => (
                 <div key={p.phase} style={{ flex:1, minWidth:210 }}>
-                  <div style={{ fontSize:13, fontWeight:700, color:[C.blue, C.gold, C.green, C.purple][i], marginBottom:6 }}>
+                  <div style={{ fontSize:17.5, fontWeight:700, color:[C.blue, C.gold, C.green, C.purple][i], marginBottom:6 }}>
                     {i + 1}. {p.phase}
                   </div>
-                  <div style={{ fontSize:12, color:C.textSub, lineHeight:1.55 }}>{p.desc}</div>
-                  <div style={{ fontSize:11, color:C.muted, marginTop:6 }}>📦 {p.deliverables}</div>
+                  <div style={{ fontSize:16, color:C.textSub, lineHeight:1.55 }}>{p.desc}</div>
+                  <div style={{ fontSize:15, color:C.muted, marginTop:6 }}>📦 {p.deliverables}</div>
                 </div>
               ))}
             </Row>
@@ -108,7 +108,7 @@ export default function AuditCenter({ agency, onNavigate }: { agency: Agency; on
         </>
       ) : (
         <Card title={`${agency.abbrev} Audit Snapshot`}>
-          <div style={{ fontSize:13, color:C.textSub, lineHeight:1.8 }}>
+          <div style={{ fontSize:17.5, color:C.textSub, lineHeight:1.8 }}>
             {agency.id === "SEC"
               ? "The SEC has sustained unmodified (clean) opinions on its financial statements; GAO performs the audit. Active OIG engagement areas (T&M contract management, FISMA controls, CAT data) are tracked in the legacy portal's OIG module."
               : `Most CFO Act agencies receive annual financial statement audits under the CFO Act and OMB Bulletin 24-02. Drop ${agency.abbrev} AFR/OIG source documents into sourcedata/ to power a finding-level tracker here. The DoD selection demonstrates the full finding → solution → demo experience.`}
@@ -121,10 +121,10 @@ export default function AuditCenter({ agency, onNavigate }: { agency: Agency; on
         <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(270px, 1fr))", gap:12 }}>
           {GUIDANCE_LIBRARY.map(g => (
             <div key={g.title} style={{ background:C.card, border:`1px solid ${C.border}`, borderRadius:10, padding:"12px 14px" }}>
-              <div style={{ fontSize:13, fontWeight:600, color:C.blue }}>{g.title}
-                <span style={{ fontSize:11, color:C.muted, fontWeight:400 }}> · {g.cite}</span>
+              <div style={{ fontSize:17.5, fontWeight:600, color:C.blue }}>{g.title}
+                <span style={{ fontSize:15, color:C.muted, fontWeight:400 }}> · {g.cite}</span>
               </div>
-              <div style={{ fontSize:11.5, color:C.textSub, marginTop:5, lineHeight:1.5 }}>{g.desc}</div>
+              <div style={{ fontSize:15.5, color:C.textSub, marginTop:5, lineHeight:1.5 }}>{g.desc}</div>
             </div>
           ))}
         </div>
@@ -151,24 +151,24 @@ function MWDrill({ deep, title, issue, onNavigate, onClose }:
       <div style={{ display:"flex", gap:7, flexWrap:"wrap", marginBottom:14, alignItems:"center" }}>
         {DRILL_TABS.map(t => (
           <button key={t} onClick={() => setTab(t)}
-            style={{ padding:"7px 13px", borderRadius:8, fontSize:12.5, fontWeight: tab === t ? 700 : 500, cursor:"pointer",
+            style={{ padding:"7px 13px", borderRadius:8, fontSize:17, fontWeight: tab === t ? 700 : 500, cursor:"pointer",
                      border:`1px solid ${tab === t ? C.borderAccent : C.border}`, background: tab === t ? `${C.blue}1f` : C.card,
                      color: tab === t ? C.blue : C.muted }}>{t}</button>
         ))}
-        <button onClick={onClose} style={{ marginLeft:"auto", padding:"6px 12px", borderRadius:8, fontSize:12, cursor:"pointer",
+        <button onClick={onClose} style={{ marginLeft:"auto", padding:"6px 12px", borderRadius:8, fontSize:16, cursor:"pointer",
                  border:`1px solid ${C.border}`, background:C.card, color:C.muted }}>✕ close</button>
       </div>
 
       {tab === "Analysis" && (
         <div>
-          <div style={{ padding:"10px 13px", background:`${C.red}10`, border:`1px solid ${C.red}44`, borderRadius:9, marginBottom:12, fontSize:12.5, color:C.text }}>
+          <div style={{ padding:"10px 13px", background:`${C.red}10`, border:`1px solid ${C.red}44`, borderRadius:9, marginBottom:12, fontSize:17, color:C.text }}>
             <b style={{ color:C.red }}>Exposure:</b> {deep.exposure}
           </div>
           <Row>
             {([["Root cause", deep.rootCause, C.orange], ["Criteria not met", deep.criteria, C.cyan], ["Effect", deep.effect, C.purple]] as const).map(([t, body, col]) => (
               <div key={t} style={{ flex:1, minWidth:260, background:C.card, border:`1px solid ${C.border}`, borderRadius:9, padding:"11px 13px" }}>
                 <Badge color={col}>{t}</Badge>
-                <div style={{ fontSize:12.5, color:C.textSub, lineHeight:1.65, marginTop:7 }}>{body}</div>
+                <div style={{ fontSize:17, color:C.textSub, lineHeight:1.65, marginTop:7 }}>{body}</div>
               </div>
             ))}
           </Row>
@@ -177,7 +177,7 @@ function MWDrill({ deep, title, issue, onNavigate, onClose }:
 
       {tab === "Component Positions" && (
         <div>
-          <div style={{ fontSize:12, color:C.muted, marginBottom:10 }}>
+          <div style={{ fontSize:16, color:C.muted, marginBottom:10 }}>
             How each reporting entity stands on this finding in the FY2025 audit cycle — remediation leaders are the playbook for the rest.
           </div>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(330px, 1fr))", gap:10 }}>
@@ -187,10 +187,10 @@ function MWDrill({ deep, title, issue, onNavigate, onClose }:
               return (
                 <div key={p.component} style={{ background:C.card, border:`1px solid ${C.border}`, borderLeft:`3px solid ${col}`, borderRadius:9, padding:"10px 13px" }}>
                   <div style={{ display:"flex", justifyContent:"space-between", gap:8, alignItems:"center" }}>
-                    <span style={{ fontSize:13, fontWeight:700, color:C.text }}>{p.component}</span>
+                    <span style={{ fontSize:17.5, fontWeight:700, color:C.text }}>{p.component}</span>
                     <Badge color={col}>{meta.label}</Badge>
                   </div>
-                  <div style={{ fontSize:12, color:C.textSub, lineHeight:1.55, marginTop:6 }}>{p.note}</div>
+                  <div style={{ fontSize:16, color:C.textSub, lineHeight:1.55, marginTop:6 }}>{p.note}</div>
                 </div>
               )
             })}
@@ -200,7 +200,7 @@ function MWDrill({ deep, title, issue, onNavigate, onClose }:
 
       {tab === "Data & Systems" && (
         <div>
-          <div style={{ fontSize:12, color:C.muted, marginBottom:12 }}>
+          <div style={{ fontSize:16, color:C.muted, marginBottom:12 }}>
             The system landscape this weakness lives in — feeders on the left must reconcile through the canonical layer to the ledgers and reporting on the right.
           </div>
           <div style={{ display:"flex", gap:14, flexWrap:"wrap" }}>
@@ -211,12 +211,12 @@ function MWDrill({ deep, title, issue, onNavigate, onClose }:
               const col = kind === "feeder" ? C.cyan : kind === "gl" ? C.green : kind === "treasury" ? C.gold : C.purple
               return (
                 <div key={kind} style={{ flex:1, minWidth:220 }}>
-                  <div style={{ fontSize:10.5, color:col, letterSpacing:"0.1em", marginBottom:8, fontWeight:700 }}>{label} {kind === "feeder" ? "→" : kind === "gl" ? "⇄" : ""}</div>
+                  <div style={{ fontSize:14, color:col, letterSpacing:"0.1em", marginBottom:8, fontWeight:700 }}>{label} {kind === "feeder" ? "→" : kind === "gl" ? "⇄" : ""}</div>
                   <div style={{ display:"flex", flexDirection:"column", gap:7 }}>
                     {nodes.map(s => (
                       <div key={s.name} style={{ background:C.card, border:`1px solid ${col}44`, borderRadius:8, padding:"8px 11px" }}>
-                        <div style={{ fontSize:12.5, fontWeight:700, color:C.text, fontFamily:"var(--font-mono)" }}>{s.name}</div>
-                        <div style={{ fontSize:11, color:C.muted, marginTop:2 }}>{s.detail}</div>
+                        <div style={{ fontSize:17, fontWeight:700, color:C.text, fontFamily:"var(--font-mono)" }}>{s.name}</div>
+                        <div style={{ fontSize:15, color:C.muted, marginTop:2 }}>{s.detail}</div>
                       </div>
                     ))}
                   </div>
@@ -230,9 +230,9 @@ function MWDrill({ deep, title, issue, onNavigate, onClose }:
       {tab === "Advana Solution" && (
         <div>
           <div style={{ padding:"10px 13px", background:`${C.blue}10`, border:`1px solid ${C.borderAccent}`, borderRadius:9, marginBottom:14 }}>
-            <div style={{ fontSize:11, color:C.muted, letterSpacing:"0.08em", marginBottom:6 }}>THE ADVANA MEDALLION PATTERN</div>
+            <div style={{ fontSize:15, color:C.muted, letterSpacing:"0.08em", marginBottom:6 }}>THE ADVANA MEDALLION PATTERN</div>
             {ADVANA_PATTERN.map((p, i) => (
-              <div key={i} style={{ fontSize:11.5, color:C.textSub, lineHeight:1.7 }}><b style={{ color:C.cyan }}>{i + 1}.</b> {p}</div>
+              <div key={i} style={{ fontSize:15.5, color:C.textSub, lineHeight:1.7 }}><b style={{ color:C.cyan }}>{i + 1}.</b> {p}</div>
             ))}
           </div>
           <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
@@ -242,9 +242,9 @@ function MWDrill({ deep, title, issue, onNavigate, onClose }:
                   <Badge color={[C.cyan, C.blue, C.gold, C.green][i % 4]}>{s.layer}</Badge>
                 </div>
                 <div style={{ flex:1 }}>
-                  <div style={{ fontSize:13, fontWeight:700, color:C.text, marginBottom:4 }}>{i + 1}. {s.title}</div>
-                  <div style={{ fontSize:12, color:C.textSub, lineHeight:1.6 }}>{s.tech}</div>
-                  {s.ai && <div style={{ fontSize:12, color:C.purple, lineHeight:1.6, marginTop:6 }}>
+                  <div style={{ fontSize:17.5, fontWeight:700, color:C.text, marginBottom:4 }}>{i + 1}. {s.title}</div>
+                  <div style={{ fontSize:16, color:C.textSub, lineHeight:1.6 }}>{s.tech}</div>
+                  {s.ai && <div style={{ fontSize:16, color:C.purple, lineHeight:1.6, marginTop:6 }}>
                     🤖 <b>AI embedded:</b> <span style={{ color:C.textSub }}>{s.ai}</span></div>}
                 </div>
               </div>
@@ -255,15 +255,15 @@ function MWDrill({ deep, title, issue, onNavigate, onClose }:
 
       {tab === "Execution Plan" && (
         <div>
-          <div style={{ fontSize:12, color:C.muted, marginBottom:12 }}>
+          <div style={{ fontSize:16, color:C.muted, marginBottom:12 }}>
             FIAR-phased to the statutory Dec 31, 2028 clean-opinion deadline ({monthsToDeadline()} months out).
           </div>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(240px, 1fr))", gap:10 }}>
             {deep.plan.map((p, i) => (
               <div key={i} style={{ background:C.card, border:`1px solid ${C.border}`, borderTop:`3px solid ${[C.blue, C.gold, C.green, C.purple][i % 4]}`, borderRadius:10, padding:"12px 14px" }}>
-                <div style={{ fontSize:13, fontWeight:700, color:C.text }}>{p.phase}</div>
-                <div style={{ fontSize:11, color:C.muted, marginBottom:8 }}>{p.window}</div>
-                <ul style={{ margin:0, paddingLeft:16, fontSize:11.5, color:C.textSub, lineHeight:1.7 }}>
+                <div style={{ fontSize:17.5, fontWeight:700, color:C.text }}>{p.phase}</div>
+                <div style={{ fontSize:15, color:C.muted, marginBottom:8 }}>{p.window}</div>
+                <ul style={{ margin:0, paddingLeft:16, fontSize:15.5, color:C.textSub, lineHeight:1.7 }}>
                   {p.milestones.map((m, j) => <li key={j} style={{ marginBottom:4 }}>{m}</li>)}
                 </ul>
               </div>
@@ -405,7 +405,7 @@ function DemoPanel({ demo, mwNum, onNavigate }: { demo: DemoConfig; mwNum: numbe
         <div>
           <div style={{ background:`${C.blue}0d`, border:`1px solid ${C.border}`, borderRadius:9, padding:"10px 13px", marginBottom:12 }}>
             {MODEL_BLUEPRINT[demo.model].map((s, i) => (
-              <div key={i} style={{ fontSize:11, color:C.textSub, fontFamily:"var(--font-mono)", lineHeight:1.8 }}>
+              <div key={i} style={{ fontSize:15, color:C.textSub, fontFamily:"var(--font-mono)", lineHeight:1.8 }}>
                 <span style={{ color:C.cyan }}>{i + 1}·</span> {s}</div>
             ))}
           </div>
@@ -422,8 +422,8 @@ function DemoPanel({ demo, mwNum, onNavigate }: { demo: DemoConfig; mwNum: numbe
             <div key={i} style={{ display:"flex", gap:10, alignItems:"flex-start", padding:"10px 12px", background:C.card, border:`1px solid ${C.border}`, borderRadius:9 }}>
               <Badge color={f.severity === "high" ? C.red : f.severity === "medium" ? C.orange : C.green}>{f.severity.toUpperCase()}</Badge>
               <div>
-                <div style={{ fontSize:12.5, fontWeight:700, color:C.text, lineHeight:1.45 }}>{f.title}</div>
-                <div style={{ fontSize:12, color:C.textSub, lineHeight:1.6, marginTop:4 }}>{f.detail}</div>
+                <div style={{ fontSize:17, fontWeight:700, color:C.text, lineHeight:1.45 }}>{f.title}</div>
+                <div style={{ fontSize:16, color:C.textSub, lineHeight:1.6, marginTop:4 }}>{f.detail}</div>
               </div>
             </div>
           ))}
@@ -436,7 +436,7 @@ function DemoPanel({ demo, mwNum, onNavigate }: { demo: DemoConfig; mwNum: numbe
       sub:"Append-only, hash-locked, reproducible — the same record auditors receive from the Gold layer",
       body: (
         <pre style={{ margin:0, padding:"14px 16px", background:C.bg, border:`1px solid ${C.border}`, borderRadius:10,
-                      fontSize:10.5, lineHeight:1.65, color:C.textSub, fontFamily:"var(--font-mono)", overflowX:"auto", whiteSpace:"pre" }}>
+                      fontSize:14, lineHeight:1.65, color:C.textSub, fontFamily:"var(--font-mono)", overflowX:"auto", whiteSpace:"pre" }}>
           {artifact}
         </pre>
       ) })
@@ -446,7 +446,7 @@ function DemoPanel({ demo, mwNum, onNavigate }: { demo: DemoConfig; mwNum: numbe
       sub:"Prioritized, owned, grounded in the numbers this run just produced",
       body: (
         <div style={{ overflowX:"auto" }}>
-          <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12.5, minWidth:560 }}>
+          <table style={{ width:"100%", borderCollapse:"collapse", fontSize:17, minWidth:560 }}>
             <thead><tr style={{ color:C.muted, textAlign:"left" }}>
               {["Pri", "Action", "Owner"].map(h => <th key={h} style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}` }}>{h}</th>)}
             </tr></thead>
@@ -473,21 +473,21 @@ function DemoPanel({ demo, mwNum, onNavigate }: { demo: DemoConfig; mwNum: numbe
     <div>
       <div style={{ display:"flex", gap:12, alignItems:"flex-start", flexWrap:"wrap", marginBottom:14 }}>
         <div style={{ flex:1, minWidth:300 }}>
-          <div style={{ fontSize:13.5, fontWeight:700, color:C.text, marginBottom:6 }}>▶ {demo.title}</div>
-          <div style={{ fontSize:12.5, color:C.textSub, lineHeight:1.65 }}>{demo.rationale}</div>
-          <div style={{ fontSize:11.5, color:C.cyan, marginTop:8, fontFamily:"var(--font-mono)" }}>
+          <div style={{ fontSize:18, fontWeight:700, color:C.text, marginBottom:6 }}>▶ {demo.title}</div>
+          <div style={{ fontSize:17, color:C.textSub, lineHeight:1.65 }}>{demo.rationale}</div>
+          <div style={{ fontSize:15.5, color:C.cyan, marginTop:8, fontFamily:"var(--font-mono)" }}>
             dataset: {sizes[demo.dataset]} · 5-stage pipeline · all numbers computed live in-browser
           </div>
         </div>
         <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
           <button onClick={run} disabled={running}
-            style={{ padding:"10px 20px", borderRadius:9, fontSize:13, fontWeight:700, cursor:"pointer",
+            style={{ padding:"10px 20px", borderRadius:9, fontSize:17.5, fontWeight:700, cursor:"pointer",
                      border:`1px solid ${C.borderAccent}`, background:`${C.blue}26`, color:C.blue }}>
             {running ? "Pipeline running…" : stages.length ? "↻ Re-run pipeline" : "▶ Run solution pipeline"}
           </button>
           {onNavigate && (
             <button onClick={() => onNavigate("ml")}
-              style={{ padding:"8px 14px", borderRadius:8, fontSize:11.5, cursor:"pointer",
+              style={{ padding:"8px 14px", borderRadius:8, fontSize:15.5, cursor:"pointer",
                        border:`1px solid ${C.border}`, background:C.card, color:C.muted }}>
               Open full AI/ML Workbench →
             </button>
@@ -505,20 +505,20 @@ function DemoPanel({ demo, mwNum, onNavigate }: { demo: DemoConfig; mwNum: numbe
                 {/* rail */}
                 <div style={{ display:"flex", flexDirection:"column", alignItems:"center", width:34, flexShrink:0 }}>
                   <div style={{ width:30, height:30, borderRadius:"50%", display:"flex", alignItems:"center", justifyContent:"center",
-                                fontSize:13, flexShrink:0, border:`2px solid ${shown ? C.green : isNext ? C.blue : C.border}`,
+                                fontSize:17.5, flexShrink:0, border:`2px solid ${shown ? C.green : isNext ? C.blue : C.border}`,
                                 background: shown ? `${C.green}1a` : C.card, transition:"all .2s" }}>
-                    {shown ? st.icon : isNext && running ? "⏳" : <span style={{ color:C.muted, fontSize:11 }}>{i + 1}</span>}
+                    {shown ? st.icon : isNext && running ? "⏳" : <span style={{ color:C.muted, fontSize:15 }}>{i + 1}</span>}
                   </div>
                   {i < stages.length - 1 && <div style={{ width:2, flex:1, minHeight:18, background: shown ? `${C.green}55` : C.border, transition:"background .2s" }} />}
                 </div>
                 {/* card */}
                 <div style={{ flex:1, paddingBottom:16, minWidth:0 }}>
                   <div style={{ display:"flex", gap:10, alignItems:"baseline", flexWrap:"wrap" }}>
-                    <span style={{ fontSize:13.5, fontWeight:700, color: shown ? C.text : C.muted }}>
+                    <span style={{ fontSize:18, fontWeight:700, color: shown ? C.text : C.muted }}>
                       Stage {i + 1} — {st.title}</span>
-                    {shown && <span style={{ fontSize:10.5, color:C.green, fontFamily:"var(--font-mono)" }}>✓ {st.ms} ms</span>}
+                    {shown && <span style={{ fontSize:14, color:C.green, fontFamily:"var(--font-mono)" }}>✓ {st.ms} ms</span>}
                   </div>
-                  <div style={{ fontSize:11.5, color:C.muted, margin:"3px 0 10px" }}>{st.sub}</div>
+                  <div style={{ fontSize:15.5, color:C.muted, margin:"3px 0 10px" }}>{st.sub}</div>
                   {shown && <div style={{ animation:"afFadeIn .25s ease" }}>{st.body}</div>}
                 </div>
               </div>
@@ -534,7 +534,7 @@ function DemoPanel({ demo, mwNum, onNavigate }: { demo: DemoConfig; mwNum: numbe
 // ── stage 1 body: population manifest ────────────────────────────────────────
 function ManifestView({ m }: { m: PopulationManifest }) {
   const C = useTheme()
-  const cell: React.CSSProperties = { padding:"6px 10px", borderBottom:`1px solid ${C.border}`, fontSize:12 }
+  const cell: React.CSSProperties = { padding:"6px 10px", borderBottom:`1px solid ${C.border}`, fontSize:16 }
   return (
     <div>
       <Row>
@@ -555,13 +555,13 @@ function ManifestView({ m }: { m: PopulationManifest }) {
           {m.gates.map((g, i) => (
             <tr key={"g" + i}>
               <td style={{ ...cell, color:C.muted }}>quality gate</td>
-              <td style={{ ...cell, color:C.text }}>{g.rule} <span style={{ color:C.muted, fontSize:11 }}>— {g.note}</span></td>
+              <td style={{ ...cell, color:C.text }}>{g.rule} <span style={{ color:C.muted, fontSize:15 }}>— {g.note}</span></td>
               <td style={{ ...cell, textAlign:"right", fontFamily:"var(--font-mono)", color: g.after < g.before ? C.orange : C.green }}>{g.before.toLocaleString()} → {g.after.toLocaleString()}</td>
             </tr>
           ))}
         </tbody>
       </table>
-      <div style={{ fontSize:11, color:C.muted, marginTop:8, lineHeight:1.6 }}>
+      <div style={{ fontSize:15, color:C.muted, marginTop:8, lineHeight:1.6 }}>
         In production this stage is the UoT gate: population ties to the trial balance before anything downstream runs.
         The hash makes the population tamper-evident — re-running on identical data reproduces it exactly.
       </div>
@@ -580,10 +580,10 @@ function DemoResultView({ res }: { res: DemoResult }) {
         <ResponsiveContainer width="100%" height={240}>
           <BarChart data={b.digits}>
             <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
-            <XAxis dataKey="digit" stroke={C.muted} fontSize={11} />
-            <YAxis stroke={C.muted} fontSize={11} tickFormatter={(v: number) => `${v}%`} />
+            <XAxis dataKey="digit" stroke={C.muted} fontSize={15} />
+            <YAxis stroke={C.muted} fontSize={15} tickFormatter={(v: number) => `${v}%`} />
             <Tooltip content={<Tip />} />
-            <Legend wrapperStyle={{ fontSize:12 }} />
+            <Legend wrapperStyle={{ fontSize:16 }} />
             <Bar dataKey="expected" name="Benford expected %" fill={C.dim} />
             <Bar dataKey="observed" name="Observed %" fill={b.conforms ? C.green : C.red} />
           </BarChart>
@@ -633,10 +633,10 @@ function DemoResultView({ res }: { res: DemoResult }) {
       <ResponsiveContainer width="100%" height={250}>
         <ComposedChart data={data}>
           <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
-          <XAxis dataKey="label" stroke={C.muted} fontSize={10} />
-          <YAxis stroke={C.muted} fontSize={10} tickFormatter={(v: number) => fmtMoney(v)} />
+          <XAxis dataKey="label" stroke={C.muted} fontSize={13.5} />
+          <YAxis stroke={C.muted} fontSize={13.5} tickFormatter={(v: number) => fmtMoney(v)} />
           <Tooltip content={<Tip />} />
-          <Legend wrapperStyle={{ fontSize:12 }} />
+          <Legend wrapperStyle={{ fontSize:16 }} />
           <Area dataKey="hi" name="80% hi" stroke="none" fill={`${C.gold}22`} />
           <Area dataKey="lo" name="80% lo" stroke="none" fill={C.bg} />
           <Line dataKey="actual" name="Actual" stroke={C.blue} strokeWidth={2} dot />
@@ -651,7 +651,7 @@ function MiniTable({ head, rows }: { head: string[]; rows: React.ReactNode[][] }
   const C = useTheme()
   return (
     <div style={{ overflowX:"auto" }}>
-      <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12, minWidth:540 }}>
+      <table style={{ width:"100%", borderCollapse:"collapse", fontSize:16, minWidth:540 }}>
         <thead><tr style={{ color:C.muted, textAlign:"left" }}>
           {head.map(h => <th key={h} style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}` }}>{h}</th>)}
         </tr></thead>

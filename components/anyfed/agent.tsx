@@ -49,7 +49,7 @@ function AgentCard({ content, x, y }: { content: AgentContent | null; x: number;
   if (content) last.current = content
   const info = last.current
   const active = !!content
-  const W = 300, H = 160
+  const W = 380, H = 170
   const vw = typeof window !== "undefined" ? window.innerWidth : 1200
   const vh = typeof window !== "undefined" ? window.innerHeight : 800
   const left = Math.min(x + 18, vw - W - 12)
@@ -62,11 +62,11 @@ function AgentCard({ content, x, y }: { content: AgentContent | null; x: number;
                     padding:"11px 13px", boxShadow:"0 10px 30px rgba(0,0,0,0.45)" }}>
         <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:6 }}>
           <span style={{ width:22, height:22, borderRadius:7, background:`linear-gradient(135deg,${C.blue},${C.indigo})`,
-                         display:"flex", alignItems:"center", justifyContent:"center", fontSize:12 }}>🤖</span>
-          <span style={{ fontSize:11.5, fontWeight:700, color:C.text }}>{info.title}</span>
+                         display:"flex", alignItems:"center", justifyContent:"center", fontSize:16 }}>🤖</span>
+          <span style={{ fontSize:15.5, fontWeight:700, color:C.text }}>{info.title}</span>
         </div>
         {info.lines.map((l, i) => (
-          <div key={i} style={{ fontSize:11.5, color: i === 0 ? C.cyan : C.textSub, lineHeight:1.5,
+          <div key={i} style={{ fontSize:15.5, color: i === 0 ? C.cyan : C.textSub, lineHeight:1.5,
                                 fontFamily: i === 0 ? "var(--font-mono)" : "inherit", marginBottom:3 }}>{l}</div>
         ))}
       </div>

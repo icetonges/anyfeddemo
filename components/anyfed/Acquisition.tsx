@@ -19,8 +19,8 @@ function HBar({ rows, name }: { rows: { name: string; total: number }[]; name: s
     <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data} layout="vertical" margin={{ left: 60 }}>
         <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
-        <XAxis type="number" stroke={C.muted} fontSize={10} tickFormatter={(v: number) => fmtMoney(v)} />
-        <YAxis type="category" dataKey="name" stroke={C.muted} fontSize={10} width={160} />
+        <XAxis type="number" stroke={C.muted} fontSize={13.5} tickFormatter={(v: number) => fmtMoney(v)} />
+        <YAxis type="category" dataKey="name" stroke={C.muted} fontSize={13.5} width={160} />
         <Tooltip content={<Tip />} />
         <Bar dataKey="total" name={name}>
           {data.map((_, i) => <Cell key={i} fill={PIE[i % PIE.length]} />)}
@@ -34,7 +34,7 @@ function DodAcquisition() {
   const C = useTheme()
   const { data, loading, error } = useAgencyData<DodAwards>("DOD", "awards")
   if (loading) return <Spinner label="Loading USAspending award extracts from sourcedata/…" />
-  if (error || !data) return <Card title="Data error"><span style={{ color:C.red, fontSize:13 }}>{error}</span></Card>
+  if (error || !data) return <Card title="Data error"><span style={{ color:C.red, fontSize:17.5 }}>{error}</span></Card>
   const total = data.transactions.reduce((s, t) => s + t.amount, 0)
   return (
     <div>
@@ -66,7 +66,7 @@ function DodAcquisition() {
                 {data.byType.slice(0, 8).map((_, i) => <Cell key={i} fill={PIE[i % PIE.length]} />)}
               </Pie>
               <Tooltip content={<Tip />} />
-              <Legend wrapperStyle={{ fontSize:11 }} />
+              <Legend wrapperStyle={{ fontSize:15 }} />
             </PieChart>
           </ResponsiveContainer>
         </Card>
@@ -75,7 +75,7 @@ function DodAcquisition() {
         </Card>
       </Row>
       <div style={{ height:14 }} />
-      <div style={{ fontSize:12, color:C.muted }}>
+      <div style={{ fontSize:16, color:C.muted }}>
         Acquisition-integrity angle: run <b>K-Means segmentation</b> and the <b>Risk Scorer</b> on this population in
         the AI/ML Workbench — category management tiers and post-award review candidates in one pass.
       </div>
@@ -87,7 +87,7 @@ function LiveAcquisition({ agency }: { agency: Agency }) {
   const C = useTheme()
   const { data, loading, error } = useAgencyData<LiveAwards>(agency.id, "awards")
   if (loading) return <Spinner label={`Fetching ${agency.abbrev} award obligations from USAspending.gov…`} />
-  if (error || !data) return <Card title="Acquisition"><span style={{ color:C.red, fontSize:13 }}>Live fetch failed: {error}</span></Card>
+  if (error || !data) return <Card title="Acquisition"><span style={{ color:C.red, fontSize:17.5 }}>Live fetch failed: {error}</span></Card>
   return (
     <div>
       <SectionTitle title="Contracts & Acquisition" sub={`${data.fiscalYear} obligations by award category — live`} />

@@ -22,7 +22,7 @@ export default function FinOps({ agency }: { agency: Agency }) {
     <div>
       <SectionTitle title="Finance Operations"
         sub="Travel (DTS/E2/ConcurGov), Government Travel Charge Card, and Government Purchase Card programs" />
-      <div style={{ fontSize:11.5, color:C.muted, marginBottom:14 }}>
+      <div style={{ fontSize:15.5, color:C.muted, marginBottom:14 }}>
         Metrics below are illustrative, modeled on published SmartPay / DTMO benchmark ranges — wire your agency&apos;s
         card-issuer and travel-system feeds to make them live.
       </div>
@@ -30,7 +30,7 @@ export default function FinOps({ agency }: { agency: Agency }) {
       <Row>
         {FINOPS_PROGRAMS.map(p => (
           <Card key={p.id} title={`${p.icon} ${p.name}`} style={{ flex:1, minWidth:280 }}>
-            <div style={{ fontSize:12.5, color:C.textSub, lineHeight:1.6, marginBottom:10 }}>{p.desc}</div>
+            <div style={{ fontSize:17, color:C.textSub, lineHeight:1.6, marginBottom:10 }}>{p.desc}</div>
             <div style={{ display:"flex", gap:6, flexWrap:"wrap" }}>
               {p.kpis.map(k => <Badge key={k} color={C.cyan}>{k}</Badge>)}
             </div>
@@ -52,10 +52,10 @@ export default function FinOps({ agency }: { agency: Agency }) {
           <ResponsiveContainer width="100%" height={240}>
             <BarChart data={GTC_DELINQ}>
               <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
-              <XAxis dataKey="month" stroke={C.muted} fontSize={11} />
-              <YAxis stroke={C.muted} fontSize={11} tickFormatter={(v: number) => `${v}%`} />
+              <XAxis dataKey="month" stroke={C.muted} fontSize={15} />
+              <YAxis stroke={C.muted} fontSize={15} tickFormatter={(v: number) => `${v}%`} />
               <Tooltip content={<Tip />} />
-              <Legend wrapperStyle={{ fontSize:12 }} />
+              <Legend wrapperStyle={{ fontSize:16 }} />
               <Bar dataKey="30+ days" fill={C.gold} />
               <Bar dataKey="60+ days" fill={C.red} />
             </BarChart>
@@ -65,8 +65,8 @@ export default function FinOps({ agency }: { agency: Agency }) {
           <ResponsiveContainer width="100%" height={240}>
             <BarChart data={DTS_CYCLE}>
               <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
-              <XAxis dataKey="month" stroke={C.muted} fontSize={11} />
-              <YAxis stroke={C.muted} fontSize={11} />
+              <XAxis dataKey="month" stroke={C.muted} fontSize={15} />
+              <YAxis stroke={C.muted} fontSize={15} />
               <Tooltip content={<Tip />} />
               <Bar dataKey="days" name="Cycle days" fill={C.blue} />
             </BarChart>
@@ -76,7 +76,7 @@ export default function FinOps({ agency }: { agency: Agency }) {
 
       <div style={{ height:16 }} />
       <Card title="Program Integrity Hooks" sub="Where the AI/ML Workbench plugs into finance operations">
-        <div style={{ fontSize:12.5, color:C.textSub, lineHeight:1.9 }}>
+        <div style={{ fontSize:17, color:C.textSub, lineHeight:1.9 }}>
           • <b style={{ color:C.text }}>Transaction Risk Scorer</b> → GPC/DTS post-payment review sampling (replaces random sampling with risk-ranked)<br />
           • <b style={{ color:C.text }}>Benford first-digit test</b> → screen monthly disbursement populations for fabricated amounts<br />
           • <b style={{ color:C.text }}>Robust-Z anomaly detector</b> → catch card-spend spikes per cardholder/merchant-category<br />

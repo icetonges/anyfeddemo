@@ -27,13 +27,13 @@ export default function AgencyLandscape({ agency, onNavigate }: { agency: Agency
            ["⭐", "What makes it different", p.uniqueness, C.gold]] as const).map(([icon, t, body, col]) => (
           <div key={t} style={{ flex:1, minWidth:280, background:C.card, border:`1px solid ${C.border}`,
                                 borderTop:`3px solid ${col}`, borderRadius:10, padding:"13px 15px" }}>
-            <div style={{ fontSize:12.5, fontWeight:700, color:C.text, marginBottom:7 }}>{icon} {t}</div>
-            <div style={{ fontSize:12, color:C.textSub, lineHeight:1.65 }}>{body}</div>
+            <div style={{ fontSize:17, fontWeight:700, color:C.text, marginBottom:7 }}>{icon} {t}</div>
+            <div style={{ fontSize:16, color:C.textSub, lineHeight:1.65 }}>{body}</div>
           </div>
         ))}
       </Row>
       <div style={{ height:14 }} />
-      <div style={{ fontSize:11, color:C.muted, letterSpacing:"0.08em", marginBottom:10 }}>
+      <div style={{ fontSize:15, color:C.muted, letterSpacing:"0.08em", marginBottom:10 }}>
         FINANCIAL MANAGEMENT LANDSCAPE — CLICK A DOMAIN TO OPEN ITS MODULE
       </div>
       <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(290px, 1fr))", gap:10 }}>
@@ -42,10 +42,10 @@ export default function AgencyLandscape({ agency, onNavigate }: { agency: Agency
             style={{ background:C.card, border:`1px solid ${C.border}`, borderRadius:10, padding:"11px 13px",
                      cursor: onNavigate ? "pointer" : "default" }}>
             <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:6 }}>
-              <span style={{ fontSize:12.5, fontWeight:700, color:C.text }}>{d.icon} {d.label}</span>
+              <span style={{ fontSize:17, fontWeight:700, color:C.text }}>{d.icon} {d.label}</span>
               {onNavigate && <Badge color={C.blue}>open →</Badge>}
             </div>
-            <div style={{ fontSize:11.5, color:C.textSub, lineHeight:1.6 }}>{p.fm[d.key]}</div>
+            <div style={{ fontSize:15.5, color:C.textSub, lineHeight:1.6 }}>{p.fm[d.key]}</div>
           </div>
         ))}
       </div>

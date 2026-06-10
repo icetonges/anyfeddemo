@@ -53,7 +53,7 @@ function Inner({ agency }: { agency: Agency }) {
   if (loading) return <Spinner label={`Building the ${agency.abbrev} data-intelligence bundle — 5 live GTAS/USAspending endpoints…`} />
   if (error || !data) return (
     <Card title="Data Intelligence" accent={C.red}>
-      <div style={{ fontSize:13, color:C.textSub, lineHeight:1.7 }}>
+      <div style={{ fontSize:17.5, color:C.textSub, lineHeight:1.7 }}>
         Could not assemble the live bundle for {agency.name}: <span style={{ color:C.red }}>{error}</span><br />
         USAspending may not publish FY{fy} detail for this agency yet — try an earlier fiscal year.
         <div style={{ marginTop:10 }}>
@@ -70,7 +70,7 @@ function Inner({ agency }: { agency: Agency }) {
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:14, flexWrap:"wrap", gap:10 }}>
         <SourceTag source={data.source} />
         <div style={{ display:"flex", gap:8, alignItems:"center" }}>
-          <span style={{ fontSize:11.5, color:C.muted }}>Analysis fiscal year</span>
+          <span style={{ fontSize:15.5, color:C.muted }}>Analysis fiscal year</span>
           <FySelect value={fy} onChange={setFy} options={fys} />
         </div>
       </div>
@@ -116,21 +116,21 @@ function Inner({ agency }: { agency: Agency }) {
                 style={{ cursor:"pointer", userSelect:"none", background: on ? `${C.blue}1c` : C.card,
                          border:`1px solid ${on ? C.borderAccent : C.border}`, borderRadius:10, padding:"11px 13px" }}>
                 <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center" }}>
-                  <span style={{ fontSize:12.5, fontWeight:700, color: on ? C.blue : C.text }}>⠿ {DIM_ICON[k]} {dim.label}</span>
+                  <span style={{ fontSize:17, fontWeight:700, color: on ? C.blue : C.text }}>⠿ {DIM_ICON[k]} {dim.label}</span>
                   {p && <Badge color={p.hhi > 2500 ? C.orange : C.green}>{p.hhi > 2500 ? "concentrated" : "diversified"}</Badge>}
                 </div>
                 {p ? (
                   <>
-                    <div style={{ fontSize:11, color:C.muted, marginTop:4 }}>
+                    <div style={{ fontSize:15, color:C.muted, marginTop:4 }}>
                       {p.n} rows{p.childCount ? ` → ${p.childCount} ${dim.childLabel.toLowerCase() || "children"}` : ""} · {dim.measure}
                     </div>
-                    <div style={{ display:"flex", gap:10, marginTop:7, fontSize:10.5, fontFamily:"var(--font-mono)" }}>
+                    <div style={{ display:"flex", gap:10, marginTop:7, fontSize:14, fontFamily:"var(--font-mono)" }}>
                       <span style={{ color:C.cyan }}>{fmt(p.total)}</span>
                       <span style={{ color:C.muted }}>HHI {p.hhi}</span>
                       <span style={{ color:C.muted }}>top {p.topShare}%</span>
                     </div>
                   </>
-                ) : <div style={{ fontSize:11, color:C.muted, marginTop:4 }}>no rows in FY{fy}</div>}
+                ) : <div style={{ fontSize:15, color:C.muted, marginTop:4 }}>no rows in FY{fy}</div>}
               </div>
             )
           })}
@@ -169,10 +169,10 @@ function Inner({ agency }: { agency: Agency }) {
                 style={{ padding:"10px 12px", background:C.card, border:`1px solid ${C.border}`, borderRadius:9 }}>
                 <div style={{ display:"flex", gap:8, alignItems:"center", marginBottom:4 }}>
                   <Badge color={f.severity === "high" ? C.red : f.severity === "medium" ? C.orange : C.green}>{f.severity.toUpperCase()}</Badge>
-                  <span style={{ fontSize:11, color:C.muted }}>{f.area}</span>
-                  <span style={{ fontSize:12, fontWeight:700, color:C.text }}>{f.title}</span>
+                  <span style={{ fontSize:15, color:C.muted }}>{f.area}</span>
+                  <span style={{ fontSize:16, fontWeight:700, color:C.text }}>{f.title}</span>
                 </div>
-                <div style={{ fontSize:12, color:C.textSub, lineHeight:1.55 }}>{f.text}</div>
+                <div style={{ fontSize:16, color:C.textSub, lineHeight:1.55 }}>{f.text}</div>
               </div>
             ))}
           </div>
@@ -188,7 +188,7 @@ function FySelect({ value, onChange, options }: { value: number; onChange: (v: n
   const C = useTheme()
   return (
     <select value={value} onChange={e => onChange(Number(e.target.value))}
-      style={{ background:C.card, color:C.text, border:`1px solid ${C.border}`, borderRadius:8, padding:"6px 10px", fontSize:12, cursor:"pointer" }}>
+      style={{ background:C.card, color:C.text, border:`1px solid ${C.border}`, borderRadius:8, padding:"6px 10px", fontSize:16, cursor:"pointer" }}>
       {options.map(f => <option key={f} value={f}>FY{f}</option>)}
     </select>
   )
@@ -200,20 +200,20 @@ function FolderInventory({ agency }: { agency: Agency }) {
   const setAgent = useAgentSet()
   const { data } = useAgencyData<DodBudget>("DOD", "budget")
   if (agency.id === "SEC") return (
-    <div style={{ marginTop:12, paddingTop:10, borderTop:`1px solid ${C.border}`, fontSize:11.5, color:C.muted, lineHeight:1.6 }}>
+    <div style={{ marginTop:12, paddingTop:10, borderTop:`1px solid ${C.border}`, fontSize:15.5, color:C.muted, lineHeight:1.6 }}>
       📁 Folder data: <b style={{ color:C.text }}>SEC FY2027 CBJ</b> (budget history, object class, fee offsets) — explored in Executive Overview and pooled in the ML Workbench.
     </div>
   )
   if (!data) return null
   return (
     <div style={{ marginTop:12, paddingTop:12, borderTop:`1px solid ${C.border}` }}>
-      <div style={{ fontSize:11, color:C.muted, letterSpacing:"0.08em", marginBottom:8 }}>📁 FOLDER DATASETS (sourcedata/ · PB2026 + PB2027 J-books)</div>
+      <div style={{ fontSize:15, color:C.muted, letterSpacing:"0.08em", marginBottom:8 }}>📁 FOLDER DATASETS (sourcedata/ · PB2026 + PB2027 J-books)</div>
       <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
         {Object.entries(data.exhibits).map(([k, e]) => (
           <div key={k} {...agentProps(setAgent, { title: e.title, lines: [
               `${e.appn} · ${(e.records?.length ?? 0)} line groups · ${(e.hierarchy?.length ?? 0)}-level drill`,
               `Full vintage/lifecycle + 5-level drill-down lives in the Data Explorer page. This live page adds the GTAS execution view the J-books don't carry.`] })}
-            style={{ fontSize:11.5, padding:"7px 11px", borderRadius:8, background:C.card, border:`1px solid ${C.border}`, color:C.textSub }}>
+            style={{ fontSize:15.5, padding:"7px 11px", borderRadius:8, background:C.card, border:`1px solid ${C.border}`, color:C.textSub }}>
             <b style={{ color:C.text }}>{e.appn}</b> · {e.records?.length ?? 0} groups · {(e.hierarchy?.length ?? 0)}-lvl
           </div>
         ))}
@@ -231,7 +231,7 @@ function DimensionProfile({ data, dimKey, fy }: { data: LiveDetail; dimKey: DimK
   const ol = useMemo(() => outlayLag(dim), [dim])
   const mix = dimKey === "objectClass" ? objectClassMix(dim) : null
   const doctrine = DIM_DOCTRINE[dimKey]
-  if (!p) return <Card title={`2 · Profile — ${dim.label}`}><div style={{ fontSize:12.5, color:C.muted }}>No rows for FY{fy}.</div></Card>
+  if (!p) return <Card title={`2 · Profile — ${dim.label}`}><div style={{ fontSize:17, color:C.muted }}>No rows for FY{fy}.</div></Card>
   const top = [...dim.nodes].sort((a, b) => b.value - a.value).slice(0, 10)
     .map(n => ({ name: n.name.length > 22 ? n.name.slice(0, 20) + "…" : n.name, value: n.value / 1e6, full: n.name }))
   return (
@@ -242,8 +242,8 @@ function DimensionProfile({ data, dimKey, fy }: { data: LiveDetail; dimKey: DimK
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={top} layout="vertical" margin={{ left: 30 }}>
               <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
-              <XAxis type="number" stroke={C.muted} fontSize={10} tickFormatter={(v: number) => `$${v >= 1000 ? (v/1000).toFixed(0) + "B" : v.toFixed(0) + "M"}`} />
-              <YAxis type="category" dataKey="name" stroke={C.muted} fontSize={10} width={140} />
+              <XAxis type="number" stroke={C.muted} fontSize={13.5} tickFormatter={(v: number) => `$${v >= 1000 ? (v/1000).toFixed(0) + "B" : v.toFixed(0) + "M"}`} />
+              <YAxis type="category" dataKey="name" stroke={C.muted} fontSize={13.5} width={140} />
               <Tooltip content={<Tip />} />
               <Bar dataKey="value">{top.map((_, i) => <Cell key={i} fill={PALETTE[i % PALETTE.length]} />)}</Bar>
             </BarChart>
@@ -259,15 +259,15 @@ function DimensionProfile({ data, dimKey, fy }: { data: LiveDetail; dimKey: DimK
             </div>
           </Row>
           <div {...agentProps(setAgent, { title:"Top-3 share", lines:[`${p.top3Share}%`, `"${p.topName}" alone holds ${p.topShare}%.`] })}
-            style={{ fontSize:12, color:C.textSub, background:C.card, border:`1px solid ${C.border}`, borderRadius:9, padding:"9px 12px", lineHeight:1.6 }}>
+            style={{ fontSize:16, color:C.textSub, background:C.card, border:`1px solid ${C.border}`, borderRadius:9, padding:"9px 12px", lineHeight:1.6 }}>
             <b style={{ color:C.text }}>Distribution:</b> top category <b style={{ color:C.cyan }}>{p.topName}</b> = {p.topShare}%, top-3 = {p.top3Share}%. {p.reading}
           </div>
           {ol && <div {...agentProps(setAgent, { title:"Liquidation", lines:[`${ol.ratio}% outlay ratio`, ol.text] })}
-            style={{ fontSize:12, color:C.textSub, background:C.card, border:`1px solid ${C.border}`, borderRadius:9, padding:"9px 12px", lineHeight:1.6 }}>
+            style={{ fontSize:16, color:C.textSub, background:C.card, border:`1px solid ${C.border}`, borderRadius:9, padding:"9px 12px", lineHeight:1.6 }}>
             <b style={{ color:C.text }}>Liquidation:</b> {ol.text}
             {ol.laggards.length > 0 && <span> Slowest: {ol.laggards.slice(0, 2).map(l => `${l.name} (${l.ratio}%)`).join(", ")}.</span>}
           </div>}
-          {mix && <div style={{ fontSize:12, color:C.textSub, background:C.card, border:`1px solid ${C.border}`, borderRadius:9, padding:"9px 12px", lineHeight:1.6 }}>
+          {mix && <div style={{ fontSize:16, color:C.textSub, background:C.card, border:`1px solid ${C.border}`, borderRadius:9, padding:"9px 12px", lineHeight:1.6 }}>
             <b style={{ color:C.text }}>Cost structure:</b> {mix.text}
           </div>}
         </div>
@@ -277,7 +277,7 @@ function DimensionProfile({ data, dimKey, fy }: { data: LiveDetail; dimKey: DimK
         {([["What it's for", doctrine.use, C.green], ["Pitfall", doctrine.pitfall, C.orange], ["Audit hook", doctrine.auditHook, C.purple]] as const).map(([t, body, col]) => (
           <div key={t} style={{ flex:1, minWidth:240, background:C.card, border:`1px solid ${C.border}`, borderRadius:9, padding:"10px 12px" }}>
             <Badge color={col}>{t}</Badge>
-            <div style={{ fontSize:11.5, color:C.textSub, lineHeight:1.6, marginTop:6 }}>{body}</div>
+            <div style={{ fontSize:15.5, color:C.textSub, lineHeight:1.6, marginTop:6 }}>{body}</div>
           </div>
         ))}
       </Row>
@@ -311,16 +311,16 @@ function CompareWorkspace({ agency, cmp, setCmp, fys }:
         style={{ border:`2px dashed ${over ? C.blue : C.border}`, borderRadius:10, padding:"12px 14px",
                  background: over ? `${C.blue}10` : "transparent", marginBottom:12,
                  display:"flex", gap:12, alignItems:"center", flexWrap:"wrap" }}>
-        <span style={{ fontSize:12, color:C.muted }}>⤵ Comparing</span>
+        <span style={{ fontSize:16, color:C.muted }}>⤵ Comparing</span>
         <select value={cmp.dim} onChange={e => setCmp({ ...cmp, dim: e.target.value as DimKey })}
-          style={{ background:C.card, color:C.blue, fontWeight:700, border:`1px solid ${C.borderAccent}`, borderRadius:8, padding:"6px 10px", fontSize:12.5, cursor:"pointer" }}>
+          style={{ background:C.card, color:C.blue, fontWeight:700, border:`1px solid ${C.borderAccent}`, borderRadius:8, padding:"6px 10px", fontSize:17, cursor:"pointer" }}>
           {DIM_KEYS.map(k => <option key={k} value={k}>{DIM_ICON[k]} {a.data?.dims[k].label ?? k}</option>)}
         </select>
         <FySelect value={cmp.fyA} onChange={v => setCmp({ ...cmp, fyA: v })} options={fys} />
-        <span style={{ color:C.muted, fontSize:12 }}>vs</span>
+        <span style={{ color:C.muted, fontSize:16 }}>vs</span>
         <FySelect value={cmp.fyB} onChange={v => setCmp({ ...cmp, fyB: v })} options={fys} />
         {res && (
-          <span style={{ marginLeft:"auto", fontSize:12, color:C.muted }}>
+          <span style={{ marginLeft:"auto", fontSize:16, color:C.muted }}>
             Δ total <b style={{ fontFamily:"var(--font-mono)", color: totDelta >= 0 ? C.green : C.red }}>{totDelta >= 0 ? "+" : ""}{fmt(totDelta)}</b>
             <span style={{ marginLeft:8 }}>({fmt(res.totalA)} → {fmt(res.totalB)})</span>
           </span>
@@ -330,7 +330,7 @@ function CompareWorkspace({ agency, cmp, setCmp, fys }:
       {res && !a.loading && !b.loading && (
         <>
           <div style={{ overflowX:"auto", maxHeight:380, overflowY:"auto" }}>
-            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12, minWidth:560 }}>
+            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:16, minWidth:560 }}>
               <thead><tr style={{ color:C.muted, textAlign:"left", position:"sticky", top:0, background:C.surface }}>
                 {[dimLabel, `FY${cmp.fyA}`, `FY${cmp.fyB}`, "Δ", "Δ%"].map(h => <th key={h} style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}` }}>{h}</th>)}
               </tr></thead>
@@ -350,7 +350,7 @@ function CompareWorkspace({ agency, cmp, setCmp, fys }:
               </tbody>
             </table>
           </div>
-          <div style={{ fontSize:11.5, color:C.muted, marginTop:10, lineHeight:1.6 }}>
+          <div style={{ fontSize:15.5, color:C.muted, marginTop:10, lineHeight:1.6 }}>
             {res.onlyB > 0 && <>⚠ {res.onlyB} categor{res.onlyB === 1 ? "y" : "ies"} new in FY{cmp.fyB} and </>}
             {res.onlyA > 0 && <>{res.onlyA} only in FY{cmp.fyA} — </>}
             name-matched comparison; renames across years will show as a disappear/appear pair, not a delta.
@@ -378,14 +378,14 @@ export function DrillPanel({ data, fy }: { data: LiveDetail; fy: number }) {
       <div style={{ display:"flex", gap:7, flexWrap:"wrap", marginBottom:12 }}>
         {DIM_KEYS.map(k => (
           <button key={k} onClick={() => { setTab(k); setOpen(new Set()) }}
-            style={{ padding:"7px 13px", borderRadius:8, fontSize:12.5, fontWeight: tab === k ? 700 : 500, cursor:"pointer",
+            style={{ padding:"7px 13px", borderRadius:8, fontSize:17, fontWeight: tab === k ? 700 : 500, cursor:"pointer",
                      border:`1px solid ${tab === k ? C.borderAccent : C.border}`, background: tab === k ? `${C.blue}1f` : C.card,
                      color: tab === k ? C.blue : C.muted }}>
             {DIM_ICON[k]} {data.dims[k].label} <span style={{ opacity:0.65 }}>({data.dims[k].nodes.length})</span>
           </button>
         ))}
       </div>
-      {!nodes.length ? <div style={{ fontSize:12.5, color:C.muted }}>No {dim.label.toLowerCase()} rows for FY{fy}.</div> : (
+      {!nodes.length ? <div style={{ fontSize:17, color:C.muted }}>No {dim.label.toLowerCase()} rows for FY{fy}.</div> : (
         <div style={{ maxHeight:480, overflowY:"auto", border:`1px solid ${C.border}`, borderRadius:10 }}>
           {nodes.slice(0, 60).map(n => {
             const share = total ? Math.round(Math.max(n.value, 0) / total * 1000) / 10 : 0
@@ -399,13 +399,13 @@ export function DrillPanel({ data, fy }: { data: LiveDetail; fy: number }) {
                     note: has ? `${n.children.length} ${dim.childLabel.toLowerCase() || "children"} beneath — click to expand.` : undefined }))}
                   style={{ display:"flex", alignItems:"center", gap:8, padding:"7px 12px", cursor: has ? "pointer" : "default",
                            borderBottom:`1px solid ${C.border}` }}>
-                  <span style={{ width:12, color:C.muted, fontSize:11 }}>{has ? (isOpen ? "▾" : "▸") : "·"}</span>
-                  <span style={{ flex:1, fontSize:12, color:C.text, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{n.name}</span>
+                  <span style={{ width:12, color:C.muted, fontSize:15 }}>{has ? (isOpen ? "▾" : "▸") : "·"}</span>
+                  <span style={{ flex:1, fontSize:16, color:C.text, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{n.name}</span>
                   <div style={{ width:100, height:7, background:C.dim, borderRadius:4, overflow:"hidden", flexShrink:0 }}>
                     <div style={{ width:`${Math.abs(n.value) / max * 100}%`, height:"100%", background: n.value < 0 ? C.red : C.blue }} />
                   </div>
-                  <span style={{ width:84, textAlign:"right", fontFamily:"var(--font-mono)", fontSize:11.5, color: n.value < 0 ? C.red : C.cyan, flexShrink:0 }}>{fmt(n.value)}</span>
-                  <span style={{ width:46, textAlign:"right", fontSize:11, color:C.muted, flexShrink:0 }}>{share}%</span>
+                  <span style={{ width:84, textAlign:"right", fontFamily:"var(--font-mono)", fontSize:15.5, color: n.value < 0 ? C.red : C.cyan, flexShrink:0 }}>{fmt(n.value)}</span>
+                  <span style={{ width:46, textAlign:"right", fontSize:15, color:C.muted, flexShrink:0 }}>{share}%</span>
                 </div>
                 {isOpen && n.children.sort((x, y) => Math.abs(y.value) - Math.abs(x.value)).map(c => {
                   const cShare = n.value ? Math.round(Math.abs(c.value) / Math.abs(n.value) * 1000) / 10 : 0
@@ -414,14 +414,14 @@ export function DrillPanel({ data, fy }: { data: LiveDetail; fy: number }) {
                       {...agentProps(setAgent, () => liveHover({ dimLabel: dim.childLabel || dim.label, name: c.name, value: c.value, share: cShare, outlays: c.outlays, count: c.count, depth: 1 }))}
                       style={{ display:"flex", alignItems:"center", gap:8, padding:"6px 12px 6px 34px",
                                borderBottom:`1px solid ${C.border}`, background:`${C.blue}06` }}>
-                      <span style={{ flex:1, fontSize:11.5, color:C.textSub, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
+                      <span style={{ flex:1, fontSize:15.5, color:C.textSub, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
                         {c.code ? <span style={{ fontFamily:"var(--font-mono)", color:C.muted, marginRight:6 }}>{c.code}</span> : null}{c.name}
                       </span>
                       <div style={{ width:80, height:6, background:C.dim, borderRadius:4, overflow:"hidden", flexShrink:0 }}>
                         <div style={{ width:`${Math.abs(c.value) / kidMax * 100}%`, height:"100%", background:C.purple }} />
                       </div>
-                      <span style={{ width:84, textAlign:"right", fontFamily:"var(--font-mono)", fontSize:11, color: c.value < 0 ? C.red : C.textSub, flexShrink:0 }}>{fmt(c.value)}</span>
-                      <span style={{ width:46, textAlign:"right", fontSize:10.5, color:C.muted, flexShrink:0 }}>{cShare}%</span>
+                      <span style={{ width:84, textAlign:"right", fontFamily:"var(--font-mono)", fontSize:15, color: c.value < 0 ? C.red : C.textSub, flexShrink:0 }}>{fmt(c.value)}</span>
+                      <span style={{ width:46, textAlign:"right", fontSize:14, color:C.muted, flexShrink:0 }}>{cShare}%</span>
                     </div>
                   )
                 })}
@@ -450,7 +450,7 @@ export function CadencePanel({ data }: { data: LiveDetail }) {
           sub="Intra-year burn by GTAS reporting period (left) and the multi-year resources-vs-obligations track (right)">
       <div style={{ display:"flex", gap:10, alignItems:"center", marginBottom:10, flexWrap:"wrap" }}>
         <select value={year.fy} onChange={e => setFySel(e.target.value)}
-          style={{ background:C.card, color:C.text, border:`1px solid ${C.border}`, borderRadius:8, padding:"6px 10px", fontSize:12, cursor:"pointer" }}>
+          style={{ background:C.card, color:C.text, border:`1px solid ${C.border}`, borderRadius:8, padding:"6px 10px", fontSize:16, cursor:"pointer" }}>
           {withPeriods.map(y => <option key={y.fy} value={y.fy}>{y.fy}</option>)}
         </select>
         <Badge color={ins.surge === "severe" ? C.red : ins.surge === "elevated" ? C.orange : C.green}>Q4 {ins.q4Share}% · {ins.surge}</Badge>
@@ -461,27 +461,27 @@ export function CadencePanel({ data }: { data: LiveDetail }) {
           <ResponsiveContainer width="100%" height={250}>
             <BarChart data={chart}>
               <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
-              <XAxis dataKey="period" stroke={C.muted} fontSize={11} />
-              <YAxis stroke={C.muted} fontSize={10} tickFormatter={(v: number) => `$${v.toFixed(0)}B`} />
+              <XAxis dataKey="period" stroke={C.muted} fontSize={15} />
+              <YAxis stroke={C.muted} fontSize={13.5} tickFormatter={(v: number) => `$${v.toFixed(0)}B`} />
               <Tooltip content={<Tip />} />
               <Bar dataKey="value" name="Obligated">{chart.map((p, i) => <Cell key={i} fill={p.q4 ? C.orange : C.blue} />)}</Bar>
             </BarChart>
           </ResponsiveContainer>
-          <div style={{ fontSize:11.5, color:C.textSub, lineHeight:1.6, marginTop:8 }}>{ins.text}</div>
+          <div style={{ fontSize:15.5, color:C.textSub, lineHeight:1.6, marginTop:8 }}>{ins.text}</div>
         </div>
         <div style={{ flex:1, minWidth:330 }}>
           <ResponsiveContainer width="100%" height={250}>
             <ComposedChart data={trendChart}>
               <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
-              <XAxis dataKey="fy" stroke={C.muted} fontSize={11} />
-              <YAxis stroke={C.muted} fontSize={10} tickFormatter={(v: number) => `$${v.toFixed(0)}B`} />
+              <XAxis dataKey="fy" stroke={C.muted} fontSize={15} />
+              <YAxis stroke={C.muted} fontSize={13.5} tickFormatter={(v: number) => `$${v.toFixed(0)}B`} />
               <Tooltip content={<Tip />} />
-              <Legend wrapperStyle={{ fontSize:12 }} />
+              <Legend wrapperStyle={{ fontSize:16 }} />
               <Bar dataKey="Obligated" fill={C.cyan} />
               <Line dataKey="Resources" stroke={C.gold} strokeWidth={2} dot />
             </ComposedChart>
           </ResponsiveContainer>
-          <div style={{ fontSize:11.5, color:C.muted, lineHeight:1.6, marginTop:8 }}>
+          <div style={{ fontSize:15.5, color:C.muted, lineHeight:1.6, marginTop:8 }}>
             Gap between the gold line and the bars = unobligated balance each year. A widening gap with flat obligations = authority arriving faster than execution capacity.
           </div>
         </div>
@@ -501,9 +501,9 @@ function DataOps({ data, quality, dimKey }: { data: LiveDetail; quality: { score
     <Card title="Data ops — quality & prep" sub={`Scorecard for the live bundle + transparent cleaning of ${data.dims[dimKey].label}`} style={{ flex:1, minWidth:340 }}>
       <div {...agentProps(setAgent, { title:"Quality score", lines:[`${quality.score}/100`, "Composite of dimension coverage, parent/child tie-outs, sign anomalies, and series availability. Deterministic — re-scores on every load."] })}
         style={{ display:"flex", alignItems:"center", gap:14, marginBottom:12 }}>
-        <div style={{ fontSize:30, fontWeight:800, fontFamily:"var(--font-mono)", color: quality.score >= 80 ? C.green : quality.score >= 60 ? C.gold : C.red }}>{quality.score}</div>
+        <div style={{ fontSize:40.5, fontWeight:800, fontFamily:"var(--font-mono)", color: quality.score >= 80 ? C.green : quality.score >= 60 ? C.gold : C.red }}>{quality.score}</div>
         <div style={{ flex:1 }}>
-          <div style={{ fontSize:11, color:C.muted, marginBottom:4 }}>BUNDLE QUALITY SCORE / 100</div>
+          <div style={{ fontSize:15, color:C.muted, marginBottom:4 }}>BUNDLE QUALITY SCORE / 100</div>
           <div style={{ height:8, background:C.dim, borderRadius:4, overflow:"hidden" }}>
             <div style={{ width:`${quality.score}%`, height:"100%", background: quality.score >= 80 ? C.green : quality.score >= 60 ? C.gold : C.red }} />
           </div>
@@ -513,13 +513,13 @@ function DataOps({ data, quality, dimKey }: { data: LiveDetail; quality: { score
         {quality.findings.map((f, i) => (
           <div key={i} style={{ display:"flex", gap:8, alignItems:"flex-start", padding:"7px 10px", background:C.card, border:`1px solid ${C.border}`, borderRadius:8 }}>
             <Badge color={col(f.level)}>{f.level.toUpperCase()}</Badge>
-            <div><div style={{ fontSize:11.5, fontWeight:600, color:C.text }}>{f.title}</div>
-              <div style={{ fontSize:11, color:C.textSub, marginTop:2, lineHeight:1.5 }}>{f.detail}</div></div>
+            <div><div style={{ fontSize:15.5, fontWeight:600, color:C.text }}>{f.title}</div>
+              <div style={{ fontSize:15, color:C.textSub, marginTop:2, lineHeight:1.5 }}>{f.detail}</div></div>
           </div>
         ))}
       </div>
-      <div style={{ fontSize:11, color:C.muted, letterSpacing:"0.08em", marginBottom:8 }}>PREP PIPELINE — {data.dims[dimKey].label.toUpperCase()}</div>
-      <table style={{ width:"100%", borderCollapse:"collapse", fontSize:11.5 }}>
+      <div style={{ fontSize:15, color:C.muted, letterSpacing:"0.08em", marginBottom:8 }}>PREP PIPELINE — {data.dims[dimKey].label.toUpperCase()}</div>
+      <table style={{ width:"100%", borderCollapse:"collapse", fontSize:15.5 }}>
         <thead><tr style={{ color:C.muted, textAlign:"left" }}>
           {["Step", "Rule", "In", "Out"].map(h => <th key={h} style={{ padding:"5px 8px", borderBottom:`1px solid ${C.border}` }}>{h}</th>)}
         </tr></thead>
@@ -534,7 +534,7 @@ function DataOps({ data, quality, dimKey }: { data: LiveDetail; quality: { score
           ))}
         </tbody>
       </table>
-      <div style={{ fontSize:11, color:C.muted, marginTop:10, lineHeight:1.6 }}>
+      <div style={{ fontSize:15, color:C.muted, marginTop:10, lineHeight:1.6 }}>
         Non-destructive — the cleaned set ({prep.clean.length} rows) is what the <b style={{ color:C.text }}>AI/ML Workbench</b> should pool for screens; raw API responses are never modified.
       </div>
     </Card>

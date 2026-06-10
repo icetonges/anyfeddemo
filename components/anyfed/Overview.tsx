@@ -64,7 +64,7 @@ function DodOverview({ agency, onNavigate }: { agency: Agency; onNavigate: Nav }
   }, [data, awards.data])
 
   if (loading) return <Spinner label="Loading DoD exhibit books from sourcedata/…" />
-  if (error || !data || !stats) return <Card title="Data error"><span style={{ color:C.red, fontSize:13 }}>{error}</span></Card>
+  if (error || !data || !stats) return <Card title="Data error"><span style={{ color:C.red, fontSize:17.5 }}>{error}</span></Card>
 
   const mwByCat = ["IT & Systems", "Transactions & Balances", "Reporting & Oversight"].map(cat => ({
     cat, n: DOD_MATERIAL_WEAKNESSES.filter(m => m.category === cat).length }))
@@ -128,10 +128,10 @@ function DrillPanel({ id, data, stats, mwByCat, onNavigate }:
         <ResponsiveContainer width="100%" height={300}>
           <ComposedChart data={trend}>
             <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
-            <XAxis dataKey="fy" stroke={C.muted} fontSize={12} />
-            <YAxis stroke={C.muted} fontSize={12} tickFormatter={(v: number) => `$${v.toFixed(0)}B`} />
+            <XAxis dataKey="fy" stroke={C.muted} fontSize={16} />
+            <YAxis stroke={C.muted} fontSize={16} tickFormatter={(v: number) => `$${v.toFixed(0)}B`} />
             <Tooltip content={<Tip />} />
-            <Legend wrapperStyle={{ fontSize:12 }} />
+            <Legend wrapperStyle={{ fontSize:16 }} />
             {appns.map((ap, i) => <Bar key={ap} dataKey={ap} stackId="a" fill={EXHIBIT_COLORS[i % EXHIBIT_COLORS.length]} />)}
             <Line dataKey="total" name="Total" stroke={C.text} strokeWidth={2} dot />
           </ComposedChart>
@@ -155,10 +155,10 @@ function DrillPanel({ id, data, stats, mwByCat, onNavigate }:
             <ResponsiveContainer width="100%" height={270}>
               <BarChart data={chart}>
                 <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
-                <XAxis dataKey="fy" stroke={C.muted} fontSize={12} />
-                <YAxis stroke={C.muted} fontSize={11} tickFormatter={(v: number) => `$${v.toFixed(0)}B`} />
+                <XAxis dataKey="fy" stroke={C.muted} fontSize={16} />
+                <YAxis stroke={C.muted} fontSize={15} tickFormatter={(v: number) => `$${v.toFixed(0)}B`} />
                 <Tooltip content={<Tip />} />
-                <Legend wrapperStyle={{ fontSize:12 }} />
+                <Legend wrapperStyle={{ fontSize:16 }} />
                 <Bar dataKey="Request" fill={C.blue} />
                 <Bar dataKey="Enacted" fill={C.gold} />
                 <Bar dataKey="Actual" fill={C.green} />
@@ -169,10 +169,10 @@ function DrillPanel({ id, data, stats, mwByCat, onNavigate }:
             {findings.map((f, i) => (
               <div key={i} style={{ padding:"9px 11px", background:C.card, border:`1px solid ${C.border}`, borderRadius:9 }}>
                 <Badge color={f.kind === "execution" ? C.green : C.gold}>{f.fy} · {f.kind}</Badge>
-                <div style={{ fontSize:12, color:C.textSub, lineHeight:1.55, marginTop:5 }}>{f.text}</div>
+                <div style={{ fontSize:16, color:C.textSub, lineHeight:1.55, marginTop:5 }}>{f.text}</div>
               </div>
             ))}
-            <div style={{ fontSize:11.5, color:C.muted, lineHeight:1.6 }}>
+            <div style={{ fontSize:15.5, color:C.muted, lineHeight:1.6 }}>
               Reading: over-execution above enacted implies supplementals/reprogramming; congressional adds above the request shift the FY27 hearing posture.
             </div>
           </div>
@@ -190,15 +190,15 @@ function DrillPanel({ id, data, stats, mwByCat, onNavigate }:
         <ResponsiveContainer width="100%" height={260}>
           <BarChart data={chart}>
             <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
-            <XAxis dataKey="fy" stroke={C.muted} fontSize={12} />
-            <YAxis stroke={C.muted} fontSize={11} tickFormatter={(v: number) => `$${v.toFixed(0)}B`} />
+            <XAxis dataKey="fy" stroke={C.muted} fontSize={16} />
+            <YAxis stroke={C.muted} fontSize={15} tickFormatter={(v: number) => `$${v.toFixed(0)}B`} />
             <Tooltip content={<Tip />} />
-            <Legend wrapperStyle={{ fontSize:12 }} />
+            <Legend wrapperStyle={{ fontSize:16 }} />
             <Bar dataKey="Discretionary" stackId="a" fill={C.blue} />
             <Bar dataKey="Mandatory" stackId="a" fill={C.orange} />
           </BarChart>
         </ResponsiveContainer>
-        <div style={{ fontSize:12, color:C.textSub, lineHeight:1.65, marginTop:10 }}>
+        <div style={{ fontSize:16, color:C.textSub, lineHeight:1.65, marginTop:10 }}>
           Expert read: a {fmtShare(stats.mandShare)} mandatory share inside the FY2026 topline means raw FY25→FY26 growth
           overstates the program trajectory. Variance narratives, CAGR computations, and the FY2027 hearing book must
           present discretionary-only trend lines with the mandatory tranche footnoted separately.
@@ -217,7 +217,7 @@ function DrillPanel({ id, data, stats, mwByCat, onNavigate }:
           ))}
           <KPI icon="✅" label="Clean entities" value={String(DOD_AUDIT_FACTS.cleanEntities.length)} accent={C.green} sub="USMC pattern proves the path" />
         </Row>
-        <div style={{ fontSize:12, color:C.textSub, lineHeight:1.65, marginTop:12 }}>
+        <div style={{ fontSize:16, color:C.textSub, lineHeight:1.65, marginTop:12 }}>
           Highest-leverage levers: <b style={{ color:C.text }}>MW #7 Universe of Transactions</b> (unlocks valid sampling for every other balance)
           and <b style={{ color:C.text }}>MW #8 FBwT</b> (the checkbook). The Audit Center carries the full drill-down: Component positions,
           feeder→GL system maps, the Advana solution with embedded AI, the execution plan, and a live model demonstration per weakness.
@@ -230,7 +230,7 @@ function DrillPanel({ id, data, stats, mwByCat, onNavigate }:
   if (id === "yearend") {
     return (
       <Card title="Drill — year-end execution posture" sub="FY-Q4 (Jul–Sep) share of award obligations from the bundled USAspending transaction files">
-        <div style={{ fontSize:12.5, color:C.textSub, lineHeight:1.7 }}>
+        <div style={{ fontSize:17, color:C.textSub, lineHeight:1.7 }}>
           A Q4 share of <b style={{ color:C.text }}>{fmtShare(stats.q4Share)}</b> against a 25% uniform baseline
           {(stats.q4Share ?? 0) > 32
             ? " is an elevated use-it-or-lose-it signal: expect contract-rush quality risk, improper-payment exposure on September awards, and de-obligation sweep opportunities in Q1. Pre-position post-payment review sampling on September activity now."
@@ -250,8 +250,8 @@ function DrillPanel({ id, data, stats, mwByCat, onNavigate }:
       <ResponsiveContainer width="100%" height={250}>
         <BarChart data={rows} layout="vertical" margin={{ left: 40 }}>
           <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
-          <XAxis type="number" stroke={C.muted} fontSize={11} tickFormatter={(v: number) => `$${v.toFixed(0)}B`} />
-          <YAxis type="category" dataKey="name" stroke={C.muted} fontSize={11} width={150} />
+          <XAxis type="number" stroke={C.muted} fontSize={15} tickFormatter={(v: number) => `$${v.toFixed(0)}B`} />
+          <YAxis type="category" dataKey="name" stroke={C.muted} fontSize={15} width={150} />
           <Tooltip content={<Tip />} />
           <Bar dataKey="value" name="FY2027 ($B)">
             {rows.map((_, i) => <Cell key={i} fill={EXHIBIT_COLORS[i % EXHIBIT_COLORS.length]} />)}
@@ -268,7 +268,7 @@ function DrillFoot({ onNavigate, page, label }: { onNavigate: Nav; page: string;
   if (!onNavigate) return null
   return (
     <button onClick={() => onNavigate(page)}
-      style={{ marginTop:12, padding:"8px 14px", borderRadius:8, fontSize:12, fontWeight:600, cursor:"pointer",
+      style={{ marginTop:12, padding:"8px 14px", borderRadius:8, fontSize:16, fontWeight:600, cursor:"pointer",
                border:`1px solid ${C.borderAccent}`, background:`${C.blue}14`, color:C.blue }}>{label}</button>
   )
 }
@@ -314,12 +314,12 @@ function DecisionQueue({ stats, monthsLeft, onNavigate }:
         {cards.map((c, i) => (
           <div key={i} style={{ background:C.card, border:`1px solid ${C.border}`, borderRadius:10, padding:"13px 15px", display:"flex", flexDirection:"column" }}>
             <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:7 }}>
-              <span style={{ fontSize:13, fontWeight:700, color:C.text }}>{c.icon} {c.title}</span>
+              <span style={{ fontSize:17.5, fontWeight:700, color:C.text }}>{c.icon} {c.title}</span>
               <Badge color={C.cyan}>{c.stat}</Badge>
             </div>
-            <div style={{ fontSize:12, color:C.textSub, lineHeight:1.6, flex:1 }}>{c.decision}</div>
+            <div style={{ fontSize:16, color:C.textSub, lineHeight:1.6, flex:1 }}>{c.decision}</div>
             {onNavigate && <button onClick={() => onNavigate(c.page)}
-              style={{ marginTop:10, alignSelf:"flex-start", padding:"5px 11px", borderRadius:7, fontSize:11.5, cursor:"pointer",
+              style={{ marginTop:10, alignSelf:"flex-start", padding:"5px 11px", borderRadius:7, fontSize:15.5, cursor:"pointer",
                        border:`1px solid ${C.border}`, background:"transparent", color:C.blue }}>work it →</button>}
           </div>
         ))}
@@ -343,7 +343,7 @@ function ActionItems({ onNavigate, q4Share, mandShare, execVar }:
   return (
     <Card title="Action Items" sub="Prioritized, owned, dated — click a row to open the page where the work happens">
       <div style={{ overflowX:"auto" }}>
-        <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12.5, minWidth:640 }}>
+        <table style={{ width:"100%", borderCollapse:"collapse", fontSize:17, minWidth:640 }}>
           <thead><tr style={{ color:C.muted, textAlign:"left" }}>
             {["Pri", "Action", "Owner", "Due", ""].map(h => <th key={h} style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}` }}>{h}</th>)}
           </tr></thead>
@@ -355,7 +355,7 @@ function ActionItems({ onNavigate, q4Share, mandShare, execVar }:
                 <td style={{ padding:"8px 10px", borderBottom:`1px solid ${C.border}`, color:C.text, lineHeight:1.55 }}>{it.action}</td>
                 <td style={{ padding:"8px 10px", borderBottom:`1px solid ${C.border}`, color:C.textSub, whiteSpace:"nowrap" }}>{it.owner}</td>
                 <td style={{ padding:"8px 10px", borderBottom:`1px solid ${C.border}`, color:C.muted, whiteSpace:"nowrap" }}>{it.due}</td>
-                <td style={{ padding:"8px 10px", borderBottom:`1px solid ${C.border}`, color:C.blue, fontSize:11.5, whiteSpace:"nowrap" }}>{onNavigate ? "open →" : ""}</td>
+                <td style={{ padding:"8px 10px", borderBottom:`1px solid ${C.border}`, color:C.blue, fontSize:15.5, whiteSpace:"nowrap" }}>{onNavigate ? "open →" : ""}</td>
               </tr>
             ))}
           </tbody>
@@ -387,11 +387,11 @@ function SecOverview({ agency, onNavigate }: { agency: Agency; onNavigate?: (pag
         <ResponsiveContainer width="100%" height={300}>
           <ComposedChart data={hist}>
             <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
-            <XAxis dataKey="fy" stroke={C.muted} fontSize={12} />
-            <YAxis yAxisId="m" stroke={C.muted} fontSize={12} />
-            <YAxis yAxisId="f" orientation="right" stroke={C.muted} fontSize={12} />
+            <XAxis dataKey="fy" stroke={C.muted} fontSize={16} />
+            <YAxis yAxisId="m" stroke={C.muted} fontSize={16} />
+            <YAxis yAxisId="f" orientation="right" stroke={C.muted} fontSize={16} />
             <Tooltip content={<Tip />} />
-            <Legend wrapperStyle={{ fontSize:12 }} />
+            <Legend wrapperStyle={{ fontSize:16 }} />
             <Bar yAxisId="m" dataKey="requested" name="Requested ($M)" fill={C.dim} />
             <Bar yAxisId="m" dataKey="enacted" name="Enacted ($M)" fill={C.blue} />
             <Line yAxisId="f" dataKey="fte" name="FTE" stroke={C.gold} strokeWidth={2} />
@@ -399,7 +399,7 @@ function SecOverview({ agency, onNavigate }: { agency: Agency; onNavigate?: (pag
         </ResponsiveContainer>
       </Card>
       <div style={{ height:14 }} />
-      <div style={{ fontSize:12.5, color:C.muted }}>
+      <div style={{ fontSize:17, color:C.muted }}>
         Full SEC deep-dive (program analysis, OIG, Section 31 fees, interview prep) remains available in the
         legacy portal: <a href="/sec-cfo" style={{ color:C.blue }}>/sec-cfo</a>
       </div>
@@ -420,7 +420,7 @@ function LiveOverview({ agency, onNavigate }: { agency: Agency; onNavigate: Nav 
   if (loading) return <Spinner label={`Building the ${agency.abbrev} live posture from USAspending/GTAS…`} />
   if (error || !data) return (
     <Card title={`${agency.name}`}>
-      <span style={{ color:C.red, fontSize:13 }}>Live fetch failed: {error}. Add an agency folder under
+      <span style={{ color:C.red, fontSize:17.5 }}>Live fetch failed: {error}. Add an agency folder under
       sourcedata/ to load it as a default source.</span>
     </Card>
   )
@@ -450,10 +450,10 @@ function LiveOverview({ agency, onNavigate }: { agency: Agency; onNavigate: Nav 
           <ResponsiveContainer width="100%" height={280}>
             <AreaChart data={rows}>
               <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
-              <XAxis dataKey="fy" stroke={C.muted} fontSize={12} />
-              <YAxis stroke={C.muted} fontSize={12} tickFormatter={(v: number) => `$${v.toFixed(0)}B`} />
+              <XAxis dataKey="fy" stroke={C.muted} fontSize={16} />
+              <YAxis stroke={C.muted} fontSize={16} tickFormatter={(v: number) => `$${v.toFixed(0)}B`} />
               <Tooltip content={<Tip />} />
-              <Legend wrapperStyle={{ fontSize:12 }} />
+              <Legend wrapperStyle={{ fontSize:16 }} />
               <Area dataKey="resources" name="Resources ($B)" stroke={C.blue} fill={`${C.blue}33`} strokeWidth={2} />
               <Area dataKey="obligated" name="Obligated ($B)" stroke={C.green} fill={`${C.green}26`} strokeWidth={2} />
             </AreaChart>
@@ -465,13 +465,13 @@ function LiveOverview({ agency, onNavigate }: { agency: Agency; onNavigate: Nav 
               <div key={i} style={{ padding:"9px 11px", background:C.card, border:`1px solid ${C.border}`, borderRadius:9 }}>
                 <div style={{ display:"flex", gap:8, alignItems:"center", marginBottom:4 }}>
                   <Badge color={f.severity === "high" ? C.red : f.severity === "medium" ? C.orange : C.green}>{f.severity.toUpperCase()}</Badge>
-                  <span style={{ fontSize:12, fontWeight:700, color:C.text }}>{f.title}</span>
+                  <span style={{ fontSize:16, fontWeight:700, color:C.text }}>{f.title}</span>
                 </div>
-                <div style={{ fontSize:11.5, color:C.textSub, lineHeight:1.55 }}>{f.text}</div>
+                <div style={{ fontSize:15.5, color:C.textSub, lineHeight:1.55 }}>{f.text}</div>
               </div>
             ))}
             {onNavigate && <button onClick={() => onNavigate("intel")}
-              style={{ alignSelf:"flex-start", padding:"7px 13px", borderRadius:8, fontSize:12, fontWeight:600, cursor:"pointer",
+              style={{ alignSelf:"flex-start", padding:"7px 13px", borderRadius:8, fontSize:16, fontWeight:600, cursor:"pointer",
                        border:`1px solid ${C.borderAccent}`, background:`${C.blue}14`, color:C.blue }}>
               Full profile, drill-down & comparison in Data Intelligence →</button>}
           </div>
@@ -480,7 +480,7 @@ function LiveOverview({ agency, onNavigate }: { agency: Agency; onNavigate: Nav 
       <div style={{ height:18 }} />
       <Card title="Action Items" sub="Generated from the live findings — owners per the standard CFO org model">
         <div style={{ overflowX:"auto" }}>
-          <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12.5, minWidth:600 }}>
+          <table style={{ width:"100%", borderCollapse:"collapse", fontSize:17, minWidth:600 }}>
             <thead><tr style={{ color:C.muted, textAlign:"left" }}>
               {["Pri", "Action", "Owner", ""].map(h => <th key={h} style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}` }}>{h}</th>)}
             </tr></thead>
@@ -493,7 +493,7 @@ function LiveOverview({ agency, onNavigate }: { agency: Agency; onNavigate: Nav 
                   <td style={{ padding:"8px 10px", borderBottom:`1px solid ${C.border}`, color:C.text, lineHeight:1.55 }}>
                     {actionFor(f.area, agency.abbrev)}</td>
                   <td style={{ padding:"8px 10px", borderBottom:`1px solid ${C.border}`, color:C.textSub, whiteSpace:"nowrap" }}>{ownerFor(f.area)}</td>
-                  <td style={{ padding:"8px 10px", borderBottom:`1px solid ${C.border}`, color:C.blue, fontSize:11.5 }}>{onNavigate ? "open →" : ""}</td>
+                  <td style={{ padding:"8px 10px", borderBottom:`1px solid ${C.border}`, color:C.blue, fontSize:15.5 }}>{onNavigate ? "open →" : ""}</td>
                 </tr>
               ))}
             </tbody>

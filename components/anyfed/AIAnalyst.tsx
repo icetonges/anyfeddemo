@@ -66,7 +66,7 @@ export default function AIAnalyst({ agency }: { agency: Agency }) {
           <Badge color={C.green}>● CHAIN ACTIVE</Badge>
           <select value={modelId} onChange={e => setModelId(e.target.value)}
             style={{ marginLeft:"auto", background:C.card, color:C.text, border:`1px solid ${C.border}`,
-                     borderRadius:8, padding:"6px 10px", fontSize:12 }}>
+                     borderRadius:8, padding:"6px 10px", fontSize:16 }}>
             {MODELS.map(m => <option key={m.id} value={m.id}>{m.name} — {m.providerLabel ?? m.provider}</option>)}
           </select>
         </div>
@@ -74,14 +74,14 @@ export default function AIAnalyst({ agency }: { agency: Agency }) {
         <div style={{ height:420, overflowY:"auto", padding:16 }}>
           {!msgs.length && (
             <div>
-              <div style={{ fontSize:13, color:C.muted, marginBottom:12 }}>
+              <div style={{ fontSize:17.5, color:C.muted, marginBottom:12 }}>
                 Ask anything about {agency.name} financial management. Try:
               </div>
               {sugg.map(s => (
                 <button key={s} onClick={() => send(s)}
                   style={{ display:"block", width:"100%", textAlign:"left", marginBottom:8, padding:"10px 14px",
                            background:C.card, border:`1px solid ${C.border}`, borderRadius:10, color:C.textSub,
-                           fontSize:12.5, cursor:"pointer" }}>
+                           fontSize:17, cursor:"pointer" }}>
                   💬 {s}
                 </button>
               ))}
@@ -89,19 +89,19 @@ export default function AIAnalyst({ agency }: { agency: Agency }) {
           )}
           {msgs.map((m, i) => (
             <div key={i} style={{ marginBottom:14, display:"flex", justifyContent: m.role === "user" ? "flex-end" : "flex-start" }}>
-              <div style={{ maxWidth:"82%", padding:"10px 14px", borderRadius:12, fontSize:13, lineHeight:1.65,
+              <div style={{ maxWidth:"82%", padding:"10px 14px", borderRadius:12, fontSize:17.5, lineHeight:1.65,
                             whiteSpace:"pre-wrap",
                             background: m.role === "user" ? `${C.blue}26` : C.card,
                             border:`1px solid ${m.role === "user" ? C.borderAccent : C.border}`,
                             color:C.text }}>
                 {m.content}
                 {m.modelUsed && (
-                  <div style={{ fontSize:10.5, color:C.muted, marginTop:6 }}>answered by {m.modelUsed}</div>
+                  <div style={{ fontSize:14, color:C.muted, marginTop:6 }}>answered by {m.modelUsed}</div>
                 )}
               </div>
             </div>
           ))}
-          {busy && <div style={{ fontSize:12.5, color:C.muted }}>Analyst is thinking…</div>}
+          {busy && <div style={{ fontSize:17, color:C.muted }}>Analyst is thinking…</div>}
           <div ref={endRef} />
         </div>
 
@@ -110,9 +110,9 @@ export default function AIAnalyst({ agency }: { agency: Agency }) {
             onKeyDown={e => e.key === "Enter" && send()}
             placeholder={`Ask the ${agency.abbrev} FM analyst…`}
             style={{ flex:1, background:C.card, border:`1px solid ${C.border}`, borderRadius:10,
-                     padding:"10px 14px", fontSize:13, color:C.text, outline:"none" }} />
+                     padding:"10px 14px", fontSize:17.5, color:C.text, outline:"none" }} />
           <button onClick={() => send()} disabled={busy}
-            style={{ padding:"10px 22px", borderRadius:10, fontWeight:700, fontSize:13, cursor:"pointer",
+            style={{ padding:"10px 22px", borderRadius:10, fontWeight:700, fontSize:17.5, cursor:"pointer",
                      border:`1px solid ${C.borderAccent}`, background:`${C.blue}26`, color:C.blue }}>
             Send
           </button>

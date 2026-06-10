@@ -35,7 +35,7 @@ export default function Accounting({ agency }: { agency: Agency }) {
       <Row>
         <Card title="USSGL Core Accounts" sub="Budgetary (4xxx) and proprietary series used daily by FM shops" style={{ flex:1.3, minWidth:340 }}>
           <div style={{ overflowX:"auto" }}>
-            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12.5 }}>
+            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:17 }}>
               <thead>
                 <tr style={{ color:C.muted, textAlign:"left" }}>
                   {["Acct", "Title", "Normal", "Statement"].map(h => (
@@ -67,13 +67,13 @@ export default function Accounting({ agency }: { agency: Agency }) {
               ["Disburse (invoice paid)", "DR 4901 → CR 4902 · DR 2110 → CR 1010 FBwT"],
             ].map(([step, entry], i) => (
               <div key={step} style={{ padding:"9px 0", borderBottom:`1px solid ${C.border}` }}>
-                <div style={{ fontSize:12.5, fontWeight:600, color:C.text }}>{i + 1}. {step}</div>
-                <div style={{ fontSize:11.5, color:C.cyan, fontFamily:"var(--font-mono)", marginTop:3 }}>{entry}</div>
+                <div style={{ fontSize:17, fontWeight:600, color:C.text }}>{i + 1}. {step}</div>
+                <div style={{ fontSize:15.5, color:C.cyan, fontFamily:"var(--font-mono)", marginTop:3 }}>{entry}</div>
               </div>
             ))}
           </Card>
           <Card title="JV Quality Gate" sub={isDod ? "Directly remediates MW #18 (Unsupported Adjustments) & MW #5 (SoD)" : "A-123 control: ACC-01"}>
-            <div style={{ fontSize:12.5, color:C.textSub, lineHeight:1.8 }}>
+            <div style={{ fontSize:17, color:C.textSub, lineHeight:1.8 }}>
               ✔ Key Supporting Documentation attached before posting<br />
               ✔ Preparer ≠ approver (segregation of duties)<br />
               ✔ USSGL debit/credit pairs validated against TFM posting models<br />
@@ -90,7 +90,7 @@ export default function Accounting({ agency }: { agency: Agency }) {
               : "Monthly GL ↔ Treasury CARS/GWA tie-out (illustrative figures, $K)"}>
         <Row>
           <div style={{ flex:1.4, minWidth:340, overflowX:"auto" }}>
-            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12.5, minWidth:420 }}>
+            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:17, minWidth:420 }}>
               <tbody>
                 <tr>
                   <td style={{ padding:"8px 10px", borderBottom:`1px solid ${C.border}`, color:C.text, fontWeight:600 }}>
@@ -137,7 +137,7 @@ export default function Accounting({ agency }: { agency: Agency }) {
                      sub={`${fmtMoney(Math.abs(residual), "K")} residual`} />
               </div>
             </div>
-            <div style={{ fontSize:12.5, color:C.textSub, lineHeight:1.8 }}>
+            <div style={{ fontSize:17, color:C.textSub, lineHeight:1.8 }}>
               Reconciling items are aged and cleared within 60 days under control <b style={{ color:C.text }}>ACC-02</b>.
               Items beyond threshold route to the suspense-clearance queue.
               {isDod && <> Unresolved differences at scale are the heart of <Badge color={C.orange}>MW #8 — Fund Balance with Treasury</Badge>.</>}

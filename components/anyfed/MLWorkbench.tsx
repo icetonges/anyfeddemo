@@ -206,7 +206,7 @@ export default function MLWorkbench({ agency }: { agency: Agency }) {
     <div>
       <SectionTitle title="AI / ML Workbench"
         sub={`Blueprint-driven models computed live on ${agency.abbrev} data — DataRobot-style leaderboard, real numbers, no canned outputs`} />
-      <div style={{ fontSize:11.5, color:C.muted, marginBottom:12 }}>
+      <div style={{ fontSize:15.5, color:C.muted, marginBottom:12 }}>
         {live.loading
           ? `📡 Fetching ${agency.abbrev} live GTAS detail (accounts, object classes, monthly burn) from USAspending.gov…`
           : visible.some(d => d.agency === agency.id)
@@ -229,11 +229,11 @@ export default function MLWorkbench({ agency }: { agency: Agency }) {
                   onChange={() => setSelected(p => on ? p.filter(x => x !== d.id) : [...p, d.id])} />
                 <div>
                   <div style={{ display:"flex", gap:8, alignItems:"center", flexWrap:"wrap" }}>
-                    <span style={{ fontSize:12.5, fontWeight:600, color:C.text }}>{d.label}</span>
+                    <span style={{ fontSize:17, fontWeight:600, color:C.text }}>{d.label}</span>
                     {d.agency !== agency.id && <Badge color={C.gold}>{d.agency}</Badge>}
                   </div>
-                  <div style={{ fontSize:11, color:C.muted, marginTop:2 }}>{d.source}</div>
-                  <div style={{ fontSize:11, color:C.cyan, marginTop:3 }}>
+                  <div style={{ fontSize:15, color:C.muted, marginTop:2 }}>{d.source}</div>
+                  <div style={{ fontSize:15, color:C.cyan, marginTop:3 }}>
                     {d.txns ? `${d.txns.length} txns` : d.amounts ? `${d.amounts.length} values` : ""}
                     {d.series ? `${d.txns || d.amounts ? " · " : ""}${d.series.length}-pt series` : ""}
                   </div>
@@ -243,11 +243,11 @@ export default function MLWorkbench({ agency }: { agency: Agency }) {
           })}
         </div>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", gap:10, flexWrap:"wrap", marginTop:10 }}>
-          <div style={{ fontSize:11.5, color:C.muted }}>
+          <div style={{ fontSize:15.5, color:C.muted }}>
             Pooled: <b style={{ color:C.text }}>{pooledAmounts.length}</b> values · <b style={{ color:C.text }}>{pooledTxns.length}</b> transactions
             {firstSeries ? <> · series ready (<b style={{ color:C.text }}>{firstSeries.length}</b> pts)</> : " · no time series selected"}
           </div>
-          <label style={{ display:"flex", gap:7, alignItems:"center", fontSize:11.5, color:C.textSub, cursor:"pointer" }}>
+          <label style={{ display:"flex", gap:7, alignItems:"center", fontSize:15.5, color:C.textSub, cursor:"pointer" }}>
             <input type="checkbox" checked={crossAgency} onChange={e => setCrossAgency(e.target.checked)} />
             Include other agencies&apos; datasets (cross-agency pooling — benchmark {agency.abbrev} against DoD/SEC folder data)
           </label>
@@ -265,15 +265,15 @@ export default function MLWorkbench({ agency }: { agency: Agency }) {
               <div key={m.id} style={{ background:C.card, border:`1px solid ${C.border}`, borderRadius:10, padding:"13px 15px",
                        opacity: ok ? 1 : 0.55 }}>
                 <div style={{ display:"flex", justifyContent:"space-between", gap:8 }}>
-                  <div style={{ fontSize:13, fontWeight:700, color:C.text }}>{m.name}</div>
+                  <div style={{ fontSize:17.5, fontWeight:700, color:C.text }}>{m.name}</div>
                   <Badge color={C.purple}>{m.family}</Badge>
                 </div>
-                <div style={{ fontSize:11.5, color:C.textSub, margin:"7px 0", lineHeight:1.5 }}>{m.useCase}</div>
-                <div style={{ fontSize:10.5, color:C.muted, fontFamily:"var(--font-mono)", lineHeight:1.7 }}>
+                <div style={{ fontSize:15.5, color:C.textSub, margin:"7px 0", lineHeight:1.5 }}>{m.useCase}</div>
+                <div style={{ fontSize:14, color:C.muted, fontFamily:"var(--font-mono)", lineHeight:1.7 }}>
                   {m.blueprint.map((s, i) => <div key={i}>{i + 1}· {s}</div>)}
                 </div>
                 <button onClick={() => ok && run(m)} disabled={!ok || running === m.id}
-                  style={{ marginTop:10, width:"100%", padding:"7px 0", borderRadius:8, fontSize:12.5, fontWeight:700,
+                  style={{ marginTop:10, width:"100%", padding:"7px 0", borderRadius:8, fontSize:17, fontWeight:700,
                            cursor: ok ? "pointer" : "not-allowed", border:`1px solid ${C.borderAccent}`,
                            background: running === m.id ? C.dim : `${C.blue}26`, color:C.blue }}>
                   {running === m.id ? "Computing…" : ok ? "▶ Run model" : m.needs === "series" ? "Needs a time series" : "Needs ≥20 rows"}
@@ -289,10 +289,10 @@ export default function MLWorkbench({ agency }: { agency: Agency }) {
       {/* 3 ── leaderboard */}
       <Card title="3 · Leaderboard" sub="Every run is logged with its data, population size, and headline metric">
         {!runs.length ? (
-          <div style={{ fontSize:12.5, color:C.muted, padding:"12px 0" }}>No runs yet — select data and run a blueprint above.</div>
+          <div style={{ fontSize:17, color:C.muted, padding:"12px 0" }}>No runs yet — select data and run a blueprint above.</div>
         ) : (
           <div style={{ overflowX:"auto" }}>
-            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12.5, minWidth:640 }}>
+            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:17, minWidth:640 }}>
               <thead>
                 <tr style={{ color:C.muted, textAlign:"left" }}>
                   {["Model", "Task", "Data", "N", "Headline metric", ""].map(h => (
@@ -305,12 +305,12 @@ export default function MLWorkbench({ agency }: { agency: Agency }) {
                   <tr key={r.runId} style={{ background: active?.runId === r.runId ? `${C.blue}11` : "transparent" }}>
                     <td style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}`, fontWeight:600, color:C.text }}>{r.model.name}</td>
                     <td style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}` }}><Badge color={C.cyan}>{r.model.task}</Badge></td>
-                    <td style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}`, color:C.textSub, fontSize:11.5 }}>{r.datasets.join(" + ")}</td>
+                    <td style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}`, color:C.textSub, fontSize:15.5 }}>{r.datasets.join(" + ")}</td>
                     <td style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}`, fontFamily:"var(--font-mono)", color:C.text }}>{r.n}</td>
                     <td style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}`, color:C.gold, fontFamily:"var(--font-mono)" }}>{r.metric}</td>
                     <td style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}` }}>
                       <button onClick={() => setActiveRun(r.runId)}
-                        style={{ fontSize:11.5, padding:"4px 10px", borderRadius:6, cursor:"pointer",
+                        style={{ fontSize:15.5, padding:"4px 10px", borderRadius:6, cursor:"pointer",
                                  border:`1px solid ${C.border}`, background:C.card, color:C.blue }}>view</button>
                     </td>
                   </tr>
@@ -329,7 +329,7 @@ export default function MLWorkbench({ agency }: { agency: Agency }) {
       )}
 
       <div style={{ height:14 }} />
-      <div style={{ fontSize:11.5, color:C.muted }}>
+      <div style={{ fontSize:15.5, color:C.muted }}>
         Decision support only — model outputs inform, humans decide. Pipeline pattern follows AutoML blueprint
         conventions (DataRobot-style); all computation runs locally in lib/ml/engine.ts on the data you selected.
       </div>
@@ -353,10 +353,10 @@ function ResultPanel({ rec }: { rec: RunRecord }) {
         <ResponsiveContainer width="100%" height={300}>
           <ComposedChart data={data}>
             <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
-            <XAxis dataKey="label" stroke={C.muted} fontSize={11} />
-            <YAxis stroke={C.muted} fontSize={11} tickFormatter={(v: number) => fmtMoney(v)} />
+            <XAxis dataKey="label" stroke={C.muted} fontSize={15} />
+            <YAxis stroke={C.muted} fontSize={15} tickFormatter={(v: number) => fmtMoney(v)} />
             <Tooltip content={<Tip />} />
-            <Legend wrapperStyle={{ fontSize:12 }} />
+            <Legend wrapperStyle={{ fontSize:16 }} />
             <Area dataKey="hi" name="80% hi" stroke="none" fill={`${C.gold}22`} />
             <Area dataKey="lo" name="80% lo" stroke="none" fill={C.bg} />
             <Line dataKey="actual" name="Actual" stroke={C.blue} strokeWidth={2} dot />
@@ -388,10 +388,10 @@ function ResultPanel({ rec }: { rec: RunRecord }) {
         <ResponsiveContainer width="100%" height={280}>
           <BarChart data={benford.digits}>
             <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
-            <XAxis dataKey="digit" stroke={C.muted} fontSize={11} />
-            <YAxis stroke={C.muted} fontSize={11} tickFormatter={(v: number) => `${v}%`} />
+            <XAxis dataKey="digit" stroke={C.muted} fontSize={15} />
+            <YAxis stroke={C.muted} fontSize={15} tickFormatter={(v: number) => `${v}%`} />
             <Tooltip content={<Tip />} />
-            <Legend wrapperStyle={{ fontSize:12 }} />
+            <Legend wrapperStyle={{ fontSize:16 }} />
             <Bar dataKey="expected" name="Benford expected %" fill={C.dim} />
             <Bar dataKey="observed" name="Observed %" fill={benford.conforms ? C.green : C.red} />
           </BarChart>
@@ -435,7 +435,7 @@ function ResultTable({ head, rows }: { head: string[]; rows: React.ReactNode[][]
   const C = useTheme()
   return (
     <div style={{ overflowX:"auto" }}>
-      <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12, minWidth:560 }}>
+      <table style={{ width:"100%", borderCollapse:"collapse", fontSize:16, minWidth:560 }}>
         <thead>
           <tr style={{ color:C.muted, textAlign:"left" }}>
             {head.map(h => <th key={h} style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}` }}>{h}</th>)}

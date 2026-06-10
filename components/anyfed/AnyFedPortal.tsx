@@ -59,7 +59,7 @@ export default function AnyFedPortal() {
     <select value={agencyId}
       onChange={e => { setAgencyId(e.target.value); setMenuOpen(false) }}
       style={{ width:"100%", background:C.card, color:C.text, border:`1px solid ${C.borderAccent}`,
-               borderRadius:10, padding:"10px 12px", fontSize:13, fontWeight:600, cursor:"pointer" }}>
+               borderRadius:10, padding:"10px 12px", fontSize:17.5, fontWeight:600, cursor:"pointer" }}>
       <optgroup label="📁 Folder data loaded (default source)">
         {AGENCIES.filter(a => a.hasLocalData).map(a => (
           <option key={a.id} value={a.id}>{a.seal} {a.name}</option>
@@ -76,7 +76,7 @@ export default function AnyFedPortal() {
   const navButtons = NAV.map(n => (
     <button key={n.id} onClick={() => { setPage(n.id); setMenuOpen(false) }}
       style={{ display:"flex", alignItems:"center", gap:10, width:"100%", textAlign:"left",
-               padding:"10px 14px", borderRadius:10, fontSize:13, cursor:"pointer",
+               padding:"10px 14px", borderRadius:10, fontSize:17.5, cursor:"pointer",
                fontWeight: page === n.id ? 700 : 500,
                border:`1px solid ${page === n.id ? C.borderAccent : "transparent"}`,
                background: page === n.id ? `${C.blue}1f` : "transparent",
@@ -89,10 +89,10 @@ export default function AnyFedPortal() {
     <div style={{ display:"flex", alignItems:"center", gap:10 }}>
       <div style={{ width:34, height:34, borderRadius:9, background:`linear-gradient(135deg, ${C.blue}, ${C.indigo})`,
                     display:"flex", alignItems:"center", justifyContent:"center",
-                    fontWeight:900, fontSize:13, color:"#fff", letterSpacing:"-0.5px" }}>AF</div>
+                    fontWeight:900, fontSize:17.5, color:"#fff", letterSpacing:"-0.5px" }}>AF</div>
       <div>
-        <div style={{ fontSize:15, fontWeight:800, color:C.text, letterSpacing:"0.02em" }}>ANY FED</div>
-        <div style={{ fontSize:10, color:C.muted, letterSpacing:"0.12em" }}>FEDERAL FM PORTAL</div>
+        <div style={{ fontSize:20, fontWeight:800, color:C.text, letterSpacing:"0.02em" }}>ANY FED</div>
+        <div style={{ fontSize:13.5, color:C.muted, letterSpacing:"0.12em" }}>FEDERAL FM PORTAL</div>
       </div>
     </div>
   )
@@ -116,7 +116,7 @@ export default function AnyFedPortal() {
           <div style={{ position:"fixed", inset:0, top:58, zIndex:49, background:C.sidebar, padding:16, overflowY:"auto" }}>
             <div style={{ marginBottom:14 }}>{agencySelect}</div>
             {navButtons}
-            <div style={{ marginTop:14, fontSize:11, color:C.muted }}>
+            <div style={{ marginTop:14, fontSize:15, color:C.muted }}>
               Legacy SEC portal: <a href="/sec-cfo" style={{ color:C.blue }}>/sec-cfo</a>
             </div>
           </div>
@@ -130,7 +130,7 @@ export default function AnyFedPortal() {
                             position:"sticky", top:0, height:"100vh", overflowY:"auto" }}>
               <div style={{ marginBottom:20, paddingLeft:4 }}>{brand}</div>
               <div style={{ marginBottom:16 }}>
-                <div style={{ fontSize:10.5, color:C.muted, letterSpacing:"0.1em", marginBottom:6, paddingLeft:4 }}>
+                <div style={{ fontSize:14, color:C.muted, letterSpacing:"0.1em", marginBottom:6, paddingLeft:4 }}>
                   DEPARTMENT / AGENCY
                 </div>
                 {agencySelect}
@@ -138,10 +138,10 @@ export default function AnyFedPortal() {
               <nav style={{ display:"flex", flexDirection:"column", gap:2 }}>{navButtons}</nav>
               <div style={{ marginTop:18, paddingTop:14, borderTop:`1px solid ${C.border}` }}>
                 <button onClick={() => setDark(d => !d)}
-                  style={{ ...iconBtn(C), width:"100%", fontSize:12 }}>
+                  style={{ ...iconBtn(C), width:"100%", fontSize:16 }}>
                   {dark ? "☀️ Light mode" : "🌙 Dark mode"}
                 </button>
-                <div style={{ marginTop:12, fontSize:10.5, color:C.muted, lineHeight:1.7, paddingLeft:4 }}>
+                <div style={{ marginTop:12, fontSize:14, color:C.muted, lineHeight:1.7, paddingLeft:4 }}>
                   Data: sourcedata/ folder (default) · USAspending.gov (fallback)<br />
                   Legacy SEC portal: <a href="/sec-cfo" style={{ color:C.blue }}>/sec-cfo</a>
                 </div>
@@ -153,12 +153,12 @@ export default function AnyFedPortal() {
           <main style={{ flex:1, padding: isMobile ? "18px 14px 60px" : "26px 30px 60px", minWidth:0 }}>
             {!isMobile && (
               <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:20 }}>
-                <div style={{ fontSize:12, color:C.muted }}>
+                <div style={{ fontSize:16, color:C.muted }}>
                   {agency.seal} <b style={{ color:C.text }}>{agency.name}</b>
                   &nbsp;· {agency.cfoAct ? "CFO Act agency" : "Non-CFO Act"} · {agency.funding}
                   {agency.hasLocalData ? " · 📁 folder data" : " · 🌐 live data"}
                 </div>
-                <div style={{ fontSize:11, color:C.muted }}>
+                <div style={{ fontSize:15, color:C.muted }}>
                   AI chain: Gemini → Claude → Groq · models run locally on selected data
                 </div>
               </div>
@@ -172,6 +172,6 @@ export default function AnyFedPortal() {
 }
 
 const iconBtn = (C: typeof DARK): React.CSSProperties => ({
-  padding:"8px 12px", borderRadius:8, cursor:"pointer", fontSize:14,
+  padding:"8px 12px", borderRadius:8, cursor:"pointer", fontSize:19,
   border:`1px solid ${C.border}`, background:C.card, color:C.text,
 })

@@ -9,14 +9,14 @@ export const DARK = {
   border:"rgba(14,100,200,0.16)", borderAccent:"rgba(14,165,233,0.38)",
   blue:"#0ea5e9", cyan:"#22d3ee", gold:"#f59e0b", green:"#10b981",
   red:"#ef4444", orange:"#f97316", purple:"#a78bfa", indigo:"#6366f1",
-  text:"#e2e8f0", textSub:"#94a3b8", muted:"#94a3b8", dim:"#1e3050",
+  text:"#ffffff", textSub:"#d7e1ee", muted:"#aebdd0", dim:"#1e3050",
 }
 export const LIGHT = {
   bg:"#f0f4f8", sidebar:"#e2e8f0", surface:"#ffffff", card:"#f8fafc",
   border:"rgba(14,100,200,0.20)", borderAccent:"rgba(14,165,233,0.45)",
   blue:"#0369a1", cyan:"#0891b2", gold:"#b45309", green:"#047857",
   red:"#b91c1c", orange:"#c2410c", purple:"#6d28d9", indigo:"#4338ca",
-  text:"#0f172a", textSub:"#334155", muted:"#475569", dim:"#e2e8f0",
+  text:"#020617", textSub:"#1a2638", muted:"#3b4a63", dim:"#e2e8f0",
 }
 export type Theme = typeof DARK
 export const ThemeContext = createContext<Theme>(DARK)
@@ -48,9 +48,9 @@ export const Tip = ({ active, payload, label }: { active?: boolean; payload?: { 
   if (!active || !payload?.length) return null
   return (
     <div style={{ background:C.card, border:`1px solid ${C.border}`, borderRadius:8, padding:"10px 14px" }}>
-      <div style={{ fontSize:12, color:C.muted, marginBottom:5 }}>{label}</div>
+      <div style={{ fontSize:16, color:C.muted, marginBottom:5 }}>{label}</div>
       {payload.map((p, i) => (
-        <div key={i} style={{ fontSize:12, color:p.color || C.text, marginBottom:2 }}>
+        <div key={i} style={{ fontSize:16, color:p.color || C.text, marginBottom:2 }}>
           {p.name}: <b>{typeof p.value === "number" ? fmtMoney(p.value) : p.value}</b>
         </div>
       ))}
@@ -68,10 +68,10 @@ export function KPI({ label, value, sub, accent, icon }: {
                   padding:"16px 18px", flex:1, minWidth:150, position:"relative", overflow:"hidden" }}>
       <div style={{ position:"absolute", top:0, left:0, right:0, height:2,
                     background:`linear-gradient(90deg,${ac},transparent)` }} />
-      <div style={{ fontSize:11, color:C.muted, letterSpacing:"0.07em",
+      <div style={{ fontSize:15, color:C.muted, letterSpacing:"0.07em",
                     textTransform:"uppercase", marginBottom:6 }}>{icon} {label}</div>
-      <div style={{ fontSize:24, fontWeight:700, color:ac, fontFamily:"var(--font-mono)" }}>{value}</div>
-      {sub && <div style={{ fontSize:12, color:C.textSub, marginTop:4 }}>{sub}</div>}
+      <div style={{ fontSize:32.5, fontWeight:700, color:ac, fontFamily:"var(--font-mono)" }}>{value}</div>
+      {sub && <div style={{ fontSize:16, color:C.textSub, marginTop:4 }}>{sub}</div>}
     </div>
   )
 }
@@ -85,8 +85,8 @@ export function Card({ title, sub, children, accent, style }: {
                   padding:20, ...style }}>
       {title && (
         <div style={{ marginBottom:14 }}>
-          <div style={{ fontSize:15, fontWeight:600, color:accent || C.text }}>{title}</div>
-          {sub && <div style={{ fontSize:12, color:C.muted, marginTop:3 }}>{sub}</div>}
+          <div style={{ fontSize:20, fontWeight:600, color:accent || C.text }}>{title}</div>
+          {sub && <div style={{ fontSize:16, color:C.muted, marginTop:3 }}>{sub}</div>}
         </div>
       )}
       {children}
@@ -98,7 +98,7 @@ export function Badge({ children, color }: { children: ReactNode; color?: string
   const C = useTheme()
   const c = color || C.blue
   return (
-    <span style={{ display:"inline-block", padding:"2px 9px", borderRadius:20, fontSize:11,
+    <span style={{ display:"inline-block", padding:"2px 9px", borderRadius:20, fontSize:15,
                    fontWeight:600, color:c, background:`${c}1a`, border:`1px solid ${c}55` }}>
       {children}
     </span>
@@ -109,8 +109,8 @@ export function SectionTitle({ title, sub }: { title: string; sub?: string }) {
   const C = useTheme()
   return (
     <div style={{ marginBottom:18 }}>
-      <h2 style={{ fontSize:20, fontWeight:700, color:C.text, margin:0 }}>{title}</h2>
-      {sub && <div style={{ fontSize:13, color:C.muted, marginTop:4 }}>{sub}</div>}
+      <h2 style={{ fontSize:27, fontWeight:700, color:C.text, margin:0 }}>{title}</h2>
+      {sub && <div style={{ fontSize:17.5, color:C.muted, marginTop:4 }}>{sub}</div>}
     </div>
   )
 }
@@ -123,7 +123,7 @@ export function SourceTag({ source }: { source?: string }) {
   const C = useTheme()
   const folder = source?.startsWith("folder")
   return (
-    <span style={{ fontSize:10.5, color: folder ? C.green : C.gold, letterSpacing:"0.04em" }}>
+    <span style={{ fontSize:14, color: folder ? C.green : C.gold, letterSpacing:"0.04em" }}>
       {folder ? "● SOURCE: sourcedata/ folder (default)" : "● SOURCE: live USAspending.gov (fallback)"}
     </span>
   )
@@ -132,7 +132,7 @@ export function SourceTag({ source }: { source?: string }) {
 export function Spinner({ label }: { label?: string }) {
   const C = useTheme()
   return (
-    <div style={{ padding:40, textAlign:"center", color:C.muted, fontSize:13 }}>
+    <div style={{ padding:40, textAlign:"center", color:C.muted, fontSize:17.5 }}>
       <div style={{ display:"inline-block", width:22, height:22, border:`3px solid ${C.dim}`,
                     borderTopColor:C.blue, borderRadius:"50%", animation:"afspin 0.8s linear infinite",
                     marginBottom:10 }} />
