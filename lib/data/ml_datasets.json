@@ -1,0 +1,95 @@
+{
+ "datasets": [
+  {
+   "id": "dod_awards_contracts",
+   "label": "DoD Contract Prime Transactions (USAspending)",
+   "agency": "DOD",
+   "source": "sourcedata/Department of Defense/USASPENDING",
+   "file": "dod_awards.json",
+   "table": "transactions",
+   "filter": {
+    "kind": "contract"
+   },
+   "target": "amount",
+   "features": [
+    "date",
+    "recipient",
+    "subAgency",
+    "type",
+    "naics"
+   ]
+  },
+  {
+   "id": "dod_awards_assistance",
+   "label": "DoD Assistance Prime Transactions (USAspending)",
+   "agency": "DOD",
+   "source": "sourcedata/Department of Defense/USASPENDING",
+   "file": "dod_awards.json",
+   "table": "transactions",
+   "filter": {
+    "kind": "assistance"
+   },
+   "target": "amount",
+   "features": [
+    "date",
+    "recipient",
+    "subAgency",
+    "type",
+    "naics"
+   ]
+  },
+  {
+   "id": "dod_monthly_obligations",
+   "label": "DoD Monthly Obligation Series",
+   "agency": "DOD",
+   "source": "USAspending action dates",
+   "file": "dod_awards.json",
+   "table": "monthly",
+   "target": "total",
+   "features": [
+    "month"
+   ]
+  },
+  {
+   "id": "dod_budget_exhibits",
+   "label": "DoD Budget Exhibits M-1/O-1/P-1/R-1/RF-1 (FY24-FY27)",
+   "agency": "DOD",
+   "source": "sourcedata/Department of Defense/dod_1",
+   "file": "dod_budget.json",
+   "table": "exhibits",
+   "target": "value",
+   "features": [
+    "exhibit",
+    "fy",
+    "org"
+   ]
+  },
+  {
+   "id": "sec_budget_history",
+   "label": "SEC Budget & FTE History (FY23-FY27 CBJ)",
+   "agency": "SEC",
+   "source": "sourcedata/Security Exchange Commission",
+   "file": "(bundled)",
+   "table": "BUDGET_HISTORY",
+   "target": "enacted",
+   "features": [
+    "fy",
+    "fte"
+   ]
+  },
+  {
+   "id": "sec_object_class",
+   "label": "SEC Object Class Obligations (FY25-FY27)",
+   "agency": "SEC",
+   "source": "FY2027 CBJ",
+   "file": "(bundled)",
+   "table": "OBJECT_CLASS",
+   "target": "fy27",
+   "features": [
+    "code",
+    "name"
+   ]
+  }
+ ],
+ "generated": "2026-06-10T01:38:37.653090Z"
+}

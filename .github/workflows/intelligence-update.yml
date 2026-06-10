@@ -1,0 +1,93 @@
+# .github/workflows/intelligence-update.yml
+# ─────────────────────────────────────────────────────────────────────────────
+# Runs every 4 hours on weekdays (7 AM–9 PM ET) and on manual trigger.
+# Fetches SEC / OMB / Congress news, scores financial impact via Claude Haiku,
+# upserts into Neon DB, and triggers Vercel ISR revalidation.
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: SEC Intelligence Update
+
+on:
+  # Every 4 hours, Mon–Fri, 11:00–01:00 UTC (≈ 07:00–21:00 ET)
+  schedule:
+    - cron: ''
+
+  # Manual trigger from GitHub Actions tab
+  workflow_dispatch:
+    inputs:
+      debug:
+        description: 'Enable debug logging'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  fetch-and-store:
+    name: Fetch Intelligence & Update DB
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      # ── 1. Checkout ────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Node.js ─────────────────────────────────────────────────────────
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # ── 3. Install dependencies ────────────────────────────────────────────
+      - name: Install dependencies
+        run: npm ci --prefer-offline
+
+      # ── 4. Health check — verify Vercel is live before proceeding ──────────
+      - name: Health check
+        env:
+          APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$APP_URL/api/health" || echo "000")
+          echo "Health check status: $STATUS"
+          if [ "$STATUS" != "200" ] && [ "$STATUS" != "207" ]; then
+            echo "⚠️  App returned $STATUS — continuing anyway (first deploy may not be live yet)"
+          fi
+
+      # ── 5. Run intelligence fetcher ────────────────────────────────────────
+      - name: Fetch & store intelligence
+        env:
+          ANTHROPIC_API_KEY:    ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_AI_API_KEY:    ${{ secrets.GOOGLE_AI_API_KEY }}
+          GROQ_API_KEY:         ${{ secrets.GROQ_API_KEY }}
+          DATABASE_URL:         ${{ secrets.DATABASE_URL }}
+          NEXT_PUBLIC_APP_URL:  ${{ secrets.NEXT_PUBLIC_APP_URL }}
+          CRON_SECRET:          ${{ secrets.CRON_SECRET }}
+          NODE_OPTIONS:         "--experimental-specifier-resolution=node"
+          DEBUG:                ${{ github.event.inputs.debug == 'true' && '1' || '' }}
+        run: |
+          npx ts-node \
+            --project tsconfig.scripts.json \
+            --transpile-only \
+            scripts/fetch-intelligence.ts
+
+      # ── 6. Trigger Vercel ISR revalidation ────────────────────────────────
+      - name: Revalidate Vercel cache
+        env:
+          APP_URL:     ${{ secrets.NEXT_PUBLIC_APP_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          curl -s -X POST "$APP_URL/api/news-feed" \
+            -H "Content-Type: application/json" \
+            -H "x-cron-secret: $CRON_SECRET" \
+            -d '{"items":[]}' \
+            || echo "Revalidation request sent (errors ignored)"
+
+      # ── 7. Summary ─────────────────────────────────────────────────────────
+      - name: Job summary
+        if: always()
+        run: |
+          echo "## SEC Intelligence Update" >> $GITHUB_STEP_SUMMARY
+          echo "- Run time: $(date -u '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "- Trigger: ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Status: ${{ job.status }}" >> $GITHUB_STEP_SUMMARY

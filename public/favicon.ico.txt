@@ -1,0 +1,3 @@
+Place your favicon.ico here.
+Generate one at: https://favicon.io/favicon-generator/
+Suggested text: SEC | Background: #003087 | Font color: #ffffff
