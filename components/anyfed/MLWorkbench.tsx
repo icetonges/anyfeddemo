@@ -2,9 +2,9 @@
 // components/anyfed/MLWorkbench.tsx — DataRobot-style AI/ML workbench.
 // Select data sources (default: the sourcedata/ folder bundles) → pick a model
 // blueprint → Run. Every result is computed in-browser by lib/ml/engine.ts.
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { useTheme, Card, Row, SectionTitle, Badge, Spinner, Tip, fmtMoney } from "./ui"
-import { useAgencyData, DodAwards, DodBudget, Txn } from "./useAgencyData"
+import { useAgencyData, DodAwards, DodBudget, LiveBudget, Txn } from "./useAgencyData"
 import { MODEL_BLUEPRINTS, ModelBlueprint } from "@/lib/ml/registry"
 import {
   holtForecast, linearForecast, detectAnomalies, benfordTest, kmeans1d, riskScore,
@@ -32,6 +32,10 @@ export default function MLWorkbench({ agency }: { agency: Agency }) {
   const C = useTheme()
   const awards = useAgencyData<DodAwards>("DOD", "awards")
   const budget = useAgencyData<DodBudget>("DOD", "budget")
+  // Selected-agency live budget — adds that agency's data to the catalog when a
+  // live (non-folder) department is chosen, so models run on the picked agency.
+  const isFolderAgency = agency.id === "DOD" || agency.id === "SEC"
+  const live = useAgencyData<LiveBudget>(agency.id, "budget")
   const [selected, setSelected] = useState<string[]>(["dod_awards_contracts"])
   const [runs, setRuns] = useState<RunRecord[]>([])
   const [activeRun, setActiveRun] = useState<number | null>(null)
@@ -85,8 +89,28 @@ export default function MLWorkbench({ agency }: { agency: Agency }) {
       amounts: OBJECT_CLASS.flatMap(o => [o.fy25, o.fy26, o.fy27]),
       labels: OBJECT_CLASS.flatMap(o => [`${o.code} ${o.name} FY25`, `${o.code} ${o.name} FY26`, `${o.code} ${o.name} FY27`]),
     })
+    // Selected live agency (FDIC, Treasury, …): expose its USAspending budgetary
+    // resources & obligations as a forecastable series + amount pool.
+    if (!isFolderAgency && live.data && Array.isArray(live.data.fiscalYears) && live.data.fiscalYears.length >= 3) {
+      const fy = live.data.fiscalYears
+      out.push({
+        id:`live_${agency.id}_resources`, label:`${agency.abbrev} Budgetary Resources (live)`, agency:agency.id,
+        source:"live:USAspending.gov · GTAS-derived",
+        series: fy.map(y => ({ label: y.fy, value: y.budgetaryResources })),
+        amounts: fy.flatMap(y => [y.budgetaryResources, y.obligated]).filter(v => v > 0),
+        labels: fy.flatMap(y => [`${y.fy} resources`, `${y.fy} obligated`]),
+      })
+    }
     return out
-  }, [awards.data, budget.data])
+  }, [awards.data, budget.data, live.data, isFolderAgency, agency.id, agency.abbrev])
+
+  // When a live agency is selected, surface its dataset automatically (once).
+  const liveDatasetId = !isFolderAgency ? `live_${agency.id}_resources` : null
+  useEffect(() => {
+    if (liveDatasetId && datasets.some(d => d.id === liveDatasetId)) {
+      setSelected(prev => (prev.includes(liveDatasetId) ? prev : [...prev, liveDatasetId]))
+    }
+  }, [liveDatasetId, datasets])
 
   const sel = datasets.filter(d => selected.includes(d.id))
   const pooledAmounts = sel.flatMap(d => d.amounts ?? [])
@@ -146,7 +170,16 @@ export default function MLWorkbench({ agency }: { agency: Agency }) {
   return (
     <div>
       <SectionTitle title="AI / ML Workbench"
-        sub="Blueprint-driven models computed live on your selected data sources — DataRobot-style leaderboard, real numbers" />
+        sub={`Blueprint-driven models computed live on your selected data sources — DataRobot-style leaderboard, real numbers · active agency: ${agency.abbrev}`} />
+      {!isFolderAgency && (
+        <div style={{ fontSize:11.5, color:C.muted, marginBottom:12 }}>
+          {live.loading
+            ? `Fetching ${agency.abbrev} budgetary resources from USAspending.gov for modeling…`
+            : datasets.some(d => d.id === liveDatasetId)
+              ? `📡 ${agency.abbrev} live budgetary-resources series added below — forecast its burn alongside the bundled folder datasets.`
+              : `No live series available for ${agency.abbrev}; bundled DoD/SEC folder datasets remain available below.`}
+        </div>
+      )}
 
       {/* 1 ── data sources */}
       <Card title="1 · Data Sources" sub="Default: datasets parsed from the sourcedata/ folder. Multi-select to pool populations.">

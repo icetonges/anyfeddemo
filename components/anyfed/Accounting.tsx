@@ -1,12 +1,25 @@
 "use client"
 // components/anyfed/Accounting.tsx — USSGL, journal entries, FBwT reconciliation
-import { useTheme, Card, Row, SectionTitle, Badge, KPI } from "./ui"
+import { useTheme, Card, Row, SectionTitle, Badge, KPI, fmtMoney } from "./ui"
 import { USSGL_SAMPLE } from "@/lib/fm-content"
 import type { Agency } from "@/lib/agencies"
+
+// Illustrative FBwT reconciliation — agency GL vs. Treasury (CARS/GWA). Values in $K.
+// Pattern mirrors the monthly tie-out every CFO shop performs (TFM Vol 1 Part 2).
+const FBWT_ITEMS = [
+  { item: "Deposits in transit — not yet posted by Treasury",   amt: 9_240 },
+  { item: "Outstanding disbursements — SF-1081 in process",     amt: -22_905 },
+  { item: "Unmatched IPAC transactions (intragovernmental)",    amt: -3_010 },
+  { item: "Suspense / default account clearing (F3875)",        amt: -1_865 },
+]
 
 export default function Accounting({ agency }: { agency: Agency }) {
   const C = useTheme()
   const isDod = agency.id === "DOD"
+  const glBalance   = 4_812_440          // USSGL 1010 per agency GL ($K)
+  const carsBalance = 4_829_115          // Treasury CARS/GWA statement ($K)
+  const reconciling = FBWT_ITEMS.reduce((s, r) => s + r.amt, 0)
+  const residual    = carsBalance + reconciling - glBalance  // unreconciled difference
   return (
     <div>
       <SectionTitle title="Accounting Operations"
@@ -69,6 +82,72 @@ export default function Accounting({ agency }: { agency: Agency }) {
           </Card>
         </div>
       </Row>
+
+      <div style={{ height:18 }} />
+      <Card title="Fund Balance with Treasury (FBwT) Reconciliation"
+            sub={isDod
+              ? "Monthly GL ↔ Treasury CARS/GWA tie-out — the control behind MW #8 (illustrative figures, $K)"
+              : "Monthly GL ↔ Treasury CARS/GWA tie-out (illustrative figures, $K)"}>
+        <Row>
+          <div style={{ flex:1.4, minWidth:340, overflowX:"auto" }}>
+            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12.5, minWidth:420 }}>
+              <tbody>
+                <tr>
+                  <td style={{ padding:"8px 10px", borderBottom:`1px solid ${C.border}`, color:C.text, fontWeight:600 }}>
+                    Treasury CARS/GWA account statement
+                  </td>
+                  <td style={{ padding:"8px 10px", borderBottom:`1px solid ${C.border}`, textAlign:"right", fontFamily:"var(--font-mono)", color:C.cyan }}>{fmtMoney(carsBalance, "K")}</td>
+                </tr>
+                {FBWT_ITEMS.map(r => (
+                  <tr key={r.item}>
+                    <td style={{ padding:"7px 10px 7px 22px", borderBottom:`1px solid ${C.border}`, color:C.textSub }}>
+                      {r.amt >= 0 ? "＋ " : "－ "}{r.item}
+                    </td>
+                    <td style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}`, textAlign:"right", fontFamily:"var(--font-mono)", color: r.amt >= 0 ? C.green : C.orange }}>
+                      {fmtMoney(Math.abs(r.amt), "K")}
+                    </td>
+                  </tr>
+                ))}
+                <tr>
+                  <td style={{ padding:"8px 10px", borderBottom:`1px solid ${C.border}`, color:C.text, fontWeight:600 }}>
+                    Agency GL — FBwT (USSGL 1010)
+                  </td>
+                  <td style={{ padding:"8px 10px", borderBottom:`1px solid ${C.border}`, textAlign:"right", fontFamily:"var(--font-mono)", color:C.text }}>{fmtMoney(glBalance, "K")}</td>
+                </tr>
+                <tr>
+                  <td style={{ padding:"9px 10px", color:C.text, fontWeight:700 }}>Unreconciled residual</td>
+                  <td style={{ padding:"9px 10px", textAlign:"right", fontFamily:"var(--font-mono)", fontWeight:700, color: Math.abs(residual) < 5_000 ? C.green : C.red }}>
+                    {fmtMoney(residual, "K")}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div style={{ flex:1, minWidth:280, display:"flex", flexDirection:"column", gap:12 }}>
+            <div style={{ display:"flex", gap:10, flexWrap:"wrap" }}>
+              <div style={{ flex:1, minWidth:120 }}>
+                <KPI icon="🏦" label="Variance vs. CARS"
+                     value={`${(((carsBalance - glBalance) / glBalance) * 100).toFixed(2)}%`}
+                     accent={C.gold} sub="Before reconciling items" />
+              </div>
+              <div style={{ flex:1, minWidth:120 }}>
+                <KPI icon={Math.abs(residual) < 5_000 ? "✅" : "🔴"} label="Tie-out Status"
+                     value={Math.abs(residual) < 5_000 ? "Cleared" : "Open"}
+                     accent={Math.abs(residual) < 5_000 ? C.green : C.red}
+                     sub={`${fmtMoney(Math.abs(residual), "K")} residual`} />
+              </div>
+            </div>
+            <div style={{ fontSize:12.5, color:C.textSub, lineHeight:1.8 }}>
+              Reconciling items are aged and cleared within 60 days under control <b style={{ color:C.text }}>ACC-02</b>.
+              Items beyond threshold route to the suspense-clearance queue.
+              {isDod && <> Unresolved differences at scale are the heart of <Badge color={C.orange}>MW #8 — Fund Balance with Treasury</Badge>.</>}
+              <br /><br />
+              <b style={{ color:C.text }}>AI hook:</b> the Workbench&apos;s anomaly detector flags abnormal IPAC and
+              suspense spikes before they age into audit findings.
+            </div>
+          </div>
+        </Row>
+      </Card>
     </div>
   )
 }

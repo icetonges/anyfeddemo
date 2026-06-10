@@ -1,10 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="10" fill="#003087"/>
-  <!-- SEC letters -->
-  <text x="32" y="26" font-family="Arial Black,sans-serif" font-size="16" font-weight="900"
-        text-anchor="middle" fill="white" letter-spacing="1">SEC</text>
-  <text x="32" y="42" font-family="Arial,sans-serif" font-size="9" font-weight="600"
-        text-anchor="middle" fill="rgba(255,255,255,0.75)" letter-spacing="0.5">OSO</text>
-  <!-- Blue accent bar -->
-  <rect x="16" y="45" width="32" height="2" rx="1" fill="#3b82f6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ANY FED">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#081840"/>
+      <stop offset="1" stop-color="#163a8c"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <rect x="2.4" y="2.4" width="59.2" height="59.2" rx="12" fill="none" stroke="#38bdf8" stroke-opacity="0.55" stroke-width="1.2"/>
+  <g fill="#f4f8ff">
+    <!-- star -->
+    <path fill="#f5b01e" d="M32 9.2l1.6 3.3 3.6.5-2.6 2.5.6 3.6-3.2-1.7-3.2 1.7.6-3.6-2.6-2.5 3.6-.5z"/>
+    <!-- cupola -->
+    <rect x="30.4" y="18.5" width="3.2" height="4" rx="0.6"/>
+    <!-- dome -->
+    <path d="M22 31 a10 10 0 0 1 20 0 z"/>
+    <!-- drum -->
+    <rect x="24.5" y="30.5" width="15" height="4" rx="1"/>
+    <!-- architrave -->
+    <rect x="19" y="34.5" width="26" height="3.2" rx="1.4"/>
+    <!-- colonnade -->
+    <rect x="20.5" y="37.5" width="23" height="9"/>
+    <!-- steps -->
+    <rect x="18.5" y="46.6" width="27" height="2.6" rx="1.3"/>
+    <rect x="20" y="49" width="24" height="2.6" rx="1.3"/>
+  </g>
+  <!-- column slits -->
+  <g fill="#163a8c">
+    <rect x="22.5" y="38.6" width="1.5" height="7"/><rect x="25.5" y="38.6" width="1.5" height="7"/>
+    <rect x="28.5" y="38.6" width="1.5" height="7"/><rect x="31.5" y="38.6" width="1.5" height="7"/>
+    <rect x="34.5" y="38.6" width="1.5" height="7"/><rect x="37.5" y="38.6" width="1.5" height="7"/>
+    <rect x="40" y="38.6" width="1.5" height="7"/>
+  </g>
+  <!-- stripes -->
+  <g>
+    <rect x="20" y="52.2" width="24" height="1.3" rx="0.6" fill="#38bdf8"/>
+    <rect x="20" y="54.2" width="24" height="1.3" rx="0.6" fill="#f5b01e"/>
+    <rect x="20" y="56.2" width="24" height="1.3" rx="0.6" fill="#38bdf8"/>
+  </g>
 </svg>

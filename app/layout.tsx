@@ -15,13 +15,23 @@ const ibmPlexMono = IBM_Plex_Mono({
 })
 
 export const metadata: Metadata = {
-  title:       'SEC Financial Management Portal | OSO',
-  description: 'U.S. Securities and Exchange Commission — Office of Support Operations.',
-  keywords:    ['SEC', 'budget', 'financial management', 'OSO', 'CFO', 'appropriations'],
+  title: {
+    default:  'ANY FED | Federal Financial Management Portal',
+    template: '%s | ANY FED',
+  },
+  description:
+    'Any-agency federal financial management showcase — budget formulation/enactment/execution, accounting, audit, finance operations, internal controls, acquisition, and a live AI/ML workbench. Folder source data with USAspending live fallback.',
+  keywords: [
+    'federal financial management', 'budget', 'appropriations', 'USSGL', 'audit',
+    'OMB A-11', 'A-123', 'FIAR', 'DoD', 'SEC', 'USAspending', 'AI', 'machine learning',
+  ],
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png',
   },
 }
 

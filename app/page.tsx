@@ -1,14 +1,9 @@
-import SECFinancialPortal from '@/components/sec/SECFinancialPortal'
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'SEC OSO Financial Management Portal',
-  description: 'Live SEC OSO financial intelligence — budget execution, OIG compliance, AI analyst, and live intelligence feed.',
-  icons: { icon: '/favicon.svg' },
-}
+import AnyFedPortal from '@/components/anyfed/AnyFedPortal'
 
 export const revalidate = 14400
 
+// Root URL is the ANY FED federal FM portal.
+// The legacy SEC-only portal lives at /sec-cfo.
 export default function RootPage() {
-  return <SECFinancialPortal />
+  return <AnyFedPortal />
 }
