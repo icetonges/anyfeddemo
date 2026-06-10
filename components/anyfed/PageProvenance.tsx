@@ -18,7 +18,7 @@ const MAP: Record<string, Src[]> = {
   intel:       [LIVE, JBOOKS],
   data:        [JBOOKS, LIVE, LAKE],
   budget:      [JBOOKS, AWARDS, LIVE, SECCBJ],
-  accounting:  [P("📚", "lib/fm-content.ts", "USSGL sample accounts, posting doctrine"), LIVE],
+  accounting:  [P("📚", "lib/fm-content.ts", "USSGL sample accounts, posting doctrine"), LIVE, P("🏛️", "sourcedata/FiscalData/", "audited Financial Report statements (SNC by agency, Balance Sheet) via api.fiscaldata.treasury.gov")],
   audit:       [AUDIT, AWARDS, JBOOKS],
   finops:      [P("📚", "lib/fm-content.ts", "DTS/GTC/GPC program reference"), LIVE],
   controls:    [P("📚", "lib/fm-content.ts", "A-123 control catalog"), AUDIT],

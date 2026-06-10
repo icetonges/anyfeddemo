@@ -14,11 +14,11 @@ const CANNOT: { stmt: string; why: string; needs: string; where: string }[] = [
   { stmt: "Balance Sheet",
     why: "Requires proprietary USSGL 1000/2000-series BALANCES (FBwT 101000, AR 131000, PP&E 17xxxx, AP 211000, actuarial liabilities) on an accrual basis — USAspending carries budgetary execution flows, not proprietary balances.",
     needs: "Agency proprietary trial balance by USSGL account (adjusted, period-end)",
-    where: "Agency AFR (audited statements + notes) · GTAS proprietary submission (agency-internal, not public) · DDRS for DoD · Fiscal Service Combined Statement" },
+    where: "Agency AFR (audited) · GTAS proprietary (non-public) · NOW LOCAL: Treasury Fiscal Data v2/accounting/od/balance_sheets — government-wide audited Balance Sheet, pulled by scripts/fiscaldata_statements.py" },
   { stmt: "Statement of Net Cost",
     why: "Needs accrual-basis program costs (USSGL 610000) and earned revenue (520000) by responsibility segment, including depreciation, actuarial expense, and imputed costs — none are in budgetary/award data. Gross outlays approximate cash cost only.",
     needs: "Proprietary cost accounts by program/segment; depreciation schedules; actuarial valuations (pension/ORB)",
-    where: "Agency AFR SNC + notes · agency cost accounting (CFO shop) · OPM/Treasury actuarial reports for imputed costs" },
+    where: "Agency AFR SNC + notes · NOW LOCAL: Fiscal Data v2/accounting/od/statement_net_cost — AUDITED net cost BY AGENCY (gross cost, earned revenue, $B, 10+ yrs), pulled into sourcedata/FiscalData/ + DuckDB by scripts/fiscaldata_statements.py" },
   { stmt: "Statement of Changes in Net Position",
     why: "Driven by USSGL 3000-series (310x unexpended appropriations, 331000 cumulative results) plus appropriations used and transfer activity — proprietary equity accounts that GTAS publishes only inside the agency's own books.",
     needs: "USSGL 3xxxxx balances and activity (appropriations received/used, transfers, donations)",
@@ -59,6 +59,9 @@ export default function StatementBuilder({ agency }: { agency: Agency }) {
           sub={`USAspending publishes USSGL-crosswalked BUDGETARY execution (File A/B, GTAS lineage). That is enough for the SBR family — and structurally insufficient for the proprietary statements. Both halves shown, specifically.`}>
 
       {/* ── CAN: live SBR ── */}
+      <div style={{ display:"flex", gap:8, alignItems:"center", flexWrap:"wrap", marginBottom:8 }}>
+        <Badge color={C.purple}>NEW: audited statements pipeline — python scripts/fiscaldata_statements.py all → SNC by agency (10 yrs) + Balance Sheet into sourcedata/FiscalData/ + the DuckDB warehouse</Badge>
+      </div>
       <div style={{ display:"flex", gap:8, alignItems:"center", flexWrap:"wrap", marginBottom:8 }}>
         <Badge color={C.green}>✓ CAN BUILD — live now</Badge>
         <span style={{ fontSize:15.5, fontWeight:700, color:C.text }}>Statement of Budgetary Resources (condensed) — {agency.abbrev}, {sbr?.fy ?? `FY${curFY}`}</span>
