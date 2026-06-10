@@ -14,6 +14,7 @@ import InternalControls from "./InternalControls"
 import Acquisition from "./Acquisition"
 import MLWorkbench from "./MLWorkbench"
 import AIAnalyst from "./AIAnalyst"
+import PageProvenance from "./PageProvenance"
 
 const NAV = [
   { id:"overview",  label:"Executive Overview", icon:"🏛️" },
@@ -52,6 +53,7 @@ export default function AnyFedPortal() {
       {page === "acquisition" && <Acquisition agency={agency} />}
       {page === "ml"          && <MLWorkbench agency={agency} />}
       {page === "analyst"     && <AIAnalyst agency={agency} />}
+      <PageProvenance page={page} />
     </>
   )
 
@@ -159,7 +161,7 @@ export default function AnyFedPortal() {
                   {agency.hasLocalData ? " · 📁 folder data" : " · 🌐 live data"}
                 </div>
                 <div style={{ fontSize:15, color:C.muted }}>
-                  AI chain: Gemini → Claude → Groq · models run locally on selected data
+                  AI chain: Gemini → Groq → Claude · models run locally on selected data
                 </div>
               </div>
             )}

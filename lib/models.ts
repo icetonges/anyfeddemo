@@ -252,13 +252,14 @@ export function chainFor(task: 'fast' | 'value' | 'best' | 'agentic'): ModelId[]
       return [
         'gemini-3.5-flash',             // ★ recommended — speed + deep thinking
         'gemini-2.5-flash',             // proven reasoning, 1M ctx
-        'gemini-3.1-flash-lite',        // cost-saving fallback
-        'claude-haiku-4-5-20251001',    // Anthropic fallback
+        'llama-3.3-70b-versatile',      // Groq fallback (fast, free)
+        'claude-haiku-4-5-20251001',    // Anthropic last resort
       ]
     case 'best':
       // Gemini 3.5 Flash leads; Claude models as premium escalation
       return [
         'gemini-3.5-flash',             // ★ recommended default
+        'llama-3.3-70b-versatile',      // Groq fast fallback
         'claude-sonnet-4-6',            // Anthropic balanced escalation
         'claude-opus-4-6',              // Anthropic frontier last resort
       ]
