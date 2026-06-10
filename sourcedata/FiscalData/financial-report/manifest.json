@@ -1,0 +1,11 @@
+{
+  "pulled": "2026-06-10",
+  "status": "PARTIAL \u2014 FY2025 complete (40 FR entities); FY2016-2024 via local script run",
+  "tables": {
+    "statement_net_cost": {
+      "status": "OK (FY2025)",
+      "rows": 40,
+      "byAgency": true
+    }
+  }
+}

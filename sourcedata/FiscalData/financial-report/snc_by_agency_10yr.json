@@ -1,0 +1,400 @@
+{
+ "generated": "2026-06-10",
+ "source": "fiscaldata v2 statement_net_cost (audited FR) \u2014 pulled via portal session",
+ "unit": "billions USD, accrual, GAO-audited",
+ "yearsHeld": [
+  "FY2025"
+ ],
+ "yearsRemaining": "FY2016-FY2024 \u2014 run: python scripts/fiscaldata_statements.py all",
+ "registryAgenciesCovered": [
+  "DHS",
+  "DOC",
+  "DOD",
+  "DOE",
+  "DOI",
+  "DOJ",
+  "DOL",
+  "DOS",
+  "DOT",
+  "ED",
+  "EPA",
+  "FCC",
+  "FDIC",
+  "GSA",
+  "HHS",
+  "HUD",
+  "NASA",
+  "NRC",
+  "NSF",
+  "OPM",
+  "SBA",
+  "SEC",
+  "SSA",
+  "TREAS",
+  "USAID",
+  "USDA",
+  "VA"
+ ],
+ "agencies": {
+  "Department of Health and Human Services": {
+   "registryId": "HHS",
+   "FY2025": {
+    "grossCost": 2070.1,
+    "earnedRevenue": 184.3,
+    "changeAssumptions": 0.5,
+    "netCost": 1886.3
+   }
+  },
+  "Social Security Administration": {
+   "registryId": "SSA",
+   "FY2025": {
+    "grossCost": 1655.7,
+    "earnedRevenue": 0.3,
+    "changeAssumptions": 0.0,
+    "netCost": 1655.4
+   }
+  },
+  "Department of Defense": {
+   "registryId": "DOD",
+   "FY2025": {
+    "grossCost": 1115.4,
+    "earnedRevenue": 120.0,
+    "changeAssumptions": 241.9,
+    "netCost": 1237.3
+   }
+  },
+  "Interest on Treasury Securities held by the public": {
+   "registryId": null,
+   "FY2025": {
+    "grossCost": 987.1,
+    "earnedRevenue": 0.0,
+    "changeAssumptions": 0.0,
+    "netCost": 987.1
+   }
+  },
+  "Department of Veterans Affairs": {
+   "registryId": "VA",
+   "FY2025": {
+    "grossCost": 572.7,
+    "earnedRevenue": 6.3,
+    "changeAssumptions": -44.2,
+    "netCost": 522.2
+   }
+  },
+  "Department of the Treasury": {
+   "registryId": "TREAS",
+   "FY2025": {
+    "grossCost": 413.7,
+    "earnedRevenue": 116.9,
+    "changeAssumptions": 0.0,
+    "netCost": 296.8
+   }
+  },
+  "Department of Agriculture": {
+   "registryId": "USDA",
+   "FY2025": {
+    "grossCost": 236.5,
+    "earnedRevenue": 12.6,
+    "changeAssumptions": 0.0,
+    "netCost": 223.9
+   }
+  },
+  "Department of Transportation": {
+   "registryId": "DOT",
+   "FY2025": {
+    "grossCost": 130.2,
+    "earnedRevenue": 1.6,
+    "changeAssumptions": 0.0,
+    "netCost": 128.6
+   }
+  },
+  "Department of Homeland Security": {
+   "registryId": "DHS",
+   "FY2025": {
+    "grossCost": 141.7,
+    "earnedRevenue": 18.1,
+    "changeAssumptions": 0.5,
+    "netCost": 124.1
+   }
+  },
+  "Department of Housing and Urban Development": {
+   "registryId": "HUD",
+   "FY2025": {
+    "grossCost": 75.2,
+    "earnedRevenue": 3.8,
+    "changeAssumptions": 0.0,
+    "netCost": 71.4
+   }
+  },
+  "Department of Energy": {
+   "registryId": "DOE",
+   "FY2025": {
+    "grossCost": 72.6,
+    "earnedRevenue": 5.8,
+    "changeAssumptions": 0.0,
+    "netCost": 66.8
+   }
+  },
+  "Department of Labor": {
+   "registryId": "DOL",
+   "FY2025": {
+    "grossCost": 62.5,
+    "earnedRevenue": 0.0,
+    "changeAssumptions": 0.0,
+    "netCost": 62.5
+   }
+  },
+  "Department of Justice": {
+   "registryId": "DOJ",
+   "FY2025": {
+    "grossCost": 50.2,
+    "earnedRevenue": 1.7,
+    "changeAssumptions": 0.0,
+    "netCost": 48.5
+   }
+  },
+  "Environmental Protection Agency": {
+   "registryId": "EPA",
+   "FY2025": {
+    "grossCost": 37.6,
+    "earnedRevenue": 0.6,
+    "changeAssumptions": 0.0,
+    "netCost": 37.0
+   }
+  },
+  "Department of State": {
+   "registryId": "DOS",
+   "FY2025": {
+    "grossCost": 38.1,
+    "earnedRevenue": 6.4,
+    "changeAssumptions": 0.2,
+    "netCost": 31.9
+   }
+  },
+  "Department of the Interior": {
+   "registryId": "DOI",
+   "FY2025": {
+    "grossCost": 34.0,
+    "earnedRevenue": 3.5,
+    "changeAssumptions": 0.0,
+    "netCost": 30.5
+   }
+  },
+  "National Aeronautics and Space Administration": {
+   "registryId": "NASA",
+   "FY2025": {
+    "grossCost": 23.9,
+    "earnedRevenue": 0.4,
+    "changeAssumptions": 0.0,
+    "netCost": 23.5
+   }
+  },
+  "Department of Commerce": {
+   "registryId": "DOC",
+   "FY2025": {
+    "grossCost": 27.1,
+    "earnedRevenue": 8.6,
+    "changeAssumptions": 0.0,
+    "netCost": 18.5
+   }
+  },
+  "Agency for International Development": {
+   "registryId": "USAID",
+   "FY2025": {
+    "grossCost": 16.8,
+    "earnedRevenue": 0.9,
+    "changeAssumptions": 0.0,
+    "netCost": 15.9
+   }
+  },
+  "Railroad Retirement Board": {
+   "registryId": null,
+   "FY2025": {
+    "grossCost": 14.9,
+    "earnedRevenue": 0.0,
+    "changeAssumptions": 0.0,
+    "netCost": 14.9
+   }
+  },
+  "United States Postal Service": {
+   "registryId": null,
+   "FY2025": {
+    "grossCost": 90.6,
+    "earnedRevenue": 79.1,
+    "changeAssumptions": 0.0,
+    "netCost": 11.5
+   }
+  },
+  "Federal Communications Commission": {
+   "registryId": "FCC",
+   "FY2025": {
+    "grossCost": 11.1,
+    "earnedRevenue": 0.4,
+    "changeAssumptions": 0.0,
+    "netCost": 10.7
+   }
+  },
+  "National Science Foundation": {
+   "registryId": "NSF",
+   "FY2025": {
+    "grossCost": 9.9,
+    "earnedRevenue": 0.0,
+    "changeAssumptions": 0.0,
+    "netCost": 9.9
+   }
+  },
+  "Small Business Administration": {
+   "registryId": "SBA",
+   "FY2025": {
+    "grossCost": 12.4,
+    "earnedRevenue": 4.4,
+    "changeAssumptions": 0.0,
+    "netCost": 8.0
+   }
+  },
+  "National Credit Union Administration": {
+   "registryId": null,
+   "FY2025": {
+    "grossCost": 0.4,
+    "earnedRevenue": 0.1,
+    "changeAssumptions": 0.0,
+    "netCost": 0.3
+   }
+  },
+  "General Services Administration": {
+   "registryId": "GSA",
+   "FY2025": {
+    "grossCost": 1.4,
+    "earnedRevenue": 1.1,
+    "changeAssumptions": 0.0,
+    "netCost": 0.3
+   }
+  },
+  "Pension Benefit Guaranty Corporation": {
+   "registryId": null,
+   "FY2025": {
+    "grossCost": 17.1,
+    "earnedRevenue": 16.9,
+    "changeAssumptions": 0.0,
+    "netCost": 0.2
+   }
+  },
+  "U.S. Nuclear Regulatory Commission": {
+   "registryId": "NRC",
+   "FY2025": {
+    "grossCost": 1.0,
+    "earnedRevenue": 0.8,
+    "changeAssumptions": 0.0,
+    "netCost": 0.2
+   }
+  },
+  "United States International Development Finance Corporation": {
+   "registryId": null,
+   "FY2025": {
+    "grossCost": 0.4,
+    "earnedRevenue": 0.5,
+    "changeAssumptions": 0.0,
+    "netCost": -0.1
+   }
+  },
+  "Export-Import Bank of the United States": {
+   "registryId": null,
+   "FY2025": {
+    "grossCost": 0.1,
+    "earnedRevenue": 0.2,
+    "changeAssumptions": 0.0,
+    "netCost": -0.1
+   }
+  },
+  "Farm Credit System Insurance Corporation": {
+   "registryId": null,
+   "FY2025": {
+    "grossCost": 0.1,
+    "earnedRevenue": 0.4,
+    "changeAssumptions": 0.0,
+    "netCost": -0.3
+   }
+  },
+  "Tennessee Valley Authority": {
+   "registryId": null,
+   "FY2025": {
+    "grossCost": 12.3,
+    "earnedRevenue": 13.7,
+    "changeAssumptions": 0.0,
+    "netCost": -1.4
+   }
+  },
+  "Securities and Exchange Commission": {
+   "registryId": "SEC",
+   "FY2025": {
+    "grossCost": 2.3,
+    "earnedRevenue": 4.4,
+    "changeAssumptions": 0.0,
+    "netCost": -2.1
+   }
+  },
+  "National Railroad Retirement Investment Trust": {
+   "registryId": null,
+   "FY2025": {
+    "grossCost": 0.1,
+    "earnedRevenue": 2.7,
+    "changeAssumptions": 0.0,
+    "netCost": -2.6
+   }
+  },
+  "Federal Deposit Insurance Corporation": {
+   "registryId": "FDIC",
+   "FY2025": {
+    "grossCost": -1.1,
+    "earnedRevenue": 15.3,
+    "changeAssumptions": 0.0,
+    "netCost": -16.4
+   }
+  },
+  "Security Assistance Accounts": {
+   "registryId": null,
+   "FY2025": {
+    "grossCost": -4.0,
+    "earnedRevenue": 34.7,
+    "changeAssumptions": 0.0,
+    "netCost": -38.7
+   }
+  },
+  "Office of Personnel Management": {
+   "registryId": "OPM",
+   "FY2025": {
+    "grossCost": 139.8,
+    "earnedRevenue": 34.9,
+    "changeAssumptions": -180.4,
+    "netCost": -75.5
+   }
+  },
+  "Department of Education": {
+   "registryId": "ED",
+   "FY2025": {
+    "grossCost": -29.2,
+    "earnedRevenue": 48.4,
+    "changeAssumptions": 0.0,
+    "netCost": -77.6
+   }
+  },
+  "All other entities": {
+   "registryId": null,
+   "FY2025": {
+    "grossCost": 30.7,
+    "earnedRevenue": 2.4,
+    "changeAssumptions": 0.1,
+    "netCost": 28.4
+   }
+  },
+  "Total": {
+   "registryId": null,
+   "FY2025": {
+    "grossCost": 8071.4,
+    "earnedRevenue": 752.2,
+    "changeAssumptions": 18.6,
+    "netCost": 7337.8
+   }
+  }
+ }
+}
