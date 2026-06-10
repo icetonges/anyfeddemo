@@ -11,6 +11,7 @@ import { BUDGET_HISTORY, BUDGET_SUMMARY } from "@/lib/sec-data"
 import { DOD_AUDIT_FACTS, DOD_MATERIAL_WEAKNESSES } from "@/lib/fm-content"
 import { deptLifecycle } from "@/lib/data-insights"
 import AgencyLandscape from "./AgencyLandscape"
+import { AuditedHighlight } from "./AuditedStatements"
 import { fmt as fmtLive, resourceTrend, cadence, expertFindings } from "@/lib/live-insights"
 import {
   ComposedChart, Bar, Line, Area, AreaChart, XAxis, YAxis, CartesianGrid,
@@ -95,6 +96,9 @@ function DodOverview({ agency, onNavigate }: { agency: Agency; onNavigate: Nav }
           </div>
         ))}
       </div>
+
+      <div style={{ height:12 }} />
+      <Row><AuditedHighlight agency={agency} onNavigate={onNavigate} /></Row>
 
       {drill && <><div style={{ height:14 }} /><DrillPanel id={drill} data={data} stats={stats} mwByCat={mwByCat} onNavigate={onNavigate} /></>}
 
@@ -440,6 +444,7 @@ function LiveOverview({ agency, onNavigate }: { agency: Agency; onNavigate: Nav 
           <KPI icon="🏦" label="Unobligated" value={fmtLive(trend.carryover)} accent={trend.carryoverShare > 35 ? C.orange : C.green} sub={`${trend.carryoverShare}% carryover`} />
           <KPI icon="📅" label="Q4 Obligation Share" value={cad ? `${cad.q4Share}%` : "—"} accent={cad && cad.q4Share > 32 ? C.orange : C.green}
                sub={cad ? `${cad.surge} cadence` : "intra-year burn"} />
+                  <AuditedHighlight agency={agency} onNavigate={onNavigate} />
         </Row>
       )}
       <div style={{ height:18 }} />

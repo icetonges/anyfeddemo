@@ -14,7 +14,7 @@ const PAGES: [string, string, string][] = [
   ["🧠 Data Intelligence", "Profile/compare/drill every dataset; UoT linkage thread; quality scoring", "When you need to understand or defend the DATA itself"],
   ["🗂️ Data Explorer", "Deep J-book explorer (DoD), live drill (all agencies), Acquire + Runbook + Catalog", "Line-item analysis and data acquisition"],
   ["📊 Budget Management", "Briefing + three-world cross-check (J-book × GTAS × awards) + exports", "Budget formulation/execution analysis and briefings"],
-  ["📒 Accounting", "USSGL reference, posting doctrine", "Quick USSGL/posting lookups"],
+  ["📒 Accounting", "AUDITED Statements of Net Cost by agency/year (Fiscal Data) + disconnect analysis + Statement Builder + USSGL reference", "Statements, accrual-vs-budgetary analysis, USSGL lookups"],
   ["🔍 Audit", "26 MWs, 8 deep dives: components → Advana solution → plan → live pipeline demo", "Audit remediation strategy and demonstrations"],
   ["💳 Finance Operations", "DTS/GTC/GPC program reference and KPIs", "Travel/charge-card program questions"],
   ["🛡️ Internal Controls", "A-123 control catalog", "Control design and testing reference"],
@@ -47,6 +47,7 @@ const FILES: [string, string][] = [
   ["scripts/etl_sourcedata.py", "J-book xlsx + award CSVs → lib/data/*.json (bundled slices)"],
   ["scripts/usaspending_duck.py", "DuckDB lakehouse: build / gold / sql / status"],
   ["scripts/usaspending_coverage.py", "coverage scan + API gap fill"],
+  ["scripts/fiscaldata_statements.py", "audited FR statements (SNC by agency, Balance Sheet) → folder + DuckDB"],
   ["sourcedata/", "all source data (J-books, audit PDFs, USAspending tree) — bulk git-ignored"],
 ]
 
@@ -263,6 +264,7 @@ export default function AboutApp() {
                   {([["etl_sourcedata.py", "python scripts/etl_sourcedata.py", "J-book xlsx + award CSVs → lib/data/*.json", "after any sourcedata change"],
                      ["usaspending_duck.py", "build · gold --agency 097 --fy 2026 · sql · status", "bulk archives → silver Parquet → gold report", "monthly, after archive downloads"],
                      ["usaspending_coverage.py", "scan · fill", "folder tree → coverage_manifest.json; API → gtas JSON", "monthly, before downloads"],
+                     ["fiscaldata_statements.py", "python scripts/fiscaldata_statements.py all", "Fiscal Data API → audited FR statements → sourcedata/FiscalData/ + DuckDB fr_* tables", "annually, after each FR release (~Feb)"],
                      ["usaspending_pipeline.py", "python scripts/usaspending_pipeline.py --agency 097 --fy 2026", "stdlib fallback if DuckDB unavailable", "rarely"]] as const)
                     .map((r, i) => (
                     <tr key={i}>

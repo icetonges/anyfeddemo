@@ -143,6 +143,18 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ source: 'folder:sourcedata', ...mlDatasets })
     }
 
+    // Audited Financial Report statements (Treasury Fiscal Data, GAO-audited):
+    // Statements of Net Cost BY AGENCY, all statement years (~2K rows, $B).
+    if (slice === 'statements') {
+      const r = await fetch(
+        'https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/statement_net_cost?page%5Bsize%5D=10000',
+        { next: { revalidate: 86400 } })
+      if (!r.ok) throw new Error(`fiscaldata ${r.status}`)
+      const j = await r.json()
+      return NextResponse.json({ source: 'live:fiscaldata (audited FR)', unit: 'billions USD',
+        rows: j.data ?? [], fetchedAt: new Date().toISOString() })
+    }
+
     // Live multi-dimension detail works for EVERY agency (incl. DoD/SEC \u2014
     // it complements their folder data with GTAS-derived execution detail).
     if (slice === 'detail') {
