@@ -9,6 +9,11 @@ import { DOD_MATERIAL_WEAKNESSES, DOD_AUDIT_FACTS, FIAR_PHASES, GUIDANCE_LIBRARY
 import { MW_DEEP_NUMS, getDeep, MWDeep, COMP_STATUS_META, ADVANA_PATTERN, DemoConfig } from "@/lib/audit-solutions"
 import { useAgencyData, DodAwards, DodBudget } from "./useAgencyData"
 import { benfordTest, detectAnomalies, riskScore, kmeans1d, holtForecast } from "@/lib/ml/engine"
+import {
+  stageTxns, stageValues, stageSeries, MODEL_BLUEPRINT, buildArtifact,
+  rootCauseBenford, rootCauseAnomaly, rootCauseRisk, rootCauseCluster, rootCauseForecast,
+  PopulationManifest, RootCause,
+} from "@/lib/demo-pipeline"
 import type { BenfordResult, AnomalyRow, RiskRow, ClusterResult, ForecastResult, SeriesPoint } from "@/lib/ml/engine"
 import type { Agency } from "@/lib/agencies"
 import {
@@ -267,12 +272,16 @@ function MWDrill({ deep, title, issue, onNavigate, onClose }:
         </div>
       )}
 
-      {tab === "Live Demo" && <DemoPanel demo={deep.demo} onNavigate={onNavigate} />}
+      {tab === "Live Demo" && <DemoPanel demo={deep.demo} mwNum={deep.num} onNavigate={onNavigate} />}
     </Card>
   )
 }
 
 // ════════════════════════════════════════════════════ live model demonstration
+// A production-pattern pipeline run, executed live on the bundled sourcedata/
+// datasets: ① population staging (quality gates + integrity hash) → ② blueprint
+// execution (the real model) → ③ AI root-cause analysis of the actual output →
+// ④ system-generated evidence artifact → ⑤ prioritized actionable items.
 type DemoResult =
   | { kind: "benford"; r: BenfordResult }
   | { kind: "anomaly"; r: AnomalyRow[]; n: number }
@@ -280,11 +289,14 @@ type DemoResult =
   | { kind: "cluster"; r: ClusterResult; n: number }
   | { kind: "forecast"; r: ForecastResult }
 
-function DemoPanel({ demo, onNavigate }: { demo: DemoConfig; onNavigate?: (p: string) => void }) {
+interface StageView { icon: string; title: string; sub: string; ms: number; body: React.ReactNode }
+
+function DemoPanel({ demo, mwNum, onNavigate }: { demo: DemoConfig; mwNum: number; onNavigate?: (p: string) => void }) {
   const C = useTheme()
   const awards = useAgencyData<DodAwards>("DOD", "awards")
   const budget = useAgencyData<DodBudget>("DOD", "budget")
-  const [result, setResult] = useState<DemoResult | null>(null)
+  const [stages, setStages] = useState<StageView[]>([])
+  const [revealed, setRevealed] = useState(0)
   const [running, setRunning] = useState(false)
 
   const pools = useMemo(() => {
@@ -301,37 +313,158 @@ function DemoPanel({ demo, onNavigate }: { demo: DemoConfig; onNavigate?: (p: st
   }, [awards.data, budget.data])
 
   const sizes: Record<DemoConfig["dataset"], string> = {
-    "txn-contracts": `${pools.con.length} contract transactions`,
-    "txn-assistance": `${pools.asst.length} assistance transactions`,
-    "txn-all": `${pools.all.length} award transactions`,
-    "exhibit-accounts": `${pools.exVals.length} exhibit account-year values`,
+    "txn-contracts": `${pools.con.length.toLocaleString()} contract transactions`,
+    "txn-assistance": `${pools.asst.length.toLocaleString()} assistance transactions`,
+    "txn-all": `${pools.all.length.toLocaleString()} award transactions`,
+    "exhibit-accounts": `${pools.exVals.length.toLocaleString()} exhibit account-year values`,
     "monthly-series": `${pools.series.length}-point monthly obligation series`,
   }
 
   const run = () => {
-    setRunning(true)
+    setRunning(true); setStages([]); setRevealed(0)
     setTimeout(() => {
-      try {
-        if (demo.model === "benford") {
-          const amounts = demo.dataset === "exhibit-accounts" ? pools.exVals : pools.all.map(t => Math.abs(t.amount))
-          setResult({ kind: "benford", r: benfordTest(amounts) })
-        } else if (demo.model === "anomaly") {
-          const src = demo.dataset === "txn-assistance" ? pools.asst : pools.con
-          const amounts = src.map(t => t.amount); const labels = src.map(t => `${t.recipient} · ${t.date}`)
-          setResult({ kind: "anomaly", r: detectAnomalies(amounts, labels), n: amounts.length })
-        } else if (demo.model === "risk") {
-          const counts = new Map<string, number>()
-          pools.con.forEach(t => counts.set(t.recipient, (counts.get(t.recipient) ?? 0) + 1))
-          const r = riskScore(pools.con.map(t => ({ label:`${t.recipient} · ${t.date} · ${fmtMoney(t.amount)}`, amount:t.amount, date:t.date, counterpartyCount:counts.get(t.recipient) }))).slice(0, 12)
-          setResult({ kind: "risk", r, n: pools.con.length })
-        } else if (demo.model === "cluster") {
-          const amounts = demo.dataset === "exhibit-accounts" ? pools.exVals : pools.all.map(t => Math.abs(t.amount))
-          setResult({ kind: "cluster", r: kmeans1d(amounts, 4), n: amounts.length })
-        } else if (demo.model === "forecast") {
-          setResult({ kind: "forecast", r: holtForecast(pools.series, 4) })
-        }
-      } finally { setRunning(false) }
-    }, 60)
+      const built = buildStages()
+      setStages(built)
+      let i = 0
+      const tick = () => { i++; setRevealed(i); if (i < built.length) setTimeout(tick, 430); else setRunning(false) }
+      setTimeout(tick, 360)
+    }, 40)
+  }
+
+  function buildStages(): StageView[] {
+    const out: StageView[] = []
+    const t0 = performance.now()
+
+    // ── ① population staging ────────────────────────────────────────────
+    let manifest: PopulationManifest
+    let cleanTxns: typeof pools.con = []
+    let cleanVals: number[] = []; let cleanLabs: string[] = []
+    if (demo.dataset === "exhibit-accounts") {
+      const st = stageValues(pools.exVals, pools.exLabs, "J-book exhibit accounts, PB2026+PB2027 (sourcedata/)")
+      manifest = st.manifest; cleanVals = st.clean; cleanLabs = st.cleanLabels
+    } else if (demo.dataset === "monthly-series") {
+      manifest = stageSeries(pools.series, "Monthly obligation rollup from award action dates (sourcedata/)")
+    } else {
+      const src = demo.dataset === "txn-contracts" ? pools.con : demo.dataset === "txn-assistance" ? pools.asst : pools.all
+      const st = stageTxns(src, sizes[demo.dataset] + " (USAspending files in sourcedata/)")
+      manifest = st.manifest; cleanTxns = st.clean
+    }
+    const t1 = performance.now()
+    out.push({ icon:"📦", title:"Population staging & quality gates", ms: Math.max(1, Math.round(t1 - t0)),
+      sub:"Bronze → certified analytical population: every record accounted for, integrity hash locked",
+      body: <ManifestView m={manifest} /> })
+
+    // ── ② model execution ───────────────────────────────────────────────
+    const t2 = performance.now()
+    let res: DemoResult
+    let metrics: [string, string][] = []
+    let verdict = ""
+    let rc: RootCause
+    if (demo.model === "benford") {
+      const amounts = demo.dataset === "exhibit-accounts" ? cleanVals : cleanTxns.map(t => Math.abs(t.amount))
+      const b = benfordTest(amounts)
+      res = { kind:"benford", r:b }
+      metrics = [["n", String(b.n)], ["chi-square", `${b.chi2} vs 15.51 critical`], ["MAD", `${b.mad}%`]]
+      verdict = b.conforms ? "CONFORMS — attach to UoT certification as integrity evidence" : "DEVIATES — disposition required before population certification"
+      rc = rootCauseBenford(b, demo.dataset === "exhibit-accounts" ? null : cleanTxns)
+    } else if (demo.model === "anomaly") {
+      const src = demo.dataset === "txn-assistance" ? cleanTxns : cleanTxns
+      const flags = detectAnomalies(src.map(t => t.amount), src.map(t => `${t.recipient} · ${t.date}`))
+      res = { kind:"anomaly", r:flags, n:src.length }
+      metrics = [["population", src.length.toLocaleString()], ["flags", String(flags.length)], ["flagged $", fmtMoney(flags.reduce((s, f) => s + Math.abs(f.value), 0))]]
+      verdict = flags.length ? `${flags.length} items routed to the residual work queue` : "clean screen — record with population hash"
+      rc = rootCauseAnomaly(flags, src.length, manifest.gross)
+    } else if (demo.model === "risk") {
+      const counts = new Map<string, number>()
+      cleanTxns.forEach(t => counts.set(t.recipient, (counts.get(t.recipient) ?? 0) + 1))
+      const items = cleanTxns.map(t => ({ label:`${t.recipient} · ${t.date} · ${fmtMoney(t.amount)}`, amount:t.amount, date:t.date, counterpartyCount:counts.get(t.recipient) }))
+      const amountByLabel = new Map(items.map(x => [x.label, x.amount]))
+      const rows = riskScore(items).slice(0, 12)
+      res = { kind:"risk", r:rows, n:cleanTxns.length }
+      metrics = [["population", cleanTxns.length.toLocaleString()], ["queue", String(rows.length)], ["high-risk (≥60)", String(rows.filter(r => r.score >= 60).length)]]
+      verdict = "queue released to post-payment review (PIIA sampling frame)"
+      rc = rootCauseRisk(rows, cleanTxns.length, amountByLabel)
+    } else if (demo.model === "cluster") {
+      const amounts = demo.dataset === "exhibit-accounts" ? cleanVals : cleanTxns.map(t => Math.abs(t.amount))
+      const k = kmeans1d(amounts, 4)
+      res = { kind:"cluster", r:k, n:amounts.length }
+      metrics = [["population", amounts.length.toLocaleString()], ["strata", String(k.clusters.length)], ["inertia", String(k.inertia)]]
+      verdict = "stratified test design generated from data-driven boundaries"
+      rc = rootCauseCluster(k, amounts.length, manifest.gross)
+    } else {
+      const f = holtForecast(pools.series, 4)
+      res = { kind:"forecast", r:f }
+      metrics = [["method", f.metrics.method], ["MAPE", `${f.metrics.mape}%`], ["next-period band", `${fmtMoney(f.forecast[0]?.lo ?? 0)} – ${fmtMoney(f.forecast[0]?.hi ?? 0)}`]]
+      verdict = "80% lower band armed as the silent-failure alarm threshold"
+      rc = rootCauseForecast(f)
+    }
+    const t3 = performance.now()
+    out.push({ icon:"⚙️", title:"Blueprint execution", ms: Math.max(1, Math.round(t3 - t2)),
+      sub:"The exact pipeline steps, then the model output — computed in-browser by lib/ml/engine, not canned",
+      body: (
+        <div>
+          <div style={{ background:`${C.blue}0d`, border:`1px solid ${C.border}`, borderRadius:9, padding:"10px 13px", marginBottom:12 }}>
+            {MODEL_BLUEPRINT[demo.model].map((s, i) => (
+              <div key={i} style={{ fontSize:11, color:C.textSub, fontFamily:"var(--font-mono)", lineHeight:1.8 }}>
+                <span style={{ color:C.cyan }}>{i + 1}·</span> {s}</div>
+            ))}
+          </div>
+          <DemoResultView res={res} />
+        </div>
+      ) })
+
+    // ── ③ AI root-cause analysis ────────────────────────────────────────
+    out.push({ icon:"🤖", title:"AI root-cause analysis", ms: Math.max(1, Math.round(performance.now() - t3)),
+      sub:"The analyst layer interrogates the actual output — localization, concentration, attribution — and says what it means",
+      body: (
+        <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+          {rc.findings.map((f, i) => (
+            <div key={i} style={{ display:"flex", gap:10, alignItems:"flex-start", padding:"10px 12px", background:C.card, border:`1px solid ${C.border}`, borderRadius:9 }}>
+              <Badge color={f.severity === "high" ? C.red : f.severity === "medium" ? C.orange : C.green}>{f.severity.toUpperCase()}</Badge>
+              <div>
+                <div style={{ fontSize:12.5, fontWeight:700, color:C.text, lineHeight:1.45 }}>{f.title}</div>
+                <div style={{ fontSize:12, color:C.textSub, lineHeight:1.6, marginTop:4 }}>{f.detail}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) })
+
+    // ── ④ evidence artifact ─────────────────────────────────────────────
+    const artifact = buildArtifact({ mwNum, model: demo.model, manifest, metrics, verdict })
+    out.push({ icon:"🔏", title:"System-generated evidence artifact", ms: 1,
+      sub:"Append-only, hash-locked, reproducible — the same record auditors receive from the Gold layer",
+      body: (
+        <pre style={{ margin:0, padding:"14px 16px", background:C.bg, border:`1px solid ${C.border}`, borderRadius:10,
+                      fontSize:10.5, lineHeight:1.65, color:C.textSub, fontFamily:"var(--font-mono)", overflowX:"auto", whiteSpace:"pre" }}>
+          {artifact}
+        </pre>
+      ) })
+
+    // ── ⑤ actionable items ──────────────────────────────────────────────
+    out.push({ icon:"✅", title:"Actionable items", ms: 1,
+      sub:"Prioritized, owned, grounded in the numbers this run just produced",
+      body: (
+        <div style={{ overflowX:"auto" }}>
+          <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12.5, minWidth:560 }}>
+            <thead><tr style={{ color:C.muted, textAlign:"left" }}>
+              {["Pri", "Action", "Owner"].map(h => <th key={h} style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}` }}>{h}</th>)}
+            </tr></thead>
+            <tbody>
+              {rc.actions.map((a, i) => (
+                <tr key={i}>
+                  <td style={{ padding:"8px 10px", borderBottom:`1px solid ${C.border}`, verticalAlign:"top" }}>
+                    <Badge color={a.pri === 1 ? C.red : a.pri === 2 ? C.orange : C.gold}>P{a.pri}</Badge></td>
+                  <td style={{ padding:"8px 10px", borderBottom:`1px solid ${C.border}`, color:C.text, lineHeight:1.6 }}>{a.action}</td>
+                  <td style={{ padding:"8px 10px", borderBottom:`1px solid ${C.border}`, color:C.textSub, whiteSpace:"nowrap", verticalAlign:"top" }}>{a.owner}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) })
+
+    return out
   }
 
   if (awards.loading || budget.loading) return <Spinner label="Staging bundled sourcedata/ datasets for the demonstration…" />
@@ -343,14 +476,14 @@ function DemoPanel({ demo, onNavigate }: { demo: DemoConfig; onNavigate?: (p: st
           <div style={{ fontSize:13.5, fontWeight:700, color:C.text, marginBottom:6 }}>▶ {demo.title}</div>
           <div style={{ fontSize:12.5, color:C.textSub, lineHeight:1.65 }}>{demo.rationale}</div>
           <div style={{ fontSize:11.5, color:C.cyan, marginTop:8, fontFamily:"var(--font-mono)" }}>
-            dataset: {sizes[demo.dataset]} · computed in-browser by lib/ml/engine — live, not canned
+            dataset: {sizes[demo.dataset]} · 5-stage pipeline · all numbers computed live in-browser
           </div>
         </div>
         <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
           <button onClick={run} disabled={running}
             style={{ padding:"10px 20px", borderRadius:9, fontSize:13, fontWeight:700, cursor:"pointer",
                      border:`1px solid ${C.borderAccent}`, background:`${C.blue}26`, color:C.blue }}>
-            {running ? "Computing…" : "▶ Run demonstration"}
+            {running ? "Pipeline running…" : stages.length ? "↻ Re-run pipeline" : "▶ Run solution pipeline"}
           </button>
           {onNavigate && (
             <button onClick={() => onNavigate("ml")}
@@ -361,19 +494,90 @@ function DemoPanel({ demo, onNavigate }: { demo: DemoConfig; onNavigate?: (p: st
           )}
         </div>
       </div>
-      {result && <DemoResultView res={result} />}
+
+      {stages.length > 0 && (
+        <div>
+          {stages.map((st, i) => {
+            const shown = i < revealed
+            const isNext = i === revealed
+            return (
+              <div key={i} style={{ display:"flex", gap:14 }}>
+                {/* rail */}
+                <div style={{ display:"flex", flexDirection:"column", alignItems:"center", width:34, flexShrink:0 }}>
+                  <div style={{ width:30, height:30, borderRadius:"50%", display:"flex", alignItems:"center", justifyContent:"center",
+                                fontSize:13, flexShrink:0, border:`2px solid ${shown ? C.green : isNext ? C.blue : C.border}`,
+                                background: shown ? `${C.green}1a` : C.card, transition:"all .2s" }}>
+                    {shown ? st.icon : isNext && running ? "⏳" : <span style={{ color:C.muted, fontSize:11 }}>{i + 1}</span>}
+                  </div>
+                  {i < stages.length - 1 && <div style={{ width:2, flex:1, minHeight:18, background: shown ? `${C.green}55` : C.border, transition:"background .2s" }} />}
+                </div>
+                {/* card */}
+                <div style={{ flex:1, paddingBottom:16, minWidth:0 }}>
+                  <div style={{ display:"flex", gap:10, alignItems:"baseline", flexWrap:"wrap" }}>
+                    <span style={{ fontSize:13.5, fontWeight:700, color: shown ? C.text : C.muted }}>
+                      Stage {i + 1} — {st.title}</span>
+                    {shown && <span style={{ fontSize:10.5, color:C.green, fontFamily:"var(--font-mono)" }}>✓ {st.ms} ms</span>}
+                  </div>
+                  <div style={{ fontSize:11.5, color:C.muted, margin:"3px 0 10px" }}>{st.sub}</div>
+                  {shown && <div style={{ animation:"afFadeIn .25s ease" }}>{st.body}</div>}
+                </div>
+              </div>
+            )
+          })}
+          <style>{`@keyframes afFadeIn { from { opacity:0; transform:translateY(4px) } to { opacity:1; transform:none } }`}</style>
+        </div>
+      )}
     </div>
   )
 }
 
+// ── stage 1 body: population manifest ────────────────────────────────────────
+function ManifestView({ m }: { m: PopulationManifest }) {
+  const C = useTheme()
+  const cell: React.CSSProperties = { padding:"6px 10px", borderBottom:`1px solid ${C.border}`, fontSize:12 }
+  return (
+    <div>
+      <Row>
+        <KPI icon="🧾" label="Records" value={m.records.toLocaleString()} accent={C.blue} sub={m.dateMin ? `${m.dateMin} → ${m.dateMax}` : "certified population"} />
+        <KPI icon="💵" label="Gross amount" value={fmtMoney(m.gross)} accent={C.cyan} sub={`net ${fmtMoney(m.net)}`} />
+        <KPI icon="🔏" label="Integrity hash" value={m.hash} accent={C.purple} sub="FNV-1a over amount stream" />
+      </Row>
+      <div style={{ height:10 }} />
+      <table style={{ width:"100%", borderCollapse:"collapse" }}>
+        <tbody>
+          {m.sources.map((s, i) => (
+            <tr key={"s" + i}>
+              <td style={{ ...cell, color:C.muted, width:130 }}>source</td>
+              <td style={{ ...cell, color:C.text }}>{s.name}</td>
+              <td style={{ ...cell, color:C.textSub, textAlign:"right", fontFamily:"var(--font-mono)" }}>{s.records.toLocaleString()} rec · {fmtMoney(s.amount)}</td>
+            </tr>
+          ))}
+          {m.gates.map((g, i) => (
+            <tr key={"g" + i}>
+              <td style={{ ...cell, color:C.muted }}>quality gate</td>
+              <td style={{ ...cell, color:C.text }}>{g.rule} <span style={{ color:C.muted, fontSize:11 }}>— {g.note}</span></td>
+              <td style={{ ...cell, textAlign:"right", fontFamily:"var(--font-mono)", color: g.after < g.before ? C.orange : C.green }}>{g.before.toLocaleString()} → {g.after.toLocaleString()}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <div style={{ fontSize:11, color:C.muted, marginTop:8, lineHeight:1.6 }}>
+        In production this stage is the UoT gate: population ties to the trial balance before anything downstream runs.
+        The hash makes the population tamper-evident — re-running on identical data reproduces it exactly.
+      </div>
+    </div>
+  )
+}
+
+// ── stage 2 result visualizations ────────────────────────────────────────────
 function DemoResultView({ res }: { res: DemoResult }) {
   const C = useTheme()
   if (res.kind === "benford") {
     const b = res.r
     return (
-      <Card title={`Result — Benford first-digit test`}
-            sub={`n=${b.n} · χ²=${b.chi2} vs critical 15.51 (α=0.05) · MAD ${b.mad}% — ${b.conforms ? "population CONFORMS — supports the integrity assertion" : "population DEVIATES — localize and investigate before certifying"}`}>
-        <ResponsiveContainer width="100%" height={250}>
+      <Card title="Model output — Benford first-digit distribution"
+            sub={`n=${b.n} · χ²=${b.chi2} vs critical 15.51 (α=0.05) · MAD ${b.mad}% — ${b.conforms ? "CONFORMS" : "DEVIATES"}`}>
+        <ResponsiveContainer width="100%" height={240}>
           <BarChart data={b.digits}>
             <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
             <XAxis dataKey="digit" stroke={C.muted} fontSize={11} />
@@ -389,7 +593,7 @@ function DemoResultView({ res }: { res: DemoResult }) {
   }
   if (res.kind === "anomaly") {
     return (
-      <Card title="Result — outlier flags" sub={`${res.r.length} flags from ${res.n} values (robust z > 3.5 or beyond IQR×3) — in production these are the recon residuals worked first`}>
+      <Card title="Model output — outlier flags" sub={`${res.r.length} flags from ${res.n.toLocaleString()} values (robust z > 3.5 or beyond IQR×3)`}>
         <MiniTable head={["Severity", "Item", "Value", "Method"]}
           rows={res.r.slice(0, 10).map(a => [
             <Badge key="b" color={a.score > 8 ? C.red : a.score > 5 ? C.orange : C.gold}>{a.score.toFixed(1)}</Badge>,
@@ -399,7 +603,7 @@ function DemoResultView({ res }: { res: DemoResult }) {
   }
   if (res.kind === "risk") {
     return (
-      <Card title="Result — post-payment review queue" sub={`Top ${res.r.length} of ${res.n} transactions by composite risk — the PIIA sampling frame`}>
+      <Card title="Model output — post-payment review queue" sub={`Top ${res.r.length} of ${res.n.toLocaleString()} disbursements by composite risk, with driver attribution`}>
         <MiniTable head={["Score", "Transaction", "Risk drivers"]}
           rows={res.r.map(r => [
             <Badge key="b" color={r.score >= 60 ? C.red : r.score >= 35 ? C.orange : C.gold}>{r.score}</Badge>,
@@ -410,7 +614,7 @@ function DemoResultView({ res }: { res: DemoResult }) {
   if (res.kind === "cluster") {
     const k = res.r
     return (
-      <Card title="Result — value strata" sub={`k=4 on log₁₀ |amount| over ${res.n} values · converged in ${k.iterations} iterations — count/test effort concentrates in the top strata`}>
+      <Card title="Model output — value strata" sub={`k=4 on log₁₀ |amount| over ${res.n.toLocaleString()} values · converged in ${k.iterations} iterations`}>
         <MiniTable head={["Stratum", "Center", "Range", "Population", "Share"]}
           rows={k.clusters.map((c, i) => [
             <Badge key="b" color={["#22d3ee", "#10b981", "#f59e0b", "#ef4444"][i]}>{["Micro", "Small", "Medium", "Major"][i] ?? `C${i + 1}`}</Badge>,
@@ -425,8 +629,8 @@ function DemoResultView({ res }: { res: DemoResult }) {
               ...f.forecast.map(x => ({ label: x.label, fc: x.value, lo: x.lo, hi: x.hi }))]
   const data = [...hist, ...fc.slice(1)]
   return (
-    <Card title="Result — feed-volume forecast" sub={`${f.metrics.method} · MAPE ${f.metrics.mape}% — an actual feed below the lower band triggers the interface alarm`}>
-      <ResponsiveContainer width="100%" height={260}>
+    <Card title="Model output — feed-volume forecast" sub={`${f.metrics.method} · MAPE ${f.metrics.mape}% · 80% bands — the lower band is the alarm threshold`}>
+      <ResponsiveContainer width="100%" height={250}>
         <ComposedChart data={data}>
           <CartesianGrid stroke={C.dim} strokeDasharray="3 3" />
           <XAxis dataKey="label" stroke={C.muted} fontSize={10} />
