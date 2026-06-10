@@ -41,12 +41,12 @@ export default function AnyFedPortal() {
 
   const content = (
     <>
-      {page === "overview"    && <Overview agency={agency} />}
+      {page === "overview"    && <Overview agency={agency} onNavigate={p => setPage(p as NavId)} />}
       {page === "intel"       && <DataIntelligence agency={agency} />}
       {page === "data"        && <DataExplorer agency={agency} />}
       {page === "budget"      && <BudgetLifecycle agency={agency} />}
       {page === "accounting"  && <Accounting agency={agency} />}
-      {page === "audit"       && <AuditCenter agency={agency} />}
+      {page === "audit"       && <AuditCenter agency={agency} onNavigate={p => setPage(p as NavId)} />}
       {page === "finops"      && <FinOps agency={agency} />}
       {page === "controls"    && <InternalControls agency={agency} />}
       {page === "acquisition" && <Acquisition agency={agency} />}
