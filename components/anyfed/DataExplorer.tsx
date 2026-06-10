@@ -10,6 +10,7 @@ import { useTheme, Card, Row, SectionTitle, Badge, KPI, Spinner, Tip, fmtMoney }
 import { useAgencyData, DodBudget, BudgetExhibit, BudgetRecord, LiveDetail } from "./useAgencyData"
 import type { Agency } from "@/lib/agencies"
 import { AgentProvider, useAgentSet, agentProps as liveAgentProps } from "./agent"
+import AcquirePanel from "./AcquirePanel"
 import { DrillPanel, CadencePanel } from "./DataIntelligence"
 import { fmt as fmtLive, resourceTrend, dimProfile, DIM_KEYS } from "@/lib/live-insights"
 import {
@@ -75,11 +76,11 @@ export default function DataExplorer({ agency }: { agency: Agency }) {
       <SectionTitle title="Data Explorer"
         sub="Drag a data source onto the canvas, then drill, pivot, compare vintages, and let the agents analyze — every number is computed live from sourcedata/" />
 
-      {/* palette + canvas */}
-      <div style={{ display:"flex", gap:14, flexWrap:"wrap", alignItems:"stretch", marginBottom:16 }}>
-        <SourcePalette data={data} active={active} />
-        <AnalysisCanvas data={data} active={active} setActive={setActive} setTab={setTab} tab={tab} tabs={TABS} />
-      </div>
+      {/* palette (horizontal strip) above the active-datasets canvas */}
+      <SourcePalette data={data} active={active} />
+      <div style={{ height:12 }} />
+      <AnalysisCanvas data={data} active={active} setActive={setActive} setTab={setTab} tab={tab} tabs={TABS} />
+      <div style={{ height:16 }} />
 
       {active.length > 0 && (
         <>
@@ -90,6 +91,9 @@ export default function DataExplorer({ agency }: { agency: Agency }) {
           {tab === "Data Prep"           && <PrepTab key={primary} ex={ex} exKey={primary} />}
         </>
       )}
+
+      <div style={{ height:16 }} />
+      <AcquirePanel agency={agency} />
 
       <HoverAgent ctx={agentCtx} x={pos.current.x} y={pos.current.y} />
     </AgentCtx.Provider>
@@ -126,17 +130,18 @@ function HoverAgent({ ctx, x, y }: { ctx: HoverCtx | null; x: number; y: number 
   )
 }
 
-// ── draggable data-source palette ────────────────────────────────────────────
+// ── draggable data-source palette (horizontal strip) ────────────────────────
 function SourcePalette({ data, active }: { data: DodBudget; active: string[] }) {
   const C = useTheme()
   const setAgent = useAgent()
   const exKeys = Object.keys(data.exhibits)
   return (
-    <div style={{ width:230, flexShrink:0, background:C.sidebar, border:`1px solid ${C.border}`,
-                  borderRadius:12, padding:"14px 12px" }}>
-      <div style={{ fontSize:15, color:C.muted, letterSpacing:"0.1em", marginBottom:4 }}>DATA SOURCES</div>
-      <div style={{ fontSize:14, color:C.muted, marginBottom:10 }}>drag a card → canvas</div>
-      <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+    <div style={{ background:C.sidebar, border:`1px solid ${C.border}`, borderRadius:12, padding:"12px 14px" }}>
+      <div style={{ display:"flex", alignItems:"baseline", gap:12, flexWrap:"wrap", marginBottom:10 }}>
+        <span style={{ fontSize:15, color:C.muted, letterSpacing:"0.1em" }}>DATA SOURCES</span>
+        <span style={{ fontSize:14, color:C.muted }}>drag a card onto the canvas below · parsed from <b style={{ color:C.textSub }}>PB2026 + PB2027</b> J-books in <code>sourcedata/</code></span>
+      </div>
+      <div style={{ display:"flex", gap:10, flexWrap:"wrap" }}>
         {exKeys.map(k => {
           const e = data.exhibits[k]; const on = active.includes(k)
           const recs = e.records?.length ?? 0
@@ -145,9 +150,10 @@ function SourcePalette({ data, active }: { data: DodBudget; active: string[] }) 
               onDragStart={ev => ev.dataTransfer.setData("text/plain", k)}
               {...insightProps(setAgent, { exhibitTitle: e.title,
                 note: `${e.appn} · ${recs} line groups · ${(e.hierarchy?.length ?? 0)} drill levels · vintages ${Object.keys(e.vintages ?? {}).join(" + ")}. Drag onto the canvas to analyze.` })}
-              style={{ cursor:"grab", userSelect:"none", background: on?`${C.blue}1c`:C.card,
-                       border:`1px solid ${on?C.borderAccent:C.border}`, borderRadius:10, padding:"9px 11px" }}>
-              <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center" }}>
+              style={{ cursor:"grab", userSelect:"none", flex:"1 1 200px", minWidth:200, maxWidth:300,
+                       background: on?`${C.blue}1c`:C.card,
+                       border:`1px solid ${on?C.borderAccent:C.border}`, borderRadius:10, padding:"9px 12px" }}>
+              <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", gap:8 }}>
                 <span style={{ fontSize:17, fontWeight:700, color:on?C.blue:C.text }}>⠿ {e.appn}</span>
                 <Badge color={e.isMilcon?C.orange:C.purple}>{k.toUpperCase()}</Badge>
               </div>
@@ -155,9 +161,6 @@ function SourcePalette({ data, active }: { data: DodBudget; active: string[] }) 
             </div>
           )
         })}
-      </div>
-      <div style={{ marginTop:12, paddingTop:10, borderTop:`1px solid ${C.border}`, fontSize:14, color:C.muted, lineHeight:1.6 }}>
-        Sources parsed from <b style={{ color:C.textSub }}>PB2026 + PB2027</b> J-books in <code>sourcedata/</code>.
       </div>
     </div>
   )
@@ -678,6 +681,8 @@ function LiveExplorerInner({ agency }: { agency: Agency }) {
       <DrillPanel data={data} fy={lastFY} />
       <div style={{ height:16 }} />
       <CadencePanel data={data} />
+      <div style={{ height:16 }} />
+      <AcquirePanel agency={agency} />
       <div style={{ height:14 }} />
       <div style={{ fontSize:15.5, color:C.muted, lineHeight:1.7 }}>
         Want J-book-grade depth (vintages, 5-level drill, line-item movers)? That requires the agency&apos;s budget
