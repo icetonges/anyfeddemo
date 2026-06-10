@@ -3,6 +3,7 @@
 import { useTheme, Card, Row, SectionTitle, Badge, KPI, fmtMoney } from "./ui"
 import { USSGL_SAMPLE } from "@/lib/fm-content"
 import type { Agency } from "@/lib/agencies"
+import StatementBuilder from "./StatementBuilder"
 
 // Illustrative FBwT reconciliation — agency GL vs. Treasury (CARS/GWA). Values in $K.
 // Pattern mirrors the monthly tie-out every CFO shop performs (TFM Vol 1 Part 2).
@@ -24,6 +25,9 @@ export default function Accounting({ agency }: { agency: Agency }) {
     <div>
       <SectionTitle title="Accounting Operations"
         sub="USSGL posting logic, journal entry workflow, and Fund Balance with Treasury reconciliation" />
+
+      <StatementBuilder agency={agency} />
+      <div style={{ height:18 }} />
       <Row>
         <KPI icon="📒" label="Chart of Accounts" value="USSGL" accent={C.blue} sub="Treasury TFM Supplement 2 — transaction-level (FFMIA)" />
         <KPI icon="🏦" label="FBwT Reconciliation" value="Monthly" accent={C.cyan} sub="Agency GL ↔ Treasury CARS/GWA" />

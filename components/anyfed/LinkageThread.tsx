@@ -8,6 +8,7 @@ import { useTheme, Card, Badge } from "./ui"
 
 interface Stage {
   icon: string; name: string; dataset: string; grain: string
+  measure: string                  // the SPECIFIC dollar measure at this grain
   joinKey: string                  // the key that links DOWN to the next stage
   what: string
   example: string                  // real worked example value
@@ -16,22 +17,27 @@ interface Stage {
 
 const STAGES: Stage[] = [
   { icon: "📜", name: "Statement / SBR line", dataset: "File A — Account Balances (GTAS)", grain: "TAS × period",
+    measure: "total_budgetary_resources · obligations_incurred · unobligated_balance (SF-133 lines 1910/2190/2490, $ whole)",
     joinKey: "TAS (Treasury Account Symbol)",
     what: "The certified top: total budgetary resources, obligations, and unobligated balance per appropriation account. This is the number on the Statement of Budgetary Resources — everything below must roll up to it.",
     example: "TAS 097-2026/2026-1205 (Navy MILCON FY2026) — account-level obligations from the GTAS view on this page", color: "blue" },
   { icon: "🧾", name: "Cost structure split", dataset: "File B — Program Activity & Object Class", grain: "TAS × PA × OC × period",
+    measure: "obligated_amount + gross_outlay_amount per TAS×PA×OC (USSGL 480x/490x-sourced, $ whole)",
     joinKey: "TAS + program activity + object class",
     what: "The same account dollars split by what they bought (object class) and which program bought them — the bridge between account balances and cost analysis. Must tie to File A per TAS.",
     example: "Within the MILCON TAS: OC 32.0 (land & structures) carries the construction obligations", color: "cyan" },
   { icon: "🔗", name: "Account ↔ Award bridge", dataset: "File C — Account Breakdown by Award", grain: "TAS × award × period",
+    measure: "transaction_obligated_amount per TAS×award×period ($ whole — sums to the TAS obligations above)",
     joinKey: "award_unique_key (PIID/FAIN)",
     what: "THE critical hop: which awards each account funded, period by period. This is where appropriation-year attribution lives — and the hop most agencies cannot complete cleanly, which is exactly DoD's MW #7.",
     example: "TAS 097-2026/2026-1205 → award W912PP-26-C-#### (Navy shipyard infrastructure MACC)", color: "gold" },
   { icon: "💸", name: "Award transaction", dataset: "D1 archive — 297-column contract transactions", grain: "transaction (obligation event)",
+    measure: "federal_action_obligation per action ($ whole; net of de-obligations) + total_dollars_obligated cumulative per award",
     joinKey: "contract_transaction_unique_key",
     what: "The individual obligation event with everything attached: amount, action date, recipient, NAICS/PSC, funding vs awarding office, and the TAS LIST funding it (treasury_accounts_funding_this_award closes the loop back up to File A).",
     example: "Real row from your archive: $152.0M · KIEWIT-ALBERICI SIOP MACC AJV · 2025-11-06 · Dept of the Navy — flagged top outlier by the pipeline", color: "green" },
   { icon: "📄", name: "Source document (KSD)", dataset: "EDA / PIEE / WAWF — outside USAspending", grain: "document",
+    measure: "contract ceiling (base_and_all_options_value) · invoice/acceptance amounts on the documents themselves",
     joinKey: "PIID + modification number",
     what: "The audit terminus: the contract, modification, receiving report, and invoice that evidence the transaction. USAspending carries the keys (PIID, mod); the documents live in the contracting systems — this last hop is what KSD retrieval automates.",
     example: "PIID + mod → EDA contract PDF + WAWF DD-250 acceptance — the evidence package an auditor samples", color: "purple" },
@@ -75,6 +81,9 @@ export default function LinkageThread() {
           <span style={{ fontSize:13, color:C.muted, fontFamily:"var(--font-mono)" }}>{s.dataset}</span>
         </div>
         <div style={{ fontSize:15, color:C.textSub, lineHeight:1.7, marginBottom:9 }}>{s.what}</div>
+        <div style={{ fontSize:13.5, color:C.gold, fontFamily:"var(--font-mono)", lineHeight:1.55, marginBottom:8 }}>
+          $ measure · {s.measure}
+        </div>
         <div style={{ fontSize:14, color:C.cyan, fontFamily:"var(--font-mono)", lineHeight:1.6, padding:"8px 11px",
                       background:C.bg, borderRadius:8, border:`1px solid ${C.border}` }}>
           worked example · {s.example}

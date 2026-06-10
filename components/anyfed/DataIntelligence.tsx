@@ -86,15 +86,15 @@ function Inner({ agency }: { agency: Agency }) {
         <Row>
           <div style={{ flex:1, minWidth:160 }} {...agentProps(setAgent, { title:"Total budgetary resources", lines:[fmt(trend.latest.resources), `All authority available to ${agency.abbrev} in ${trend.latest.fy}: new appropriations + carryover + offsetting collections (SF-133 line 1910 equivalent).`, trend.yoyResources != null ? `${trend.yoyResources >= 0 ? "+" : ""}${trend.yoyResources}% vs prior year.` : ""] })}>
             <KPI icon="💰" label={`${trend.latest.fy} resources`} value={fmt(trend.latest.resources)} accent={C.blue}
-                 sub={trend.yoyResources != null ? `${trend.yoyResources >= 0 ? "+" : ""}${trend.yoyResources}% YoY` : "budgetary resources"} />
+                 sub={`total budgetary resources (SF-133 1910)${trend.yoyResources != null ? ` · ${trend.yoyResources >= 0 ? "+" : ""}${trend.yoyResources}% YoY` : ""}`} />
           </div>
           <div style={{ flex:1, minWidth:160 }} {...agentProps(setAgent, { title:"Obligations", lines:[fmt(trend.latest.obligated), `Legally binding commitments incurred — the execution KPI. ${trend.yoyObligated != null ? `Moving ${trend.yoyObligated >= 0 ? "+" : ""}${trend.yoyObligated}% YoY.` : ""}`] })}>
             <KPI icon="✍️" label="Obligated" value={fmt(trend.latest.obligated)} accent={C.cyan}
-                 sub={`${trend.latest.rate ?? "—"}% of resources`} />
+                 sub={`obligations incurred (SF-133 2190) · ${trend.latest.rate ?? "—"}% of resources`} />
           </div>
           <div style={{ flex:1, minWidth:160 }} {...agentProps(setAgent, { title:"Unobligated balance", lines:[fmt(trend.carryover), `${trend.carryoverShare}% of resources not yet obligated. ${trend.carryoverShare > 35 ? "Large carryover — likely multi-year/no-year authority; obligation-rate KPIs mislead here." : trend.carryoverShare < 8 ? "Very tight — little buffer for in-year requirements." : "Within the normal band."}`] })}>
             <KPI icon="🏦" label="Unobligated" value={fmt(trend.carryover)} accent={trend.carryoverShare > 35 ? C.orange : C.green}
-                 sub={`${trend.carryoverShare}% of resources`} />
+                 sub={`unobligated balance (SF-133 2490) · ${trend.carryoverShare}% of resources`} />
           </div>
           <div style={{ flex:1, minWidth:160 }} {...agentProps(setAgent, { title:"Obligation-rate trend", lines:[`${trend.latest.rate ?? "—"}% latest`, `Across ${data.years.length} years the rate is ${trend.rateTrend}. A falling rate with rising resources usually means new multi-year money landing faster than execution capacity.`] })}>
             <KPI icon="📈" label="Rate trend" value={trend.rateTrend} accent={trend.rateTrend === "falling" ? C.orange : C.green}

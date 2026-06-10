@@ -131,7 +131,7 @@ export default function BudgetIntel({ agency }: { agency: Agency }) {
       <div style={{ overflowX:"auto", marginBottom:6 }}>
         <table style={{ width:"100%", borderCollapse:"collapse", fontSize:14, minWidth:760 }}>
           <thead><tr style={{ color:C.muted, textAlign:"left" }}>
-            {["Family (exhibit)", "FY2026 enacted (J-book)", "FY2027 request", `GTAS FY${curFY} obligations`, "Coverage", "Source xlsx"].map(h =>
+            {["Family (exhibit)", "FY2026 enacted TOA (J-book)", "FY2027 request TOA", `GTAS FY${curFY} obligations incurred`, "Coverage", "Source xlsx"].map(h =>
               <th key={h} style={{ padding:"7px 9px", borderBottom:`1px solid ${C.border}` }}>{h}</th>)}
           </tr></thead>
           <tbody>
@@ -159,7 +159,7 @@ export default function BudgetIntel({ agency }: { agency: Agency }) {
         ② AWARD WORLD — who the money reaches (USAspending contract/assistance files)
       </div>
       <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(210px, 1fr))", gap:8, marginBottom:14 }}>
-        {([["Net award obligations", model.awardNet != null ? fmtMoney(model.awardNet) : "—", "extract window, contracts + assistance"],
+        {([["Net award obligations", model.awardNet != null ? fmtMoney(model.awardNet) : "—", "Σ federal_action_obligation, extract window"],
            ["Top sub-agency", model.topSub?.name ?? "—", model.topSub ? fmtMoney(model.topSub.total) : ""],
            ["Top recipient", model.topRec?.name ?? "—", model.topRec ? fmtMoney(model.topRec.total) : ""],
            ["Transactions", model.awardCounts ? (model.awardCounts.contracts + model.awardCounts.assistance).toLocaleString() : "—", model.awardCounts ? `${model.awardCounts.contracts.toLocaleString()} contract · ${model.awardCounts.assistance.toLocaleString()} assistance` : ""]] as const)

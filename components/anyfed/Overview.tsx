@@ -71,8 +71,8 @@ function DodOverview({ agency, onNavigate }: { agency: Agency; onNavigate: Nav }
   const monthsLeft = Math.max(0, Math.round((new Date(2028, 11, 31).getTime() - Date.now()) / (30.44 * 24 * 3600 * 1000)))
 
   const kpis: { id: KpiId; icon: string; label: string; value: string; accent: string; sub: string }[] = [
-    { id:"req27",   icon:"💰", label:"FY2027 Request", value: fmtMoney(stats.latest, "K"), accent:C.blue, sub:`${stats.delta >= 0 ? "+" : ""}${stats.delta.toFixed(1)}% vs FY2026 · click to decompose` },
-    { id:"enact26", icon:"📊", label:"FY2026 Enacted + Spend Plan", value: fmtMoney(stats.prior, "K"), accent:C.cyan, sub:"disc. enacted + P.L. 119-21 mandatory" },
+    { id:"req27",   icon:"💰", label:"FY2027 Request (TOA)", value: fmtMoney(stats.latest, "K"), accent:C.blue, sub:`total obligational authority, J-book $K · ${stats.delta >= 0 ? "+" : ""}${stats.delta.toFixed(1)}% vs FY2026` },
+    { id:"enact26", icon:"📊", label:"FY2026 Enacted (TOA)", value: fmtMoney(stats.prior, "K"), accent:C.cyan, sub:"disc. enacted BA + P.L. 119-21 mandatory spend plan, J-book $K" },
     { id:"exec25",  icon:"⚙️", label:"FY2025 Execution Variance", value: stats.execVar25 != null ? `${stats.execVar25 >= 0 ? "+" : ""}${stats.execVar25}%` : "—", accent: Math.abs(stats.execVar25 ?? 0) > 4 ? C.orange : C.green, sub:"actual vs enacted · the execution report card" },
     { id:"cong26",  icon:"🏛️", label:"FY2026 Congressional Action", value: stats.cong26 != null ? `${stats.cong26 >= 0 ? "+" : ""}${stats.cong26}%` : "—", accent:C.gold, sub:"enacted vs request · hearing posture input" },
     { id:"mandatory", icon:"⚠️", label:"FY2026 Mandatory Share", value: stats.mandShare != null ? `${stats.mandShare}%` : "—", accent:C.orange, sub:"one-time reconciliation money inside the topline" },
