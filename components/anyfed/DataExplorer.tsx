@@ -650,7 +650,7 @@ function LiveExplorerInner({ agency }: { agency: Agency }) {
   const C = useTheme()
   const setAgent = useAgentSet()
   const now = new Date()
-  const lastFY = (now.getMonth() >= 9 ? now.getFullYear() + 1 : now.getFullYear()) - 1
+  const lastFY = now.getMonth() >= 9 ? now.getFullYear() + 1 : now.getFullYear()   // CURRENT in-progress FY
   const { data, loading, error } = useAgencyData<LiveDetail>(agency.id, "detail", `fy=${lastFY}`)
   const trend = data ? resourceTrend(data.years) : null
 

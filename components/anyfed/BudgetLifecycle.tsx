@@ -5,6 +5,7 @@ import { useTheme, Card, Row, SectionTitle, SourceTag, Spinner, Tip, fmtMoney, B
 import { useAgencyData, DodBudget, DodAwards, LiveDetail } from "./useAgencyData"
 import { A11_PHASES } from "@/lib/fm-content"
 import BudgetBriefing from "./BudgetBriefing"
+import BudgetIntel from "./BudgetIntel"
 import type { Agency } from "@/lib/agencies"
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
@@ -19,10 +20,12 @@ export default function BudgetLifecycle({ agency }: { agency: Agency }) {
   const [tab, setTab] = useState<Tab>("Execution")
   return (
     <div>
-      <SectionTitle title="Budget Lifecycle"
+      <SectionTitle title="Budget Management"
         sub="OMB Circular A-11 — formulation, congressional enactment, and year-of-execution management" />
 
       <BudgetBriefing agency={agency} />
+      <div style={{ height:18 }} />
+      <BudgetIntel agency={agency} />
       <div style={{ height:18 }} />
 
       {/* A-11 phase strip */}

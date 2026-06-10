@@ -19,7 +19,7 @@ const NAV = [
   { id:"overview",  label:"Executive Overview", icon:"🏛️" },
   { id:"intel",     label:"Data Intelligence",  icon:"🧠" },
   { id:"data",      label:"Data Explorer",      icon:"🗂️" },
-  { id:"budget",    label:"Budget Lifecycle",   icon:"📊" },
+  { id:"budget",    label:"Budget Management",  icon:"📊" },
   { id:"accounting",label:"Accounting",         icon:"📒" },
   { id:"audit",     label:"Audit",              icon:"🔍" },
   { id:"finops",    label:"Finance Operations", icon:"💳" },

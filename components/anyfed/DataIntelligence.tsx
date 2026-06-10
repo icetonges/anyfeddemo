@@ -9,6 +9,7 @@
 import { useMemo, useState } from "react"
 import { useTheme, Card, Row, SectionTitle, Badge, KPI, Spinner, Tip, SourceTag } from "./ui"
 import { AgentProvider, useAgentSet, agentProps } from "./agent"
+import LinkageThread from "./LinkageThread"
 import { useAgencyData, LiveDetail, DetailDim, DetailNode, DodBudget } from "./useAgencyData"
 import type { Agency } from "@/lib/agencies"
 import {
@@ -26,7 +27,12 @@ const DIM_ICON: Record<DimKey, string> = { subAgency:"🏢", budgetFunction:"�
 function fyOptions(): number[] {
   const now = new Date()
   const currentFY = now.getMonth() >= 9 ? now.getFullYear() + 1 : now.getFullYear()
-  return [1, 2, 3, 4].map(i => currentFY - i)   // last 4 completed FYs, newest first
+  // CURRENT in-progress FY first (what people care about most), then history
+  return [0, 1, 2, 3, 4].map(i => currentFY - i)
+}
+export function isInProgressFY(fy: number): boolean {
+  const now = new Date()
+  return fy === (now.getMonth() >= 9 ? now.getFullYear() + 1 : now.getFullYear())
 }
 
 export default function DataIntelligence({ agency }: { agency: Agency }) {
@@ -160,7 +166,12 @@ function Inner({ agency }: { agency: Agency }) {
 
       <div style={{ height:16 }} />
 
-      {/* ── 6 · Expert findings + data ops ── */}
+      {/* ── 6 · Cross-dataset linkage (UoT thread) ── */}
+      <LinkageThread />
+
+      <div style={{ height:16 }} />
+
+      {/* ── 7 · Expert findings + data ops ── */}
       <Row>
         <Card title="Expert findings" sub="Deterministic — computed from this bundle, ranked by severity" style={{ flex:1.2, minWidth:360 }}>
           <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
@@ -189,7 +200,7 @@ function FySelect({ value, onChange, options }: { value: number; onChange: (v: n
   return (
     <select value={value} onChange={e => onChange(Number(e.target.value))}
       style={{ background:C.card, color:C.text, border:`1px solid ${C.border}`, borderRadius:8, padding:"6px 10px", fontSize:16, cursor:"pointer" }}>
-      {options.map(f => <option key={f} value={f}>FY{f}</option>)}
+      {options.map(f => <option key={f} value={f}>FY{f}{isInProgressFY(f) ? " — in progress (most current)" : ""}</option>)}
     </select>
   )
 }
