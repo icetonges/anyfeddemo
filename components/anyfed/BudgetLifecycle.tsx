@@ -4,6 +4,7 @@ import { useState } from "react"
 import { useTheme, Card, Row, SectionTitle, SourceTag, Spinner, Tip, fmtMoney, Badge, KPI } from "./ui"
 import { useAgencyData, DodBudget, DodAwards, LiveBudget } from "./useAgencyData"
 import { A11_PHASES } from "@/lib/fm-content"
+import BudgetBriefing from "./BudgetBriefing"
 import type { Agency } from "@/lib/agencies"
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
@@ -20,6 +21,10 @@ export default function BudgetLifecycle({ agency }: { agency: Agency }) {
     <div>
       <SectionTitle title="Budget Lifecycle"
         sub="OMB Circular A-11 — formulation, congressional enactment, and year-of-execution management" />
+
+      <BudgetBriefing agency={agency} />
+      <div style={{ height:18 }} />
+
       {/* A-11 phase strip */}
       <Row>
         {A11_PHASES.map((p, i) => (

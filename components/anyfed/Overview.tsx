@@ -10,6 +10,7 @@ import type { Agency } from "@/lib/agencies"
 import { BUDGET_HISTORY, BUDGET_SUMMARY } from "@/lib/sec-data"
 import { DOD_AUDIT_FACTS, DOD_MATERIAL_WEAKNESSES } from "@/lib/fm-content"
 import { deptLifecycle } from "@/lib/data-insights"
+import AgencyLandscape from "./AgencyLandscape"
 import { fmt as fmtLive, resourceTrend, cadence, expertFindings } from "@/lib/live-insights"
 import {
   ComposedChart, Bar, Line, Area, AreaChart, XAxis, YAxis, CartesianGrid,
@@ -21,7 +22,7 @@ type Nav = ((page: string) => void) | undefined
 
 export default function Overview({ agency, onNavigate }: { agency: Agency; onNavigate?: (page: string) => void }) {
   if (agency.id === "DOD") return <DodOverview agency={agency} onNavigate={onNavigate} />
-  if (agency.id === "SEC") return <SecOverview agency={agency} />
+  if (agency.id === "SEC") return <SecOverview agency={agency} onNavigate={onNavigate} />
   return <LiveOverview agency={agency} onNavigate={onNavigate} />
 }
 
@@ -96,6 +97,9 @@ function DodOverview({ agency, onNavigate }: { agency: Agency; onNavigate: Nav }
       </div>
 
       {drill && <><div style={{ height:14 }} /><DrillPanel id={drill} data={data} stats={stats} mwByCat={mwByCat} onNavigate={onNavigate} /></>}
+
+      <div style={{ height:18 }} />
+      <AgencyLandscape agency={agency} onNavigate={onNavigate} />
 
       <div style={{ height:18 }} />
       <DecisionQueue stats={stats} monthsLeft={monthsLeft} onNavigate={onNavigate} />
@@ -362,7 +366,7 @@ function ActionItems({ onNavigate, q4Share, mandShare, execVar }:
 }
 
 // ════════════════════════════════════════════ SEC: bundled CBJ constants
-function SecOverview({ agency }: { agency: Agency }) {
+function SecOverview({ agency, onNavigate }: { agency: Agency; onNavigate?: (page: string) => void }) {
   const C = useTheme()
   const hist = BUDGET_HISTORY.map(h => ({ ...h }))
   return (
@@ -376,6 +380,8 @@ function SecOverview({ agency }: { agency: Agency }) {
         <KPI icon="🔄" label="Carryover → FY27" value={fmtMoney(BUDGET_SUMMARY.fy27Carryover, "K")} accent={C.gold} sub="+$25M prior-year recoveries" />
         <KPI icon="🏛️" label="Funding Model" value="Fee-offset" accent={C.green} sub="Section 31 — $0 net to taxpayers" />
       </Row>
+      <div style={{ height:18 }} />
+      <AgencyLandscape agency={agency} onNavigate={onNavigate} />
       <div style={{ height:18 }} />
       <Card title="Budget Trajectory ($M) & FTE" sub="Enacted vs. requested, FY2023–FY2027">
         <ResponsiveContainer width="100%" height={300}>
@@ -436,6 +442,8 @@ function LiveOverview({ agency, onNavigate }: { agency: Agency; onNavigate: Nav 
                sub={cad ? `${cad.surge} cadence` : "intra-year burn"} />
         </Row>
       )}
+      <div style={{ height:18 }} />
+      <AgencyLandscape agency={agency} onNavigate={onNavigate} />
       <div style={{ height:18 }} />
       <Row>
         <Card title="Resources vs. Obligations ($B)" sub="GTAS-derived totals by fiscal year" style={{ flex:1.2, minWidth:340 }}>
