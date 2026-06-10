@@ -36,3 +36,152 @@ input[type=range]::-webkit-slider-thumb {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #1e3050; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #2d4a7a; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   GLOBAL MOBILE — safe, targeted fixes only.
+   NEVER touch: flex-direction, flex-wrap, overflow on main layout containers,
+   height:100vh, display:flex on column containers.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 767px) {
+
+  /* 1. Prevent horizontal scroll at page root */
+  html, body { overflow-x: hidden !important; }
+
+  /* 2. Collapse CSS grid layouts to single column.
+        Safe — only affects display:grid elements, not flex columns. */
+  [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* 3. Allow text to wrap everywhere */
+  [style*="white-space: nowrap"] {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  /* 4. Tables: scroll horizontally inside their wrapper */
+  [style*="overflow-x: auto"],
+  [style*="overflow-x:auto"] {
+    overflow-x: auto !important;
+    max-width: calc(100vw - 24px) !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  table { min-width: 0; }
+
+  /* 5. Reduce padding on cards (not main layout) */
+  [style*="padding: 30px 32px"],
+  [style*="padding: 28px 28px"],
+  [style*="padding: 26px 30px"],
+  [style*="padding: 20px 22px"],
+  [style*="padding: 22px 22px"] {
+    padding: 14px !important;
+  }
+
+  /* 6. Reduce main content area padding */
+  main { padding: 12px 12px 28px !important; }
+
+  /* 7. Prevent fixed pixel widths (sidebar panels) from overflowing */
+  [style*="width: 300px"],
+  [style*="width: 280px"],
+  [style*="width: 250px"],
+  [style*="width: 240px"],
+  [style*="width: 220px"],
+  [style*="width: 200px"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 8. Flex children: allow shrinking below content size */
+  [style*="min-width: 145px"],
+  [style*="min-width: 160px"],
+  [style*="min-width: 200px"],
+  [style*="min-width: 240px"],
+  [style*="min-width: 250px"] {
+    min-width: 0 !important;
+  }
+
+  /* 9. AI page: remove fixed viewport height so it scrolls naturally */
+  [style*="height: calc(100vh - 160px)"] {
+    height: auto !important;
+    min-height: 400px;
+  }
+
+  /* 10. Compact header on mobile */
+  header { padding: 0 12px !important; }
+
+  /* 11. Breadcrumb padding */
+  [style*="padding: 8px 24px"],
+  [style*="padding: 8px 28px"] {
+    padding: 6px 12px !important;
+  }
+
+  /* 12. Reduce gap in flex rows (stat strips, pill rows) */
+  [style*="gap: 20px"] { gap: 10px !important; }
+  [style*="gap: 22px"] { gap: 10px !important; }
+
+  /* 13. Font size reductions for very large numbers */
+  [style*="font-size: 28px"] { font-size: 20px !important; }
+  [style*="font-size: 26px"] { font-size: 20px !important; }
+  /* 14. KPI cards (OSOKPI) and stat strips: 2 per row on mobile.
+         minWidth:145 renders as min-width: 145px in DOM.
+         minWidth:100 renders as min-width: 100px in DOM. */
+  [style*="min-width: 145px"],
+  [style*="min-width: 100px"] {
+    min-width: calc(50% - 8px) !important;
+    max-width: calc(50% - 8px) !important;
+    flex: 0 0 calc(50% - 8px) !important;
+    box-sizing: border-box;
+  }
+
+  /* 15. KPI value numbers — smaller on mobile */
+  [style*="font-size: 26px"] { font-size: 18px !important; }
+  [style*="font-size: 28px"] { font-size: 18px !important; }
+  [style*="font-size: 24px"] { font-size: 16px !important; }
+
+  /* 16. KPI label text — wrap, don't truncate */
+  [style*="text-transform: uppercase"][style*="font-size: 10px"],
+  [style*="text-transform: uppercase"][style*="font-size: 12px"] {
+    white-space: normal !important;
+    word-break: break-word !important;
+    font-size: 10px !important;
+  }
+
+  /* 17. PageHeader right section — stack below title on mobile */
+  [style*="justify-content: space-between"][style*="margin-bottom"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+
+  /* 18. Filter pill rows — smaller pills on mobile */
+  [style*="border-radius: 20px"][style*="padding: 5px 15px"] {
+    padding: 5px 10px !important;
+    font-size: 13px !important;
+  }
+
+  /* 19. Impact/info boxes with label + text + link: stack on mobile.
+         Targets flex rows with padding: 9px 13px (OSO IMPACT pattern)
+         and similar rows with padding: 9px 12px (OSOPagesV2 action rows). */
+  [style*="padding: 9px 13px"],
+  [style*="padding: 9px 12px"],
+  [style*="padding: 10px 14px"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+  }
+
+  /* 20. Badge label rows (HIGH PRIORITY + category) — allow wrapping */
+  [style*="align-items: center"][style*="flex-wrap"] {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  /* 21. News card header row: let time/source drop below badges on mobile */
+  [style*="margin-bottom: 10px"][style*="flex-wrap"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+  }
+
+}

@@ -99,6 +99,34 @@ const INIT_COR = [
   { id:"COR-004", officer:"T. Brown", contract:"Janitorial Services HQ", vendor:"CleanFed Corp", ceiling:504000, ytdOblig:42000, utilPct:8.3, lastLog:"2026-10-10", nextDue:"2026-10-31", status:"CURRENT", oig582:true },
 ];
 
+const INIT_FACILITIES = [
+  { id:"FAC-001", name:"HQ — Station Place (100 F St NE)", city:"Washington, DC", type:"GSA Lease", sqft:565000, status:"ACTIVE", leaseExp:"2031-09-30", annualRent:28400000, oc:"23.0", poc:"OSBO-CL", notes:"Multi-year GSA lease. Renewal planning begins FY2029." },
+  { id:"FAC-002", name:"Northeast Regional Office",         city:"New York, NY",    type:"GSA Lease", sqft:68000,  status:"ACTIVE", leaseExp:"2028-03-31", annualRent:6100000,  oc:"23.0", poc:"OSBO-CL", notes:"Renewal option exercised FY2025. Space reduction under review." },
+  { id:"FAC-003", name:"Boston District Office",            city:"Boston, MA",      type:"GSA Lease", sqft:14200,  status:"ACTIVE", leaseExp:"2027-06-30", annualRent:1420000,  oc:"23.0", poc:"OSBO-CL", notes:"Lease expires FY2027 — replacement lease in progress." },
+  { id:"FAC-004", name:"Philadelphia Regional Office",      city:"Philadelphia, PA",type:"GSA Lease", sqft:22000,  status:"ACTIVE", leaseExp:"2029-09-30", annualRent:1980000,  oc:"23.0", poc:"OSBO-CL", notes:"No action required." },
+  { id:"FAC-005", name:"Atlanta Regional Office",           city:"Atlanta, GA",     type:"GSA Lease", sqft:27500,  status:"ACTIVE", leaseExp:"2030-06-30", annualRent:2200000,  oc:"23.0", poc:"OSBO-CL", notes:"Space utilization review pending." },
+  { id:"FAC-006", name:"Chicago Regional Office",           city:"Chicago, IL",     type:"GSA Lease", sqft:34000,  status:"ACTIVE", leaseExp:"2028-09-30", annualRent:3060000,  oc:"23.0", poc:"OSBO-CL", notes:"Hybrid work space reconfiguration complete." },
+  { id:"FAC-007", name:"Fort Worth Regional Office",        city:"Fort Worth, TX",  type:"GSA Lease", sqft:18500,  status:"ACTIVE", leaseExp:"2029-03-31", annualRent:1480000,  oc:"23.0", poc:"OSBO-CL", notes:"No action required." },
+  { id:"FAC-008", name:"Denver Regional Office",            city:"Denver, CO",      type:"GSA Lease", sqft:16000,  status:"ACTIVE", leaseExp:"2027-09-30", annualRent:1440000,  oc:"23.0", poc:"OSBO-CL", notes:"Lease expiry FY2027 — assess renewal vs co-location." },
+  { id:"FAC-009", name:"Los Angeles Regional Office",       city:"Los Angeles, CA", type:"GSA Lease", sqft:41000,  status:"ACTIVE", leaseExp:"2030-09-30", annualRent:5330000,  oc:"23.0", poc:"OSBO-CL", notes:"No action required." },
+  { id:"FAC-010", name:"Miami Regional Office",             city:"Miami, FL",       type:"GSA Lease", sqft:14800,  status:"ACTIVE", leaseExp:"2028-06-30", annualRent:1776000,  oc:"23.0", poc:"OSBO-CL", notes:"Space reduction proposal under DOGE efficiency review." },
+  { id:"FAC-011", name:"San Francisco Regional Office",     city:"San Francisco, CA",type:"GSA Lease",sqft:29000,  status:"ACTIVE", leaseExp:"2029-09-30", annualRent:4350000,  oc:"23.0", poc:"OSBO-CL", notes:"Renovation complete FY2025." },
+  { id:"FAC-012", name:"Seattle District Office",           city:"Seattle, WA",     type:"GSA Lease", sqft:9800,   status:"ACTIVE", leaseExp:"2027-03-31", annualRent:980000,   oc:"23.0", poc:"OSBO-CL", notes:"Short-term lease — assess consolidation with SF." },
+];
+
+const INIT_FLEET = [
+  { id:"VEH-001", plate:"GSA-4821", make:"Ford Escape Hybrid",    year:2023, region:"HQ — DC",            assignment:"General / Pool",       mileage:18420, status:"AVAILABLE", nextPM:"2026-11-15", fuel:"HYBRID",   driver:"Pool" },
+  { id:"VEH-002", plate:"GSA-4822", make:"Ford Escape Hybrid",    year:2023, region:"HQ — DC",            assignment:"General / Pool",       mileage:22110, status:"IN USE",     nextPM:"2026-12-01", fuel:"HYBRID",   driver:"K. Taylor" },
+  { id:"VEH-003", plate:"GSA-4901", make:"Chevrolet Equinox",     year:2022, region:"Northeast — NY",     assignment:"EXAMS Field Use",      mileage:34500, status:"AVAILABLE", nextPM:"2026-10-30", fuel:"GAS",      driver:"Pool" },
+  { id:"VEH-004", plate:"GSA-5012", make:"Ford F-150 (utility)",  year:2021, region:"HQ — DC",            assignment:"Facilities / Maint.",  mileage:51200, status:"MAINTENANCE",nextPM:"2026-10-22", fuel:"GAS",      driver:"OSBO-FO" },
+  { id:"VEH-005", plate:"GSA-5088", make:"Toyota Camry Hybrid",   year:2024, region:"Chicago — IL",       assignment:"ENF / EXAMS Field",   mileage:9800,  status:"AVAILABLE", nextPM:"2027-01-10", fuel:"HYBRID",   driver:"Pool" },
+  { id:"VEH-006", plate:"GSA-5210", make:"Chevrolet Bolt EV",     year:2024, region:"Los Angeles — CA",   assignment:"General / Pool",       mileage:12300, status:"AVAILABLE", nextPM:"2027-02-01", fuel:"ELECTRIC", driver:"Pool" },
+  { id:"VEH-007", plate:"GSA-5312", make:"Ford Explorer",         year:2022, region:"Atlanta — GA",       assignment:"ENF Field Operations", mileage:44700, status:"IN USE",     nextPM:"2026-11-05", fuel:"GAS",      driver:"ENF Staff" },
+  { id:"VEH-008", plate:"GSA-5401", make:"Toyota Camry Hybrid",   year:2023, region:"San Francisco — CA", assignment:"General / Pool",       mileage:21600, status:"AVAILABLE", nextPM:"2026-12-15", fuel:"HYBRID",   driver:"Pool" },
+  { id:"VEH-009", plate:"GSA-5490", make:"Chevrolet Bolt EV",     year:2024, region:"Fort Worth — TX",    assignment:"EXAMS / ENF Field",    mileage:7400,  status:"AVAILABLE", nextPM:"2027-03-01", fuel:"ELECTRIC", driver:"Pool" },
+  { id:"VEH-010", plate:"GSA-5601", make:"Ford Escape Hybrid",    year:2022, region:"Philadelphia — PA",  assignment:"General / Pool",       mileage:29800, status:"AVAILABLE", nextPM:"2026-11-20", fuel:"HYBRID",   driver:"Pool" },
+];
+
 const INIT_TIMEKEEPING = [
   { name:"Allotment Tracking & Burn Rate Review", hrs:8, cat:"BUDGET EXECUTION", week:"Oct 7-11" },
   { name:"FY2028 Budget Call Coordination (OFS)", hrs:6, cat:"FORMULATION", week:"Oct 7-11" },
@@ -1133,6 +1161,363 @@ function PageOIG({ oig, setOig }) {
 }
 
 // ─────────────────────────────────────────────────────────────────────
+// PAGE: FACILITY & FLEET MANAGEMENT
+// ─────────────────────────────────────────────────────────────────────
+function PageFacilityFleet({ facilities, fleet }) {
+  const [activeTab, setActiveTab] = useState<"facilities"|"fleet">("facilities");
+  const [facFilter, setFacFilter] = useState("ALL");
+  const [fleetFilter, setFleetFilter] = useState("ALL");
+
+  // ── Facility calcs ────────────────────────────────────────────────
+  const totalSqft    = facilities.reduce((s,f) => s + f.sqft, 0);
+  const totalRent    = facilities.reduce((s,f) => s + f.annualRent, 0);
+  const expiringSoon = facilities.filter(f => {
+    const yr = parseInt(f.leaseExp.slice(0,4));
+    return yr <= 2028;
+  });
+  const visibleFac = facFilter === "ALL" ? facilities
+    : facilities.filter(f => parseInt(f.leaseExp.slice(0,4)) <= parseInt(facFilter));
+
+  // ── Fleet calcs ───────────────────────────────────────────────────
+  const fleetAvail   = fleet.filter(v => v.status === "AVAILABLE").length;
+  const fleetInUse   = fleet.filter(v => v.status === "IN USE").length;
+  const fleetMaint   = fleet.filter(v => v.status === "MAINTENANCE").length;
+  const hybridEV     = fleet.filter(v => v.fuel === "HYBRID" || v.fuel === "ELECTRIC").length;
+  const visibleFleet = fleetFilter === "ALL" ? fleet
+    : fleet.filter(v => v.status === fleetFilter || v.fuel === fleetFilter);
+
+  const leaseExpColor = (exp) => {
+    const yr = parseInt(exp.slice(0,4));
+    if (yr <= 2027) return D.red;
+    if (yr <= 2028) return D.gold;
+    return D.green;
+  };
+
+  return (
+    <div style={{ display:"flex", flexDirection:"column", gap:22 }}>
+
+      {/* Page header note */}
+      <div style={{ background:"#e8edf5", border:`1px solid ${D.border}`, borderRadius:8,
+                     padding:"10px 16px", fontSize:11, color:D.textSub }}>
+        📋 <strong>Source:</strong> SEC FY2027 CBJ p.31 — OSO / OSBO manages office lease acquisition &amp; administration,
+        property &amp; facilities management, and transportation operations. GSA fleet managed under the Federal Fleet
+        Program per Executive Order 14008. OC 23.0 covers rent, comms &amp; utilities.
+      </div>
+
+      {/* KPI Strip */}
+      <div style={{ display:"flex", gap:12, flexWrap:"wrap" }}>
+        <KPI label="Office Locations"     value={facilities.length}       sub="HQ + 11 regional"              color={D.navy} />
+        <KPI label="Total Leased Sq Ft"   value={`${(totalSqft/1000).toFixed(0)}K`} sub="GSA-managed leases" color={D.blue} />
+        <KPI label="Annual Rent (OC 23.0)"value={fmt$(totalRent)}         sub="FY2027 est. — all locations"   color={D.gold} />
+        <KPI label="Expiring ≤ FY2028"    value={expiringSoon.length}     sub="Require renewal action"        color={expiringSoon.length > 2 ? D.red : D.orange} />
+        <KPI label="GSA Fleet Vehicles"   value={fleet.length}            sub={`${fleetAvail} available · ${fleetInUse} in use`} color={D.navy} />
+        <KPI label="Green / EV Fleet"     value={`${Math.round(hybridEV/fleet.length*100)}%`} sub="Hybrid + EV — E.O. 14008" color={D.green} />
+      </div>
+
+      {/* Sub-tab switcher */}
+      <div style={{ display:"flex", gap:0, borderBottom:`2px solid ${D.border}` }}>
+        {([["facilities","🏢  Office Leases & Facilities"],["fleet","🚗  GSA Fleet Management"]] as const).map(([tab, label]) => (
+          <button key={tab} onClick={() => setActiveTab(tab)}
+            style={{ padding:"9px 22px", border:"none", background:"none", cursor:"pointer",
+                     fontSize:12, fontWeight:700,
+                     color: activeTab===tab ? D.navy : D.muted,
+                     borderBottom: activeTab===tab ? `2px solid ${D.navy}` : "2px solid transparent",
+                     marginBottom:-2 }}>
+            {label}
+          </button>
+        ))}
+      </div>
+
+      {/* ── FACILITIES TAB ── */}
+      {activeTab === "facilities" && (
+        <div style={{ display:"flex", flexDirection:"column", gap:18 }}>
+
+          {/* Filter + alert */}
+          <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:10 }}>
+            <div style={{ display:"flex", gap:8 }}>
+              {["ALL","2027","2028","2029","2030+"].map(f => (
+                <button key={f} onClick={() => setFacFilter(f)}
+                  style={{ background: facFilter===f ? D.navy : "#f0f2f5",
+                            color: facFilter===f ? "#fff" : D.muted, border:"none",
+                            borderRadius:20, padding:"4px 13px", fontSize:11, fontWeight:700, cursor:"pointer" }}>
+                  {f === "ALL" ? "All Leases" : `Expires ≤ ${f}`}
+                </button>
+              ))}
+            </div>
+            {expiringSoon.length > 0 && (
+              <div style={{ background:D.goldBg, border:`1px solid ${D.gold}`, borderRadius:6,
+                             padding:"5px 14px", fontSize:11, color:D.gold, fontWeight:600 }}>
+                ⚠️ {expiringSoon.length} lease(s) expiring by FY2028 — initiate replacement lease procurement
+              </div>
+            )}
+          </div>
+
+          {/* Lease table */}
+          <Card style={{ padding:0 }}>
+            <div style={{ overflowX:"auto" }}>
+              <table style={{ width:"100%", borderCollapse:"collapse" }}>
+                <thead>
+                  <tr>
+                    <Th>ID</Th><Th>Facility / Location</Th><Th>City</Th>
+                    <Th right>Sq Ft</Th><Th right>Annual Rent</Th>
+                    <Th>Lease Expires</Th><Th>POC</Th><Th>Status</Th><Th>Notes</Th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {visibleFac.map((f,i) => {
+                    const expYr = parseInt(f.leaseExp.slice(0,4));
+                    const isUrgent = expYr <= 2027;
+                    return (
+                      <tr key={i} style={{ background: isUrgent?"#fff5f5":i%2===0?"#fff":"#fafbfc" }}>
+                        <Td mono>{f.id}</Td>
+                        <Td bold><div style={{ maxWidth:220, fontSize:12 }}>{f.name}</div></Td>
+                        <Td>{f.city}</Td>
+                        <Td right mono>{f.sqft.toLocaleString()}</Td>
+                        <Td right mono bold color={D.navy}>{fmt$(f.annualRent)}</Td>
+                        <Td>
+                          <span style={{ fontSize:11, fontFamily:"monospace",
+                                          color: leaseExpColor(f.leaseExp), fontWeight:700 }}>
+                            {expYr <= 2027 ? "🔴 " : expYr <= 2028 ? "🟡 " : "🟢 "}{f.leaseExp}
+                          </span>
+                        </Td>
+                        <Td>{f.poc}</Td>
+                        <Td><Badge label={f.status} color="green" small /></Td>
+                        <Td><div style={{ maxWidth:200, fontSize:10, color:D.muted }}>{f.notes}</div></Td>
+                      </tr>
+                    );
+                  })}
+                  <tr style={{ background:"#eff1f5" }}>
+                    <Td bold>—</Td>
+                    <Td bold>TOTALS</Td>
+                    <Td bold>{visibleFac.length} locations</Td>
+                    <Td right mono bold>{visibleFac.reduce((s,f)=>s+f.sqft,0).toLocaleString()}</Td>
+                    <Td right mono bold color={D.navy}>{fmt$(visibleFac.reduce((s,f)=>s+f.annualRent,0))}</Td>
+                    <Td>—</Td><Td>—</Td><Td>—</Td><Td>—</Td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </Card>
+
+          {/* Lease expiry timeline + OC 23.0 breakdown */}
+          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:16 }}>
+            <Card>
+              <SectionHead title="Lease Expiry Timeline" sub="Action required within 24 months of expiry" />
+              {[2027,2028,2029,2030,2031].map(yr => {
+                const count = facilities.filter(f => parseInt(f.leaseExp.slice(0,4)) === yr).length;
+                const rent  = facilities.filter(f => parseInt(f.leaseExp.slice(0,4)) === yr)
+                                         .reduce((s,f)=>s+f.annualRent,0);
+                return (
+                  <div key={yr} style={{ marginBottom:14 }}>
+                    <div style={{ display:"flex", justifyContent:"space-between", marginBottom:4 }}>
+                      <span style={{ fontSize:12, color: yr<=2027?D.red:yr<=2028?D.gold:D.text, fontWeight:600 }}>
+                        FY{yr - 1}/{String(yr).slice(2)} — {count} lease{count!==1?"s":""}
+                      </span>
+                      <span style={{ fontSize:11, color:D.muted, fontFamily:"monospace" }}>{fmt$(rent)}/yr</span>
+                    </div>
+                    <div style={{ background:"#e8edf5", borderRadius:3, height:7 }}>
+                      <div style={{ width:`${count/facilities.length*100}%`, height:"100%",
+                                     background: yr<=2027?D.red:yr<=2028?D.gold:D.blue,
+                                     borderRadius:3 }} />
+                    </div>
+                  </div>
+                );
+              })}
+              <div style={{ fontSize:10, color:D.muted, marginTop:8, fontStyle:"italic" }}>
+                * Replacement lease procurement should begin 24 months before expiry per GSA guidance
+              </div>
+            </Card>
+
+            <Card>
+              <SectionHead title="OC 23.0 — Rent, Comms & Utilities" sub="Agency-wide context from SEC FY2027 CBJ p.7" />
+              {[
+                { label:"Office Leases (est.)",          pct:72, amount:totalRent,       color:D.navy },
+                { label:"Telecommunications",             pct:16, amount:17422000,        color:D.blue },
+                { label:"Utilities (power/water/HVAC)",   pct:8,  amount:8712000,         color:D.gold },
+                { label:"Other / Miscellaneous",          pct:4,  amount:4356000,         color:D.muted },
+              ].map((r,i) => (
+                <div key={i} style={{ marginBottom:13 }}>
+                  <div style={{ display:"flex", justifyContent:"space-between", marginBottom:4 }}>
+                    <span style={{ fontSize:12, color:D.text }}>{r.label}</span>
+                    <span style={{ fontSize:11, color:r.color, fontWeight:700, fontFamily:"monospace" }}>
+                      {r.pct}% · {fmt$(r.amount)}
+                    </span>
+                  </div>
+                  <div style={{ background:"#e8edf5", borderRadius:3, height:6 }}>
+                    <div style={{ width:`${r.pct}%`, height:"100%", background:r.color, borderRadius:3 }} />
+                  </div>
+                </div>
+              ))}
+              <div style={{ borderTop:`1px solid ${D.border}`, paddingTop:10, marginTop:4 }}>
+                <div style={{ display:"flex", justifyContent:"space-between", fontSize:12 }}>
+                  <span style={{ fontWeight:700, color:D.text }}>Total OC 23.0 (FY2027 Request)</span>
+                  <span style={{ fontWeight:800, color:D.navy, fontFamily:"monospace" }}>$108.9M</span>
+                </div>
+                <div style={{ fontSize:10, color:D.muted, marginTop:3 }}>
+                  Source: SEC FY2027 CBJ Obligations by Object Class, p.7
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          {/* Replacement lease status */}
+          <Card>
+            <SectionHead title="Replacement Lease Actions" sub="OSBO-CL tracks procurement per GSA acquisition framework" />
+            <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:14 }}>
+              {[
+                { office:"Boston District Office", exp:"Jun 2027", status:"IN PROGRESS", action:"GSA occupancy agreement amendment submitted. Target: new lease signed by Feb 2027.", color:D.gold },
+                { office:"Seattle District Office", exp:"Mar 2027", status:"IN PROGRESS", action:"Assessing consolidation with San Francisco regional office. Study due Nov 2026.", color:D.gold },
+                { office:"Denver Regional Office", exp:"Sep 2027", status:"PLANNING", action:"Market survey initiated. RLP to be submitted to GSA by Q2 FY2027.", color:D.orange },
+                { office:"Chicago Regional Office", exp:"Sep 2028", status:"MONITORING", action:"No immediate action required. Begin 24-month planning by Sep 2026. ✅ On schedule.", color:D.green },
+                { office:"Northeast — NY", exp:"Mar 2028", status:"MONITORING", action:"Space reduction analysis complete. Renewal with reduced footprint planned. Begin RLP Q3 FY2027.", color:D.green },
+                { office:"Philadelphia Regional", exp:"Sep 2029", status:"NO ACTION", action:"Outside 24-month window. Next review: FY2028 budget cycle.", color:D.muted },
+              ].map((r,i) => (
+                <div key={i} style={{ background:"#f8f9fb", borderRadius:8, padding:"14px",
+                                       borderLeft:`3px solid ${r.color}` }}>
+                  <div style={{ fontSize:12, fontWeight:700, color:D.text, marginBottom:4 }}>{r.office}</div>
+                  <div style={{ display:"flex", gap:8, marginBottom:6, alignItems:"center" }}>
+                    <span style={{ fontSize:10, color:D.muted, fontFamily:"monospace" }}>Exp: {r.exp}</span>
+                    <Badge label={r.status}
+                      color={r.status==="IN PROGRESS"?"gold":r.status==="PLANNING"?"orange":r.status==="MONITORING"?"green":"gray"}
+                      small />
+                  </div>
+                  <div style={{ fontSize:11, color:D.muted, lineHeight:1.55 }}>{r.action}</div>
+                </div>
+              ))}
+            </div>
+          </Card>
+        </div>
+      )}
+
+      {/* ── FLEET TAB ── */}
+      {activeTab === "fleet" && (
+        <div style={{ display:"flex", flexDirection:"column", gap:18 }}>
+
+          {/* Fleet KPIs */}
+          <div style={{ display:"flex", gap:12, flexWrap:"wrap" }}>
+            <KPI label="Available"   value={fleetAvail}  sub="Ready for assignment"    color={D.green}  />
+            <KPI label="In Use"      value={fleetInUse}  sub="Currently dispatched"    color={D.blue}   />
+            <KPI label="Maintenance" value={fleetMaint}  sub="Scheduled or unscheduled" color={D.gold}  />
+            <KPI label="Hybrid / EV" value={hybridEV}    sub={`${Math.round(hybridEV/fleet.length*100)}% of fleet — E.O. 14008`} color={D.green} />
+            <KPI label="Avg Mileage" value={Math.round(fleet.reduce((s,v)=>s+v.mileage,0)/fleet.length).toLocaleString()} sub="Per vehicle (all fleet)" color={D.navy} />
+          </div>
+
+          {/* Filter */}
+          <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
+            {["ALL","AVAILABLE","IN USE","MAINTENANCE","HYBRID","ELECTRIC","GAS"].map(f => (
+              <button key={f} onClick={() => setFleetFilter(f)}
+                style={{ background: fleetFilter===f ? D.navy : "#f0f2f5",
+                          color: fleetFilter===f ? "#fff" : D.muted, border:"none",
+                          borderRadius:20, padding:"4px 13px", fontSize:11, fontWeight:700, cursor:"pointer" }}>
+                {f}
+              </button>
+            ))}
+          </div>
+
+          {/* Fleet table */}
+          <Card style={{ padding:0 }}>
+            <div style={{ overflowX:"auto" }}>
+              <table style={{ width:"100%", borderCollapse:"collapse" }}>
+                <thead>
+                  <tr>
+                    <Th>Veh ID</Th><Th>Plate</Th><Th>Make / Model</Th><Th>Year</Th>
+                    <Th>Region</Th><Th>Assignment</Th><Th right>Mileage</Th>
+                    <Th>Fuel</Th><Th>Next PM</Th><Th>Status</Th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {visibleFleet.map((v,i) => (
+                    <tr key={i} style={{ background:
+                      v.status==="MAINTENANCE"?"#fef9e7":
+                      v.status==="IN USE"?"#eaf5ee":
+                      i%2===0?"#fff":"#fafbfc" }}>
+                      <Td mono>{v.id}</Td>
+                      <Td mono bold>{v.plate}</Td>
+                      <Td>{v.make}</Td>
+                      <Td mono>{v.year}</Td>
+                      <Td><div style={{ fontSize:11 }}>{v.region}</div></Td>
+                      <Td><div style={{ fontSize:11 }}>{v.assignment}</div></Td>
+                      <Td right mono>{v.mileage.toLocaleString()}</Td>
+                      <Td>
+                        <Badge label={v.fuel}
+                          color={v.fuel==="ELECTRIC"?"green":v.fuel==="HYBRID"?"navy":"gray"} small />
+                      </Td>
+                      <Td>
+                        <span style={{ fontSize:11, fontFamily:"monospace",
+                                        color: new Date(v.nextPM) < new Date(Date.now()+30*86400000) ? D.gold : D.muted }}>
+                          {v.nextPM}
+                        </span>
+                      </Td>
+                      <Td>
+                        <Badge label={v.status}
+                          color={v.status==="AVAILABLE"?"green":v.status==="IN USE"?"navy":"gold"} small />
+                      </Td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </Card>
+
+          {/* Fleet summary cards */}
+          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:16 }}>
+            <Card>
+              <SectionHead title="Fleet by Fuel Type" sub="E.O. 14008 — Federal fleet electrification targets" />
+              {[
+                { type:"Hybrid",   count:fleet.filter(v=>v.fuel==="HYBRID").length,   color:D.navy,   pct:0 },
+                { type:"Electric", count:fleet.filter(v=>v.fuel==="ELECTRIC").length, color:D.green,  pct:0 },
+                { type:"Gas",      count:fleet.filter(v=>v.fuel==="GAS").length,      color:D.muted,  pct:0 },
+              ].map((r,i) => {
+                const pct = r.count/fleet.length*100;
+                return (
+                  <div key={i} style={{ marginBottom:14 }}>
+                    <div style={{ display:"flex", justifyContent:"space-between", marginBottom:4 }}>
+                      <span style={{ fontSize:12, color:D.text, fontWeight:500 }}>{r.type}</span>
+                      <span style={{ fontSize:11, color:r.color, fontFamily:"monospace", fontWeight:700 }}>
+                        {r.count} vehicles ({pct.toFixed(0)}%)
+                      </span>
+                    </div>
+                    <div style={{ background:"#e8edf5", borderRadius:3, height:7 }}>
+                      <div style={{ width:`${pct}%`, height:"100%", background:r.color, borderRadius:3 }} />
+                    </div>
+                  </div>
+                );
+              })}
+              <div style={{ background:D.greenBg, border:`1px solid ${D.green}`, borderRadius:6,
+                             padding:"8px 12px", fontSize:11, color:D.green, marginTop:4 }}>
+                ✅ {Math.round(hybridEV/fleet.length*100)}% of SEC fleet is Hybrid or EV —
+                meets E.O. 14008 green fleet targets. GSA Fleet Management administers vehicle lifecycle.
+              </div>
+            </Card>
+
+            <Card>
+              <SectionHead title="GSA Fleet Policy Reference" sub="Federal Fleet Management compliance requirements" />
+              {[
+                { icon:"🔑", title:"GSA Fleet Program", body:"SEC vehicles procured and managed through GSA Fleet. Annual reporting required under Federal Fleet Report (FAST data system)." },
+                { icon:"🛢️", title:"Fuel Card (WEX)", body:"GSA WEX fuel card issued per vehicle. Transactions monitored monthly for split purchases or personal use — reportable to OIG." },
+                { icon:"⚡", title:"E.O. 14008 Targets", body:"Federal agencies must maximize ZEV acquisitions. OSO tracks EV/hybrid acquisition ratio each replacement cycle." },
+                { icon:"🔧", title:"Preventive Maintenance", body:"PM scheduled per GSA mileage intervals. Overdue PM must be reported. OSBO-FO coordinates with GSA fleet service centers." },
+                { icon:"📊", title:"FAST Reporting", body:"Federal Automotive Statistical Tool (FAST) data submitted annually. OSO compiles fleet usage, fuel cost, and mileage data." },
+                { icon:"🚨", title:"Misuse / Incident", body:"Any accident or suspected misuse reported to OSBO-FO within 24 hours. Insurance claim filed through GSA. OIG notified if misuse confirmed." },
+              ].map((r,i) => (
+                <div key={i} style={{ display:"flex", gap:12, padding:"9px 0",
+                                       borderBottom:i<5?`1px solid #f0f2f5`:"none" }}>
+                  <span style={{ fontSize:18, flexShrink:0 }}>{r.icon}</span>
+                  <div>
+                    <div style={{ fontSize:12, fontWeight:700, color:D.navy, marginBottom:2 }}>{r.title}</div>
+                    <div style={{ fontSize:11, color:D.muted, lineHeight:1.5 }}>{r.body}</div>
+                  </div>
+                </div>
+              ))}
+            </Card>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────
 // MAIN APP
 // ─────────────────────────────────────────────────────────────────────
 export default function OSOFinancialPortal() {
@@ -1142,6 +1527,8 @@ export default function OSOFinancialPortal() {
   const [oig, setOig]             = useState(INIT_OIG);
   const [gpc, setGpc]             = useState(INIT_GPC);
   const [cor, setCor]             = useState(INIT_COR);
+  const [facilities]              = useState(INIT_FACILITIES);
+  const [fleet]                   = useState(INIT_FLEET);
   const [timekeeping, setTime]    = useState(INIT_TIMEKEEPING);
   const [disclaimerDismissed, setDisclaimerDismissed] = useState(false);
 
@@ -1150,6 +1537,7 @@ export default function OSOFinancialPortal() {
     { id:"actions",     icon:"⚡",  label:"Actions & Obligations", group:"OPERATIONS" },
     { id:"budget",      icon:"📊",  label:"Budget Execution",  group:"OPERATIONS" },
     { id:"cor",         icon:"🔍",  label:"COR Surveillance",  group:"OPERATIONS" },
+    { id:"facilities",  icon:"🏢",  label:"Facility & Fleet",  group:"OPERATIONS" },
     { id:"gpc",         icon:"💳",  label:"GPC Cards",         group:"OPERATIONS" },
     { id:"timekeeping", icon:"⏱",  label:"Timekeeping",       group:"OPERATIONS" },
     { id:"formulation", icon:"🔭",  label:"FY2028 Formulation",group:"PLANNING" },
@@ -1258,6 +1646,7 @@ export default function OSOFinancialPortal() {
           {page==="actions"     && <PageActions actions={actions} setActions={setActions} />}
           {page==="budget"      && <PageBudget allotments={allotments} setAllotments={()=>{}} />}
           {page==="cor"         && <PageCOR cor={cor} setCor={setCor} />}
+          {page==="facilities"  && <PageFacilityFleet facilities={facilities} fleet={fleet} />}
           {page==="gpc"         && <PageGPC gpc={gpc} setGpc={setGpc} />}
           {page==="timekeeping" && <PageTime timekeeping={timekeeping} setTimekeeping={setTime} />}
           {page==="formulation" && <PageFormulation actions={actions} />}

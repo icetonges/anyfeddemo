@@ -1,6 +1,6 @@
 # .github/workflows/intelligence-update.yml
 # ─────────────────────────────────────────────────────────────────────────────
-# Runs every 4 hours on weekdays (7 AM–9 PM ET) and on manual trigger.
+# Runs every 4h on weekdays, 6 AM–6 PM ET, and on manual trigger.
 # Fetches SEC / OMB / Congress news, scores financial impact via Claude Haiku,
 # upserts into Neon DB, and triggers Vercel ISR revalidation.
 # ─────────────────────────────────────────────────────────────────────────────
@@ -8,9 +8,9 @@
 name: SEC Intelligence Update
 
 on:
-  # Every 4 hours, Mon–Fri, 11:00–01:00 UTC (≈ 07:00–21:00 ET)
+  # Every 4 hours, Mon-Fri, 6 AM to 6 PM ET (10:00-22:00 UTC / EDT).
   schedule:
-    - cron: ''
+    - cron: '0 10,14,18,22 * * 1-5'
 
   # Manual trigger from GitHub Actions tab
   workflow_dispatch:
@@ -25,7 +25,7 @@ jobs:
   fetch-and-store:
     name: Fetch Intelligence & Update DB
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
 
     steps:
       # ── 1. Checkout ────────────────────────────────────────────────────────
@@ -57,7 +57,6 @@ jobs:
       # ── 5. Run intelligence fetcher ────────────────────────────────────────
       - name: Fetch & store intelligence
         env:
-          ANTHROPIC_API_KEY:    ${{ secrets.ANTHROPIC_API_KEY }}
           GOOGLE_AI_API_KEY:    ${{ secrets.GOOGLE_AI_API_KEY }}
           GROQ_API_KEY:         ${{ secrets.GROQ_API_KEY }}
           DATABASE_URL:         ${{ secrets.DATABASE_URL }}

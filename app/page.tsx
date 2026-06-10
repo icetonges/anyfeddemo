@@ -1,6 +1,14 @@
-import { redirect } from 'next/navigation'
+import SECFinancialPortal from '@/components/sec/SECFinancialPortal'
+import type { Metadata } from 'next'
 
-// Root lands on the AnyFed portal (legacy SEC portal remains at /sec-cfo)
+export const metadata: Metadata = {
+  title: 'SEC OSO Financial Management Portal',
+  description: 'Live SEC OSO financial intelligence — budget execution, OIG compliance, AI analyst, and live intelligence feed.',
+  icons: { icon: '/favicon.svg' },
+}
+
+export const revalidate = 14400
+
 export default function RootPage() {
-  redirect('/anyfed')
+  return <SECFinancialPortal />
 }

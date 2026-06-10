@@ -4,7 +4,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { callChain } from '@/lib/llm-chain'
 import { chainFor } from '@/lib/models'
-import { buildSystemPrompt } from '@/lib/anyfed-prompt'
+import { SEC_AI_SYSTEM_PROMPT } from '@/lib/sec-data'
 import type { ChatMessage } from '@/types'
 
 export const runtime = 'nodejs'
@@ -31,9 +31,7 @@ export async function POST(req: NextRequest) {
       ? [preferredModelId, ...baseChain.filter(id => id !== preferredModelId)]
       : baseChain
 
-    // Agency-aware system prompt — defaults to SEC for the legacy /sec-cfo portal
-    const agencyId: string = body.agency ?? 'SEC'
-    const { text, modelUsed } = await callChain(chain, buildSystemPrompt(agencyId), messages, 1000)
+    const { text, modelUsed } = await callChain(chain, SEC_AI_SYSTEM_PROMPT, messages, 1000)
 
     return NextResponse.json({ text, modelUsed, chainAttempted: chain })
   } catch (err) {

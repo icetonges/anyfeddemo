@@ -7,13 +7,13 @@
 //  'fast'    →  Gemini 3.1 Flash-Lite (cheapest) → Llama 8B → Llama 70B → Gemini 3.5 Flash
 //  'value'   →  Gemini 3.5 Flash ★ → Gemini 2.5 Flash → Gemini 3.1 Flash-Lite → Claude Haiku
 //  'best'    →  Gemini 3.5 Flash ★ → Claude Sonnet 4.6 → Claude Opus 4.6
-//  'agentic' →  Compound Beta (search) → Gemini 3.5 Flash → Claude Sonnet
+//  'agentic' →  Gemini 3.5 Flash → Llama 3.3 70B → Claude Sonnet
+//              (Compound Beta removed — exceeds Vercel 30s function timeout)
 //
 //  TIER 1  FREE / ULTRA-FAST (Groq)  ─────────────────────────────────────
 //    Groq   Llama 3.1 8B Instant    →  lightning-fast, simple tasks
 //    Groq   Llama 3.3 70B           →  strong general reasoning
 //    Groq   Llama 4 Scout           →  vision + MoE reasoning
-//    Groq   Compound Beta           →  agentic + live web search
 //
 //  TIER 2  VALUE / BALANCED (Google + Haiku)  ─────────────────────────────
 //    Gemini 3.1 Flash-Lite          →  ultra-cheap bulk / agentic chains
@@ -32,7 +32,6 @@ export type ModelId =
   | 'meta-llama/llama-4-scout-17b-16e-instruct'
   | 'llama-3.3-70b-versatile'
   | 'llama-3.1-8b-instant'
-  | 'groq/compound-beta'
   // Google Gemini
   | 'gemini-3.1-flash-lite'
   | 'gemini-2.5-flash'
@@ -107,22 +106,6 @@ export const MODELS: Model[] = [
     description: 'Llama 4 MoE architecture — vision + reasoning, 128K context.',
     isFree: true,
     supportsVision: true,
-    tier: 1,
-  },
-
-  {
-    id: 'groq/compound-beta',
-    name: 'Compound Beta',
-    provider: 'groq',
-    providerLabel: 'Groq',
-    providerColor: '#f55036',
-    inputPricePer1M: 0,
-    outputPricePer1M: 0,
-    contextWindow: '128K',
-    description: 'Agentic — built-in web search, auto tool use, compound reasoning.',
-    isFree: true,
-    supportsVision: false,
-    badge: 'New',
     tier: 1,
   },
 
@@ -280,10 +263,10 @@ export function chainFor(task: 'fast' | 'value' | 'best' | 'agentic'): ModelId[]
         'claude-opus-4-6',              // Anthropic frontier last resort
       ]
     case 'agentic':
-      // Compound Beta for live search; Gemini 3.5 Flash as reasoning fallback
+      // Gemini 3.5 Flash leads (compound-beta removed — Vercel 504 timeout)
       return [
-        'groq/compound-beta',           // web search + auto tool use
-        'gemini-3.5-flash',             // reasoning fallback
+        'gemini-3.5-flash',             // reasoning + speed
+        'llama-3.3-70b-versatile',      // free Groq fallback
         'claude-sonnet-4-6',            // frontier fallback
       ]
   }

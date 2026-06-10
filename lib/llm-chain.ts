@@ -89,7 +89,15 @@ async function callModel(
         ...clean,
       ],
     })
-    return res.choices[0]?.message?.content ?? ''
+    // Compound Beta (compound-beta) may return null content when using
+    // internal tool steps — the final answer is still in message.content
+    // of the last choice, but can briefly be null mid-chain.
+    // Coerce null → '' so the chain continues rather than returning blank.
+    const content = res.choices[0]?.message?.content
+    if (content === null || content === undefined || content.trim() === '') {
+      throw new Error(`${model.id} returned empty content (possible tool-use step or model error)`)
+    }
+    return content
   }
 
   throw new Error(`Unknown provider: ${model.provider}`)

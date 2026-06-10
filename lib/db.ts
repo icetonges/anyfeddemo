@@ -22,6 +22,11 @@ export async function bootstrapSchema() {
       created_at  TIMESTAMPTZ   NOT NULL DEFAULT NOW()
     )
   `
+  // Add published_at column to existing tables (safe on re-run)
+  await sql`
+    ALTER TABLE sec_news ADD COLUMN IF NOT EXISTS published_at TEXT
+  `
+
   // Unique index on headline prevents duplicate entries from repeated cron runs
   await sql`
     CREATE UNIQUE INDEX IF NOT EXISTS idx_news_headline ON sec_news(headline)
@@ -50,7 +55,9 @@ export async function bootstrapSchema() {
 export async function getLatestNews(limit = 20) {
   return sql`
     SELECT id, cat, urg, headline, body, impact, src, url,
-           TO_CHAR(created_at, 'Dy Mon DD HH24:MI') AS time
+           TO_CHAR(created_at AT TIME ZONE 'America/New_York', 'Mon DD, YYYY HH12:MI AM "ET"') AS fetched_at,
+           TO_CHAR(created_at AT TIME ZONE 'America/New_York', 'Dy Mon DD HH12:MI AM "ET"') AS time,
+           published_at
     FROM   sec_news
     ORDER  BY created_at DESC
     LIMIT  ${limit}
