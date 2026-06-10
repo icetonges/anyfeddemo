@@ -25,6 +25,7 @@ const MAP: Record<string, Src[]> = {
   acquisition: [AWARDS, LIVE],
   ml:          [AWARDS, JBOOKS, SECCBJ, LIVE],
   analyst:     [JBOOKS, AWARDS, AUDIT, P("🤖", "AI chain", "Gemini → Groq → Claude (server-side keys)")],
+  about:       [P("📖", "this repository", "the job aid documents the codebase, scripts, and data flows themselves")],
 }
 
 export default function PageProvenance({ page }: { page: string }) {

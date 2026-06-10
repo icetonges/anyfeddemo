@@ -15,6 +15,7 @@ import Acquisition from "./Acquisition"
 import MLWorkbench from "./MLWorkbench"
 import AIAnalyst from "./AIAnalyst"
 import PageProvenance from "./PageProvenance"
+import AboutApp from "./AboutApp"
 
 const NAV = [
   { id:"overview",  label:"Executive Overview", icon:"🏛️" },
@@ -28,6 +29,7 @@ const NAV = [
   { id:"acquisition",label:"Contracts & Acquisition", icon:"📄" },
   { id:"ml",        label:"AI / ML Workbench",  icon:"🤖" },
   { id:"analyst",   label:"AI FM Analyst",      icon:"💬" },
+  { id:"about",     label:"About / Job Aid",    icon:"📖" },
 ] as const
 type NavId = typeof NAV[number]["id"]
 
@@ -53,6 +55,7 @@ export default function AnyFedPortal() {
       {page === "acquisition" && <Acquisition agency={agency} />}
       {page === "ml"          && <MLWorkbench agency={agency} />}
       {page === "analyst"     && <AIAnalyst agency={agency} />}
+      {page === "about"       && <AboutApp />}
       <PageProvenance page={page} />
     </>
   )
