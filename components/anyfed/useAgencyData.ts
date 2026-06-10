@@ -31,6 +31,9 @@ export function useAgencyData<T = Record<string, unknown>>(agencyId: string, sli
 // ── shared shapes returned by /api/agency-data ────────────────────────────
 export interface YearPhase { phase: "actuals" | "enacted" | "request"; label: string }
 
+export interface VintageYear { phase: "actuals"|"enacted"|"request"|"future"; total: number; components: Record<string, number> }
+export interface LifecycleYear { actuals?: number; enacted?: number; request?: number; execVarPct?: number; reqToEnactedPct?: number }
+
 export interface BudgetExhibit {
   title: string; appn: string; isMilcon?: boolean; note?: string
   years: Record<string, number>
@@ -44,7 +47,10 @@ export interface BudgetExhibit {
   orgComponentMix?: Record<string, Record<string, Record<string, number>>> // fy -> org -> component -> $
   records?: BudgetRecord[]
   dims?: Record<string, string[]>
-  quality?: { totalRows: number; nullAmounts: number; nonAddFiltered?: number; recordRows: number; recordsKept: number }
+  quality?: { totalRows: number; nullAmounts: number; nonAddFiltered?: number; recordRows: number; recordsKept: number; drillLevels?: string[] }
+  hierarchy?: string[]
+  vintages?: Record<string, Record<string, VintageYear>>
+  lifecycle?: Record<string, LifecycleYear>
 }
 
 export interface BudgetRecord {
@@ -54,7 +60,7 @@ export interface BudgetRecord {
   [k: string]: string | number | undefined
 }
 
-export interface CatalogEntry { file: string; exhibit: string; book: string; sheets: string[]; years: string[] }
+export interface CatalogEntry { file: string; exhibit: string; vintage?: string; book: string; sheets: string[]; years: string[] }
 
 export interface DodBudget {
   source: string
@@ -65,6 +71,8 @@ export interface DodBudget {
   exhibits: Record<string, BudgetExhibit>
   totalsByFY: Record<string, number>
   discMandatoryByFY?: Record<string, { discretionary: number; mandatory: number }>
+  lifecycleDept?: Record<string, { actuals?: number; enacted?: number; request?: number; execVarPct?: number; reqToEnactedPct?: number }>
+  books?: Record<string, { label: string; baseYear: number; folder: string; covers: string[] }>
   catalog?: CatalogEntry[]
 }
 

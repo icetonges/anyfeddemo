@@ -142,3 +142,91 @@ export function compactForLLM(budget: DodBudget, key: string): Record<string, un
     yearPhaseSemantics: budget.yearPhase,
   }
 }
+
+// ════════════════════════════════════════════ vintage / lifecycle analysis v2
+import type { LifecycleYear } from "@/components/anyfed/useAgencyData"
+
+export interface LifecycleFinding { fy: string; kind: "execution" | "congressional" | "single"; text: string; severity: "ok"|"info"|"warn" }
+
+export function lifecycleFindings(ex: BudgetExhibit): LifecycleFinding[] {
+  const out: LifecycleFinding[] = []
+  const lc = ex.lifecycle ?? {}
+  for (const fy of FYS) {
+    const y = lc[fy] as LifecycleYear | undefined; if (!y) continue
+    if (y.enacted != null && y.actuals != null) {
+      const d = y.actuals - y.enacted; const p = y.execVarPct ?? 0
+      out.push({ fy, kind: "execution", severity: Math.abs(p) > 5 ? "warn" : "info",
+        text: `${fy} executed ${fmtK(y.actuals)} against ${fmtK(y.enacted)} enacted — ${p >= 0 ? "+" : ""}${p}% (${d >= 0 ? "+" : ""}${fmtK(d)}). ${p > 3 ? "Over-execution suggests supplementals/reprogramming above enacted authority." : p < -3 ? "Under-execution — unobligated balances or rescissions." : "Executed close to plan."}` })
+    }
+    if (y.request != null && y.enacted != null) {
+      const d = y.enacted - y.request; const p = y.reqToEnactedPct ?? 0
+      out.push({ fy, kind: "congressional", severity: Math.abs(p) > 5 ? "warn" : "info",
+        text: `${fy} Congress enacted ${fmtK(y.enacted)} vs ${fmtK(y.request)} requested — ${p >= 0 ? "+" : ""}${p}% (${d >= 0 ? "+" : ""}${fmtK(d)}). ${d >= 0 ? "Congressional add above the President's request." : "Congressional cut below the request."}` })
+    }
+  }
+  return out
+}
+
+export function deptLifecycle(budget: DodBudget): LifecycleFinding[] {
+  const lc = budget.lifecycleDept ?? {}
+  const out: LifecycleFinding[] = []
+  for (const fy of FYS) {
+    const y = lc[fy]; if (!y) continue
+    if (y.enacted != null && y.actuals != null)
+      out.push({ fy, kind: "execution", severity: Math.abs(y.execVarPct ?? 0) > 4 ? "warn" : "info",
+        text: `${fy}: Department executed ${fmtK(y.actuals)} vs ${fmtK(y.enacted)} enacted (${(y.execVarPct ?? 0) >= 0 ? "+" : ""}${y.execVarPct}%).` })
+    if (y.request != null && y.enacted != null)
+      out.push({ fy, kind: "congressional", severity: Math.abs(y.reqToEnactedPct ?? 0) > 4 ? "warn" : "info",
+        text: `${fy}: Congress enacted ${fmtK(y.enacted)} vs ${fmtK(y.request)} requested (${(y.reqToEnactedPct ?? 0) >= 0 ? "+" : ""}${y.reqToEnactedPct}%).` })
+  }
+  return out
+}
+
+const fmtK = (v: number) => {
+  const n = v * 1000, a = Math.abs(n)
+  if (a >= 1e12) return `$${(n/1e12).toFixed(2)}T`
+  if (a >= 1e9)  return `$${(n/1e9).toFixed(1)}B`
+  if (a >= 1e6)  return `$${(n/1e6).toFixed(1)}M`
+  return `$${Math.round(n/1e3)}K`
+}
+
+// recursive drill: children of a path within the record hierarchy, for one FY
+export function drillChildren(records: BudgetRecord[], hierarchy: string[], path: string[], fy: FY) {
+  const level = path.length
+  if (level >= hierarchy.length) return [] as { name: string; value: number; leaf: boolean }[]
+  const field = hierarchy[level]
+  const m = new Map<string, number>()
+  for (const r of records) {
+    let match = true
+    for (let i = 0; i < path.length; i++) if (String(r[hierarchy[i]]) !== path[i]) { match = false; break }
+    if (!match) continue
+    const k = String(r[field] ?? "(unspecified)")
+    m.set(k, (m.get(k) ?? 0) + (Number(r[fy]) || 0))
+  }
+  return Array.from(m.entries())
+    .map(([name, value]) => ({ name, value: Math.round(value), leaf: level === hierarchy.length - 1 }))
+    .sort((a, b) => Math.abs(b.value) - Math.abs(a.value))
+}
+
+// contextual insight for the mouse-follow agent
+export interface HoverCtx {
+  exhibitTitle?: string; fy?: string; phase?: string
+  dim?: string; name?: string; value?: number; share?: number
+  lifecycle?: LifecycleYear; note?: string
+}
+export function hoverInsight(c: HoverCtx): { title: string; lines: string[] } {
+  const lines: string[] = []
+  if (c.value != null) lines.push(`${fmtK(c.value)}${c.share != null ? ` · ${c.share}% of ${c.fy ?? "total"}` : ""}`)
+  if (c.phase) {
+    const m = PHASE_META[c.fy ?? ""] ?? { phase: c.phase, advice: "" }
+    lines.push(`${c.fy} is ${m.phase.toLowerCase()}. ${m.advice}`)
+  }
+  if (c.lifecycle) {
+    const y = c.lifecycle
+    if (y.enacted != null && y.actuals != null) lines.push(`Execution variance: ${(y.execVarPct ?? 0) >= 0 ? "+" : ""}${y.execVarPct}% (actual ${fmtK(y.actuals)} vs enacted ${fmtK(y.enacted)}).`)
+    if (y.request != null && y.enacted != null) lines.push(`Congressional action: ${(y.reqToEnactedPct ?? 0) >= 0 ? "+" : ""}${y.reqToEnactedPct}% vs request.`)
+  }
+  if (c.note) lines.push(c.note)
+  if (c.share != null && c.share > 40 && c.dim) lines.push(`High concentration — ${c.name} alone is ${c.share}% of this ${c.dim}. Single-point exposure for category management.`)
+  return { title: c.name ?? c.exhibitTitle ?? "Insight", lines: lines.length ? lines : ["Hover a figure, bar, or row for live analysis."] }
+}
