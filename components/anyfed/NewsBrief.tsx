@@ -5,6 +5,7 @@
 import { useEffect, useMemo, useState } from "react"
 import { useTheme, Card, SectionTitle, Badge, Spinner } from "./ui"
 import type { Agency } from "@/lib/agencies"
+import { saveKnowledge } from "@/lib/knowledge"
 
 interface NewsItem {
   id: number; cat: string; urg: "HIGH" | "MEDIUM" | "LOW" | string
@@ -59,6 +60,7 @@ export default function NewsBrief({ agency }: { agency: Agency }) {
       const j = await res.json()
       if (!res.ok) throw new Error(j.error ?? `HTTP ${res.status}`)
       setBrief({ text: j.text, model: j.modelUsed })
+      saveKnowledge("brief", agency.id, `Daily brief — ${agency.abbrev} — ${new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}`, j.text, j.modelUsed)
     } catch (e) {
       setBrief({ text: `⚠️ ${e instanceof Error ? e.message : e}`, model: "" })
     } finally { setBriefing(false) }

@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react"
 import { useTheme, Card, SectionTitle, Badge } from "./ui"
 import { MODELS, DEFAULT_MODEL_ID } from "@/lib/models"
 import { knowledgeBase } from "@/lib/analyst-context"
+import { saveKnowledge } from "@/lib/knowledge"
 import type { Agency } from "@/lib/agencies"
 
 interface CompareResult { modelId: string; ok: boolean; text?: string; error?: string; ms: number }
@@ -114,7 +115,10 @@ export default function AIAnalyst({ agency }: { agency: Agency }) {
         })
         const j = await res.json()
         if (!res.ok) throw new Error(j.error ?? `HTTP ${res.status}`)
-        setMsgs([...next, { kind: "compare", question: content, results: j.results as CompareResult[] }])
+        const rs = j.results as CompareResult[]
+        setMsgs([...next, { kind: "compare", question: content, results: rs }])
+        if (rs.some(r => r.ok)) saveKnowledge("compare", agency.id, `Arena: ${content.slice(0, 120)}`,
+          `QUESTION:\n${content}\n\n${rs.map(r => `=== ${r.modelId} (${(r.ms / 1000).toFixed(1)}s) ===\n${r.ok ? r.text : `failed: ${r.error}`}`).join("\n\n")}`)
       } else {
         const res = await fetch("/api/ai-chat", {
           method: "POST", headers: { "Content-Type": "application/json" },
@@ -123,6 +127,7 @@ export default function AIAnalyst({ agency }: { agency: Agency }) {
         const j = await res.json()
         if (!res.ok) throw new Error(j.error ?? `HTTP ${res.status}`)
         setMsgs([...next, { kind: "assistant", content: j.text, modelUsed: j.modelUsed }])
+        saveKnowledge("analyst", agency.id, `Q: ${content.slice(0, 140)}`, `QUESTION:\n${content}\n\nANSWER (${j.modelUsed}):\n${j.text}`, j.modelUsed)
       }
     } catch (e) {
       setMsgs([...next, { kind: "assistant", content: `⚠️ ${e instanceof Error ? e.message : e}` }])
@@ -145,6 +150,8 @@ export default function AIAnalyst({ agency }: { agency: Agency }) {
       if (!res.ok) throw new Error(j.error ?? `HTTP ${res.status}`)
       setMsgs(m => m.map((x, i) => i === idx && x.kind === "compare"
         ? { ...x, judging: false, verdict: j.text, judgeModel: j.modelUsed } : x))
+      saveKnowledge("judge", agency.id, `Verdict: ${t.question.slice(0, 120)}`,
+        `QUESTION:\n${t.question}\n\nVERDICT (judged by ${j.modelUsed}):\n${j.text}`, j.modelUsed)
     } catch (e) {
       setMsgs(m => m.map((x, i) => i === idx && x.kind === "compare"
         ? { ...x, judging: false, verdict: `⚠️ Judge failed: ${e instanceof Error ? e.message : e}` } : x))

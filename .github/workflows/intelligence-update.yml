@@ -73,6 +73,21 @@ jobs:
             --transpile-only \
             scripts/fetch-intelligence.ts
 
+      # ── 5b. Run the knowledge-loop agent ──────────────────────────────────
+      # After fresh news lands, the agent digests the last 7 days of saved AI
+      # outputs + today's intelligence into an application-wide executive
+      # summary and saves it back into the knowledge base (self-evolving loop).
+      - name: Run knowledge-loop agent
+        env:
+          APP_URL:     ${{ secrets.NEXT_PUBLIC_APP_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          RESP=$(curl -s -X POST "$APP_URL/api/knowledge" \
+            -H "Content-Type: application/json" \
+            -H "x-cron-secret: $CRON_SECRET" \
+            -d '{"action":"agent"}' || echo '{"error":"request failed"}')
+          echo "Agent response (first 400 chars): ${RESP:0:400}"
+
       # ── 6. Trigger Vercel ISR revalidation ────────────────────────────────
       - name: Revalidate Vercel cache
         env:

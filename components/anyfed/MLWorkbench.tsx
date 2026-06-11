@@ -12,6 +12,7 @@ import {
 } from "@/lib/ml/engine"
 import { BUDGET_HISTORY, OBJECT_CLASS } from "@/lib/sec-data"
 import type { Agency } from "@/lib/agencies"
+import { saveKnowledge } from "@/lib/knowledge"
 import {
   ComposedChart, Line, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid,
   Tooltip, ResponsiveContainer, Legend, Cell,
@@ -189,6 +190,8 @@ export default function MLWorkbench({ agency }: { agency: Agency }) {
         }
         setRuns(prev => [rec, ...prev])
         setActiveRun(rec.runId)
+        saveKnowledge("ml", agency.id, `ML: ${m.name} — ${rec.metric}`,
+          `MODEL: ${m.name} (${m.task})\nDATASETS: ${rec.datasets.join(", ")}\nN: ${rec.n}\nMETRIC: ${rec.metric}\nRESULT (trimmed):\n${JSON.stringify(rec.result, (k2, v2) => Array.isArray(v2) ? v2.slice(0, 12) : v2, 1).slice(0, 4000)}`)
       } catch (e) {
         alert(`Model failed: ${e instanceof Error ? e.message : e}`)
       } finally {

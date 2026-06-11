@@ -83,3 +83,90 @@ export async function upsertNews(item: {
       WHERE sec_news.agencies = ''
   `
 }
+
+// ═══ Knowledge base — self-evolving store for every AI output ═══════════════
+// Each saved item carries a Gemini embedding (JSON float array) so the store
+// is semantically searchable; the looping agent reads recent items and writes
+// its digest BACK into the store, which is what makes the knowledge evolve.
+
+export async function bootstrapKb() {
+  await sql`
+    CREATE TABLE IF NOT EXISTS kb_items (
+      id          SERIAL PRIMARY KEY,
+      kind        VARCHAR(30)  NOT NULL,
+      agency      VARCHAR(10)  NOT NULL DEFAULT 'ALL',
+      title       TEXT         NOT NULL,
+      content     TEXT         NOT NULL,
+      model       VARCHAR(120) NOT NULL DEFAULT '',
+      hash        VARCHAR(64)  NOT NULL,
+      embedding   TEXT,
+      created_at  TIMESTAMPTZ  NOT NULL DEFAULT NOW()
+    )
+  `
+  await sql`CREATE UNIQUE INDEX IF NOT EXISTS idx_kb_hash ON kb_items(hash)`
+  await sql`CREATE INDEX IF NOT EXISTS idx_kb_created ON kb_items(created_at DESC)`
+}
+
+export async function kbInsert(item: {
+  kind: string; agency: string; title: string; content: string
+  model?: string; hash: string; embedding?: string | null
+}): Promise<number | null> {
+  const rows = await sql`
+    INSERT INTO kb_items (kind, agency, title, content, model, hash, embedding)
+    VALUES (${item.kind}, ${item.agency}, ${item.title}, ${item.content},
+            ${item.model ?? ''}, ${item.hash}, ${item.embedding ?? null})
+    ON CONFLICT (hash) DO NOTHING
+    RETURNING id
+  `
+  return rows.length ? (rows[0] as { id: number }).id : null
+}
+
+/** newest-first inventory (preview only — full content via kbGet) */
+export async function kbList(limit = 500) {
+  return sql`
+    SELECT id, kind, agency, title, model,
+           LEFT(content, 220) AS preview, LENGTH(content) AS chars,
+           TO_CHAR(created_at AT TIME ZONE 'America/New_York', 'YYYY-MM-DD') AS day,
+           TO_CHAR(created_at AT TIME ZONE 'America/New_York', 'HH12:MI AM') AS time
+    FROM kb_items ORDER BY created_at DESC LIMIT ${limit}
+  `
+}
+
+export async function kbGet(id: number) {
+  const rows = await sql`
+    SELECT id, kind, agency, title, content, model,
+           TO_CHAR(created_at AT TIME ZONE 'America/New_York', 'Mon DD, YYYY HH12:MI AM "ET"') AS saved_at
+    FROM kb_items WHERE id = ${id}
+  `
+  return rows[0] ?? null
+}
+
+/** id + embedding pairs for semantic search (small volumes — JS cosine) */
+export async function kbEmbeddings(limit = 1500) {
+  return sql`
+    SELECT id, kind, agency, title, LEFT(content, 220) AS preview, embedding,
+           TO_CHAR(created_at AT TIME ZONE 'America/New_York', 'YYYY-MM-DD') AS day
+    FROM kb_items WHERE embedding IS NOT NULL
+    ORDER BY created_at DESC LIMIT ${limit}
+  `
+}
+
+/** recent full items for the looping agent's context window */
+export async function kbRecent(days = 7, limit = 60) {
+  return sql`
+    SELECT id, kind, agency, title, LEFT(content, 500) AS excerpt,
+           TO_CHAR(created_at AT TIME ZONE 'America/New_York', 'YYYY-MM-DD') AS day
+    FROM kb_items
+    WHERE created_at > NOW() - make_interval(days => ${days})
+    ORDER BY created_at DESC LIMIT ${limit}
+  `
+}
+
+/** the most recent agent digest (continuity for the loop) */
+export async function kbLatestDigest() {
+  const rows = await sql`
+    SELECT id, title, content, TO_CHAR(created_at AT TIME ZONE 'America/New_York', 'Mon DD HH12:MI AM') AS at
+    FROM kb_items WHERE kind = 'agent-digest' ORDER BY created_at DESC LIMIT 1
+  `
+  return rows[0] ?? null
+}

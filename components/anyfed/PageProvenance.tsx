@@ -53,6 +53,11 @@ function srcsFor(page: string, a: Agency): Src[] | null {
       P("🛢", "Neon DB · sec_news", "agency-tagged, impact-scored FM intelligence items"),
       P("⚙️", ".github/workflows/intelligence-update.yml", "daily ~6 AM ET: GAO · CBO · OMB/EOP · per-agency Federal Register · GovExec · FedScoop → Gemini scoring → DB"),
       CHAIN]
+    case "kb":          return [
+      P("🛢", "Neon DB · kb_items", "every AI output saved + Gemini text-embedding-004 vectors · hash-deduped"),
+      P("🧬", "/api/knowledge", "save · semantic search · looping agent (digest written back each cycle)"),
+      P("⚙️", ".github/workflows/intelligence-update.yml", "agent runs daily after the news fetch"),
+      CHAIN]
     case "about":       return [P("📖", "this repository", "the job aid documents the codebase, scripts, and data flows themselves")]
     default:            return null
   }

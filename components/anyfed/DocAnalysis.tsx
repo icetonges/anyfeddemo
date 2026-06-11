@@ -8,6 +8,7 @@ import { useEffect, useMemo, useState } from "react"
 import { useTheme, Card, SectionTitle, Badge } from "./ui"
 import { MODELS, DEFAULT_MODEL_ID } from "@/lib/models"
 import type { Agency } from "@/lib/agencies"
+import { saveKnowledge } from "@/lib/knowledge"
 
 interface Doc { path: string; name: string; ext: string; bytes: number; mtime: string; bucket: string; agency: string; analyzable: boolean }
 interface LibState { count: number; buckets: string[]; agencies: string[]; docs: Doc[]; note?: string; truncated?: boolean }
@@ -129,6 +130,8 @@ export default function DocAnalysis({ agency }: { agency: Agency }) {
       }
     }
     setRunning(false)
+    if (prior.length) saveKnowledge("doc-analysis", agency.id, `Doc analysis — ${docLabel.slice(0, 160)}`,
+      `DOCUMENT: ${docLabel}\nACTIONS: ${ordered.map(a2 => a2.label).join(" → ")}\n\n${prior.join("\n\n")}`, modelId)
   }
 
   const copyAll = () => {
