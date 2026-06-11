@@ -24,7 +24,7 @@ const MAP: Record<string, Src[]> = {
   controls:    [P("📚", "lib/fm-content.ts", "A-123 control catalog"), AUDIT],
   acquisition: [AWARDS, LIVE],
   ml:          [AWARDS, JBOOKS, SECCBJ, LIVE],
-  analyst:     [JBOOKS, AWARDS, AUDIT, P("🤖", "AI chain", "Gemini → Groq → Claude (server-side keys)")],
+  analyst:     [P("🧠", "lib/analyst-context.ts", "agency-specific knowledge base → system prompt"), JBOOKS, AWARDS, AUDIT, P("🤖", "AI chain", "Gemini → Groq → Claude · compare + judge modes (server-side keys)")],
   about:       [P("📖", "this repository", "the job aid documents the codebase, scripts, and data flows themselves")],
 }
 

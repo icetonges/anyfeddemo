@@ -3,7 +3,7 @@
  "endpoint": "balance_sheets",
  "unit": "billions USD",
  "audited": true,
- "pulled": "2026-06-10T20:58:16.862484+00:00",
+ "pulled": "2026-06-11T14:12:47.458964+00:00",
  "rows": 1330,
  "statementYears": [
   "1994",

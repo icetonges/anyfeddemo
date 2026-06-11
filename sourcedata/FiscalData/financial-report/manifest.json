@@ -1,5 +1,5 @@
 {
-  "pulled": "2026-06-10T20:58:16.862484+00:00",
+  "pulled": "2026-06-11T14:12:47.458964+00:00",
   "source": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service",
   "tables": {
     "statement_net_cost": {
@@ -77,6 +77,11 @@
         "statements_of_social_insurance",
         "statement_social_insurance"
       ]
+    },
+    "mts_outlays_by_agency_monthly": {
+      "status": "OK",
+      "rows": 30000,
+      "fiscalYears": "2016-2019"
     }
   }
 }

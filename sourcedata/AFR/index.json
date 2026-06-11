@@ -1,0 +1,391 @@
+{
+  "generated": "2026-06-11T14:43:19.814457+00:00",
+  "note": "agency AFR PDFs - the only agency-level complete audited statements; PDF-only by design",
+  "agencies": {
+    "DOD": {
+      "status": "OK",
+      "pdfLinksFound": 55,
+      "downloaded": [
+        "DoD_FY25_Agency_Financial_Report.pdf  (already present)",
+        "1_About_the_DoD_Agency_Financial_Report-Table_of_Contents.pdf  (already present)",
+        "2_Message_from_the_Secretary_of_Defense.pdf  (already present)",
+        "3_Managements_Discussion_and_Analysis_MDA.pdf  (already present)",
+        "4_Financial_Section.pdf  (already present)",
+        "5_Other_Information.pdf  (already present)",
+        "6_Appendices.pdf  (already present)",
+        "2025_AFR_MERHCF.pdf  (already present)",
+        "2025_AFR_MRF.pdf  (already present)",
+        "DoD_FY24_Agency_Financial_Report.pdf  (29296 KB)",
+        "1-About_the_DoD_Agency_Financial_Report-DoD_At_A_Glance_Table_of_Contents.pdf  (635 KB)"
+      ],
+      "errors": [
+        "https://comptroller.defense.gov/ODCFO/afr/ -> HTTP Error 403: Forbidden",
+        "https://comptroller.war.gov/Portals/45/Documents/afr/fy2025/Audit_Oversight_Report.pdf -> HTTP Error 404: Not Found"
+      ],
+      "libraryPages": [
+        "https://comptroller.defense.gov/ODCFO/afr/",
+        "https://comptroller.war.gov/odcfo/afr/"
+      ]
+    },
+    "TREAS": {
+      "status": "OK",
+      "pdfLinksFound": 17,
+      "downloaded": [
+        "Treasury-FY-2025-AFR.pdf  (already present)",
+        "Treasury-FY-2024-AFR-111524.pdf  (already present)",
+        "Treasury-FY-2023-AFR-111523.pdf  (already present)",
+        "Treasury-FY-2022-AFR.pdf  (already present)",
+        "Treasury-FY-2021-AFR.pdf  (already present)",
+        "Treasury-FY-2020-AFR.pdf  (already present)",
+        "Treasury-FY-2019-AFR-Final-111519-508-FINALrevised.pdf  (already present)",
+        "AFR_Full_20111518_clean_508.pdf  (9836 KB)",
+        "FY17-AFR-508.pdf  (13094 KB)",
+        "FY16-AFR-_508_.pdf  (14591 KB)",
+        "AFR-FY15-508.pdf  (7958 KB)",
+        "508-FY-14-AFR.pdf  (4667 KB)"
+      ],
+      "errors": [],
+      "libraryPages": [
+        "https://home.treasury.gov/about/budget-financial-reporting-planning-and-performance/agency-financial-report"
+      ]
+    },
+    "HHS": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.hhs.gov/afr/ -> HTTP Error 403: Forbidden",
+        "https://www.hhs.gov/about/agencies/asfr/finance/financial-policy-reporting/agency-financial-reports/index.html -> HTTP Error 403: Forbidden"
+      ],
+      "libraryPages": [
+        "https://www.hhs.gov/afr/",
+        "https://www.hhs.gov/about/agencies/asfr/finance/financial-policy-reporting/agency-financial-reports/index.html"
+      ]
+    },
+    "DHS": {
+      "status": "OK",
+      "pdfLinksFound": 4,
+      "downloaded": [
+        "26_0123_mgmt_dhs-agency-financial-report-fy2025.pdf  (33804 KB)",
+        "26_0123_mgmt_dhs-agency-financial-report-fy2025-vol1.pdf  (3741 KB)",
+        "26_0123_mgmt_dhs-agency-financial-report-fy2025-vol2.pdf  (12720 KB)",
+        "26_0123_mgmt_dhs-agency-financial-report-fy2025-vol3.pdf  (17754 KB)"
+      ],
+      "errors": [],
+      "libraryPages": [
+        "https://www.dhs.gov/publications-library/collections/agency-financial-report",
+        "https://www.dhs.gov/performance-financial-reports"
+      ]
+    },
+    "VA": {
+      "status": "OK",
+      "pdfLinksFound": 3,
+      "downloaded": [
+        "2025-AFR-Cover.pdf  (already present)",
+        "2025-About-the-AFR.pdf  (already present)",
+        "2025-Department-of-Veterans-Affairs-FY-2025-Agency-Financial-Report-AFR-Final.pdf  (already present)"
+      ],
+      "errors": [
+        "https://department.va.gov/administrations-and-offices/management/finance/annual-financial-report/ -> HTTP Error 404: Not Found"
+      ],
+      "libraryPages": [
+        "https://www.va.gov/finance/afr/",
+        "https://department.va.gov/administrations-and-offices/management/finance/annual-financial-report/"
+      ]
+    },
+    "DOE": {
+      "status": "OK",
+      "pdfLinksFound": 2,
+      "downloaded": [
+        "fy-2025-doe-agency-financial-report.pdf  (5333 KB)",
+        "fy-2024-doe-agency-financial-report_0.pdf  (5281 KB)"
+      ],
+      "errors": [
+        "https://www.energy.gov/cfo/articles/fy-2025-agency-financial-report -> HTTP Error 404: Not Found"
+      ],
+      "libraryPages": [
+        "https://www.energy.gov/cfo/articles/fy-2025-agency-financial-report",
+        "https://www.energy.gov/cfo/listings/agency-financial-reports"
+      ]
+    },
+    "DOJ": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.justice.gov/cfo/annual-financial-statements -> HTTP Error 404: Not Found",
+        "https://www.justice.gov/doj/financial-documents -> HTTP Error 404: Not Found"
+      ],
+      "libraryPages": [
+        "https://www.justice.gov/cfo/annual-financial-statements",
+        "https://www.justice.gov/doj/financial-documents"
+      ]
+    },
+    "DOS": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.state.gov/reports-bureau-of-the-comptroller-and-global-financial-services -> HTTP Error 404: Not Found"
+      ],
+      "libraryPages": [
+        "https://www.state.gov/agency-financial-reports/",
+        "https://www.state.gov/reports-bureau-of-the-comptroller-and-global-financial-services"
+      ]
+    },
+    "DOT": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.transportation.gov/budget/agency-financial-reports -> HTTP Error 403: Forbidden",
+        "https://www.transportation.gov/mission/budget/agency-financial-reports -> HTTP Error 403: Forbidden"
+      ],
+      "libraryPages": [
+        "https://www.transportation.gov/budget/agency-financial-reports",
+        "https://www.transportation.gov/mission/budget/agency-financial-reports"
+      ]
+    },
+    "ED": {
+      "status": "OK",
+      "pdfLinksFound": 29,
+      "downloaded": [
+        "fy-2025-agency-financial-report-january-22-2026-113142.pdf  (already present)",
+        "fy-2025-agency-financial-report-january-22-2026-113349.pdf  (already present)",
+        "fy-2024-agency-financial-report-november-14-2024-108470.pdf  (already present)",
+        "agency-financial-report.pdf  (already present)",
+        "agency-financial-report.pdf  (already present)",
+        "agency-financial-report.pdf  (already present)",
+        "agency-financial-report.pdf  (already present)",
+        "agency-financial-report.pdf  (already present)",
+        "agency-financial-report.pdf  (already present)",
+        "agency-financial-report.pdf  (already present)",
+        "agency-financial-report.pdf  (already present)",
+        "fy25-afr-message-secretary-113350.pdf  (551 KB)"
+      ],
+      "errors": [
+        "https://www.ed.gov/about/ed-overview/annual-performance-reports-and-agency-financial-reports -> HTTP Error 404: Not Found"
+      ],
+      "libraryPages": [
+        "https://www2.ed.gov/about/reports/annual/index.html",
+        "https://www.ed.gov/about/ed-overview/annual-performance-reports-and-agency-financial-reports"
+      ]
+    },
+    "USDA": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.usda.gov/about-usda/general-information/staff-offices/office-chief-financial-officer/agency-financial-report -> The read operation timed out",
+        "https://www.usda.gov/ocfo/agency-financial-report -> The read operation timed out"
+      ],
+      "libraryPages": [
+        "https://www.usda.gov/about-usda/general-information/staff-offices/office-chief-financial-officer/agency-financial-report",
+        "https://www.usda.gov/ocfo/agency-financial-report"
+      ]
+    },
+    "DOC": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.commerce.gov/about/strategic-planning-and-performance/agency-financial-reports -> HTTP Error 403: Forbidden",
+        "https://www.commerce.gov/about/budget-and-performance -> HTTP Error 403: Forbidden"
+      ],
+      "libraryPages": [
+        "https://www.commerce.gov/about/strategic-planning-and-performance/agency-financial-reports",
+        "https://www.commerce.gov/about/budget-and-performance"
+      ]
+    },
+    "DOL": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.dol.gov/agencies/oasam/centers-offices/office-chief-financial-officer/annual-report -> HTTP Error 403: Forbidden",
+        "https://www.dol.gov/agencies/oasam/centers-offices/ocfo/reports -> HTTP Error 403: Forbidden"
+      ],
+      "libraryPages": [
+        "https://www.dol.gov/agencies/oasam/centers-offices/office-chief-financial-officer/annual-report",
+        "https://www.dol.gov/agencies/oasam/centers-offices/ocfo/reports"
+      ]
+    },
+    "HUD": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.hud.gov/program_offices/cfo/reports/cfo_rpts -> HTTP Error 404: Not Found",
+        "https://www.hud.gov/program_offices/spm/afr -> HTTP Error 404: Not Found"
+      ],
+      "libraryPages": [
+        "https://www.hud.gov/program_offices/cfo/reports/cfo_rpts",
+        "https://www.hud.gov/program_offices/spm/afr"
+      ]
+    },
+    "DOI": {
+      "status": "NO PDFS MATCHED - add afr_links.txt override",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [],
+      "libraryPages": [
+        "https://www.doi.gov/pfm/afr"
+      ]
+    },
+    "EPA": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.epa.gov/planandbudget/agency-financial-reports -> HTTP Error 404: Not Found"
+      ],
+      "libraryPages": [
+        "https://www.epa.gov/planandbudget/agency-financial-reports",
+        "https://www.epa.gov/planandbudget/results"
+      ]
+    },
+    "NASA": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.nasa.gov/ocfo/agency-financial-reports/ -> HTTP Error 404: Not Found"
+      ],
+      "libraryPages": [
+        "https://www.nasa.gov/organizations/budget-annual-reports/",
+        "https://www.nasa.gov/ocfo/agency-financial-reports/"
+      ]
+    },
+    "GSA": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.gsa.gov/reference/reports/budget-and-performance/agency-financial-reports-afrs -> HTTP Error 404: Not Found"
+      ],
+      "libraryPages": [
+        "https://www.gsa.gov/reference/reports/budget-and-performance/agency-financial-reports-afrs",
+        "https://www.gsa.gov/reference/reports/budget-and-performance"
+      ]
+    },
+    "NSF": {
+      "status": "NO PDFS MATCHED - add afr_links.txt override",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [],
+      "libraryPages": [
+        "https://www.nsf.gov/about/performance",
+        "https://new.nsf.gov/about/performance"
+      ]
+    },
+    "OPM": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.opm.gov/about-us/reports-publications/agency-plans-and-reports/ -> HTTP Error 404: Not Found",
+        "https://www.opm.gov/about-us/budget-performance/performance/ -> HTTP Error 404: Not Found"
+      ],
+      "libraryPages": [
+        "https://www.opm.gov/about-us/reports-publications/agency-plans-and-reports/",
+        "https://www.opm.gov/about-us/budget-performance/performance/"
+      ]
+    },
+    "SBA": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.sba.gov/about-sba/organization/performance-budget-finances -> HTTP Error 404: Not Found"
+      ],
+      "libraryPages": [
+        "https://www.sba.gov/document/report-agency-financial-report",
+        "https://www.sba.gov/about-sba/organization/performance-budget-finances"
+      ]
+    },
+    "SSA": {
+      "status": "NO PDFS MATCHED - add afr_links.txt override",
+      "pdfLinksFound": 1,
+      "downloaded": [],
+      "errors": [
+        "https://www.ssa.gov/finance/ -> HTTP Error 403: Forbidden",
+        "https://www.ssa.gov/finance/2025/Full%20FY%202025%20AFR.pdf -> HTTP Error 403: Forbidden"
+      ],
+      "libraryPages": [
+        "https://www.ssa.gov/finance/",
+        "https://www.ssa.gov/finance/2025/Full%20FY%202025%20AFR.pdf"
+      ]
+    },
+    "USAID": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.usaid.gov/results-and-data/progress-data/agency-financial-report -> HTTP Error 404: Not Found"
+      ],
+      "libraryPages": [
+        "https://www.usaid.gov/results-and-data/progress-data/agency-financial-report"
+      ]
+    },
+    "NRC": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.nrc.gov/reading-rm/doc-collections/nuregs/staff/sr1542/ -> The read operation timed out",
+        "https://www.nrc.gov/about-nrc/plans-budget-performance.html -> The read operation timed out"
+      ],
+      "libraryPages": [
+        "https://www.nrc.gov/reading-rm/doc-collections/nuregs/staff/sr1542/",
+        "https://www.nrc.gov/about-nrc/plans-budget-performance.html"
+      ]
+    },
+    "FDIC": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.fdic.gov/analysis/cfr/annual-report -> HTTP Error 404: Not Found"
+      ],
+      "libraryPages": [
+        "https://www.fdic.gov/about/financial-reports",
+        "https://www.fdic.gov/analysis/cfr/annual-report"
+      ]
+    },
+    "SEC": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.sec.gov/about/reports-publications/secafr -> HTTP Error 403: Forbidden",
+        "https://www.sec.gov/about/reports-publications/annual-reports -> HTTP Error 403: Forbidden"
+      ],
+      "libraryPages": [
+        "https://www.sec.gov/about/reports-publications/secafr",
+        "https://www.sec.gov/about/reports-publications/annual-reports"
+      ]
+    },
+    "FCC": {
+      "status": "PAGE ERRORS",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [
+        "https://www.fcc.gov/reports-research/reports/agency-financial-reports -> The read operation timed out",
+        "https://www.fcc.gov/general/fcc-agency-financial-reports -> The read operation timed out"
+      ],
+      "libraryPages": [
+        "https://www.fcc.gov/reports-research/reports/agency-financial-reports",
+        "https://www.fcc.gov/general/fcc-agency-financial-reports"
+      ]
+    },
+    "CFTC": {
+      "status": "NO PDFS MATCHED - add afr_links.txt override",
+      "pdfLinksFound": 0,
+      "downloaded": [],
+      "errors": [],
+      "libraryPages": [
+        "https://www.cftc.gov/About/CFTCReports/index.htm"
+      ]
+    }
+  }
+}

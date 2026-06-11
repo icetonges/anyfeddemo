@@ -94,11 +94,79 @@ def write_csv(path, rows):
         w.writeheader()
         for r in rows: w.writerow(r)
 
+def pull_mts(years_back):
+    """MTS Table 5 - outlays BY AGENCY, MONTHLY (most frequent by-agency
+    statement data published). Confirmed endpoint: v1/accounting/mts/mts_table_5.
+    Columns: classification_desc (agency/bureau), current_month gross/receipts/
+    net outlays, FYTD and prior-FYTD - dollars in millions."""
+    cutoff = (datetime.now().year + (1 if datetime.now().month >= 10 else 0)) - years_back
+    tdir = os.path.join(ROOT, "mts_outlays_by_agency_monthly")
+    os.makedirs(tdir, exist_ok=True)
+    rows, page = [], 1
+    print(f"[try ] MTS Table 5 (outlays by agency, monthly) fy>={cutoff} ...", flush=True)
+    while True:
+        url = (f"{BASE}/v1/accounting/mts/mts_table_5?filter=record_fiscal_year:gte:{cutoff}"
+               f"&page%5Bsize%5D=10000&page%5Bnumber%5D={page}")
+        try:
+            j = get(url)
+        except Exception as e:
+            print(f"[MISS] mts_table_5 page {page}: {e}"); break
+        if not j or not j.get("data"): break
+        rows += j["data"]
+        print(f"       page {page}: +{len(j['data']):,} rows (total {len(rows):,})", flush=True)
+        if page >= int(j.get("meta", {}).get("total-pages", 1)) or len(j["data"]) < 10000: break
+        page += 1
+    if not rows:
+        return {"status": "FAILED"}
+    json.dump({"table": "mts_table_5", "endpoint": "v1/accounting/mts/mts_table_5",
+               "unit": "millions USD", "cadence": "MONTHLY (published ~8th business day after month end)",
+               "grain": "agency/bureau classification x month", "pulled": datetime.now(timezone.utc).isoformat(),
+               "rows": len(rows), "data": rows},
+              open(os.path.join(tdir, "mts_table_5_ALL.json"), "w", encoding="utf-8"))
+    write_csv(os.path.join(tdir, "mts_table_5_ALL.csv"), rows)
+    fys = sorted({r.get("record_fiscal_year") for r in rows if r.get("record_fiscal_year")})
+    for y in fys:
+        yr = [r for r in rows if r.get("record_fiscal_year") == y]
+        write_csv(os.path.join(tdir, f"FY{y}.csv"), yr)
+        json.dump(yr, open(os.path.join(tdir, f"FY{y}.json"), "w", encoding="utf-8"))
+    # naive monthly rollup by classification (agency line) - net outlays
+    roll = {}
+    for r in rows:
+        k = (r.get("classification_desc") or "").strip().rstrip(":")
+        v = r.get("current_month_net_outly_amt")
+        if not k or v in (None, "", "null"): continue
+        m = f"{r.get('record_calendar_year')}-{r.get('record_calendar_month')}"
+        roll.setdefault(k, {})[m] = roll.setdefault(k, {}).get(m, 0.0) + float(v)
+    json.dump({"generated": datetime.now(timezone.utc).isoformat(),
+               "unit": "millions USD, net outlays (cash), MONTHLY",
+               "note": "classification_desc includes agencies AND sub-lines; filter to top-level agency names when analyzing",
+               "byClassificationMonthly": roll},
+              open(os.path.join(ROOT, "mts_net_outlays_by_agency_monthly.json"), "w", encoding="utf-8"))
+    print(f"[ OK ] mts_table_5: {len(rows):,} rows | FY{fys[0]}-FY{fys[-1]} | MONTHLY by agency -> {os.path.basename(tdir)}/")
+    return {"status": "OK", "rows": len(rows), "fiscalYears": f"{fys[0]}-{fys[-1]}"}
+
+def load_user_endpoints():
+    """Optional: sourcedata/FiscalData/financial-report/fr_endpoints.txt
+    Lines of  friendly_name = exact_endpoint_name  (from each table's
+    fiscaldata.treasury.gov page, 'API Quick Guide' section)."""
+    f = os.path.join(ROOT, "fr_endpoints.txt")
+    if not os.path.exists(f): return
+    for line in open(f, encoding="utf-8"):
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line: continue
+        name, ep = [x.strip() for x in line.split("=", 1)]
+        if name and ep:
+            STATEMENTS.setdefault(name, [])
+            if ep not in STATEMENTS[name]:
+                STATEMENTS[name].insert(0, ep)
+            print(f"[user] added endpoint for '{name}': {ep}")
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--years", type=int, default=10, help="how many most-recent statement years to split out (default 10)")
     a = ap.parse_args()
     os.makedirs(ROOT, exist_ok=True)
+    load_user_endpoints()
     manifest = {"pulled": datetime.now(timezone.utc).isoformat(), "source": BASE, "tables": {}}
     print("=" * 72)
     print("FISCAL DATA - AUDITED FINANCIAL REPORT STATEMENTS - FULL PULL")
@@ -159,6 +227,9 @@ def main():
                 "agencies": by}
         json.dump(gold, open(os.path.join(ROOT, "snc_by_agency_10yr.json"), "w", encoding="utf-8"), indent=1)
         print(f"[GOLD] snc_by_agency_10yr.json: {len(by)} FR entities, {len(gold['registryAgenciesCovered'])} registry agencies, years FY{cutoff[0]}-FY{cutoff[-1]}")
+
+    # MONTHLY BY-AGENCY data (the most frequently updated by-agency source)
+    manifest["tables"]["mts_outlays_by_agency_monthly"] = pull_mts(a.years)
 
     json.dump(manifest, open(os.path.join(ROOT, "manifest.json"), "w", encoding="utf-8"), indent=2)
 
