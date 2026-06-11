@@ -9,6 +9,7 @@ import { useTheme, Card, SectionTitle, Badge } from "./ui"
 import { MODELS, DEFAULT_MODEL_ID } from "@/lib/models"
 import { knowledgeBase } from "@/lib/analyst-context"
 import { saveKnowledge } from "@/lib/knowledge"
+import { plainText } from "@/lib/text"
 import type { Agency } from "@/lib/agencies"
 
 interface CompareResult { modelId: string; ok: boolean; text?: string; error?: string; ms: number }
@@ -126,7 +127,7 @@ export default function AIAnalyst({ agency }: { agency: Agency }) {
         })
         const j = await res.json()
         if (!res.ok) throw new Error(j.error ?? `HTTP ${res.status}`)
-        setMsgs([...next, { kind: "assistant", content: j.text, modelUsed: j.modelUsed }])
+        setMsgs([...next, { kind: "assistant", content: plainText(j.text), modelUsed: j.modelUsed }])
         saveKnowledge("analyst", agency.id, `Q: ${content.slice(0, 140)}`, `QUESTION:\n${content}\n\nANSWER (${j.modelUsed}):\n${j.text}`, j.modelUsed)
       }
     } catch (e) {
@@ -149,7 +150,7 @@ export default function AIAnalyst({ agency }: { agency: Agency }) {
       const j = await res.json()
       if (!res.ok) throw new Error(j.error ?? `HTTP ${res.status}`)
       setMsgs(m => m.map((x, i) => i === idx && x.kind === "compare"
-        ? { ...x, judging: false, verdict: j.text, judgeModel: j.modelUsed } : x))
+        ? { ...x, judging: false, verdict: plainText(j.text), judgeModel: j.modelUsed } : x))
       saveKnowledge("judge", agency.id, `Verdict: ${t.question.slice(0, 120)}`,
         `QUESTION:\n${t.question}\n\nVERDICT (judged by ${j.modelUsed}):\n${j.text}`, j.modelUsed)
     } catch (e) {
@@ -184,7 +185,7 @@ export default function AIAnalyst({ agency }: { agency: Agency }) {
           </span>
         </div>
         {r.ok
-          ? <div style={{ fontSize: 16.5, lineHeight: 1.65, color: C.text, whiteSpace: "pre-wrap" }}>{r.text}</div>
+          ? <div style={{ fontSize: 16.5, lineHeight: 1.65, color: C.text, whiteSpace: "pre-wrap" }}>{plainText(r.text ?? "")}</div>
           : <div style={{ fontSize: 15.5, color: C.red ?? "#f87171" }}>⚠️ {r.error}</div>}
       </div>
     )

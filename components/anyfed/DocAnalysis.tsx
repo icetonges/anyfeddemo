@@ -9,6 +9,7 @@ import { useTheme, Card, SectionTitle, Badge } from "./ui"
 import { MODELS, DEFAULT_MODEL_ID } from "@/lib/models"
 import type { Agency } from "@/lib/agencies"
 import { saveKnowledge } from "@/lib/knowledge"
+import { plainText } from "@/lib/text"
 
 interface Doc { path: string; name: string; ext: string; bytes: number; mtime: string; bucket: string; agency: string; analyzable: boolean }
 interface LibState { count: number; buckets: string[]; agencies: string[]; docs: Doc[]; note?: string; truncated?: boolean }
@@ -123,8 +124,9 @@ export default function DocAnalysis({ agency }: { agency: Agency }) {
         })
         const j = await res.json()
         if (!res.ok) throw new Error(j.error ?? `HTTP ${res.status}`)
-        prior.push(`[${a.label}]\n${j.text}`)
-        setResults(rs => rs.map(r => r.id === a.id ? { ...r, status: "done", text: j.text, ms: Date.now() - t0, modelUsed: j.modelUsed } : r))
+        const cleanText = plainText(j.text)
+        prior.push(`[${a.label}]\n${cleanText}`)
+        setResults(rs => rs.map(r => r.id === a.id ? { ...r, status: "done", text: cleanText, ms: Date.now() - t0, modelUsed: j.modelUsed } : r))
       } catch (e) {
         setResults(rs => rs.map(r => r.id === a.id ? { ...r, status: "failed", text: `⚠️ ${e instanceof Error ? e.message : e}`, ms: Date.now() - t0 } : r))
       }

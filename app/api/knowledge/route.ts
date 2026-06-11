@@ -129,9 +129,11 @@ Produce this cycle's digest:
 2. WHAT CHANGED — vs the previous digest (or "first cycle baseline").
 3. TOP INSIGHTS — exactly 5, each citing item ids.
 4. KNOWLEDGE GAPS & NEXT ACTIONS — exactly 3, each naming the portal feature to use (Daily Brief, Document Analysis, AI Analyst, ML Workbench) and what to run.
-Under 450 words. No preamble.`
+Under 450 words. No preamble. FORMAT: plain text only — no markdown syntax of any kind (no #, ##, **, *, backticks, tables); UPPERCASE section labels, numbered lines.`
 
-    const { text, modelUsed } = await callChain(chainFor('best'), system, [{ role: 'user', content: user }], 1200)
+    const base = chainFor('best')
+    const chain = body.modelId ? [String(body.modelId), ...base.filter(id => id !== body.modelId)] : base
+    const { text, modelUsed } = await callChain(chain, system, [{ role: 'user', content: user }], 1200)
     // save the digest back — THIS is the self-evolving step
     const hash = sha(`agent-digest|${text}`)
     const emb = await embed(text)

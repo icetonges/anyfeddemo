@@ -5,7 +5,7 @@
 import { useState } from "react"
 import { useTheme, Card, SectionTitle, Badge } from "./ui"
 
-const TABS = ["What This Is", "Architecture (Dev)", "Build It Yourself (Dev)", "Data Pipeline", "User Guide (Ops)", "Troubleshooting"] as const
+const TABS = ["What This Is", "Architecture (Dev)", "Build It Yourself (Dev)", "Data Pipeline", "Loop Agent (AI)", "User Guide (Ops)", "Troubleshooting"] as const
 type Tab = typeof TABS[number]
 
 // ── content data ─────────────────────────────────────────────────────────────
@@ -20,7 +20,10 @@ const PAGES: [string, string, string][] = [
   ["🛡️ Internal Controls", "A-123 control catalog", "Control design and testing reference"],
   ["📄 Contracts & Acquisition", "Award-data views", "Vendor/contract questions"],
   ["🤖 AI/ML Workbench", "DataRobot-style: pick data → run real models → leaderboard", "Benford, anomalies, risk scoring, forecasting"],
-  ["💬 AI FM Analyst", "Chat over the loaded context (Gemini → Groq → Claude)", "Free-form questions; needs API keys"],
+  ["💬 AI FM Analyst", "Chat over the loaded context (Gemini → Groq → Claude) · model arena + judge", "Free-form questions; needs API keys"],
+  ["📑 Document Analysis", "Pick a library document (PDF/Excel/JSON/CSV) → chain of AI actions", "Summaries, figure extraction, compliance scans of real documents"],
+  ["📰 Daily Brief", "Live agency-tagged FM intelligence + AI executive brief", "Morning situational awareness; brief leadership"],
+  ["🧬 Knowledge Base", "Every AI output saved + embedded · looping agent digest · semantic search", "Retrieve anything the portal ever produced; app-wide summary"],
 ]
 
 const STACK = [
@@ -166,7 +169,7 @@ export default function AboutApp() {
             </div>
           </Card>
           <div style={{ height:14 }} />
-          <Card title="Capability map — the 11 pages" sub="What each page does and when to reach for it">
+          <Card title="Capability map — the 14 pages" sub="What each page does and when to reach for it">
             <div style={{ overflowX:"auto" }}>
               <table style={{ width:"100%", borderCollapse:"collapse", fontSize:14, minWidth:680 }}>
                 <thead><tr style={{ color:C.muted, textAlign:"left" }}>
@@ -279,6 +282,93 @@ export default function AboutApp() {
             <div style={{ fontSize:13.5, color:C.muted, marginTop:10, lineHeight:1.6 }}>
               Full cadence table, coverage matrix, and the monthly Task-Scheduler one-liner live in
               <b style={{ color:C.text }}> Data Explorer → Data Operations Runbook</b>.
+            </div>
+          </Card>
+        </>
+      )}
+
+      {tab === "Loop Agent (AI)" && (
+        <>
+          <Card title="🧬 The Knowledge-Loop Agent — what it is" sub="The portal's self-evolving memory: every AI output becomes durable, searchable knowledge that the next AI cycle builds on">
+            <div style={{ fontSize:15.5, color:C.textSub, lineHeight:1.8 }}>
+              LLMs are stateless — every chat starts from zero. The loop agent fixes that at the application level:
+              every output any AI surface produces (daily briefs, analyst answers, model-arena comparisons and verdicts,
+              document analyses, ML runs) is <b style={{ color:C.text }}>captured, embedded, and stored</b>; on each cycle the agent
+              re-reads what the application now knows — <b style={{ color:C.text }}>including its own previous digest</b> — and writes a new
+              application-wide executive summary <b style={{ color:C.text }}>back into the same store</b>. That write-back is the loop:
+              cycle N&apos;s output is cycle N+1&apos;s input, so the knowledge base compounds instead of resetting.
+            </div>
+          </Card>
+          <div style={{ height:14 }} />
+          <Card title="How it's built — the five components" sub="all in this repository; no external vector database or agent framework">
+            <div style={{ overflowX:"auto" }}>
+              <table style={{ width:"100%", borderCollapse:"collapse", fontSize:14, minWidth:700 }}>
+                <thead><tr style={{ color:C.muted, textAlign:"left" }}>
+                  {["Component", "File", "What it does"].map(h => <th key={h} style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}` }}>{h}</th>)}
+                </tr></thead>
+                <tbody>
+                  {[
+                    ["① Capture hooks", "lib/knowledge.ts → wired into NewsBrief · AIAnalyst · DocAnalysis · MLWorkbench", "fire-and-forget saveKnowledge() after every AI output — silent on failure so persistence never breaks the UX"],
+                    ["② Store + embeddings", "Neon Postgres kb_items via lib/db.ts", "kind · agency · title · content · model · SHA-256 hash (dedupe) · Gemini text-embedding-004 vector (768-dim, JSON)"],
+                    ["③ The API", "app/api/knowledge/route.ts", "save (embed + insert) · search (cosine similarity in JS over the vectors) · item (permanent retrieval link) · agent (the loop cycle)"],
+                    ["④ The loop cycle", "POST /api/knowledge {action:'agent'}", "previous digest + last 7 days of items + latest intelligence feed → LLM chain → new digest → SAVED BACK embedded"],
+                    ["⑤ The triggers", ".github/workflows/intelligence-update.yml + the 🧬 page button", "daily ~6 AM ET after the news fetch (automated loop) and on-demand (interactive loop), with a model dropdown to pin the LLM"],
+                  ].map((r, i) => (
+                    <tr key={i}>
+                      <td style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}`, color:C.text, fontWeight:700, whiteSpace:"nowrap" }}>{r[0]}</td>
+                      <td style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}`, color:C.cyan, fontFamily:"var(--font-mono)", fontSize:12.5 }}>{r[1]}</td>
+                      <td style={{ padding:"7px 10px", borderBottom:`1px solid ${C.border}`, color:C.textSub, lineHeight:1.55 }}>{r[2]}</td>
+                    </tr>))}
+                </tbody>
+              </table>
+            </div>
+          </Card>
+          <div style={{ height:14 }} />
+          <Card title="One cycle, step by step" sub="what happens when the agent runs (automatically each morning, or when you press the button)">
+            <div style={{ display:"flex", alignItems:"stretch", gap:0, overflowX:"auto", paddingBottom:6 }}>
+              {[
+                ["📥", "GATHER", "its own previous digest + last 7 days of saved items + latest 12 intelligence items"],
+                ["🧩", "COMPOSE", "continuity prompt: 'here is what you said last cycle; here is what's new'"],
+                ["🤖", "REASON", "LLM chain (your pinned model first, fallbacks behind) writes the digest"],
+                ["📝", "DIGEST", "exec summary · what changed vs last cycle · 5 insights citing [#item-ids] · 3 gaps + next actions"],
+                ["💾", "WRITE BACK", "digest saved into kb_items, embedded — it becomes item [#N]"],
+                ["🔁", "LOOP", "next cycle reads THIS digest as its memory — the loop closes"],
+              ].map((st, i, arr) => (
+                <div key={i} style={{ display:"flex", alignItems:"center", flexShrink:0 }}>
+                  <div style={{ width:170, padding:"10px 10px", borderRadius:10, textAlign:"center", border:`2px solid ${i === 5 ? C.purple : C.border}`, background: i === 5 ? `${C.purple}14` : C.card }}>
+                    <div style={{ fontSize:21 }}>{st[0]}</div>
+                    <div style={{ fontSize:13.5, fontWeight:800, color: i === 5 ? C.purple : C.text, letterSpacing:"0.05em" }}>{st[1]}</div>
+                    <div style={{ fontSize:11.5, color:C.muted, lineHeight:1.45, marginTop:3 }}>{st[2]}</div>
+                  </div>
+                  {i < arr.length - 1 && <span style={{ padding:"0 6px", color:C.muted, fontSize:16 }}>→</span>}
+                </div>
+              ))}
+            </div>
+          </Card>
+          <div style={{ height:14 }} />
+          <Card title="The three loops in action" sub="the system runs three nested feedback loops at different speeds">
+            <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(280px, 1fr))", gap:10 }}>
+              {[
+                ["🔄 Capture loop — seconds", C.cyan, "You generate any AI output anywhere in the portal → it's saved and embedded instantly → it's immediately findable in semantic search and citable by the next digest. Every interaction makes the store richer."],
+                ["🌅 Daily automation loop — 24h", C.blue, "GitHub Action at ~6 AM ET: fetch agency-tagged news → score impact → run the agent over news + the week's knowledge → save the digest → revalidate the site. The portal wakes up briefed without anyone touching it."],
+                ["🧬 Self-evolution loop — cycle over cycle", C.purple, "Each digest names KNOWLEDGE GAPS and the exact feature to run (e.g., 'run a Benford screen on VA awards'). When you do, the new items land in the store, and the NEXT digest measures what changed — the agent steers its own learning agenda."],
+              ].map(([t, col, body], i) => (
+                <div key={i} style={{ background:C.card, border:`1px solid ${String(col)}55`, borderTop:`3px solid ${String(col)}`, borderRadius:10, padding:"11px 13px" }}>
+                  <div style={{ fontSize:15, fontWeight:800, color:String(col), marginBottom:6 }}>{t}</div>
+                  <div style={{ fontSize:14, color:C.textSub, lineHeight:1.65 }}>{body}</div>
+                </div>
+              ))}
+            </div>
+          </Card>
+          <div style={{ height:14 }} />
+          <Card title="What makes it special" sub="design choices that matter for a federal FM context">
+            <div style={{ fontSize:14.5, color:C.textSub, lineHeight:1.85 }}>
+              ① <b style={{ color:C.text }}>Write-back memory</b> — the agent's output is its own future input; stateless LLMs gain durable, compounding state without fine-tuning.
+              ② <b style={{ color:C.text }}>Audit-grade lineage</b> — every insight cites item ids ([#42]) that resolve to permanent retrieval links (/api/knowledge?op=item&id=42); you can trace any claim to the exact saved output that produced it.
+              ③ <b style={{ color:C.text }}>Semantic recall</b> — Gemini embeddings + cosine similarity mean "FBwT reconciliation findings" finds the right items even when no keyword matches.
+              ④ <b style={{ color:C.text }}>Idempotent by construction</b> — SHA-256 content hashing dedupes; re-running anything never double-counts knowledge.
+              ⑤ <b style={{ color:C.text }}>Model-agnostic</b> — the cycle runs on the chain (pin any model from the dropdown; fallbacks behind it), so no single provider outage breaks the loop.
+              ⑥ <b style={{ color:C.text }}>Graceful degradation</b> — no DATABASE_URL? The app works normally, persistence just switches off with a visible notice. No embedding key? Search falls back to keywords.
             </div>
           </Card>
         </>

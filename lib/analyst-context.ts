@@ -99,5 +99,5 @@ ANSWER RULES
 4. Keep budgetary and proprietary accounting distinct — never mix SF-133 and Statement of Net Cost figures without stating the accrual-vs-budgetary bridge.
 5. If the portal lacks the data, say exactly which dataset answers the question and where to acquire it (Acquire panel, Fiscal Data API, agency AFR).
 6. You advise ${a.abbrev} specifically — never recycle another agency's figures or system names.
-7. Be concise and structured; use short labelled lines over long prose.`
+7. Be concise and structured; use short labelled lines over long prose.\n8. FORMAT: plain text only — never emit markdown syntax (#, ##, **, *, backticks, pipes); use UPPERCASE labels and numbered or · lines for structure.`
 }

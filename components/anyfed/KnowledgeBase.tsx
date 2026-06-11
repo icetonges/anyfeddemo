@@ -7,6 +7,8 @@
 import { useEffect, useMemo, useState } from "react"
 import { useTheme, Card, SectionTitle, Badge, Spinner } from "./ui"
 import type { Agency } from "@/lib/agencies"
+import { plainText } from "@/lib/text"
+import { MODELS, DEFAULT_MODEL_ID } from "@/lib/models"
 
 interface KbItem {
   id: number; kind: string; agency: string; title: string; model: string
@@ -36,6 +38,7 @@ export default function KnowledgeBase({ agency }: { agency: Agency }) {
   const [onlyAgency, setOnlyAgency] = useState(false)
   const [open, setOpen] = useState<Record<number, string | "loading" | undefined>>({})
   const [agentBusy, setAgentBusy] = useState(false)
+  const [modelId, setModelId] = useState<string>(DEFAULT_MODEL_ID)
   const [q, setQ] = useState("")
   const [hits, setHits] = useState<Hit[] | null>(null)
   const [searching, setSearching] = useState(false)
@@ -50,7 +53,7 @@ export default function KnowledgeBase({ agency }: { agency: Agency }) {
     setAgentBusy(true)
     try {
       const r = await fetch("/api/knowledge", { method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action: "agent" }) })
+        body: JSON.stringify({ action: "agent", modelId }) })
       const j = await r.json()
       if (!r.ok || j.error) throw new Error(j.error ?? `HTTP ${r.status}`)
       await load()
@@ -77,7 +80,7 @@ export default function KnowledgeBase({ agency }: { agency: Agency }) {
     try {
       const r = await fetch(`/api/knowledge?op=item&id=${id}`)
       const j = await r.json()
-      setOpen(o => ({ ...o, [id]: j.item?.content ?? "(not found)" }))
+      setOpen(o => ({ ...o, [id]: plainText(j.item?.content ?? "(not found)") }))
     } catch { setOpen(o => ({ ...o, [id]: "(fetch failed)" })) }
   }
 
@@ -115,18 +118,25 @@ export default function KnowledgeBase({ agency }: { agency: Agency }) {
               <Badge color={C.purple}>cycle of {digest.at}</Badge>
               <Badge color={C.green}>● LOOP ACTIVE — digest is itself item [#{digest.id}]</Badge>
             </div>
-            <div style={{ fontSize: 16, lineHeight: 1.7, color: C.text, whiteSpace: "pre-wrap" }}>{digest.content}</div>
+            <div style={{ fontSize: 16, lineHeight: 1.7, color: C.text, whiteSpace: "pre-wrap" }}>{plainText(digest.content)}</div>
           </div>
         ) : (
           <div style={{ fontSize: 15.5, color: C.muted, lineHeight: 1.65 }}>
             No digest yet — generate outputs around the portal (Daily Brief, AI Analyst, Document Analysis, ML Workbench), then run the agent.
           </div>
         )}
-        <button onClick={runAgent} disabled={agentBusy || !dbOk}
-          style={{ marginTop: 12, padding: "9px 20px", borderRadius: 10, fontSize: 15.5, fontWeight: 800, cursor: "pointer",
-                   border: `1px solid ${C.purple}66`, background: `${C.purple}14`, color: C.purple }}>
-          {agentBusy ? "⏳ Agent digesting the knowledge base…" : "🧬 Run the looping agent now"}
-        </button>
+        <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap", marginTop: 12 }}>
+          <button onClick={runAgent} disabled={agentBusy || !dbOk}
+            style={{ padding: "9px 20px", borderRadius: 10, fontSize: 15.5, fontWeight: 800, cursor: "pointer",
+                     border: `1px solid ${C.purple}66`, background: `${C.purple}14`, color: C.purple }}>
+            {agentBusy ? "⏳ Agent digesting the knowledge base…" : "🧬 Run the looping agent now"}
+          </button>
+          <span style={{ fontSize: 14, color: C.muted }}>Model</span>
+          <select value={modelId} onChange={e => setModelId(e.target.value)}
+            style={{ background: C.card, color: C.text, border: `1px solid ${C.border}`, borderRadius: 8, padding: "7px 10px", fontSize: 14.5, cursor: "pointer" }}>
+            {MODELS.map(m => <option key={m.id} value={m.id}>{m.name} — {m.providerLabel ?? m.provider}</option>)}
+          </select>
+        </div>
       </Card>
       <div style={{ height: 16 }} />
 
