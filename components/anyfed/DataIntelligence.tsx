@@ -315,6 +315,19 @@ function CompareWorkspace({ agency, cmp, setCmp, fys }:
   }, [a.data, b.data, cmp.dim])
   const dimLabel = a.data?.dims[cmp.dim].label ?? cmp.dim
   const totDelta = res ? res.totalB - res.totalA : 0
+  // cross-dimension reconciliation: every dimension total vs the File A anchor
+  const recon = useMemo(() => {
+    if (!a.data || !b.data) return null
+    const dims = DIM_KEYS.map(k => ({
+      k, label: a.data!.dims[k].label, measure: a.data!.dims[k].measure,
+      nA: a.data!.dims[k].nodes.length, nB: b.data!.dims[k].nodes.length,
+      totA: a.data!.dims[k].nodes.reduce((s, n) => s + n.value, 0),
+      totB: b.data!.dims[k].nodes.reduce((s, n) => s + n.value, 0),
+    }))
+    const fileA_A = a.data!.years.find(y => y.fy === `FY${cmp.fyA}`)?.obligated ?? null
+    const fileA_B = b.data!.years.find(y => y.fy === `FY${cmp.fyB}`)?.obligated ?? null
+    return { dims, fileA_A, fileA_B }
+  }, [a.data, b.data, cmp.fyA, cmp.fyB])
   return (
     <Card title="3 · Compare Workspace"
           sub="Drop an inventory card here (or pick a dimension), choose two fiscal years, and decompose the delta line by line.">
@@ -358,14 +371,80 @@ function CompareWorkspace({ agency, cmp, setCmp, fys }:
                     <td style={{ padding:"6px 10px", borderBottom:`1px solid ${C.border}`, textAlign:"right", fontFamily:"var(--font-mono)", color:C.muted }}>{r.deltaPct != null ? `${r.deltaPct >= 0 ? "+" : ""}${r.deltaPct}%` : "new"}</td>
                   </tr>
                 ))}
+                <tr style={{ background:`${C.blue}10` }}>
+                  <td style={{ padding:"8px 10px", borderTop:`2px solid ${C.borderAccent}`, color:C.text, fontWeight:800 }}>
+                    TOTAL — all {dimLabel.toLowerCase()} lines ({a.data?.dims[cmp.dim].nodes.length ?? 0})</td>
+                  <td style={{ padding:"8px 10px", borderTop:`2px solid ${C.borderAccent}`, textAlign:"right", fontFamily:"var(--font-mono)", fontWeight:800, color:C.cyan }}>{fmt(res.totalA)}</td>
+                  <td style={{ padding:"8px 10px", borderTop:`2px solid ${C.borderAccent}`, textAlign:"right", fontFamily:"var(--font-mono)", fontWeight:800, color:C.cyan }}>{fmt(res.totalB)}</td>
+                  <td style={{ padding:"8px 10px", borderTop:`2px solid ${C.borderAccent}`, textAlign:"right", fontFamily:"var(--font-mono)", fontWeight:800, color: totDelta >= 0 ? C.green : C.red }}>{totDelta >= 0 ? "+" : ""}{fmt(totDelta)}</td>
+                  <td style={{ padding:"8px 10px", borderTop:`2px solid ${C.borderAccent}`, textAlign:"right", fontFamily:"var(--font-mono)", color:C.muted }}>{res.totalA ? `${totDelta >= 0 ? "+" : ""}${Math.round(totDelta / Math.abs(res.totalA) * 1000) / 10}%` : "—"}</td>
+                </tr>
               </tbody>
             </table>
           </div>
           <div style={{ fontSize:15.5, color:C.muted, marginTop:10, lineHeight:1.6 }}>
-            {res.onlyB > 0 && <>⚠ {res.onlyB} categor{res.onlyB === 1 ? "y" : "ies"} new in FY{cmp.fyB} and </>}
+            Table shows the top movers; the TOTAL row covers every line in the dimension.
+            {res.onlyB > 0 && <> ⚠ {res.onlyB} categor{res.onlyB === 1 ? "y" : "ies"} new in FY{cmp.fyB} and </>}
             {res.onlyA > 0 && <>{res.onlyA} only in FY{cmp.fyA} — </>}
-            name-matched comparison; renames across years will show as a disappear/appear pair, not a delta.
+            {" "}name-matched comparison; renames across years will show as a disappear/appear pair, not a delta.
           </div>
+
+          {/* ── cross-check: why each dimension totals differently ── */}
+          {recon && (
+            <div style={{ marginTop:14 }}>
+              <div style={{ fontSize:16, fontWeight:800, color:C.text, marginBottom:8 }}>🧮 Total cross-check — all four dimensions vs the certified anchor</div>
+              <div style={{ overflowX:"auto" }}>
+                <table style={{ width:"100%", borderCollapse:"collapse", fontSize:14.5, minWidth:640 }}>
+                  <thead><tr style={{ color:C.muted, textAlign:"left" }}>
+                    {["Dimension", "Measure basis", `FY${cmp.fyA} total`, `FY${cmp.fyB} total`, `vs File A FY${cmp.fyB}`].map(h =>
+                      <th key={h} style={{ padding:"6px 9px", borderBottom:`1px solid ${C.border}` }}>{h}</th>)}
+                  </tr></thead>
+                  <tbody>
+                    {recon.dims.map(d => {
+                      const cov = recon.fileA_B ? Math.round(d.totB / recon.fileA_B * 1000) / 10 : null
+                      const isAward = d.measure.startsWith("award")
+                      return (
+                        <tr key={d.k} style={{ background: d.k === cmp.dim ? `${C.blue}12` : "transparent" }}>
+                          <td style={{ padding:"5px 9px", borderBottom:`1px solid ${C.border}`, color: d.k === cmp.dim ? C.blue : C.text, fontWeight: d.k === cmp.dim ? 700 : 500 }}>{DIM_ICON[d.k]} {d.label} <span style={{ color:C.muted, fontWeight:400 }}>({d.nB} lines)</span></td>
+                          <td style={{ padding:"5px 9px", borderBottom:`1px solid ${C.border}` }}>
+                            <span style={{ fontSize:12.5, fontWeight:700, color: isAward ? C.gold : C.green }}>{isAward ? "AWARD $ (D-files)" : "ACCOUNT $ (File B)"}</span></td>
+                          <td style={{ padding:"5px 9px", borderBottom:`1px solid ${C.border}`, textAlign:"right", fontFamily:"var(--font-mono)", color:C.textSub }}>{fmt(d.totA)}</td>
+                          <td style={{ padding:"5px 9px", borderBottom:`1px solid ${C.border}`, textAlign:"right", fontFamily:"var(--font-mono)", color:C.textSub }}>{fmt(d.totB)}</td>
+                          <td style={{ padding:"5px 9px", borderBottom:`1px solid ${C.border}`, textAlign:"right", fontFamily:"var(--font-mono)", color: cov == null ? C.muted : cov > 96 && cov < 104 ? C.green : isAward ? C.gold : C.orange }}>{cov == null ? "—" : `${cov}%`}</td>
+                        </tr>
+                      )
+                    })}
+                    <tr>
+                      <td style={{ padding:"6px 9px", color:C.text, fontWeight:800 }}>⚓ File A — total obligations (certified)</td>
+                      <td style={{ padding:"6px 9px" }}><span style={{ fontSize:12.5, fontWeight:700, color:C.cyan }}>GTAS / SF-133 line 2190</span></td>
+                      <td style={{ padding:"6px 9px", textAlign:"right", fontFamily:"var(--font-mono)", fontWeight:800, color:C.cyan }}>{recon.fileA_A != null ? fmt(recon.fileA_A) : "—"}</td>
+                      <td style={{ padding:"6px 9px", textAlign:"right", fontFamily:"var(--font-mono)", fontWeight:800, color:C.cyan }}>{recon.fileA_B != null ? fmt(recon.fileA_B) : "—"}</td>
+                      <td style={{ padding:"6px 9px", textAlign:"right", color:C.muted }}>100%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div style={{ fontSize:14.5, color:C.textSub, lineHeight:1.75, marginTop:10, padding:"10px 13px",
+                            background:`${C.gold}0c`, border:`1px solid ${C.gold}44`, borderRadius:9 }}>
+                <b style={{ color:C.gold }}>ROOT CAUSE — why the four totals differ (this is data design, not an error):</b><br />
+                ① <b style={{ color:C.text }}>Two different dollar universes.</b> Sub-agency comes from USAspending&apos;s award endpoints —
+                it counts <b style={{ color:C.gold }}>prime award obligations only</b> (contracts + grants/loans). Budget function, federal
+                account, and object class come from GTAS <b style={{ color:C.green }}>File B account data</b> — ALL obligations, including
+                civilian/military pay, travel, interagency agreements, and classified lines that never become public awards. The award total
+                will always be a subset of the account total; the gap IS the non-award spend.
+                ② <b style={{ color:C.text }}>Top-100 truncation.</b> Each dimension API returns at most 100 lines; an agency with hundreds of
+                federal accounts loses the tail in that dimension, so the three account dimensions can differ from each other by a few percent.
+                The coverage column above quantifies exactly how much of the certified File A total each dimension captures.
+                ③ <b style={{ color:C.text }}>Negative lines.</b> Downward adjustments/de-obligations appear as negative rows in account
+                dimensions and net against the total. Fix applied: the TOTAL row and this cross-check are computed over ALL fetched lines and
+                anchored to File A line 2190 — the number every dimension must be read against.
+                {recon.fileA_B != null && recon.dims.some(d => d.measure.startsWith("award")) && (
+                  <> ④ <b style={{ color:C.text }}>The award-vs-account gap here:</b> {fmt((recon.dims.find(d => d.measure.startsWith("award"))?.totB ?? 0))} award $ vs {fmt(recon.fileA_B)} total obligations
+                  — ≈{Math.round((recon.dims.find(d => d.measure.startsWith("award"))?.totB ?? 0) / recon.fileA_B * 100)}% of {agency.abbrev} obligations flow through public awards.</>
+                )}
+              </div>
+            </div>
+          )}
         </>
       )}
     </Card>
