@@ -70,9 +70,7 @@ export default function DocAnalysis({ agency }: { agency: Agency }) {
     setSelDoc(d); setDocNote(null); setResults([])
     if (!d.analyzable) {
       setDocText(""); setDocLabel(d.name)
-      setDocNote(d.ext === ".pdf"
-        ? `${d.name} is a PDF (${fmtKB(d.bytes)}). Server-side PDF text extraction is not enabled — open it, copy the pages you need, and use 📋 Paste. The Fiscal Data JSONs carry the same audited statement values in analyzable form.`
-        : `${d.name} (${d.ext}, ${fmtKB(d.bytes)}) is not text-analyzable — export to CSV/JSON or paste the content.`)
+      setDocNote(`${d.name} (${d.ext}, ${fmtKB(d.bytes)}) exceeds the extraction size cap — split it or paste the content you need.`)
       return
     }
     setLoadingDoc(true)
@@ -226,7 +224,7 @@ export default function DocAnalysis({ agency }: { agency: Agency }) {
         {srcMode === "paste" && (
           <div style={{ marginBottom: 14 }}>
             <textarea value={pasted} onChange={e => setPasted(e.target.value)} rows={7}
-              placeholder="Paste budget exhibit rows, AFR pages, contract text, GTAS extracts…"
+              placeholder="Paste budget exhibit rows, contract text, GTAS extracts — or just pick a PDF/Excel/JSON/CSV from the library above…"
               style={{ width: "100%", background: C.card, color: C.text, border: `1px solid ${C.border}`, borderRadius: 10, padding: "10px 13px", fontSize: 15, fontFamily: "var(--font-mono)" }} />
             <button onClick={usePaste} disabled={pasted.trim().length < 50}
               style={{ marginTop: 8, padding: "8px 18px", borderRadius: 9, fontSize: 15.5, fontWeight: 700, cursor: "pointer",

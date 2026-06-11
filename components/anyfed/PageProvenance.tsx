@@ -49,6 +49,10 @@ function srcsFor(page: string, a: Agency): Src[] | null {
     case "ml":          return [...F, LIVE]
     case "analyst":     return [KB, ...F, FISCAL, CHAIN]
     case "docs":        return [DOCLIB, AFR(a), FISCAL, LAKE, CHAIN]
+    case "brief":       return [
+      P("🛢", "Neon DB · sec_news", "agency-tagged, impact-scored FM intelligence items"),
+      P("⚙️", ".github/workflows/intelligence-update.yml", "daily ~6 AM ET: GAO · CBO · OMB/EOP · per-agency Federal Register · GovExec · FedScoop → Gemini scoring → DB"),
+      CHAIN]
     case "about":       return [P("📖", "this repository", "the job aid documents the codebase, scripts, and data flows themselves")]
     default:            return null
   }

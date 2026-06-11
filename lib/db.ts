@@ -26,6 +26,10 @@ export async function bootstrapSchema() {
   await sql`
     ALTER TABLE sec_news ADD COLUMN IF NOT EXISTS published_at TEXT
   `
+  // Agency tags (comma-separated registry ids, e.g. "DOD,TREAS") — ANY FED scope
+  await sql`
+    ALTER TABLE sec_news ADD COLUMN IF NOT EXISTS agencies TEXT NOT NULL DEFAULT ''
+  `
 
   // Unique index on headline prevents duplicate entries from repeated cron runs
   await sql`
@@ -54,7 +58,7 @@ export async function bootstrapSchema() {
 /** Fetch latest N news items */
 export async function getLatestNews(limit = 20) {
   return sql`
-    SELECT id, cat, urg, headline, body, impact, src, url,
+    SELECT id, cat, urg, headline, body, impact, src, url, agencies,
            TO_CHAR(created_at AT TIME ZONE 'America/New_York', 'Mon DD, YYYY HH12:MI AM "ET"') AS fetched_at,
            TO_CHAR(created_at AT TIME ZONE 'America/New_York', 'Dy Mon DD HH12:MI AM "ET"') AS time,
            published_at
@@ -68,11 +72,14 @@ export async function getLatestNews(limit = 20) {
 export async function upsertNews(item: {
   cat: string; urg: string; headline: string
   body: string; impact: string; src: string; url?: string
+  agencies?: string; published_at?: string
 }) {
   await sql`
-    INSERT INTO sec_news (cat, urg, headline, body, impact, src, url)
+    INSERT INTO sec_news (cat, urg, headline, body, impact, src, url, agencies, published_at)
     VALUES (${item.cat}, ${item.urg}, ${item.headline},
-            ${item.body}, ${item.impact}, ${item.src}, ${item.url ?? null})
-    ON CONFLICT (headline) DO NOTHING
+            ${item.body}, ${item.impact}, ${item.src}, ${item.url ?? null},
+            ${item.agencies ?? ''}, ${item.published_at ?? null})
+    ON CONFLICT (headline) DO UPDATE SET agencies = EXCLUDED.agencies
+      WHERE sec_news.agencies = ''
   `
 }

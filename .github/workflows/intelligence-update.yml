@@ -1,16 +1,19 @@
 # .github/workflows/intelligence-update.yml
 # ─────────────────────────────────────────────────────────────────────────────
-# Runs every 4h on weekdays, 6 AM–6 PM ET, and on manual trigger.
-# Fetches SEC / OMB / Congress news, scores financial impact via Claude Haiku,
-# upserts into Neon DB, and triggers Vercel ISR revalidation.
+# Runs ONCE DAILY (~6 AM ET) and on manual trigger — volume-appropriate for
+# the ANY FED scope. Fetches federal FM news for every registry agency (DoD,
+# Treasury, DHS, HHS, VA, DOE, SEC, GSA, OPM + GAO/CBO/OMB government-wide),
+# tags each item by agency, scores FM impact via Gemini, upserts into Neon DB,
+# and triggers Vercel ISR revalidation for the Daily Brief page.
 # ─────────────────────────────────────────────────────────────────────────────
 
-name: SEC Intelligence Update
+name: AnyFed FM Intelligence Update
 
 on:
-  # Every 4 hours, Mon-Fri, 6 AM to 6 PM ET (10:00-22:00 UTC / EDT).
+  # Once daily at 10:00 UTC (6 AM EDT / 5 AM EST) — every day incl. weekends,
+  # since appropriations and audit news doesn't keep business hours.
   schedule:
-    - cron: '0 10,14,18,22 * * 1-5'
+    - cron: '0 10 * * *'
 
   # Manual trigger from GitHub Actions tab
   workflow_dispatch:

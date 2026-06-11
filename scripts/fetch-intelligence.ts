@@ -1,9 +1,11 @@
 #!/usr/bin/env ts-node
 /**
  * scripts/fetch-intelligence.ts
- * Run by GitHub Actions daily at 8 AM ET — fetches OSO-relevant news from
- * SEC, OMB, OIG, Federal Register, Congress, and federal procurement sources.
- * Scores each item's OSO financial management impact via LLM, pushes to Neon DB.
+ * Run by GitHub Actions DAILY — fetches federal financial-management news
+ * scoped to the ANY FED portal's agency registry (DoD, Treasury, DHS, HHS, VA,
+ * DOE, SEC, GSA, OPM + government-wide GAO/CBO/OMB sources), tags each item
+ * with the registry agencies it affects, scores FM impact via LLM, pushes to
+ * Neon DB. The Daily Brief page renders the result filtered by selected agency.
  */
 
 import https from 'https'
@@ -89,31 +91,35 @@ function parseFeed(xml: string): FeedItem[] {
 
 // ─── LLM impact scorer (Google Gemini Flash) ─────────────────────────────────
 async function scoreImpact(title: string, body: string, feedCat: string): Promise<{
-  cat: string; urg: 'HIGH' | 'MEDIUM' | 'LOW'; impact: string
+  cat: string; urg: 'HIGH' | 'MEDIUM' | 'LOW'; impact: string; agencies: string[]
 }> {
   const apiKey = process.env.GOOGLE_AI_API_KEY
-  if (!apiKey) return { cat: feedCat, urg: 'MEDIUM', impact: 'Review for OSO financial management relevance.' }
+  if (!apiKey) return { cat: feedCat, urg: 'MEDIUM', impact: 'Review for federal financial management relevance.', agencies: [] }
 
-  const systemPrompt = `You are a senior federal financial management analyst at the SEC Office of Support Operations (OSO),
-Business Management & Continuity Branch (BMCB). Your job is to assess how news items affect OSO's financial
-management operations: budget execution ($11M+ allotment), OIG compliance (OIG-582/584), GPC program,
-COR surveillance, FY2028 formulation, ADA compliance, and stakeholder reporting.
+  const systemPrompt = `You are a senior federal financial management analyst supporting CFO organizations across ALL federal agencies
+(the ANY FED portal: DoD, Treasury, DHS, HHS, VA, DOE, SEC, GSA, OPM, SSA, NASA, and the other CFO Act agencies).
+Assess each news item for its FEDERAL FINANCIAL MANAGEMENT impact: budget formulation/enactment/execution, appropriations law (ADA),
+accounting & audit readiness (USSGL, GTAS, AFR, material weaknesses), internal controls (A-123), payment integrity (PIIA),
+procurement/acquisition, and finance operations (travel, purchase/travel cards, payroll).
 
-Categories relevant to OSO:
-- "Congressional Action" — appropriations, hearings, FTE authorizations, markup actions
-- "Budget Action" — OMB guidance, DOGE efficiency targets, apportionment, reprogramming
-- "Procurement & Contracts" — FAR/GSAM changes, SAM.gov updates, T&M contract rules, COR policy
-- "OIG & Compliance" — OIG reports, audit findings, internal control guidance, FMFIA
-- "SEC Operations" — SEC organizational changes, IT systems, fee collections, workforce
-- "Federal Management" — GSA, OPM, OFPP, government-wide FM policy affecting OSO operations
+Categories:
+- "Congressional Action" — appropriations bills, CRs, markups, NDAA, hearings, rescissions
+- "Budget Action" — OMB circulars/guidance, apportionment, reprogramming, budget releases
+- "Procurement & Contracts" — FAR changes, SAM.gov, protest decisions, acquisition policy
+- "OIG & Audit" — GAO/OIG reports, audit findings, material weaknesses, FMFIA/FISCAM
+- "Financial Management" — Treasury/FIT guidance, USSGL/TFM updates, GTAS, payment integrity
+- "Agency Operations" — agency-specific reorganizations, systems, workforce with FM impact
 
-Urgency for OSO:
-- HIGH: Requires OSO action within 5 business days or creates direct ADA/OIG risk
-- MEDIUM: Affects OSO planning within 30 days; include in next brief to Brian Williams
-- LOW: Background awareness; monitor for future impact
+Urgency for a CFO shop:
+- HIGH: action needed within ~5 business days or direct ADA/audit risk
+- MEDIUM: affects planning within 30 days
+- LOW: background awareness
+
+Agency tagging: from this registry — DOD SEC FDIC TREAS HHS DHS DOE DOJ DOS DOT ED VA USDA DOC DOL HUD DOI EPA NASA GSA NSF OPM SBA SSA USAID NRC FCC CFTC —
+list the ids this item materially affects; use ["ALL"] for government-wide items.
 
 Respond ONLY with valid JSON:
-{"cat":"category from list above","urg":"HIGH|MEDIUM|LOW","impact":"one specific sentence on OSO financial management implication — cite dollar amounts, deadlines, or regulatory refs where relevant"}`
+{"cat":"category from list above","urg":"HIGH|MEDIUM|LOW","agencies":["DOD","TREAS"],"impact":"one specific sentence on the federal FM implication — cite dollar amounts, deadlines, or regulatory refs where relevant"}`
 
   const payload = JSON.stringify({
     system_instruction: { parts: [{ text: systemPrompt }] },
@@ -143,19 +149,20 @@ Respond ONLY with valid JSON:
           const jsonMatch = text.match(/\{[\s\S]*\}/)
           const result = jsonMatch ? JSON.parse(jsonMatch[0]) : {}
           resolve({
-            cat:    result.cat    ?? feedCat,
-            urg:    result.urg    ?? 'MEDIUM',
-            impact: result.impact ?? 'Monitor for OSO financial management impact.',
+            cat:      result.cat    ?? feedCat,
+            urg:      result.urg    ?? 'MEDIUM',
+            impact:   result.impact ?? 'Monitor for federal financial management impact.',
+            agencies: Array.isArray(result.agencies) ? result.agencies.map((a: unknown) => String(a).toUpperCase()) : [],
           })
         } catch {
-          resolve({ cat: feedCat, urg: 'LOW', impact: 'Unable to assess impact.' })
+          resolve({ cat: feedCat, urg: 'LOW', impact: 'Unable to assess impact.', agencies: [] })
         }
       })
     })
-    req.on('error', () => resolve({ cat: feedCat, urg: 'LOW', impact: 'Scoring unavailable.' }))
+    req.on('error', () => resolve({ cat: feedCat, urg: 'LOW', impact: 'Scoring unavailable.', agencies: [] }))
     req.setTimeout(20000, () => {
       req.destroy()
-      resolve({ cat: feedCat, urg: 'LOW', impact: 'Scoring timeout — review manually.' })
+      resolve({ cat: feedCat, urg: 'LOW', impact: 'Scoring timeout — review manually.', agencies: [] })
     })
     req.write(payload)
     req.end()
@@ -171,67 +178,58 @@ async function revalidateVercel(appUrl: string) {
   })
 }
 
-// ─── OSO-relevant RSS/Atom feeds ──────────────────────────────────────────────
-// All feeds verified reachable from GitHub Actions (Azure IPs).
-// sec.gov/rss and oig.sec.gov are Cloudflare-blocked from Azure — replaced.
-// federalnewsnetwork.com returns 0 items from Azure IPs — replaced.
-// "office-of-management-and-budget" slug returns unrelated content — fixed to EOP.
-const RSS_FEEDS = [
-  // Federal Register — SEC-specific rules and notices
-  {
-    url: 'https://www.federalregister.gov/api/v1/articles.rss?conditions%5Bagencies%5D%5B%5D=securities-and-exchange-commission&per_page=8',
-    src: 'Federal Register (SEC)',
-    defaultCat: 'SEC Operations',
-  },
-  // Federal Register — Executive Office of the President (OMB, OSTP, CEA)
-  // "executive-office-of-the-president" is the correct parent slug; "office-of-management-and-budget"
-  // alone returns unrelated Defense dept content from the FR API.
-  {
-    url: 'https://www.federalregister.gov/api/v1/articles.rss?conditions%5Bagencies%5D%5B%5D=executive-office-of-the-president&per_page=8',
-    src: 'Federal Register (EOP/OMB)',
-    defaultCat: 'Budget Action',
-  },
-  // CBO — budget analysis, appropriations scoring, fiscal projections
-  // Replaces sec.gov/rss (Cloudflare-blocked from GitHub Actions Azure IPs)
-  {
-    url: 'https://www.cbo.gov/rss/all.xml',
-    src: 'CBO',
-    defaultCat: 'Budget Action',
-  },
-  // GAO — federal financial management, internal controls, audit readiness
-  {
-    url: 'https://www.gao.gov/rss/reports.xml',
-    src: 'GAO',
-    defaultCat: 'OIG & Compliance',
-  },
-  // Federal Register — GSA procurement rules, SAM.gov updates, acquisition policy
-  // Replaces federalnewsnetwork.com/procurement (CDN blocks Azure IPs, 0 items)
-  {
-    url: 'https://www.federalregister.gov/api/v1/articles.rss?conditions%5Bagencies%5D%5B%5D=general-services-administration&per_page=6',
-    src: 'Federal Register (GSA)',
-    defaultCat: 'Procurement & Contracts',
-  },
-  // Federal Register — OPM workforce and pay/benefits policy
-  // Replaces oig.sec.gov (ENOTFOUND from GitHub Actions — DNS blocked)
-  {
-    url: 'https://www.federalregister.gov/api/v1/articles.rss?conditions%5Bagencies%5D%5B%5D=office-of-personnel-management&per_page=6',
-    src: 'Federal Register (OPM)',
-    defaultCat: 'Federal Management',
-  },
-  // GovExec — federal management, workforce, budget execution trends
-  {
-    url: 'https://www.govexec.com/rss/management/',
-    src: 'GovExec',
-    defaultCat: 'Federal Management',
-  },
-  // FedScoop — federal IT modernization and agency operations
-  // Replaces federalnewsnetwork.com/budget (CDN blocks Azure IPs, 0 items)
-  {
-    url: 'https://fedscoop.com/feed/',
-    src: 'FedScoop',
-    defaultCat: 'SEC Operations',
-  },
+// ─── ANY FED agency-scoped RSS/Atom feeds ────────────────────────────────────
+// One Federal Register feed per major registry agency + government-wide FM
+// sources (GAO, CBO, OMB/EOP, GovExec, FedScoop). All verified reachable from
+// GitHub Actions Azure IPs. defaultAgencies seeds tagging; the LLM refines it.
+const FR = (slug: string, per = 6) =>
+  `https://www.federalregister.gov/api/v1/articles.rss?conditions%5Bagencies%5D%5B%5D=${slug}&per_page=${per}`
+
+const RSS_FEEDS: { url: string; src: string; defaultCat: string; defaultAgencies: string[] }[] = [
+  // government-wide FM sources
+  { url: 'https://www.gao.gov/rss/reports.xml',  src: 'GAO',  defaultCat: 'OIG & Audit',  defaultAgencies: ['ALL'] },
+  { url: 'https://www.cbo.gov/rss/all.xml',      src: 'CBO',  defaultCat: 'Budget Action', defaultAgencies: ['ALL'] },
+  { url: FR('executive-office-of-the-president', 8), src: 'Federal Register (EOP/OMB)', defaultCat: 'Budget Action', defaultAgencies: ['ALL'] },
+  { url: 'https://www.govexec.com/rss/management/', src: 'GovExec', defaultCat: 'Federal Management', defaultAgencies: ['ALL'] },
+  { url: 'https://fedscoop.com/feed/',           src: 'FedScoop', defaultCat: 'Agency Operations', defaultAgencies: ['ALL'] },
+  // per-agency Federal Register feeds (registry-scoped)
+  { url: FR('defense-department', 8),            src: 'Federal Register (DoD)',      defaultCat: 'Agency Operations', defaultAgencies: ['DOD'] },
+  { url: FR('treasury-department'),              src: 'Federal Register (Treasury)', defaultCat: 'Financial Management', defaultAgencies: ['TREAS'] },
+  { url: FR('homeland-security-department'),     src: 'Federal Register (DHS)',      defaultCat: 'Agency Operations', defaultAgencies: ['DHS'] },
+  { url: FR('health-and-human-services-department'), src: 'Federal Register (HHS)',  defaultCat: 'Agency Operations', defaultAgencies: ['HHS'] },
+  { url: FR('veterans-affairs-department'),      src: 'Federal Register (VA)',       defaultCat: 'Agency Operations', defaultAgencies: ['VA'] },
+  { url: FR('energy-department'),                src: 'Federal Register (DOE)',      defaultCat: 'Agency Operations', defaultAgencies: ['DOE'] },
+  { url: FR('securities-and-exchange-commission'), src: 'Federal Register (SEC)',    defaultCat: 'Agency Operations', defaultAgencies: ['SEC'] },
+  { url: FR('general-services-administration'),  src: 'Federal Register (GSA)',      defaultCat: 'Procurement & Contracts', defaultAgencies: ['GSA', 'ALL'] },
+  { url: FR('office-of-personnel-management'),   src: 'Federal Register (OPM)',      defaultCat: 'Federal Management', defaultAgencies: ['OPM', 'ALL'] },
 ]
+
+// keyword fallback tagger (used alongside LLM tags)
+const AGENCY_KEYWORDS: [string, RegExp][] = [
+  ['DOD',   /\b(defense|pentagon|army|navy|air force|space force|marine|dod|military)\b/i],
+  ['TREAS', /\b(treasury|irs|fiscal service|mint\b)/i],
+  ['DHS',   /\b(homeland security|dhs|fema|cbp|tsa|coast guard|ice\b)/i],
+  ['HHS',   /\b(health and human services|hhs|medicare|medicaid|cms|nih|cdc|fda)\b/i],
+  ['VA',    /\b(veterans affairs|\bva\b|veterans health|vba)\b/i],
+  ['DOE',   /\b(department of energy|nnsa|national lab)/i],
+  ['SEC',   /\b(securities and exchange|sec\.gov)\b/i],
+  ['ED',    /\b(department of education|student aid|fafsa)\b/i],
+  ['SSA',   /\b(social security)\b/i],
+  ['NASA',  /\bnasa\b/i],
+  ['DOJ',   /\b(justice department|department of justice|fbi)\b/i],
+  ['DOT',   /\b(transportation department|faa|fhwa)\b/i],
+  ['GSA',   /\b(gsa|general services|sam\.gov|smartpay)\b/i],
+  ['OPM',   /\b(opm|office of personnel|federal employees? health)\b/i],
+  ['EPA',   /\bepa\b|environmental protection/i],
+  ['SBA',   /\bsmall business administration|\bsba\b/i],
+  ['USDA',  /\b(agriculture department|usda)\b/i],
+]
+function tagAgencies(text: string, seed: string[], llm: string[]): string {
+  const out = new Set<string>(seed.concat(llm))
+  for (const [id, re] of AGENCY_KEYWORDS) if (re.test(text)) out.add(id)
+  if (out.size > 1) out.delete('ALL')      // specific tags beat the wildcard
+  return Array.from(out).join(',')
+}
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
 async function main() {
@@ -268,6 +266,7 @@ async function main() {
         if (!item.title || item.title.length < 5) continue
         try {
           const scored = await scoreImpact(item.title, item.description, feed.defaultCat)
+          const agencies = tagAgencies(`${item.title} ${item.description}`, feed.defaultAgencies, scored.agencies)
           await upsertNews({
             cat:          scored.cat,
             urg:          scored.urg,
@@ -275,11 +274,12 @@ async function main() {
             body:         item.description.slice(0, 800),
             impact:       scored.impact,
             src:          feed.src,
-            url:          item.link || null,
+            url:          item.link || undefined,
+            agencies,
             published_at: item.published_at || undefined,
           })
           totalInserted++
-          console.log(`  ✓ [${scored.urg}] [${scored.cat}] ${item.title.slice(0, 70)}`)
+          console.log(`  ✓ [${scored.urg}] [${scored.cat}] [${agencies}] ${item.title.slice(0, 70)}`)
         } catch (itemErr) {
           console.error(`  ✗ Failed item "${item.title.slice(0,50)}":`, itemErr)
         }
