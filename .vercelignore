@@ -5,3 +5,11 @@ sourcedata/USAspending/custom-award-data
 sourcedata/USAspending/warehouse
 sourcedata/Department of Defense/USASPENDING
 _handoff
+
+# function-size protection (Vercel 300MB cap) — bulk stays local-only
+sourcedata/AFR/**/*.pdf
+sourcedata/Department of Defense
+sourcedata/FEDJOBS
+sourcedata/FiscalData/financial-report/statement_net_cost
+sourcedata/FiscalData/financial-report/balance_sheets
+sourcedata/FiscalData/financial-report/mts_outlays_by_agency_monthly

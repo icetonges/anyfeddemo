@@ -1,6 +1,20 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  // Never bundle local source data into serverless functions (Vercel 300MB cap).
+  // /api/documents reads sourcedata/ at runtime when running locally; on Vercel
+  // it gracefully reports the bulk library as local-only.
+  outputFileTracingExcludes: {
+    '*': [
+      './sourcedata/AFR/**',
+      './sourcedata/Department of Defense/**',
+      './sourcedata/USAspending/**',
+      './sourcedata/FEDJOBS/**',
+      './sourcedata/FiscalData/financial-report/statement_net_cost/**',
+      './sourcedata/FiscalData/financial-report/balance_sheets/**',
+      './sourcedata/FiscalData/financial-report/mts_outlays_by_agency_monthly/**',
+    ],
+  },
   // Allow server-side environment variables to flow through
   env: {
     ANTHROPIC_API_KEY:    process.env.ANTHROPIC_API_KEY,
