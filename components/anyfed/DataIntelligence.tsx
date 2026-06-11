@@ -350,6 +350,16 @@ function CompareWorkspace({ agency, cmp, setCmp, fys }:
           </span>
         )}
       </div>
+      {cmp.dim === "subAgency" && recon?.fileA_B != null && recon.fileA_B > 0 && (
+        <div style={{ marginBottom:12, padding:"10px 13px", background:`${C.gold}10`, border:`1px solid ${C.gold}55`, borderLeft:`4px solid ${C.gold}`, borderRadius:9, fontSize:15, color:C.textSub, lineHeight:1.65 }}>
+          <b style={{ color:C.gold }}>⚠️ AWARD-DOLLAR VIEW — this is the root cause of the smaller total.</b> Sub-agency is the ONLY dimension
+          built from USAspending&apos;s <b style={{ color:C.gold }}>award</b> endpoints: prime contract + assistance obligations only
+          (≈{Math.round(((recon.dims.find(d => d.k === "subAgency")?.totB ?? 0) / recon.fileA_B) * 100)}% of FY{cmp.fyB} total obligations).
+          Civilian/military pay, benefits, travel, intragovernmental agreements, and classified spend are obligations that never become public
+          award transactions — so they exist in File A/B (the other three dimensions) but not here. The reconciliation rows at the bottom of the
+          table restore that difference explicitly: <b style={{ color:C.text }}>no dollars are lost</b>, the view now ties to the certified File A total.
+        </div>
+      )}
       {(a.loading || b.loading) && <Spinner label={`Fetching FY${cmp.fyA} and FY${cmp.fyB} ${dimLabel.toLowerCase()} detail…`} />}
       {res && !a.loading && !b.loading && (
         <>
@@ -379,6 +389,27 @@ function CompareWorkspace({ agency, cmp, setCmp, fys }:
                   <td style={{ padding:"8px 10px", borderTop:`2px solid ${C.borderAccent}`, textAlign:"right", fontFamily:"var(--font-mono)", fontWeight:800, color: totDelta >= 0 ? C.green : C.red }}>{totDelta >= 0 ? "+" : ""}{fmt(totDelta)}</td>
                   <td style={{ padding:"8px 10px", borderTop:`2px solid ${C.borderAccent}`, textAlign:"right", fontFamily:"var(--font-mono)", color:C.muted }}>{res.totalA ? `${totDelta >= 0 ? "+" : ""}${Math.round(totDelta / Math.abs(res.totalA) * 1000) / 10}%` : "—"}</td>
                 </tr>
+                {cmp.dim === "subAgency" && recon && recon.fileA_A != null && recon.fileA_B != null && (() => {
+                  const nawA = recon.fileA_A - res.totalA, nawB = recon.fileA_B - res.totalB, nd = nawB - nawA
+                  const cell = { padding:"7px 10px", borderBottom:`1px solid ${C.border}` }
+                  const mono = { fontFamily:"var(--font-mono)" as const, textAlign:"right" as const }
+                  return (<>
+                    <tr style={{ background:`${C.gold}0c` }}>
+                      <td style={{ ...cell, color:C.gold, fontWeight:700 }}>➕ Non-award obligations (pay · benefits · travel · intragov · classified) — not in award feeds</td>
+                      <td style={{ ...cell, ...mono, color:C.gold }}>{fmt(nawA)}</td>
+                      <td style={{ ...cell, ...mono, color:C.gold }}>{fmt(nawB)}</td>
+                      <td style={{ ...cell, ...mono, fontWeight:700, color: nd >= 0 ? C.green : C.red }}>{nd >= 0 ? "+" : ""}{fmt(nd)}</td>
+                      <td style={{ ...cell, ...mono, color:C.muted }}>{nawA ? `${nd >= 0 ? "+" : ""}${Math.round(nd / Math.abs(nawA) * 1000) / 10}%` : "—"}</td>
+                    </tr>
+                    <tr style={{ background:`${C.cyan}10` }}>
+                      <td style={{ padding:"8px 10px", borderTop:`2px solid ${C.cyan}`, color:C.cyan, fontWeight:800 }}>⚓ TOTAL OBLIGATIONS — ties to File A line 2190 (certified)</td>
+                      <td style={{ padding:"8px 10px", borderTop:`2px solid ${C.cyan}`, ...mono, fontWeight:800, color:C.cyan }}>{fmt(recon.fileA_A)}</td>
+                      <td style={{ padding:"8px 10px", borderTop:`2px solid ${C.cyan}`, ...mono, fontWeight:800, color:C.cyan }}>{fmt(recon.fileA_B)}</td>
+                      <td style={{ padding:"8px 10px", borderTop:`2px solid ${C.cyan}`, ...mono, fontWeight:800, color: recon.fileA_B - recon.fileA_A >= 0 ? C.green : C.red }}>{recon.fileA_B - recon.fileA_A >= 0 ? "+" : ""}{fmt(recon.fileA_B - recon.fileA_A)}</td>
+                      <td style={{ padding:"8px 10px", borderTop:`2px solid ${C.cyan}`, ...mono, color:C.muted }}>{recon.fileA_A ? `${Math.round((recon.fileA_B - recon.fileA_A) / Math.abs(recon.fileA_A) * 1000) / 10}%` : "—"}</td>
+                    </tr>
+                  </>)
+                })()}
               </tbody>
             </table>
           </div>

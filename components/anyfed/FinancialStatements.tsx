@@ -8,6 +8,7 @@ import { useEffect, useMemo, useState } from "react"
 import { useTheme, Card, Badge, Spinner } from "./ui"
 import { useAgencyData, LiveDetail } from "./useAgencyData"
 import type { Agency } from "@/lib/agencies"
+import { getUssglStatement, exportRows } from "@/lib/ussgl-statements"
 
 interface SncRow {
   stmt_fiscal_year: string; restmt_flag: string; agency_nm: string
@@ -38,6 +39,7 @@ const TABS: { id: Stmt; icon: string; label: string; status: string; statusColor
 export default function FinancialStatements({ agency }: { agency: Agency }) {
   const C = useTheme()
   const [tab, setTab] = useState<Stmt>("sbr")
+  const [ussglOpen, setUssglOpen] = useState(true)
   const now = new Date()
   const curFY = now.getMonth() >= 9 ? now.getFullYear() + 1 : now.getFullYear()
   const [fy, setFy] = useState(curFY - 1)
@@ -56,6 +58,38 @@ export default function FinancialStatements({ agency }: { agency: Agency }) {
     snc.data.rows.filter(r => r.agency_nm === frName).sort((a, b) => b.stmt_fiscal_year.localeCompare(a.stmt_fiscal_year)).slice(0, 5),
     [snc.data, frName])
   const colHL = (c: string) => ({ color: c, fontFamily: "var(--font-mono)" as const })
+
+  /* ── runtime values for the USSGL line-detail view ── */
+  const vals: Record<string, string | null> = useMemo(() => {
+    const a = cur.data?.years.find(x => x.fy === `FY${fy}`)
+    const out = cur.data ? cur.data.dims.federalAccount.nodes.reduce((s2, n) => s2 + (n.outlays ?? 0), 0) : null
+    const s0 = mySnc[0]
+    return {
+      "sbr.1910": a ? fmtFull(a.resources) : null,
+      "sbr.2190": a ? fmtFull(a.obligated) : null,
+      "sbr.2490": a ? fmtFull(a.resources - a.obligated) : null,
+      "sbr.2500": a ? `${fmtFull(a.resources)} ✓ ties to 1910` : null,
+      "sbr.4190": out ? fmtFull(out) : null,
+      "snc.gross": s0 ? `$${f(s0.gross_cost_bil_amt).toFixed(1)}B (FY${s0.stmt_fiscal_year}, audited)` : null,
+      "snc.earned": s0 ? `($${f(s0.earned_revenue_bil_amt).toFixed(1)}B)` : null,
+      "snc.assump": s0 ? `$${f(s0.change_assumptions_bil_amt).toFixed(1)}B` : null,
+      "snc.net": s0 ? `$${f(s0.net_cost_bil_amt).toFixed(1)}B (audited)` : null,
+    }
+  }, [cur.data, fy, mySnc])
+
+  const dl = (name: string, content: string, type: string) => {
+    const blob = new Blob([content], { type })
+    const el = document.createElement("a")
+    el.href = URL.createObjectURL(blob); el.download = name; el.click(); URL.revokeObjectURL(el.href)
+  }
+  const exportJson = () => dl(`${agency.id}_statements_ussgl_FY${fy}.json`,
+    JSON.stringify({ agency: agency.id, fy: `FY${fy}`, generated: new Date().toISOString(), unitNote: "SBR values $ whole (GTAS); SNC values $B (audited FR)", rows: exportRows(vals) }, null, 2), "application/json")
+  const exportCsv = () => {
+    const rows = exportRows(vals)
+    const esc = (v: unknown) => `"${String(v ?? "").replace(/"/g, '""')}"`
+    const head = Object.keys(rows[0]).join(",")
+    dl(`${agency.id}_statements_ussgl_FY${fy}.csv`, [head, ...rows.map(r => Object.values(r).map(esc).join(","))].join("\n"), "text/csv")
+  }
 
   /* ── SBR model (two comparative years from GTAS) ── */
   const sbr = useMemo(() => {
@@ -254,6 +288,54 @@ export default function FinancialStatements({ agency }: { agency: Agency }) {
           ))}
         </div>
       )}
+
+      {/* ── USSGL LINE-BY-LINE FULL DETAIL ── */}
+      <div style={{ marginTop: 16, border: `1px solid ${C.borderAccent}`, borderRadius: 12, overflow: "hidden" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", background: `${C.blue}10`, flexWrap: "wrap" }}>
+          <span style={{ fontSize: 16, fontWeight: 800, color: C.text }}>🧾 USSGL line detail — {getUssglStatement(tab).title}</span>
+          <Badge color={C.cyan}>{getUssglStatement(tab).basis}</Badge>
+          <div style={{ marginLeft: "auto", display: "flex", gap: 8 }}>
+            <button onClick={exportJson} style={{ padding: "6px 12px", borderRadius: 8, fontSize: 13.5, fontWeight: 700, cursor: "pointer", border: `1px solid ${C.border}`, background: C.card, color: C.cyan }}>⬇ JSON (all 4 stmts)</button>
+            <button onClick={exportCsv} style={{ padding: "6px 12px", borderRadius: 8, fontSize: 13.5, fontWeight: 700, cursor: "pointer", border: `1px solid ${C.border}`, background: C.card, color: C.cyan }}>⬇ CSV</button>
+            <button onClick={() => setUssglOpen(o => !o)} style={{ padding: "6px 12px", borderRadius: 8, fontSize: 13.5, fontWeight: 700, cursor: "pointer", border: `1px solid ${C.border}`, background: C.card, color: C.textSub }}>{ussglOpen ? "▴ collapse" : "▾ expand"}</button>
+          </div>
+        </div>
+        {ussglOpen && (
+          <div style={{ overflowX: "auto" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13, minWidth: 1080 }}>
+              <thead><tr style={{ color: C.muted, textAlign: "left", background: C.surface }}>
+                {["Line", "Statement line", "USSGL accounts (TFM crosswalk)", "NB", `Value (FY${fy})`, "Audit assertion", "Key supporting documentation", "Data source / portal status"].map(h =>
+                  <th key={h} style={{ padding: "7px 9px", borderBottom: `1px solid ${C.border}`, position: "sticky", top: 0, background: C.surface }}>{h}</th>)}
+              </tr></thead>
+              <tbody>
+                {getUssglStatement(tab).lines.map((l, i) => l.kind === "section" ? (
+                  <tr key={i}><td colSpan={8} style={{ padding: "8px 9px", background: `${C.purple}10`, color: C.purple, fontWeight: 800, fontSize: 12.5, letterSpacing: "0.06em", borderBottom: `1px solid ${C.border}` }}>{l.label}</td></tr>
+                ) : (
+                  <tr key={i} style={{ background: l.kind === "total" ? `${C.blue}0d` : "transparent" }}>
+                    <td style={{ padding: "6px 9px", borderBottom: `1px solid ${C.border}`, fontFamily: "var(--font-mono)", color: C.gold, fontWeight: 700, whiteSpace: "nowrap" }}>{l.line}</td>
+                    <td style={{ padding: "6px 9px", borderBottom: `1px solid ${C.border}`, color: C.text, fontWeight: l.kind ? 800 : 500, minWidth: 190 }}>{l.label}</td>
+                    <td style={{ padding: "6px 9px", borderBottom: `1px solid ${C.border}`, fontFamily: "var(--font-mono)", fontSize: 11.5, color: C.cyan, minWidth: 200 }}>{l.ussgl}</td>
+                    <td style={{ padding: "6px 9px", borderBottom: `1px solid ${C.border}`, color: C.muted, fontFamily: "var(--font-mono)" }}>{l.normal}</td>
+                    <td style={{ padding: "6px 9px", borderBottom: `1px solid ${C.border}`, fontFamily: "var(--font-mono)", fontSize: 12.5, fontWeight: 700, color: l.valueKey && vals[l.valueKey] ? C.green : C.muted, whiteSpace: "nowrap" }}>{l.valueKey ? (vals[l.valueKey] ?? "loading…") : "—"}</td>
+                    <td style={{ padding: "6px 9px", borderBottom: `1px solid ${C.border}`, fontSize: 12, color: /MW|UoT/.test(l.assertion) ? C.orange : C.textSub, minWidth: 140 }}>{l.assertion}</td>
+                    <td style={{ padding: "6px 9px", borderBottom: `1px solid ${C.border}`, fontSize: 12, color: C.textSub, minWidth: 200 }}>{l.ksd}</td>
+                    <td style={{ padding: "6px 9px", borderBottom: `1px solid ${C.border}`, fontSize: 12, color: l.source.startsWith("✅") ? C.green : C.muted, minWidth: 180 }}>{l.source}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+        {ussglOpen && (
+          <div style={{ padding: "9px 14px", fontSize: 13, color: C.textSub, lineHeight: 1.65, borderTop: `1px solid ${C.border}` }}>
+            <b style={{ color: C.cyan }}>How to use this:</b> ⬇ JSON/CSV exports all four statements line-by-line with USSGL accounts, assertions,
+            KSD and current values — feed it to 📑 Document Analysis (upload) for AI review, to the AI/ML Workbench as a feature dictionary, or use
+            it as the audit PBC skeleton (each line = one assertion + its KSD). Lines marked <b style={{ color: C.green }}>✅</b> are populated live;
+            the rest name the exact dataset that fills them (File A by-line is the single biggest unlock — Acquire → Custom Account Data).
+            Account lists are representative TFM crosswalk families — verify against the current-year USSGL Supplement Section V before audit use.
+          </div>
+        )}
+      </div>
 
       <div style={{ fontSize: 13.5, color: C.muted, marginTop: 12, lineHeight: 1.6, padding: "9px 12px", background: `${C.purple}0c`, border: `1px solid ${C.purple}33`, borderRadius: 9 }}>
         <b style={{ color: C.purple }}>Audit context:</b> these four statements (plus custodial/social-insurance where applicable) are what the
