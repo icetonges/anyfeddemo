@@ -31,11 +31,11 @@ export default function NewsBrief({ agency }: { agency: Agency }) {
   const [briefing, setBriefing] = useState(false)
 
   useEffect(() => {
-    fetch("/api/news-feed").then(r => r.json())
+    setNews(null); setBrief(null)
+    fetch(`/api/news-feed?agency=${agency.id}`).then(r => r.json())
       .then(j => { setNews(j.news ?? []); setSource(j.source ?? "") })
       .catch(e => setErr(String(e)))
-  }, [])
-  useEffect(() => { setBrief(null) }, [agency.id])
+  }, [agency.id])
 
   const tagsOf = (n: NewsItem) => (n.agencies ?? "").split(",").map(t => t.trim()).filter(Boolean)
   const relevant = (n: NewsItem) => {
@@ -126,7 +126,7 @@ export default function NewsBrief({ agency }: { agency: Agency }) {
             {cats.map(c2 => <option key={c2} value={c2}>{c2 === "ALL" ? "All categories" : c2}</option>)}
           </select>
           <span style={{ marginLeft: "auto", display: "flex", gap: 8, alignItems: "center" }}>
-            <Badge color={source === "db" ? C.green : C.gold}>{source === "db" ? "● LIVE — Neon DB" : "◌ SAMPLE — DB not yet populated (Action seeds it daily)"}</Badge>
+            <Badge color={source === "db" ? C.green : C.gold}>{source === "db" ? "● LIVE — Neon DB" : `◌ SAMPLE for ${agency.abbrev} — DB not yet populated (the daily Action seeds it)`}</Badge>
             <Badge color={C.cyan}>{filtered.length} items</Badge>
           </span>
         </div>

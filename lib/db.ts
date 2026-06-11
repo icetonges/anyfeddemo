@@ -104,6 +104,21 @@ export async function bootstrapKb() {
     )
   `
   await sql`CREATE UNIQUE INDEX IF NOT EXISTS idx_kb_hash ON kb_items(hash)`
+  // soft-delete target: full row preserved with a deletion timestamp
+  await sql`
+    CREATE TABLE IF NOT EXISTS kb_items_deleted (
+      id          INTEGER PRIMARY KEY,
+      kind        VARCHAR(30)  NOT NULL,
+      agency      VARCHAR(10)  NOT NULL,
+      title       TEXT         NOT NULL,
+      content     TEXT         NOT NULL,
+      model       VARCHAR(120) NOT NULL DEFAULT '',
+      hash        VARCHAR(64)  NOT NULL,
+      embedding   TEXT,
+      created_at  TIMESTAMPTZ  NOT NULL,
+      deleted_at  TIMESTAMPTZ  NOT NULL DEFAULT NOW()
+    )
+  `
   await sql`CREATE INDEX IF NOT EXISTS idx_kb_created ON kb_items(created_at DESC)`
 }
 
@@ -169,4 +184,17 @@ export async function kbLatestDigest() {
     FROM kb_items WHERE kind = 'agent-digest' ORDER BY created_at DESC LIMIT 1
   `
   return rows[0] ?? null
+}
+
+/** soft delete: move the row into kb_items_deleted, then remove it */
+export async function kbDelete(id: number): Promise<boolean> {
+  const moved = await sql`
+    INSERT INTO kb_items_deleted (id, kind, agency, title, content, model, hash, embedding, created_at)
+    SELECT id, kind, agency, title, content, model, hash, embedding, created_at
+    FROM kb_items WHERE id = ${id}
+    ON CONFLICT (id) DO NOTHING
+    RETURNING id
+  `
+  await sql`DELETE FROM kb_items WHERE id = ${id}`
+  return moved.length > 0
 }

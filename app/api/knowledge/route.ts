@@ -85,6 +85,14 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, id, deduped: id === null, embedded: !!emb })
   }
 
+  // ── delete: move to kb_items_deleted, drop from the live store ─────────
+  if (action === 'delete') {
+    const id = Number(body.id)
+    if (!id) return NextResponse.json({ error: 'id required' }, { status: 400 })
+    const ok = await d.kbDelete(id)
+    return NextResponse.json({ ok, id, moved: ok ? 'kb_items_deleted' : 'not found (already deleted?)' })
+  }
+
   // ── search: semantic retrieval over the whole store ────────────────────
   if (action === 'search') {
     const q = String(body.query ?? '').trim()

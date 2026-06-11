@@ -74,6 +74,24 @@ export default function KnowledgeBase({ agency }: { agency: Agency }) {
     finally { setSearching(false) }
   }
 
+  const [deleting, setDeleting] = useState<number | null>(null)
+  const deleteItem = async (id: number, title: string) => {
+    if (deleting) return
+    if (!window.confirm(`Delete [#${id}] \u201c${title.slice(0, 80)}\u201d?\nIt moves to the deleted table in the back end (kb_items_deleted) and disappears from this page.`)) return
+    setDeleting(id)
+    try {
+      const r = await fetch("/api/knowledge", { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "delete", id }) })
+      const j = await r.json()
+      if (!r.ok || j.error) throw new Error(j.error ?? `HTTP ${r.status}`)
+      setItems(it => (it ?? []).filter(x => x.id !== id))
+      setHits(h => h ? h.filter(x => x.id !== id) : h)
+      setOpen(o => ({ ...o, [id]: undefined }))
+      if (digest?.id === id) setDigest(null)
+    } catch (e) { setNote(`Delete failed: ${e instanceof Error ? e.message : e}`) }
+    finally { setDeleting(null) }
+  }
+
   const fetchItem = async (id: number) => {
     if (open[id]) { setOpen(o => ({ ...o, [id]: undefined })); return }
     setOpen(o => ({ ...o, [id]: "loading" }))
@@ -233,6 +251,9 @@ export default function KnowledgeBase({ agency }: { agency: Agency }) {
                     <span style={{ fontSize: 12.5, color: C.muted, fontFamily: "var(--font-mono)" }}>#{i.id} · {i.time} · {(i.chars / 1000).toFixed(1)}k chars{i.model ? ` · ${i.model}` : ""}</span>
                     <button onClick={() => navigator.clipboard?.writeText(linkOf(i.id))} title="copy retrieval link"
                       style={{ padding: "4px 10px", borderRadius: 7, fontSize: 12.5, fontWeight: 700, cursor: "pointer", border: `1px solid ${C.border}`, background: C.bg, color: C.cyan }}>⧉ link</button>
+                    <button onClick={() => deleteItem(i.id, i.title)} disabled={deleting === i.id} title="move to deleted table"
+                      style={{ padding: "4px 10px", borderRadius: 7, fontSize: 12.5, fontWeight: 700, cursor: "pointer", border: `1px solid ${C.red}55`, background: `${C.red}10`, color: C.red }}>
+                      {deleting === i.id ? "…" : "🗑"}</button>
                   </div>
                   {!opened && <div style={{ fontSize: 13.5, color: C.muted, marginTop: 4, lineHeight: 1.5 }}>{i.preview}…</div>}
                   {opened === "loading" && <div style={{ fontSize: 13.5, color: C.muted, marginTop: 6 }}>loading…</div>}

@@ -6,82 +6,109 @@ import { NextRequest, NextResponse } from 'next/server'
 export const runtime = 'nodejs'
 export const revalidate = 3600   // cache 1 hour
 
-// Seed data — returned when DB is not configured or empty.
-// These are illustrative scenarios; no url field is set because there is no
-// real source article to link to. "View Source" only appears on live DB items
-// that carry an actual article URL extracted from the RSS feed.
-// Covers all 6 OSO-relevant categories, newest-first.
-const SEED_NEWS = [
-  // Congressional Action
-  { id:1, cat:'Congressional Action', urg:'HIGH',
-    headline:'Senate FSGG Subcommittee Markup Scheduled — June 2026',
-    body:"Senate Appropriations FSGG Subcommittee scheduled markup of FY2027 spending bills. SEC's $1.908B request (11% below FY2026 enacted) faces conference process before Oct 1 deadline. Potential for CR if no agreement reached.",
-    impact:"FY2027 enacted level uncertain — OSO planning must model ±10% variance; CR scenario requires 1/12 allotment planning.",
-    time:'2h ago', src:'Senate Appropriations' },
-  { id:2, cat:'Congressional Action', urg:'MEDIUM',
-    headline:'House FSS Subcommittee Requests FTE Reduction Justification',
-    body:'House Financial Services Appropriations Subcommittee hearing questioned reduction from 4,542 to 4,177 FTE; mission-area vacancy analysis requested before markup.',
-    impact:"Potential FTE add-back in final appropriations — monitor markup; OSO headcount and OC 11.0 allotment may shift.",
-    time:'1d ago', src:'House Appropriations' },
-  // Budget Action
-  { id:3, cat:'Budget Action', urg:'HIGH',
-    headline:'OMB A-11 FY2028 Update: DOGE 10% Efficiency Targets Mandatory',
-    body:'OMB revised Circular A-11 supplemental guidance requiring all agencies to identify 10% operational savings for FY2028 submissions. OSO efficiency plans due to OMB July 2026.',
-    impact:"OSO must begin FY2028 formulation under enhanced efficiency framework — baseline assessments and office-level targets due immediately.",
-    time:'6h ago', src:'OMB' },
-  { id:4, cat:'Budget Action', urg:'MEDIUM',
-    headline:'Section 31 Collections Q2 FY2026: 8% Above Projection',
-    body:'Equity market volume drove Section 31 transaction fee collections 8% above projection in Q2 FY2026, reinforcing the SEC deficit-neutral posture.',
-    impact:"Reserve fund on track — supports $145M anticipated carryover to FY2027; OSO FY2027 allotment baseline stable.",
-    time:'1d ago', src:'SEC OFM' },
-  // OIG & Compliance
-  { id:5, cat:'OIG & Compliance', urg:'HIGH',
-    headline:'OIG-582 T&M Corrective Action Deadline Approaching — Sep 2026',
-    body:'SEC OIG Report 582 three open recommendations (quarterly T&M dashboard, contract type matrix, COR surveillance SOPs) remain open. OSO BMCB responsible for all three. Target: September 30, 2026.',
-    impact:"COR-001 (Patriot Security) surveillance log OVERDUE — immediate submission required to avoid escalation.",
-    time:'4h ago', src:'SEC OIG' },
-  { id:6, cat:'OIG & Compliance', urg:'MEDIUM',
-    headline:'GAO: Federal Agencies Warned on Year-End Obligation Spike Risks',
-    body:'GAO report flags year-end spending surge patterns at multiple agencies. Recommends agencies establish September obligation freeze procedures and document bona fide need certifications.',
-    impact:"OSO should document September obligation freeze memo per SOP-003 and ensure all September actions meet bona fide need rule.",
-    time:'2d ago', src:'GAO' },
-  // Procurement & Contracts
-  { id:7, cat:'Procurement & Contracts', urg:'MEDIUM',
-    headline:'OFPP Updates COR Surveillance Requirements for T&M Contracts',
-    body:'Office of Federal Procurement Policy issued guidance strengthening COR surveillance log requirements for time-and-materials contracts. Monthly documentation now required for all T&M vehicles above $150K.',
-    impact:"Directly strengthens OIG-582 corrective action framework — OSO COR surveillance SOP update required; M. Johnson Patriot Security log compliance critical.",
-    time:'3h ago', src:'OFPP/OMB' },
-  { id:8, cat:'Procurement & Contracts', urg:'LOW',
-    headline:'SAM.gov Post-FPDS Migration: New Contract Search Interface Live',
-    body:'GSA confirmed full transition from FPDS.gov to SAM.gov Contract Awards Management portal is complete. Legacy FPDS.gov decommissioned February 24, 2026. All contract data now in SAM.gov.',
-    impact:"OSO FM Specialist must use SAM.gov for all vendor SAM registration checks and contract award data — FPDS access no longer available.",
-    time:'5d ago', src:'GSA / SAM.gov' },
-  // SEC Operations
-  { id:9, cat:'SEC Operations', urg:'LOW',
-    headline:'EDGAR Phase 3 Cloud Migration Complete — 34% Per-Filing Cost Reduction',
-    body:"SEC's EDGAR system completed Phase 3 of cloud migration. Per-filing processing costs fell 34%, system uptime reached 99.97%. IT modernization saves estimated $8M annually.",
-    impact:"Positive IT budget signal for FY2027 equipment request ($30.4M); EDGAR savings may support OSO tech modernization requests.",
-    time:'2d ago', src:'SEC IT Division' },
-  { id:10, cat:'SEC Operations', urg:'MEDIUM',
-    headline:'Project Crypto Framework Released — Significant New Examination Workload',
-    body:"Chairman Atkins directed release of digital asset classification framework for public comment (60-day period). New examination workload anticipated for Trading & Markets division.",
-    impact:"FTE pressure in FY2027 vs. reduced 4,177 cap — OSO OSBO-PSE physical security demand may increase with expanded examination staffing.",
-    time:'4h ago', src:'SEC.gov' },
-  // Federal Management
-  { id:11, cat:'Federal Management', urg:'MEDIUM',
-    headline:'GSA SmartPay 3: New Dispute Resolution Timeline Effective FY2027',
-    body:'GSA updated SmartPay 3 program rules reducing cardholder dispute resolution window from 90 to 60 days. All agency GPC programs must update internal procedures before October 1.',
-    impact:"OSO GPC program requires SOP-004 update — notify all four OSO cardholders (Mallon, Printis, Hochberg, Taylor) of revised dispute timeline.",
-    time:'3d ago', src:'GSA SmartPay' },
-  { id:12, cat:'Federal Management', urg:'LOW',
-    headline:'OPM FY2027 Federal Benefits Open Season Dates Announced',
-    body:'OPM announced Federal Benefits Open Season dates: November 10 – December 8, 2026. All federal employees may change health, dental, vision, and FSA elections during this period.',
-    impact:"OSO payroll OC 12.0 benefits costs may shift in FY2027 Q2 based on employee enrollment changes — flag to OHR for OSO headcount planning.",
-    time:'1d ago', src:'OPM' },
-]
+// ── Agency-aware seed data ───────────────────────────────────────────────────
+// Returned when the DB is not configured or empty, so the Daily Brief always
+// demonstrates with content for the SELECTED agency — never another agency's.
+// Live items (GitHub Action → Neon) replace these automatically.
+import { getAgency } from '@/lib/agencies'
 
-export async function GET() {
-  // Try Neon DB first; fall back to seed data gracefully
+interface SeedItem {
+  id: number; cat: string; urg: string; headline: string; body: string
+  impact: string; time: string; src: string; agencies: string
+}
+
+function seedFor(agencyId: string): SeedItem[] {
+  const a = getAgency(agencyId)
+  const N = a.name, AB = a.abbrev
+
+  // agency-specific decks for the deep-profile agencies
+  if (a.id === 'DOD') return [
+    { id: 1, cat: 'Congressional Action', urg: 'HIGH', src: 'HASC / SASC', time: '3h ago', agencies: 'DOD',
+      headline: 'FY2027 NDAA markup underway — authorization conference timing at risk',
+      body: 'HASC completed subcommittee marks; SASC schedule slips toward late summer. Authorization-before-appropriation sequencing is again in question for FY2027 new starts.',
+      impact: 'New-start programs need CR-contingency language; flag FY2027 RDT&E/PROC new starts in the movers table and model a 6-month CR by appropriation.' },
+    { id: 2, cat: 'Budget Action', urg: 'HIGH', src: 'HAC-D', time: '1d ago', agencies: 'DOD',
+      headline: 'House Defense Appropriations subcommittee allocation released for FY2027',
+      body: 'The 302(b) allocation signals the discretionary topline available to HAC-D. Early subcommittee notes flag Procurement plus-ups and O&M trims versus the PB.',
+      impact: 'Run PB-vs-mark deltas by appropriation when the chairman\u2019s mark posts; congressional adds concentrate in Procurement line items.' },
+    { id: 3, cat: 'OIG & Audit', urg: 'HIGH', src: 'DoD OIG', time: '5h ago', agencies: 'DOD',
+      headline: 'FY2026 agency-wide audit: 26 material weaknesses carried; Dec 31, 2028 statutory deadline (P.L. 118-31)',
+      body: 'DODIG reiterates the path to opinion runs through MW #7 (Universe of Transactions) and MW #8 (FBwT). USMC sustainment remains the internal playbook.',
+      impact: 'Component CAP evidence for MW #7/#8 due ahead of interim testing — use the Audit page\u2019s remediation pipeline and Advana UoT thread.' },
+    { id: 4, cat: 'Financial Management', urg: 'MEDIUM', src: 'DFAS', time: '1d ago', agencies: 'DOD',
+      headline: 'DFAS publishes FY-end DDRS consolidation and GTAS period-12 submission windows',
+      body: 'Component trial balances due to DDRS-AFS on the accelerated schedule; GTAS bulk-file edits tighten for period 12.',
+      impact: 'Lock JV support packages early (MW #18) — unsupported adjustments at consolidation are the audit\u2019s first sample.' },
+    { id: 5, cat: 'Procurement & Contracts', urg: 'MEDIUM', src: 'PIEE / WAWF', time: '2d ago', agencies: 'DOD',
+      headline: 'PIEE release updates WAWF acceptance and EDA contract-document retrieval APIs',
+      body: 'Interface changes affect automated KSD retrieval used in audit response and contract-pay research.',
+      impact: 'Re-test the PIID+mod \u2192 EDA/WAWF retrieval hop in the KSD pipeline before interim testing; update the Linkage Thread stage-5 procedure.' },
+    { id: 6, cat: 'Agency Operations', urg: 'LOW', src: 'GTCC PMO', time: '3d ago', agencies: 'DOD',
+      headline: 'GTCC delinquency tick-up flagged across two Components',
+      body: 'Centrally billed account delinquencies rose quarter-over-quarter; salary offset notices issued.',
+      impact: 'Pull card-program aging in Finance Operations; PIIA reporting treats sustained delinquency as a payment-integrity indicator.' },
+  ]
+
+  if (a.id === 'SEC') return [
+    { id: 1, cat: 'Congressional Action', urg: 'HIGH', src: 'Senate Appropriations', time: '2h ago', agencies: 'SEC',
+      headline: 'Senate FSGG Subcommittee markup scheduled — June 2026',
+      body: 'FY2027 spending bills move; SEC\u2019s $1.908B request (11% below FY2026 enacted) faces conference before the Oct 1 deadline.',
+      impact: 'FY2027 enacted level uncertain — model \u00b110% variance; CR scenario requires 1/12 allotment planning.' },
+    { id: 2, cat: 'Budget Action', urg: 'MEDIUM', src: 'SEC OFM', time: '1d ago', agencies: 'SEC',
+      headline: 'Section 31 collections Q3 FY2026 tracking above projection',
+      body: 'Transaction volume keeps fee collections ahead of the enacted ceiling pace; mid-year rate true-up holds.',
+      impact: 'Reserve Fund on track; carryover posture into FY2027 stable — do not read collections as a demand signal.' },
+    { id: 3, cat: 'OIG & Audit', urg: 'HIGH', src: 'SEC OIG', time: '4h ago', agencies: 'SEC',
+      headline: 'OIG-582 T&M corrective actions — September 2026 target approaching',
+      body: 'Three open recommendations (T&M dashboard, contract-type matrix, COR surveillance SOPs) remain open.',
+      impact: 'COR surveillance log currency is the first artifact OIG will sample — close it out this quarter.' },
+    { id: 4, cat: 'Financial Management', urg: 'MEDIUM', src: 'Treasury FIT', time: '2d ago', agencies: 'SEC,ALL',
+      headline: 'GTAS period-09 window and edit-rule updates posted',
+      body: 'Treasury tightened intragovernmental edits for the period-09 submission.',
+      impact: 'Pre-validate trading-partner eliminations before certification to avoid a late resubmission cycle.' },
+    { id: 5, cat: 'Procurement & Contracts', urg: 'LOW', src: 'GSA SmartPay', time: '3d ago', agencies: 'SEC,ALL',
+      headline: 'SmartPay dispute-resolution window changes effective FY2027',
+      body: 'Cardholder dispute window shortens from 90 to 60 days; agency GPC procedures must update before Oct 1.',
+      impact: 'Update the GPC SOP and notify cardholders — small change, easy audit finding if missed.' },
+  ]
+
+  // generic deck — parameterized to the selected agency (never another agency's content)
+  const approps = a.funding === 'fee-funded'
+    ? `${AB} is fee-funded; oversight rides authorization and oversight hearings rather than annual appropriations.`
+    : `FY2027 appropriations sequencing puts ${AB} under CR risk after Oct 1 — subcommittee allocations are posted and markup timing is slipping.`
+  return [
+    { id: 1, cat: 'Congressional Action', urg: 'HIGH', src: 'Appropriations Committees', time: '4h ago', agencies: a.id,
+      headline: `FY2027 funding posture for ${N} — markup and CR scenarios in play`,
+      body: approps,
+      impact: a.funding === 'fee-funded'
+        ? `Monitor authorizing-committee riders; budget ceiling moves through governance, not approps math.`
+        : `Model a 1/12 CR apportionment for ${AB}: new starts freeze, hiring slows — brief leadership on the by-account exposure.` },
+    { id: 2, cat: 'Budget Action', urg: 'HIGH', src: 'OMB', time: '1d ago', agencies: 'ALL',
+      headline: 'OMB FY2028 A-11 update: efficiency targets and evidence requirements in Spring guidance',
+      body: 'Agencies must identify operational savings and tie budget justifications to performance evidence in FY2028 submissions.',
+      impact: `${AB} FY2028 formulation baseline needs the efficiency narrative started now — use the Budget page\u2019s formulation lane.` },
+    { id: 3, cat: 'OIG & Audit', urg: 'MEDIUM', src: 'GAO', time: '6h ago', agencies: 'ALL',
+      headline: 'GAO: year-end obligation surges and bona fide need documentation across CFO Act agencies',
+      body: 'GAO recommends September obligation review gates and documented bona fide need certifications.',
+      impact: `Stand up the ${AB} September review gate; document \u00a71502 support for late-year obligations before the auditors ask.` },
+    { id: 4, cat: 'Financial Management', urg: 'MEDIUM', src: 'Treasury FIT', time: '2d ago', agencies: 'ALL',
+      headline: 'GTAS submission window and USSGL edit updates posted for the current period',
+      body: 'Treasury refreshed validation edits; intragovernmental differences remain the top rejection driver.',
+      impact: `Pre-validate ${AB} trading-partner eliminations and certify early — a clean GTAS cycle is the cheapest audit evidence there is.` },
+    { id: 5, cat: 'Procurement & Contracts', urg: 'MEDIUM', src: 'OFPP / GSA', time: '3d ago', agencies: 'ALL',
+      headline: 'OFPP tightens COR surveillance documentation for T&M vehicles; SAM.gov interface updates',
+      body: 'Monthly surveillance documentation expected for T&M above the SAT; SAM.gov contract-data interface changes land this quarter.',
+      impact: `Refresh ${AB} COR files and re-point any SAM.gov data pulls — the Acquisition page\u2019s award feeds are unaffected.` },
+    { id: 6, cat: 'Agency Operations', urg: 'LOW', src: 'OPM / GSA', time: '4d ago', agencies: 'ALL',
+      headline: 'Charge-card and travel program rule changes queued for FY2027',
+      body: 'SmartPay dispute windows shorten; travel per-diem tables refresh on schedule.',
+      impact: `Update ${AB} GPC/travel SOPs — small compliance items that show up in A-123 testing if stale.` },
+  ]
+}
+
+export async function GET(req: NextRequest) {
+  const agencyId = (req.nextUrl.searchParams.get('agency') ?? 'DOD').toUpperCase()
+  // Try Neon DB first; fall back to agency-aware seed data gracefully
   if (process.env.DATABASE_URL) {
     try {
       const { getLatestNews } = await import('@/lib/db')
@@ -93,7 +120,7 @@ export async function GET() {
       console.warn('[news-feed] DB unavailable, using seed data:', err)
     }
   }
-  return NextResponse.json({ news: SEED_NEWS, source: 'seed' })
+  return NextResponse.json({ news: seedFor(agencyId), source: 'seed', seededFor: agencyId })
 }
 
 export async function POST(req: NextRequest) {
