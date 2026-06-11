@@ -20,24 +20,36 @@ import KnowledgeBase from "./KnowledgeBase"
 import PageProvenance from "./PageProvenance"
 import AboutApp from "./AboutApp"
 
-const NAV = [
-  { id:"overview",  label:"Executive Overview", icon:"🏛️" },
-  { id:"intel",     label:"Data Intelligence",  icon:"🧠" },
-  { id:"data",      label:"Data Explorer",      icon:"🗂️" },
-  { id:"budget",    label:"Budget Management",  icon:"📊" },
-  { id:"accounting",label:"Accounting",         icon:"📒" },
-  { id:"audit",     label:"Audit",              icon:"🔍" },
-  { id:"finops",    label:"Finance Operations", icon:"💳" },
-  { id:"controls",  label:"Internal Controls",  icon:"🛡️" },
-  { id:"acquisition",label:"Contracts & Acquisition", icon:"📄" },
-  { id:"ml",        label:"AI / ML Workbench",  icon:"🤖" },
-  { id:"analyst",   label:"AI FM Analyst",      icon:"💬" },
-  { id:"docs",      label:"Document Analysis",  icon:"📑" },
-  { id:"brief",     label:"Daily Brief",        icon:"📰" },
-  { id:"kb",        label:"Knowledge Base",     icon:"🧬" },
-  { id:"about",     label:"About / Job Aid",    icon:"📖" },
+// nav organized by workflow: situational awareness → the six FM functions →
+// the data layer → the AI workbench → reference
+const NAV_GROUPS = [
+  { group:"OVERVIEW", items:[
+    { id:"overview",  label:"Executive Overview", icon:"🏛️" },
+    { id:"brief",     label:"Daily Brief",        icon:"📰" },
+  ]},
+  { group:"FINANCIAL MANAGEMENT", items:[
+    { id:"budget",    label:"Budget Management",  icon:"📊" },
+    { id:"accounting",label:"Accounting",         icon:"📒" },
+    { id:"audit",     label:"Audit",              icon:"🔍" },
+    { id:"finops",    label:"Finance Operations", icon:"💳" },
+    { id:"controls",  label:"Internal Controls",  icon:"🛡️" },
+    { id:"acquisition",label:"Contracts & Acquisition", icon:"📄" },
+  ]},
+  { group:"DATA", items:[
+    { id:"intel",     label:"Data Intelligence",  icon:"🧠" },
+    { id:"data",      label:"Data Explorer",      icon:"🗂️" },
+  ]},
+  { group:"AI & ANALYSIS", items:[
+    { id:"analyst",   label:"AI FM Analyst",      icon:"💬" },
+    { id:"ml",        label:"AI / ML Workbench",  icon:"🤖" },
+    { id:"docs",      label:"Document Analysis",  icon:"📑" },
+    { id:"kb",        label:"Knowledge Base",     icon:"🧬" },
+  ]},
+  { group:"REFERENCE", items:[
+    { id:"about",     label:"About / Job Aid",    icon:"📖" },
+  ]},
 ] as const
-type NavId = typeof NAV[number]["id"]
+type NavId = typeof NAV_GROUPS[number]["items"][number]["id"]
 
 export default function AnyFedPortal() {
   const [dark, setDark] = useState(true)
@@ -87,16 +99,21 @@ export default function AnyFedPortal() {
     </select>
   )
 
-  const navButtons = NAV.map(n => (
-    <button key={n.id} onClick={() => { setPage(n.id); setMenuOpen(false) }}
-      style={{ display:"flex", alignItems:"center", gap:10, width:"100%", textAlign:"left",
-               padding:"9px 13px", borderRadius:10, fontSize:13.5, cursor:"pointer",
-               fontWeight: page === n.id ? 700 : 500,
-               border:`1px solid ${page === n.id ? C.borderAccent : "transparent"}`,
-               background: page === n.id ? `${C.blue}1f` : "transparent",
-               color: page === n.id ? C.blue : C.textSub }}>
-      <span>{n.icon}</span>{n.label}
-    </button>
+  const navButtons = NAV_GROUPS.map(g => (
+    <div key={g.group} style={{ marginBottom:6 }}>
+      <div style={{ fontSize:10, color:C.muted, letterSpacing:"0.14em", padding:"6px 13px 3px", fontWeight:700 }}>{g.group}</div>
+      {g.items.map(n => (
+        <button key={n.id} onClick={() => { setPage(n.id); setMenuOpen(false) }}
+          style={{ display:"flex", alignItems:"center", gap:10, width:"100%", textAlign:"left",
+                   padding:"8px 13px", borderRadius:10, fontSize:13.5, cursor:"pointer",
+                   fontWeight: page === n.id ? 700 : 500,
+                   border:`1px solid ${page === n.id ? C.borderAccent : "transparent"}`,
+                   background: page === n.id ? `${C.blue}1f` : "transparent",
+                   color: page === n.id ? C.blue : C.textSub }}>
+          <span>{n.icon}</span>{n.label}
+        </button>
+      ))}
+    </div>
   ))
 
   const brand = (
@@ -130,9 +147,6 @@ export default function AnyFedPortal() {
           <div style={{ position:"fixed", inset:0, top:58, zIndex:49, background:C.sidebar, padding:16, overflowY:"auto" }}>
             <div style={{ marginBottom:14 }}>{agencySelect}</div>
             {navButtons}
-            <div style={{ marginTop:14, fontSize:12, color:C.muted }}>
-              Legacy SEC portal: <a href="/sec-cfo" style={{ color:C.blue }}>/sec-cfo</a>
-            </div>
           </div>
         )}
 
@@ -149,15 +163,14 @@ export default function AnyFedPortal() {
                 </div>
                 {agencySelect}
               </div>
-              <nav style={{ display:"flex", flexDirection:"column", gap:2 }}>{navButtons}</nav>
+              <nav style={{ display:"flex", flexDirection:"column" }}>{navButtons}</nav>
               <div style={{ marginTop:18, paddingTop:14, borderTop:`1px solid ${C.border}` }}>
                 <button onClick={() => setDark(d => !d)}
                   style={{ ...iconBtn(C), width:"100%", fontSize:12.5 }}>
                   {dark ? "☀️ Light mode" : "🌙 Dark mode"}
                 </button>
                 <div style={{ marginTop:12, fontSize:11.5, color:C.muted, lineHeight:1.7, paddingLeft:4 }}>
-                  Data: sourcedata/ (default) · USAspending API (live) · DuckDB lakehouse (bulk)<br />
-                  Legacy SEC portal: <a href="/sec-cfo" style={{ color:C.blue }}>/sec-cfo</a>
+                  Data: sourcedata/ (default) · USAspending API (live) · DuckDB lakehouse (bulk)
                 </div>
               </div>
             </aside>
